@@ -1,0 +1,5 @@
+.Rproj.user
+.Rhistory
+.RData
+.*.Rnb.cached
+_publish.R
