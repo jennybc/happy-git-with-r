@@ -13,7 +13,7 @@ description: "Using Git and GitHub with R, Rstudio, and R Markdown"
 twitter-handle: jennybryan
 ---
 
-# What to expect {-}
+# What's going on here {-}
 
 THIS IS AN EXPERIMENT!
 
