@@ -15,6 +15,8 @@ twitter-handle: jennybryan
 
 # What's going on here {-}
 
+<img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />  
+
 THIS IS AN EXPERIMENT!
 
 Trying this, gradually: bring (and expand) the STAT 545  Git/GitHub content into bookdown format, in anticipation of the tutorial at useR! 2016:
