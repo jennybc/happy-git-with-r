@@ -4,6 +4,14 @@ These materials can be used for independent study, but I also use them to suppor
 
 ## useR! 2016 Stanford
 
+### Logistics
+
+Monday, June 27, 2016  
+9:00am - 12:00pm, with coffee break 10:15am - 10:30am  
+Campbell Rehearsal Hall 541 Lasuen Mall, Stanford, CA 94305 [Google Maps](https://www.google.com/maps/place/37%C2%B025'25.5%22N+122%C2%B010'10.0%22W/@37.4237529,-122.1716343,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.4237529!4d-122.1694456?hl=en)  
+Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
+[Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
+
 ### Overview
 
 Data analysts can use the [Git version control system](https://git-scm.com) to manage a motley assortment of project files in a sane way (e.g., data, code, reports, etc.). This has benefits for the solo analyst and, especially, for anyone who wants to communicate and collaborate with others. Git helps you organize your project over time and across different people and computers. Hosting services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org), and [GitLab](https://about.gitlab.com) provide a home for your Git-based projects on the internet.
