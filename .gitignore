@@ -4,3 +4,6 @@
 .*.Rnb.cached
 _publish.R
 ubc-practice-emails.csv
+_main.rds
+_book
+_bookdown_files
