@@ -7,11 +7,3 @@ Bring this over:
 And this too:
 
 <http://stat545.com/git04_introduce-self-to-git.html>
-
-## Install a Git client
-
-Optional but recommended.
-
-Bring this over:
-
-<http://stat545.com/git02_git-clients.html>

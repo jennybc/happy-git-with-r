@@ -10,8 +10,9 @@ rmd_files: [
   "06_install-r-rstudio.Rmd",
   "07_install-git.Rmd",
   "08_install-git-client.Rmd",
-  "06_install-connect-git-github.Rmd",
-  "07_install-connect-rstudio-git-github.Rmd",
-  "08_install-troubleshooting.Rmd",
+  "09_install-can-rstudio-use-git.Rmd",
+  "10_install-connect-git-github.Rmd",
+  "11_install-connect-rstudio-git-github.Rmd",
+  "12_install-troubleshooting.Rmd",
   "90_references.Rmd",
 ]

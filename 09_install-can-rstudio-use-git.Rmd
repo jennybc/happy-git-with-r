@@ -1,0 +1,5 @@
+# Detect Git from RStudio
+
+Isolate just the tests re: whether RStudio can see and use Git, so we can use it to determine if we even need to install Git.
+
+So separate this testing from full-fledged use of Git from RStudio.
