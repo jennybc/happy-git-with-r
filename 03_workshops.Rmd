@@ -14,7 +14,7 @@ Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/ev
 
 ### Outline
 
-The tutorial will be structured as ~5 task-oriented units. Indicative topics:
+The tutorial is structured as ~5 task-oriented units. Indicative topics:
 
   * The most difficult part: installation and configuration!
   * Creating a Git repository and connecting the local repo to a GitHub remote, for new and existing projects.
@@ -22,23 +22,13 @@ The tutorial will be structured as ~5 task-oriented units. Indicative topics:
   * How to propose a change or fix to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
   * Daily workflows and FAQ: how often should I commit?, which files should I commit? how do I change a commit or its message? how do groups of 1, 5, or 10 people structure their work with Git(Hub)? etc.
   
-This will be a hands-on tutorial, so bring your prepared laptop and pre-register a free GitHub account (see below).
+This is a hands-on tutorial, so pre-register a free GitHub account and bring your laptop, **prepared according to the installation instructions**.
 
-### What this tutorial is not
+### Pre-tutorial set-up
 
-This tutorial will teach novices about Git on a strict "need to know" basis. Git was built to manage development of the Linux kernel, which is probably very different from what you do. Most people need a small subset of Git's functionality and that will be our focus. If you want a full-blown exposition of Git as a directed acyclic graph or a treatise on the Git-Flow branching strategy, you will be sad.
+**It is vital that you attempt to get your system set up in advance.** These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs at the workshop starting at 8:15am.
 
-Our target audience is someone who uses R to analyze data. While R package development with Git(Hub) is absolutely in scope, it's not an explicit focus or requirement.
-
-We target GitHub -- not Bitbucket or GitLab -- for the sake of specificity. However, all the big-picture principles and even some mechanics will carry over to these alternative hosting platforms.
-
-### Background knowledge
-
-The tutorial is aimed at intermediate to advanced R users, who are comfortable writing R scripts and managing R projects. You should have a good grasp of files and directories and be generally knowledgeable about where things live on your computer.
-
-Although we will show alternatives for most Git operations, we will inevitably spend some time in the shell and we assume some prior experience. For example, you should know how to open up a shell, navigate to a certain directory, and list the files there. You should be comfortable using shell commands to view/move/rename files and to work with your command history.
-
-[R Markdown](http://rmarkdown.rstudio.com) or [RStudio](https://www.rstudio.com/products/rstudio-desktop/) will feature prominently in most of the units, so this tutorial will be most rewarding for people who already use these or are eager to try them out.
+*insert links to the specific pages of set up here!!!*
 
 ## CSAMA 2016: Statistical Data Analysis for Genome Biology
 
@@ -48,4 +38,3 @@ Although we will show alternatives for most Git operations, we will inevitably s
 July 10 - 15, 2016, Bressanone-Brixen, Italy  
 Monday July 11, Lab 2, 15:30 - 17:00 Reproducible research and R authoring with markdown and knitr  
 Thursday July 14, Lab 4, 14:00 - 15:30 Use of Git and GitHub with R, RStudio, and R Markdown
-
