@@ -6,5 +6,9 @@ rmd_files: [
   "02_contributors.Rmd",
   "03_workshops.Rmd",
   "04_install-pep-talk.Rmd",
+  "05_install-one-thing.Rmd",
+  "06_install-connect-git-github.Rmd",
+  "07_install-connect-rstudio-git-github.Rmd",
+  "08_install-troubleshooting.Rmd",
   "90_references.Rmd",
 ]
