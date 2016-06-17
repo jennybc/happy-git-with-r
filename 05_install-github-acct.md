@@ -1,21 +1,12 @@
-# Installation: One thing at a time
+# Register a GitHub account
 
-We need to set up several individual components and test individually, before we attempt to integrate:
-
-  * Register a GitHub account, section \@ref(register-github).
-  * Install or upgrade R and RStudio, section \@ref(register-github).
-  * Install Git, section \@ref(register-github).
-  * Install a Git client, section \@ref(register-github).
-
-## Register a GitHub account {#register-github}
-
-### TL;DR
+## TL;DR
 
 Register an account with GitHub. It's free!
 
   * <https://github.com>
 
-### More about GitHub
+## More about GitHub
 
 You will be able upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't worry about any of that now. **Except your username. You should actually worry about that.**
 
@@ -40,45 +31,3 @@ GitHub offers free access to paid levels of service -- unlimited private reposit
     - Free unlimited private repos for individuals.
     - Organizations with unlimited private repos for use in class, research group, lab, etc.
   * Official nonprofit organizations and charities should go here: <https://github.com/nonprofit>
-
-## Install or upgrade R and RStudio.
-
-### TL;DR
-
-Install pre-compiled binary of R for your OS: <https://cloud.r-project.org>
-
-Install Preview version RStudio Desktop: <https://www.rstudio.com/products/rstudio/download/preview/>
-
-Update your R packages: `update.packages(ask = FALSE, checkBuilt = TRUE)`
-
-Read on for more detail or hand-holding.
-
-### More about R and RStudio
-
-**Get current, people.** You don't want to adopt new things on day one. But at some point, running old versions of software adds unnecessary difficulty.
-
-In live workshops, there is a limit to how much we can help with ancient versions of R or RStudio. Also, frankly, there is a limit to our motivation. By definition, these problems are going away and we'd rather focus on edge cases with current versions, which affect lots of people.
-
-For now, just go here:
-
-<http://stat545.com/block000_r-rstudio-install.html>
-
-*not sure whether to move or duplicate that content*
-
-## Install Git
-
-Bring this over:
-
-<http://stat545.com/git01_git-install.html>
-
-And this too:
-
-<http://stat545.com/git04_introduce-self-to-git.html>
-
-## Install a Git client
-
-Optional but recommended.
-
-Bring this over:
-
-<http://stat545.com/git02_git-clients.html>
