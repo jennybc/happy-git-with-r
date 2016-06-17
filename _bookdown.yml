@@ -2,9 +2,9 @@ new_session: yes
 
 rmd_files: [
   "index.Rmd",
-  "01-overview.Rmd",
-  "02-contributors.Rmd",
-  "03-workshops.Rmd",
-  "04-installation.Rmd",
-  "90-references.Rmd",
+  "01_overview.Rmd",
+  "02_contributors.Rmd",
+  "03_workshops.Rmd",
+  "04_install-pep-talk.Rmd",
+  "90_references.Rmd",
 ]
