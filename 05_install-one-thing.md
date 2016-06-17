@@ -9,10 +9,14 @@ We need to set up several individual components and test individually, before we
 
 ## Register a GitHub account {#register-github}
 
+### TL;DR
+
 Register an account with GitHub. It's free!
 
   * <https://github.com>
-  
+
+### More about GitHub
+
 You will be able upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't worry about any of that now. **Except your username. You should actually worry about that.**
 
 A few tips, which sadly tend to contradict each other:
@@ -38,6 +42,18 @@ GitHub offers free access to paid levels of service -- unlimited private reposit
   * Official nonprofit organizations and charities should go here: <https://github.com/nonprofit>
 
 ## Install or upgrade R and RStudio.
+
+### TL;DR
+
+Install pre-compiled binary of R for your OS: <https://cloud.r-project.org>
+
+Install Preview version RStudio Desktop: <https://www.rstudio.com/products/rstudio/download/preview/>
+
+Update your R packages: `update.packages(ask = FALSE, checkBuilt = TRUE)`
+
+Read on for more detail or hand-holding.
+
+### More about R and RStudio
 
 **Get current, people.** You don't want to adopt new things on day one. But at some point, running old versions of software adds unnecessary difficulty.
 

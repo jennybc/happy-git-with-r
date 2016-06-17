@@ -1,6 +1,10 @@
 # Workshops
 
-These materials can be used for independent study, but I also use them to support in-person workshops, [STAT 545](http://stat545.com), and the [UBC Master of Data Science](http://masterdatascience.science.ubc.ca).
+These materials can be used for independent study, but I also use them to support
+
+  * in-person workshops (see below)
+  * [STAT 545](http://stat545.com) at UBC
+  * [UBC Master of Data Science](http://masterdatascience.science.ubc.ca)
 
 ## useR! 2016 Stanford
 
@@ -12,7 +16,13 @@ Campbell Rehearsal Hall 541 Lasuen Mall, Stanford, CA 94305 [Google Maps](https:
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
 
-### Outline
+### Pre-tutorial set-up
+
+**It is vital that you attempt to get your system set up in advance.** These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs at the workshop starting at 8:15am.
+
+*insert list of specific pages of set up here!!!*
+
+### What we will do
 
 The tutorial is structured as ~5 task-oriented units. Indicative topics:
 
@@ -21,14 +31,6 @@ The tutorial is structured as ~5 task-oriented units. Indicative topics:
   * The intersection of GitHub and the R world: R packages developed on Github and how to make use of ["issues"](https://guides.github.com/features/issues/); [METACRAN](http://www.r-pkg.org) [read-only mirror](https://github.com/cran) of all of CRAN; R-specific searching tips.
   * How to propose a change or fix to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
   * Daily workflows and FAQ: how often should I commit?, which files should I commit? how do I change a commit or its message? how do groups of 1, 5, or 10 people structure their work with Git(Hub)? etc.
-  
-This is a hands-on tutorial, so pre-register a free GitHub account and bring your laptop, **prepared according to the installation instructions**.
-
-### Pre-tutorial set-up
-
-**It is vital that you attempt to get your system set up in advance.** These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs at the workshop starting at 8:15am.
-
-*insert links to the specific pages of set up here!!!*
 
 ## CSAMA 2016: Statistical Data Analysis for Genome Biology
 
