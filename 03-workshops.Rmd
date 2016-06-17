@@ -1,6 +1,6 @@
-# Offerings {#offer}
+# Workshops
 
-These materials can be used for independent study, but I also use them to support in-person workshops.
+These materials can be used for independent study, but I also use them to support in-person workshops, [STAT 545](http://stat545.com), and the [UBC Master of Data Science](http://masterdatascience.science.ubc.ca).
 
 ## useR! 2016 Stanford
 
@@ -11,16 +11,6 @@ Monday, June 27, 2016
 Campbell Rehearsal Hall 541 Lasuen Mall, Stanford, CA 94305 [Google Maps](https://www.google.com/maps/place/37%C2%B025'25.5%22N+122%C2%B010'10.0%22W/@37.4237529,-122.1716343,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.4237529!4d-122.1694456?hl=en)  
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
-
-### Overview
-
-Data analysts can use the [Git version control system](https://git-scm.com) to manage a motley assortment of project files in a sane way (e.g., data, code, reports, etc.). This has benefits for the solo analyst and, especially, for anyone who wants to communicate and collaborate with others. Git helps you organize your project over time and across different people and computers. Hosting services like [GitHub](https://github.com), [Bitbucket](https://bitbucket.org), and [GitLab](https://about.gitlab.com) provide a home for your Git-based projects on the internet.
-
-What's special about using R and Git(Hub)?
-
-  * the active R package development community on GitHub
-  * workflows for R scripts and [R Markdown](http://rmarkdown.rstudio.com) files that make it easy to share source and rendered results on GitHub
-  * Git- and GitHub-related features of the [RStudio IDE](https://www.rstudio.com/products/rstudio-desktop/)
 
 ### Outline
 
@@ -49,3 +39,13 @@ The tutorial is aimed at intermediate to advanced R users, who are comfortable w
 Although we will show alternatives for most Git operations, we will inevitably spend some time in the shell and we assume some prior experience. For example, you should know how to open up a shell, navigate to a certain directory, and list the files there. You should be comfortable using shell commands to view/move/rename files and to work with your command history.
 
 [R Markdown](http://rmarkdown.rstudio.com) or [RStudio](https://www.rstudio.com/products/rstudio-desktop/) will feature prominently in most of the units, so this tutorial will be most rewarding for people who already use these or are eager to try them out.
+
+## CSAMA 2016: Statistical Data Analysis for Genome Biology
+
+### Logistics
+
+<http://www.huber.embl.de/csama2016/>  
+July 10 - 15, 2016, Bressanone-Brixen, Italy  
+Monday July 11, Lab 2, 15:30 - 17:00 Reproducible research and R authoring with markdown and knitr  
+Thursday July 14, Lab 4, 14:00 - 15:30 Use of Git and GitHub with R, RStudio, and R Markdown
+
