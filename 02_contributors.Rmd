@@ -4,7 +4,7 @@ Jenny Bryan ([twitter](https://twitter.com/jennybryan), [GitHub](https://github.
 
 The development and delivery of this material has benefited greatly from contributions by:
 
-  * Dean Attali ([blog](http://deanattali.com), [GitHub](https://github.com/daattali/), [twitter](https://twitter.com/daattali)) who recently earned his M.Sc. Bioinformatics at UBC. He's the developer of the [shinyjs](https://cran.r-project.org/web/packages/shinyjs/index.html) package and [much more](http://deanattali.com/projects/).
+  * Dean Attali ([blog](http://deanattali.com), [GitHub](https://github.com/daattali/), [twitter](https://twitter.com/daattali)) who recently earned his M.Sc. Bioinformatics at UBC. He's the developer of the [shinyjs](https://github.com/daattali/shinyjs) package and [much more](http://deanattali.com/projects/).
   * Bernhard Konrad ([GitHub](https://github.com/BernhardKonrad), [twitter](https://twitter.com/bernhardkonrad)) recently earned his Ph.D. in Applied Math at UBC, completed an [Insight Data Science Fellowship](http://www.insightdatascience.com), and is a software engineer at Google.
   * Shaun Jackman ([GitHub](https://github.com/sjackman), [twitter](https://twitter.com/sjackman), [sjackman.ca](http://sjackman.ca)) is a Ph.D. in bioinformatics at UBC, the lead developer of [Linuxbrew](http://linuxbrew.sh) and a developer of [Homebrew-Science](https://github.com/Homebrew/homebrew-science) and the genome sequence assembly software [ABySS](https://github.com/bcgsc/abyss)
   * The [STAT 545 TA group](http://stat545.com/people.html)
