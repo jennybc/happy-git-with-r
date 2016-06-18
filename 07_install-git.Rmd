@@ -1,9 +1,89 @@
 # Install Git
 
-Bring this over:
+## TL;DR
 
-<http://stat545.com/git01_git-install.html>
+You need Git, so you can use it at the command line and so RStudio can call it.
 
-And this too:
+If there's any chance it's installed already, verify that and skip this step.
 
-<http://stat545.com/git04_introduce-self-to-git.html>
+Otherwise, find installation instructions below for your operating system.
+
+## Git already installed?
+
+Go to the shell and enter `which git` and/or `git --version`:
+
+``` bash
+jenny@2015-mbp happy-git-with-r $ which git
+/usr/bin/git
+
+jenny@2015-mbp happy-git-with-r $ git --version
+git version 2.7.4 (Apple Git-66)
+```
+
+If Git reports a path to an executable and a version, that's great! You have Git already. No need to install! Move on.
+
+If, instead, you see something more like `git: command not found`, keep reading.
+
+Mac OS users might get an immediate offer to install command developer tools. Yes, you should accept! Click "Install" and read more below.
+
+## Windows
+
+**Option 1** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/), previously known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing.
+
+  * This approach leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the Bash shell will be useful as you venture outside of R/RStudio.
+  * This also leaves you with a Git client, though not a very good one. So check out Git clients we recommend *(insert link)*.
+  
+**Option 2** (*NOT recommended*): The GitHub hosting site offers [GitHub Desktop for Windows](https://desktop.github.com/) that provides Git itself, a client, and smooth integration with GitHub.
+
+  * [Their Windows set-up instructions](https://help.github.com/articles/set-up-git#platform-windows) recommend this method of Git installation.
+  * Why don't we like it? We've seen GitHub Desktop for Windows lead to Git installation in suboptimal locations, such as `~/AppData/Local`, and in other places we could never find. If you were __only__ going to interact with GitHub via this app, maybe that's OK, but that does not apply to you. Therefore, we recommend option 1 instead.
+
+## Mac OS
+
+**Option 1** (*highly recommended*): Install the Xcode command line tools (not all of Xcode), which includes Git.
+
+Go to the shell and enter one of these commands to elicit an offer to install developer command line tools:
+
+``` bash
+git --version
+git config
+```
+
+Another way to request this is via `xcode-select --install`. We just happen to find this Git-based trigger apropos.
+
+**Option 2** (*recommended*): Install Git from here: <http://git-scm.com/downloads>.
+
+  * This arguably sets you up the best for the future. It will certainly get you the latest version of Git of all approaches described here.
+  * The GitHub home for this project is here: <https://github.com/timcharper/git_osx_installer>.
+    - At that link, there is a list of maintained builds for various combinations of Git and Mac OS version. If you're running 10.7 Lion and struggling, we've had success in September 2015 with binaries found here: <https://www.wandisco.com/git/download>. 
+
+**Option 3** (*recommended*): If you anticipate getting heavily into scientific computing, you're going to be installing and updating lots of software. You should check out [homebrew](http://brew.sh), "the missing package manager for OS X". Among many other things, it can install Git for you. Once you have Homebrew installed, do this in the shell:
+
+```
+brew install git
+```
+
+**Option 4** (*NOT recommended*): The GitHub hosting site offers [GitHub Desktop for Mac](https://desktop.github.com/) that provides *the option* to install Git itself, a client, and smooth integration with GitHub..
+
+  * [Their Mac set-up instructions](https://help.github.com/articles/set-up-git#platform-mac) recommend this method of Git installation.
+  * We don't like GitHub Desktop as a Git client, so this is a very cumbersome way to install Git. Consider this option a last resort.
+
+## Linux
+
+Install Git via your distro's package manager.
+
+Ubuntu or Debian Linux:
+
+```sh
+sudo apt-get install git
+```
+
+Fedora or RedHat Linux:
+
+```sh
+sudo yum install git
+```
+
+A comprehensive list for various Linux and Unix package managers:
+
+<https://git-scm.com/download/linux>
