@@ -12,8 +12,10 @@ rmd_files: [
   "08_install-introduce-self-git.Rmd",
   "09_install-git-client.Rmd",
   "10_install-connect-git-github.Rmd",
-  "11_install-connect-rstudio-git-github.Rmd",
-  "12_install-can-rstudio-use-git.Rmd",
-  "13_install-troubleshooting.Rmd",
+  "11_install-credential-caching.Rmd",
+  "12_install-ssh-keys.Rmd",
+  "13_install-connect-rstudio-git-github.Rmd",
+  "14_install-can-rstudio-use-git.Rmd",
+  "15_install-troubleshooting.Rmd",
   "90_references.Rmd",
 ]
