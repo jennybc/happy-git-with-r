@@ -102,7 +102,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Commit this change and push to your remote repo on GitHub.
+Commit this change and push to your remote repo on GitHub. If you're a new GitHub user, you will be challenged for your GitHub username and password. Provide them!
 
 ``` sh
 git add -A
@@ -128,8 +128,6 @@ Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/jennybc/myrepo.git
    b4112c5..de669ba  master -> master
 ```
-
-If you're a new GitHub user, you will be challenged for your GitHub username and password. Provide them!
 
 ## Confirm the local change propagated to the GitHub remote
 
