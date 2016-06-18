@@ -15,10 +15,8 @@ In their defense, it's hard to write installation instructions. Failures can be 
 ## Success and operating systems
 
 <style type="text/css">
-.table {
-
-    width: 40%;
-
+#success-and-operating-systems table {
+  width: auto;
 }
 </style>
 
