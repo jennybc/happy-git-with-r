@@ -1,7 +1,5 @@
 # Install or upgrade R and RStudio.
 
-## TL;DR
-
 Install pre-compiled binary of R for your OS: <https://cloud.r-project.org>
 
 Install Preview version RStudio Desktop: <https://www.rstudio.com/products/rstudio/download/preview/>

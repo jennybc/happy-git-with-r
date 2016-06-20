@@ -1,10 +1,8 @@
 # Install Git
 
-## TL;DR
-
 You need Git, so you can use it at the command line and so RStudio can call it.
 
-If there's any chance it's installed already, verify that and skip this step.
+If there's any chance it's installed already, verify that, rejoice, and skip this step.
 
 Otherwise, find installation instructions below for your operating system.
 
