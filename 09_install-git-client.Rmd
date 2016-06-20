@@ -1,14 +1,12 @@
 # Install a Git client
 
-## TL;DR
-
 This is optional but **highly recommended**.
 
-Unless specified, it is not required for live workshops and will not be explicitly taught.
+Unless specified, it is not required for live workshops and will not be explicitly taught, though you might see us using one of these clients.
 
 ## What and why
 
-Learning to use version control can be rough at first. I found the use of a GUI – as opposed to the command line – extremely helpful when I was getting started. I call this sort of helper application a Git client. Actually I call it a Git(Hub) client because they also help you interact with GitHub.
+Learning to use version control can be rough at first. I found the use of a GUI – as opposed to the command line – extremely helpful when I was getting started. I call this sort of helper application a Git client. It's really a Git(Hub) client because they also help you interact with GitHub or other remotes.
 
 Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and the RStudio IDE are not necessary to use to Git or R, respectively, but they make the experience more pleasant because they reduce the amount of [command line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm).
 
@@ -30,6 +28,7 @@ Fantastic news: because all of the clients are just forming and executing Git co
   
   * GitHub also offers [a free Git(Hub) client](https://desktop.github.com/) for Windows and Mac. We do NOT recommend it for Windows and have serious reservations even for Mac OS. What do we object to?
     - The degree of hand-holding offered by GitHub's clients borders on hand-*cuffs*.
+    - The Windows client sometimes leaves the Git executable so well hidden that we can't find it. This is a deal-killer, because that means RStudio can't find it either.
     - These clients wrap Git functionality so thoroughly that we've had students make some destructive mistakes. For example, we've seen a "sync" operation that resulted in the loss of local uncommitted changes. Exactly which Git operations, in what order, are implied by "sync", is [not entirely clear](http://stackoverflow.com/questions/12104513/what-does-github-for-windows-sync-do). We prefer clients that expose Git more explicitly.
     - We've heard similar negative reviews from other instructors. It's not just us.
 

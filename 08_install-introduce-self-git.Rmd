@@ -1,6 +1,6 @@
 # Introduce yourself to Git
 
-## TL;DR
+In the shell:
 
 ``` sh
 git config --global user.name 'Jennifer Bryan'
