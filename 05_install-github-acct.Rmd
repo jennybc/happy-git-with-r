@@ -1,16 +1,12 @@
 # Register a GitHub account
 
-## TL;DR
-
 Register an account with GitHub. It's free!
 
   * <https://github.com>
 
-## More about GitHub
+## Username advice
 
-You will be able upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't worry about any of that now. **Except your username. You should actually worry about that.**
-
-#### Username advice
+You will be able upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't worry about any of that now. **Except your username. You might want to give that some thought**
 
 A few tips, which sadly tend to contradict each other:
 
@@ -27,7 +23,7 @@ You can change your username later, but better to get this right the first time.
   * <https://help.github.com/articles/changing-your-github-username/>
   * <https://help.github.com/articles/what-happens-when-i-change-my-username/>
 
-#### Free private repos
+## Free private repos
 
 GitHub offers free unlimited private repositories for users and organizations in education, academic research, nonprofits, and charities.
 
@@ -36,3 +32,9 @@ Go ahead and register your free acount NOW and then pursue any special offer tha
   * Students, faculty, and educational/research staff: [GitHub Education](https://education.github.com).
     - GitHub "Organizations" can be extremely useful for courses or research/lab groups, where you need some coordination across a set of repos and users.
   * Official nonprofit organizations and charities: [GitHub for Good](https://github.com/nonprofit)
+  
+## Pay for private repos
+
+Everyone else can pay for some private repos. A personal plan with unlimited private repos is $7 / month at the time of writing. See the current plans and pricing here:
+
+  * <https://github.com/pricing>
