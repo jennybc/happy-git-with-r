@@ -1,4 +1,4 @@
-# Register a GitHub account
+# Register a GitHub account {#github-acct}
 
 Register an account with GitHub. It's free!
 

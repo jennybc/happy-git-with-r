@@ -1,4 +1,4 @@
-# Install or upgrade R and RStudio.
+# Install or upgrade R and RStudio {#install-r-rstudio}
 
 Install pre-compiled binary of R for your OS: <https://cloud.r-project.org>
 

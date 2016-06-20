@@ -1,4 +1,4 @@
-# Install Git
+# Install Git {#install-git}
 
 You need Git, so you can use it at the command line and so RStudio can call it.
 
