@@ -1,3 +1,5 @@
+# (PART) Connect Git, GitHub, RStudio {-} 
+
 # Connect to GitHub {#push-pull-github}
 
 Objective: make sure that you can pull from and push to GitHub from your computer.

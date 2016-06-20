@@ -1,4 +1,4 @@
-# Installation: Connect local Git to GitHub
+# Installation: Connect local Git to GitHub {#troubleshooting}
 
 Bring this over:
 
