@@ -1,0 +1,8 @@
+Package: happygitwithr
+Title: Happy Git and GitHub for the useR
+Version: 0.0.0.9000
+Authors@R: person("Jennifer", "Bryan", role=c("aut", "cre"),
+  email = "jenny@stat.ubc.ca")
+Depends: R (>= 3.3.0)
+Imports:
+  bookdown

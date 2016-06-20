@@ -1,6 +1,6 @@
 THIS IS AN EXPERIMENT!
 
-*Lots of dummy placeholder content is here, because I initialized this repo with the bookdown demo. It will gradually get removed.*
+ [![TravisCI Build Status](https://travis-ci.org/jennybc/happy-git-with-r.svg?branch=master)](https://travis-ci.org/jennybc/happy-git-with-r)
 
 Trying this, gradually: bring (and expand) the STAT 545 content into [bookdown format](https://github.com/rstudio/bookdown), in anticipation of the tutorial at useR! 2016:
 
