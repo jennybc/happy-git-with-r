@@ -2,9 +2,11 @@ new_session: yes
 
 rmd_files: [
   "index.Rmd",
+
   "01_overview.Rmd",
   "02_contributors.Rmd",
   "03_workshops.Rmd",
+
   "04_install-pep-talk.Rmd",
   "05_install-github-acct.Rmd",
   "06_install-r-rstudio.Rmd",
@@ -17,5 +19,6 @@ rmd_files: [
   "13_install-connect-rstudio-git-github.Rmd",
   "14_install-can-rstudio-use-git.Rmd",
   "15_install-troubleshooting.Rmd",
+
   "90_references.Rmd",
 ]
