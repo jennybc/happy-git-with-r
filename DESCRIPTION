@@ -6,3 +6,5 @@ Authors@R: person("Jennifer", "Bryan", role=c("aut", "cre"),
 Depends: R (>= 3.3.0)
 Imports:
   bookdown
+Remotes:
+  rstudio/bookdown
