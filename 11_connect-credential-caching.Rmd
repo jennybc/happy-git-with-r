@@ -8,9 +8,9 @@ I do not explain all the [shell](http://stat545.com/git09_shell.html) and Git co
 
 You need a functioning test Git repository. One that exists locally and remotely on GitHub, with the local repo tracking the remote.
 
-If you have just verified that you can interact with GitHub *(add link)* from your local computer, that test repo will be perfect.
+If you have just verified that you can interact with GitHub (chapter \@ref(push-pull-github)) from your local computer, that test repo will be perfect.
 
-If you have just verified that you can work with GitHub from RStudio *(add link)*, that test repo will also be perfect.
+If you have just verified that you can work with GitHub from RStudio (chapter \@ref(rstudio-git-github)), that test repo will also be perfect.
 
 You may proceed when
 
@@ -42,7 +42,7 @@ In a [shell](http://stat545.com/git09_shell.html), do:
 
     git --version
 
-and verify your version is 1.7.10 or newer. If not, update Git *(add link)* or use SSH keys *(add link)*.
+and verify your version is 1.7.10 or newer. If not, update Git (chapter \@ref(install-git)) or use SSH keys *(add link)*.
   
 ## Turn on the credential helper
 

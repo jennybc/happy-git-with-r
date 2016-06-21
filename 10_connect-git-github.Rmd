@@ -139,7 +139,7 @@ You should see the new "A line I wrote on my local computer" in the README.
 
 If you click on "commits," you should see one with the message "A commit from my local computer."
 
-If you have made it this far, you are ready to graduate to using Git and GitHub with RStudio *(add link)*. But first ...
+If you have made it this far, you are ready to graduate to using Git and GitHub with RStudio (chapter \@ref(rstudio-git-github)). But first ...
 
 ## Am I really going to type GitHub username and password on each push?
 
@@ -147,8 +147,8 @@ It is likely that your first push, above, leads to a challenge for your GitHub u
 
 This will drive you crazy in the long-run and make you reluctant to push. Do one of the follow to eliminate this annoyance:
 
-  * Credential caching for HTTPS access *(add link)*
-  * Set up SSH keys *(add link)*
+  * Credential caching for HTTPS access, chapter \@ref(credential-caching).
+  * Set up SSH keys, chapter \@ref(ssh-keys).
 
 Now is the perfect time to do this, since you have a functioning test repo.
 
