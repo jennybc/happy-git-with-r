@@ -17,10 +17,13 @@ twitter-handle: jennybryan
 
 <img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />  
 
+Still from [Heaven King video](https://www.youtube.com/watch?v=uBWrpVrazzA)
+
 THIS IS AN EXPERIMENT!
 
-Trying this, gradually: bring (and expand) the STAT 545  Git/GitHub content into bookdown format, in anticipation of the tutorial at useR! 2016:
+Marshalling everything I have re: Git/GitHub + R/RStudio/Rmd in bookdown format, in anticipation of the tutorial at useR! 2016:
 
+  * repo that makes this site: <http://happygitwithr.com>
   * [session](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1) in the useR! schedule
   * [full description](http://user2016.org/tutorials/01.html) on the main site
   * [slides](https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user) for a related talk I've given a couple times
