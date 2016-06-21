@@ -1,7 +1,7 @@
 # Set up keys for SSH {#ssh-keys}
 
-Anmol6 to PR from MDS setup.
+*instructions via RStudio and the shell to go here*
 
-In the meantime, there are good instructions here at the end of the section on initial set up:
+In the meantime, please see RStudio instructions here at the end of the section on initial set up:
 
 http://r-pkgs.had.co.nz/git.html#git-init

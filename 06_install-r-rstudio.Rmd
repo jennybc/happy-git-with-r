@@ -14,8 +14,6 @@ Read on for more detail or hand-holding.
 
 In live workshops, there is a limit to how much we can help with ancient versions of R or RStudio. Also, frankly, there is a limit to our motivation. By definition, these problems are going away and we'd rather focus on edge cases with current versions, which affect lots of people.
 
-For now, just go here:
+For more guidance on installing or upgrading R and RStudio, go here:
 
 <http://stat545.com/block000_r-rstudio-install.html>
-
-*not sure whether to move or duplicate that content*

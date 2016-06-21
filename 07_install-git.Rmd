@@ -8,7 +8,7 @@ Otherwise, find installation instructions below for your operating system.
 
 ## Git already installed?
 
-Go to the shell and enter `which git` and/or `git --version`:
+Go to the shell (chapter \@ref(shell)) and enter `which git` and/or `git --version`:
 
 ``` bash
 jenny@2015-mbp happy-git-with-r $ which git
