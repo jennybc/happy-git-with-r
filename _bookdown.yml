@@ -23,7 +23,7 @@ rmd_files: [
 
   "16_more-content.Rmd",
 
-  "80_shell.Rmd",
+  "50_shell.Rmd",
 
   "90_references.Rmd",
 ]
