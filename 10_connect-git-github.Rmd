@@ -28,13 +28,13 @@ Take charge of -- or at least notice! -- what directory you're in. `pwd` to disp
 
 Clone `myrepo` from GitHub to your computer. This URL should have **your GitHub username** and the name of **your practice repo**. If your [shell](http://stat545.com/git09_shell.html) cooperates, you should be able to paste the whole `https://....` bit that we copied above. But some shells are not (immediately) clipboard aware. In that sad case, you must type it. **Accurately.**
 
-``` sh
+``` bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
 ```
         
 This should look something like this:
 
-``` sh
+``` bash
 jenny@2015-mbp tmp $ git clone https://github.com/jennybc/myrepo.git
 Cloning into 'myrepo'...
 remote: Counting objects: 3, done.
@@ -45,7 +45,7 @@ Checking connectivity... done.
 
 Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:
 
-``` sh
+``` bash
 cd myrepo
 ls
 less README.md
@@ -54,7 +54,7 @@ git remote show origin
 
 This should look something like this:
 
-``` sh
+``` bash
 jenny@2015-mbp ~ $ cd myrepo
 
 jenny@2015-mbp myrepo $ ls
@@ -81,7 +81,7 @@ jenny@2015-mbp myrepo $ git remote show origin
 
 Add a line to README and verify that Git notices the change:
 
-``` sh
+``` bash
 echo "A line I wrote on my local computer" >> README.md
 git status
 ```
@@ -104,7 +104,7 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Commit this change and push to your remote repo on GitHub. If you're a new GitHub user, you will be challenged for your GitHub username and password. Provide them!
 
-``` sh
+``` bash
 git add -A
 git commit -m "A commit from my local computer"
 git push
@@ -112,7 +112,7 @@ git push
 
 This should look something like this:
 
-``` sh
+``` bash
 jenny@2015-mbp myrepo $ git add -A
 
 jenny@2015-mbp myrepo $ git commit -m "A commit from my local computer"
@@ -154,13 +154,15 @@ Now is the perfect time to do this, since you have a functioning test repo.
 
 ## Clean up
 
-When you're ready to clean up, delete the local repo in the [shell](http://stat545.com/git09_shell.html):
+**Local** When you're ready to clean up, you delete the local repo any way you like. It's just a regular directory on your computer.
 
-``` sh
+Here's how to do that in the shell, if current working directory is `myrepo`:
+
+``` bash
 cd ..
 rm -rf myrepo/
 ```
 
-In the browser, viewing your repo's landing page on GitHub, click on "Settings", near the bottom or the right sidebar.
+**GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
 
 Scroll down, click on "delete repository," and do as it asks.

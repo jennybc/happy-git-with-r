@@ -23,7 +23,7 @@ You may proceed when
   
         git remote -v
         
-    Output like confirms that fetch and push are set to remote URLs that point to your GitHub repo:
+    Output like this confirms that fetch and push are set to remote URLs that point to your GitHub repo:
     
         origin	https://github.com/jennybc/myrepo (fetch)
         origin	https://github.com/jennybc/myrepo (push)
@@ -42,7 +42,7 @@ In a [shell](http://stat545.com/git09_shell.html), do:
 
     git --version
 
-and verify your version is 1.7.10 or newer. If not, update Git (chapter \@ref(install-git)) or use SSH keys *(add link)*.
+and verify your version is 1.7.10 or newer. If not, update Git (chapter \@ref(install-git)) or use SSH keys (chapter \@ref(ssh-keys)).
   
 ## Turn on the credential helper
 
@@ -71,7 +71,7 @@ And look for this output:
 
     usage: git credential-osxkeychain <get|store|erase>
 
-If you don't get this output, follow steps 2 and 3 on [the github help](https://help.github.com/articles/caching-your-github-password-in-git#platform-mac).
+If you don't get this output, it means you need a more recent version of Git, either via command line developer tools or homebrew. Go back to the Mac section of chapter (\@ref(install-git)).
 
 Once you've confirmed you have the credential helper, enter:
 

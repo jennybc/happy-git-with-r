@@ -1,10 +1,10 @@
 # (APPENDIX) Appendix {-} 
 
-# The Shell {#shell}
+# The shell {#shell}
 
 Even if you do most of your Git operations via a client, such as RStudio or GitKraken, you must sometimes work in the shell. As you get more comfortable with Git, you might prefer to do more and more via the command line.
 
-## What is the Shell?
+## What is the shell?
 
 The `shell` (or `bash` or terminal) is a program on your computer whose job is to run other programs, rather than do calculations itself. The `shell` is a very old program and in a time before the mouse it was the only way to interact with a computer. It is still extremely popular among programmers because it is very fast, concise, and is particularly powerful at automating repetitive tasks.
 

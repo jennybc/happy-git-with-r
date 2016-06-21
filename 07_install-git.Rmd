@@ -8,7 +8,7 @@ Otherwise, find installation instructions below for your operating system.
 
 ## Git already installed?
 
-Go to the shell (chapter \@ref(shell)) and enter `which git` and/or `git --version`:
+Go to the shell (chapter \@ref(shell)) and enter `which git` and `git --version`:
 
 ``` bash
 jenny@2015-mbp happy-git-with-r $ which git
@@ -22,7 +22,7 @@ If Git reports a path to an executable and a version, that's great! You have Git
 
 If, instead, you see something more like `git: command not found`, keep reading.
 
-Mac OS users might get an immediate offer to install command developer tools. Yes, you should accept! Click "Install" and read more below.
+Mac OS users might get an immediate offer to install command line developer tools. Yes, you should accept! Click "Install" and read more below.
 
 ## Windows
 
@@ -46,6 +46,8 @@ Go to the shell and enter one of these commands to elicit an offer to install de
 git --version
 git config
 ```
+
+Accept the offer! Click on "Install".
 
 Another way to request this is via `xcode-select --install`. We just happen to find this Git-based trigger apropos.
 

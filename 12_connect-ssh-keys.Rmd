@@ -2,6 +2,9 @@
 
 *instructions via RStudio and the shell to go here*
 
-In the meantime, please see RStudio instructions here at the end of the section on initial set up:
+In the meantime, here are good instructions:
 
-http://r-pkgs.had.co.nz/git.html#git-init
+  * How to do via RStudio? see the end of the section on initial set up:
+    - <http://r-pkgs.had.co.nz/git.html#git-init>
+  * How to do via shell?
+    - <https://help.github.com/articles/generating-an-ssh-key/>

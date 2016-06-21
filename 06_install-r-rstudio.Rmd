@@ -16,4 +16,4 @@ In live workshops, there is a limit to how much we can help with ancient version
 
 For more guidance on installing or upgrading R and RStudio, go here:
 
-<http://stat545.com/block000_r-rstudio-install.html>
+[STAT 545 page on Installing R and RStudio](http://stat545.com/block000_r-rstudio-install.html)

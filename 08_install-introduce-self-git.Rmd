@@ -1,8 +1,8 @@
 # Introduce yourself to Git {#hello-git}
 
-In the shell:
+In the shell (chapter \@ref(shell)):
 
-``` sh
+``` bash
 git config --global user.name 'Jennifer Bryan'
 git config --global user.email 'jenny@stat.ubc.ca'
 git config --global --list
@@ -23,8 +23,3 @@ From RStudio, go to *Tools > Shell* and tell `git` your name and **GitHub email*
     - This __must__ be the email that you used to sign up for GitHub.
 
 These commands return nothing. You can check that `git` understood what you typed by looking at the output of `git config --global --list`.
-
-Resources:
-
-* [GitHub's advice](https://help.github.com/articles/set-up-git).
-* [Quick primer on the shell](http://stat545.com/git09_shell.html)

@@ -11,7 +11,8 @@ These materials can be used for independent study, but I also use them to suppor
 ### Logistics
 
 Monday, June 27, 2016  
-9:00am - 12:00pm, with coffee break 10:15am - 10:30am  
+8:15am - 9:00 TAs available to help complete system set up  
+9:00am - 12:00pm Workshop, with coffee break 10:15am - 10:30am  
 Campbell Rehearsal Hall 541 Lasuen Mall, Stanford, CA 94305 [Google Maps](https://www.google.com/maps/place/37%C2%B025'25.5%22N+122%C2%B010'10.0%22W/@37.4237529,-122.1716343,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.4237529!4d-122.1694456?hl=en)  
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
@@ -31,14 +32,14 @@ Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
   * Prove local Git can talk to GitHub (chapter \@ref(push-pull-github)).
   * Cache your username and password (chapter \@ref(credential-caching)) or set up SSH keys (chapter \@ref(ssh-keys)) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
   * Prove RStudio can find local Git and, therefore, can talk to GitHub (chapter \@ref(rstudio-git-github)).
-    - FYI: we will walk through this again together, more slowly, with narrative, and build on it.
+    - FYI: this is where our hands-on activities will start. We walk through a similar activity together, with narrative, and build from there.
 
 Troubleshooting:
 
   * If RStudio is having a hard time finding Git, see chapter \@ref(rstudio-see-git).
   * For all manner of problems, both installation and usage related, see chapter \@ref(troubleshooting).
   
-Optional "big picture stuff":
+Optional reading on "big picture stuff":
 
   * Read "Why Git? Why GitHub?" in chapter \@ref(big-picture).
     
