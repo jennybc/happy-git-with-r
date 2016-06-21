@@ -1,4 +1,4 @@
-# Why Git? Why GitHub?
+# Why Git? Why GitHub? {#big-picture}
 
 ## Why Git?
 

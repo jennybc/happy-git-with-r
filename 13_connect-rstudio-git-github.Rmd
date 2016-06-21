@@ -1,4 +1,4 @@
-# Connect RStudio to Git and GitHub
+# Connect RStudio to Git and GitHub {#rstudio-git-github}
 
 This is the big moment where we verify that RStudio can issue Git commands on your behalf. Assuming that you've gotten local Git to talk to GitHub, this means you'll also be able to pull from and push to GitHub from RStudio.
 

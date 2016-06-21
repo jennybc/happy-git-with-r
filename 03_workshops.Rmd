@@ -18,19 +18,44 @@ Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/ev
 
 ### Pre-tutorial set-up
 
-**It is vital that you attempt to get your system set up in advance.** These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs at the workshop starting at 8:15am.
+**It is vital that you attempt to set up your system in advance. You cannot show up at 9am with no preparation and keep up!**
 
-*insert list of specific pages of set up here!!!*
+These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs in Campbell Rehearsal Hall starting at 8:15am and throughout the workshop.
 
-### What we will do
+Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
-The tutorial is structured as ~5 task-oriented units. Indicative topics:
+  * Register a free GitHub account (chapter \@ref(github-acct)).
+  * Install or update R and RStudio (chapter \@ref(install-r-rstudio)).
+  * Install Git (chapter \@ref(install-git)).
+  * Introduce yourself to Git (chapter \@ref(hello-git)).
+  * Prove local Git can talk to GitHub (chapter \@ref(push-pull-github)).
+  * Cache your username and password (chapter \@ref(credential-caching)) or set up SSH keys (chapter \@ref(ssh-keys)) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
+  * Prove RStudio can find local Git and, therefore, can talk to GitHub (chapter \@ref(rstudio-git-github)).
+    - FYI: we will walk through this again together, more slowly, with narrative, and build on it.
 
-  * The most difficult part: installation and configuration!
-  * Creating a Git repository and connecting the local repo to a GitHub remote, for new and existing projects.
-  * The intersection of GitHub and the R world: R packages developed on Github and how to make use of ["issues"](https://guides.github.com/features/issues/); [METACRAN](http://www.r-pkg.org) [read-only mirror](https://github.com/cran) of all of CRAN; R-specific searching tips.
-  * How to propose a change or fix to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
-  * Daily workflows and FAQ: how often should I commit?, which files should I commit? how do I change a commit or its message? how do groups of 1, 5, or 10 people structure their work with Git(Hub)? etc.
+Troubleshooting:
+
+  * If RStudio is having a hard time finding Git, see chapter \@ref(rstudio-see-git).
+  * For all manner of problems, both installation and usage related, see chapter \@ref(troubleshooting).
+  
+Optional "big picture stuff":
+
+  * Read "Why Git? Why GitHub?" in chapter \@ref(big-picture).
+    
+### What we can do together
+
+  * Verify and complete the most difficult part: installation and configuration!
+  * Create a Git repository and connect the local repo to a GitHub remote, for new and existing projects.
+  * Run R code, via R Markdown or a script, and share a presentable report via GitHub.
+  * The intersection of GitHub and the R world:
+    - R packages developed on Github and how to make use of [Issues](https://guides.github.com/features/issues/)
+    - [METACRAN](http://www.r-pkg.org) [read-only mirror](https://github.com/cran) of all of CRAN + R-specific searching tips.
+  * Propose a change to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
+  * Discuss daily workflow:
+    - How often should I commit? Which files should I commit?
+    - Data files and the dilemmas they present.
+    - Most common Git predicaments. How to avoid and recover.
+    - How do groups of 1, 5, or 10 people structure their work with Git(Hub)?
 
 ## CSAMA 2016: Statistical Data Analysis for Genome Biology
 
