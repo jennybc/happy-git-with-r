@@ -13,6 +13,7 @@ Trying this, gradually: bring (and expand) the STAT 545 content into [bookdown f
 
 Useful links I need during developmennt:
 
+  * <http://happygitwithr.com>
   * <https://beta.rstudioconnect.com/jennybc/happy-git-with-r/>
   * <https://bookdown.org/connect/#/documents> *I never see any evidence that I've done anything here. Why is that?*
   * <https://bookdown.org/jennybc/happy-git-with-r/> *I hope nothing is here!*
