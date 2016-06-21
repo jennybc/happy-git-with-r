@@ -23,7 +23,7 @@ THIS IS AN EXPERIMENT!
 
 Marshalling everything I have re: Git/GitHub + R/RStudio/Rmd in bookdown format, in anticipation of the tutorial at useR! 2016:
 
-  * repo that makes this site: <http://happygitwithr.com>
+  * repo that makes this site: <https://github.com/jennybc/happy-git-with-r>
   * [session](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1) in the useR! schedule
   * [full description](http://user2016.org/tutorials/01.html) on the main site
   * [slides](https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user) for a related talk I've given a couple times
