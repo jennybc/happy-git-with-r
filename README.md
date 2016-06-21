@@ -7,7 +7,6 @@ Trying this, gradually: bring (and expand) the STAT 545 content into [bookdown f
   * [session](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1) in the useR! schedule
   * [full description](http://user2016.org/tutorials/01.html) on the main site
   * [slides](https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user) for a related talk I've given a couple times
-  * [landing page](http://stat545.com/git00_index.html) for all most of the related stuff at [stat545.com](http://stat545.com/index.html)
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Happy Git and GitHub for the useR</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/jennybc/happy-git-with-r" property="cc:attributionName" rel="cc:attributionURL">Jennifer Bryan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
