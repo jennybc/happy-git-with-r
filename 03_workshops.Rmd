@@ -13,7 +13,7 @@ These materials can be used for independent study, but I also use them to suppor
 Monday, June 27, 2016  
 8:15am - 9:00 TAs available to help complete system set up  
 9:00am - 12:00pm Workshop, with coffee break 10:15am - 10:30am  
-Campbell Rehearsal Hall 541 Lasuen Mall, Stanford, CA 94305 [Google Maps](https://www.google.com/maps/place/37%C2%B025'25.5%22N+122%C2%B010'10.0%22W/@37.4237529,-122.1716343,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x0!8m2!3d37.4237529!4d-122.1694456?hl=en)  
+Lyons & Lodato 326 Galvez Street Stanford, CA 94305-6105 [Google Maps](https://goo.gl/maps/wkvKkBkbs1J2)  
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
 
@@ -21,7 +21,7 @@ Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/ev
 
 **It is vital that you attempt to set up your system in advance. You cannot show up at 9am with no preparation and keep up!**
 
-These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs in Campbell Rehearsal Hall starting at 8:15am and throughout the workshop.
+These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs in the room starting at 8:15am and throughout the workshop.
 
 Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
