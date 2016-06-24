@@ -86,16 +86,16 @@ $ clip < ~/.ssh/id_rsa.pub
 ```
 
 5. Go to your profile on [GitHub](GitHub.com)
-- In the top right corner of the page, click your profile photo, then click Settings.
+-   In the top right corner of the page, click your profile photo, then click Settings.
 
-- In the user settings sidebar, click SSH and GPG keys.
+-   In the user settings sidebar, click SSH and GPG keys.
 
-- Click New SSH key.
+-   Click New SSH key.
 
-- In the "Title" field, add a descriptive label for the new key. For   example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+-   In the "Title" field, add a descriptive label for the new key. For   example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
 
-- Paste your key into the "Key" field.
+-   Paste your key into the "Key" field.
 
-- Click Add SSH key.
+-   Click Add SSH key.
 
-- Confirm the action by entering your GitHub password
+-   Confirm the action by entering your GitHub password
