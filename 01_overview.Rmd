@@ -38,7 +38,7 @@ The rest of this site is dedicated to walking you through the necessary setup an
 
 ## What is the payoff?
 
-If someone needs to see your work or if you want them to try out your code, they can easily get it from GitHub. If they use Git, then can clone or fork your repository. If they don't use Git, they can still browse your project on GitHub like a normal website and even grab everything by downloading a zip archive.
+If someone needs to see your work or if you want them to try out your code, they can easily get it from GitHub. If they use Git, they can clone or fork your repository. If they don't use Git, they can still browse your project on GitHub like a normal website and even grab everything by downloading a zip archive.
 
 If you need to collaborate on data analysis or code development, then all involved should use Git. Use GitHub as your clearinghouse: individuals work independently, then send work back to GitHub for reconciliation and transmission to the rest of the team.
 
