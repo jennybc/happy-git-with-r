@@ -6,7 +6,7 @@ Even if you do most of your Git operations via a client, such as RStudio or GitK
 
 ## What is the shell?
 
-The `shell` (or `bash` or terminal) is a program on your computer whose job is to run other programs, rather than do calculations itself. The `shell` is a very old program and in a time before the mouse it was the only way to interact with a computer. It is still extremely popular among programmers because it is very fast, concise, and is particularly powerful at automating repetitive tasks.
+The `shell` (or `bash` or terminal or Command Prompt on Windows) is a program on your computer whose job is to run other programs, rather than do calculations itself. The `shell` is a very old program and in a time before the mouse it was the only way to interact with a computer. It is still extremely popular among programmers because it is very fast, concise, and is particularly powerful at automating repetitive tasks.
 
 Here we use the `shell` for quite modest goals: to navigate the file system, confirm the present working directory, configure Git, and configure Git remotes.
 
