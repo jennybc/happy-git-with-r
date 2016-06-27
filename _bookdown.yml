@@ -23,6 +23,7 @@ rmd_files: [
 
   "20_usage-new-project-github-first.Rmd",
   "21_usage-existing-project-github-first.Rmd",
+  "22_usage-existing-project-github-last.Rmd",
 
   "50_more-content.Rmd",
 
