@@ -31,6 +31,9 @@ rmd_files: [
   "40_prompt-clone.Rmd",
   "41_prompt-fork.Rmd",
   "42_prompt-fork-pr-bingo.Rmd",
+  "43_prompt-burn-it-all-down.Rmd",
+  "44_prompt-practice-resets.Rmd",
+  "45_prompt-search-github.Rmd",
 
   "50_more-content.Rmd",
 
