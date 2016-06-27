@@ -16,7 +16,7 @@ List it in `.gitignore.`
 
 ### I didn't mean to commit that
 
-Commiting things you didn't mean to (too big, secret). How to undo.
+Committing things you didn't mean to (too big, secret). How to undo.
 
 ## git stuff
 
@@ -30,7 +30,7 @@ http://marklodato.github.io/visual-git-guide/index-en.html
 A successful Git branching model  
 http://nvie.com/posts/a-successful-git-branching-model/
 
-A succesful Git branching model considered harmful  
+A successful Git branching model considered harmful  
 https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
 
 Git Tutorials from Atlassian

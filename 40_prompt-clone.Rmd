@@ -8,7 +8,7 @@ Pick a GitHub repository that interests you. Inspiration:
 
   * an R package you care about
   * a data analytic project you find interesting
-    - Example: The Github repo that underpins [Polygraphing's blog post](http://polygraph.cool/films/) analyzing 2,000 screenplays is here: <https://github.com/brandles/scripts>
+    - Example: The GitHub repo that underpins [Polygraphing's blog post](http://polygraph.cool/films/) analyzing 2,000 screenplays is here: <https://github.com/brandles/scripts>
     
 Create a new RStudio Project from this GitHub repo. Refresh your memory of how to do that by re-visiting our "GitHub first" workflow in chapter \@ref(new-github-first).
     

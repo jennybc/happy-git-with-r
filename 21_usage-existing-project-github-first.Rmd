@@ -4,7 +4,7 @@ A novice-friendly workflow for bringing an existing R project into the RStudio a
 
 We do this in a slightly awkward way, in order to avoid using Git at the command line. You won't want to work this way forever, but it's perfectly fine as you're getting started!
 
-We assume you've got your existing R project isolated in a directory on your computer. If that's not already true, make it so. Create a directory and marshall all the existing data and R scripts there. It doesn't really matter where you do this, but note where the project currently lives.
+We assume you've got your existing R project isolated in a directory on your computer. If that's not already true, make it so. Create a directory and marshal all the existing data and R scripts there. It doesn't really matter where you do this, but note where the project currently lives.
 
 ## Make a repo on GitHub
 
@@ -51,7 +51,7 @@ Commit your files to this repo. How?
   * Click the "Git" tab in upper right pane
   * Check "Staged" box for all files you want to commit.
     - Default: stage it.
-    - When to reconsider: this will all go to GitHub. So do consider if that is appropriate for each file. **You can absolutely keep a file locally, without commiting it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
+    - When to reconsider: this will all go to GitHub. So do consider if that is appropriate for each file. **You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
   * If you're not already in the Git pop-up, click "Commit"
   * Type a message in "Commit message", such as "init".
   * Click "Commit"
@@ -73,7 +73,7 @@ Go back to the browser. I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
-You should see all the project files you commited there.
+You should see all the project files you committed there.
 
 If you click on "commits," you should see one with the message "init".
 

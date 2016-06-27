@@ -148,7 +148,7 @@ Here are two behaviors I find very frustrating:
   * "Here is my code. Behold." This is when someone only pushes their source, i.e. R Markdown or R code AND they want other people to look at their "product". The implicit assumption is that target audience will download code and run it. Sometimes the potential payoff simply does not justify this effort.
   * "Here is my HTML. Behold." This is when someone doesn't bother to edit the default output format and accepts HTML only. What am I supposed to do with HTML on GitHub?
 
-Creating, commiting, and pushing markdown is a very functional, lighweight publishing strategy. Use `output: github_document` or `keep_md: true` if output is `html_document`. In both cases, it is critical to also commit and push everything inside `foo_files`. Now people can visit and consume your work like any other webpage.
+Creating, committing, and pushing markdown is a very functional, lighweight publishing strategy. Use `output: github_document` or `keep_md: true` if output is `html_document`. In both cases, it is critical to also commit and push everything inside `foo_files`. Now people can visit and consume your work like any other webpage.
 
 This is (sort of) another example of keeping things machine- and human-readable, which is bliss. By making `foo.Rmd` available, others can see and run your __actual code__. By sharing `foo.md` and/or `foo.html`, others can casually browse your end product and decide if they even want to bother.
 

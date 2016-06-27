@@ -27,7 +27,7 @@ You can change your username later, but better to get this right the first time.
 
 GitHub offers free unlimited private repositories for users and organizations in education, academic research, nonprofits, and charities.
 
-Go ahead and register your free acount NOW and then pursue any special offer that applies to you:
+Go ahead and register your free account NOW and then pursue any special offer that applies to you:
 
   * Students, faculty, and educational/research staff: [GitHub Education](https://education.github.com).
     - GitHub "Organizations" can be extremely useful for courses or research/lab groups, where you need some coordination across a set of repos and users.

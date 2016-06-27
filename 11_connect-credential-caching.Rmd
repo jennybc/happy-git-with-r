@@ -71,7 +71,7 @@ And look for this output:
 
     usage: git credential-osxkeychain <get|store|erase>
 
-If you don't get this output, it means you need a more recent version of Git, either via command line developer tools or homebrew. Go back to the Mac section of chapter (\@ref(install-git)).
+If you don't get this output, it means you need a more recent version of Git, either via command line developer tools or Homebrew. Go back to the Mac section of chapter (\@ref(install-git)).
 
 Once you've confirmed you have the credential helper, enter:
 

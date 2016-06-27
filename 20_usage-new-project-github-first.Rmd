@@ -37,7 +37,7 @@ In RStudio, start a new Project:
 
 This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
 
-There's a big advantage to the "Github first, then RStudio" workflow: the remote GitHub repo is now the "upstream" remote for your local repo. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes on the command line or in another Git client.
+There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is now the "upstream" remote for your local repo. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes on the command line or in another Git client.
 
 ## Make local changes, save, commit
 
