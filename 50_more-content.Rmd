@@ -1,56 +1,87 @@
 # (PART) More {-} 
 
-placeholders and notes
+# Notes
 
-# stuff
+Notes for future
+
+## Common workflow questions
+
+### Keep something out of Git
+
+List it in `.gitignore.`
+
+### I didn't mean to commit that
+
+Commiting things you didn't mean to (too big, secret). How to undo.
 
 ## git stuff
 
-link out to full tutorials w/ good visuals
+Git explainers, heavy on the diagrams
 
-filesystem / working directory
+https://twitter.com/JennyBryan/status/743548245645791232
 
-vs
+A Visual Git Reference  
+http://marklodato.github.io/visual-git-guide/index-en.html
 
-staging area
+A successful Git branching model  
+http://nvie.com/posts/a-successful-git-branching-model/
 
-vs
+A succesful Git branching model considered harmful  
+https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
 
-???
+Git Tutorials from Atlassian
+https://www.atlassian.com/git/tutorials/
 
-make sure understand you can have a file locally that git is not tracking and is not pushing/pulling to github.  It's ok to not stage everything. If a long-term situation, gitignore so it doesn't clutter things up and bug you.
+Software Carpentry Git Novice Lesson  
+http://swcarpentry.github.io/git-novice/
 
-  * `git add -A` 
+Michael Freeman slides on Git collaboration  
+http://slides.com/michaelfreeman/git-collaboration#/
+
+GitHub Training materials  
+https://services.github.com/kit/
+
+Git for Ages 4 and Up  
+<https://www.youtube.com/watch?v=3m7BgIvC-uQ>
+
+Learn Git Branching  
+http://learngitbranching.js.org
 
 ## The repeated amend
 
-local only, i.e. never amend a commit that's already pushed
+A way to commit often, without exposing your WIP on GitHub or without creating a very cluttered history.
 
-affecting a remote, explain why so dangerous and when it *might* be ok
+Make changes. Reach a decent stopping point. Test, check, if a package ... Render if an analysis .... Nothing broken?
+
+Commit. **Don't push.**
+
+Make more progress. Keep testing or checking or rendering. Inspect diffs to watch what's changing.
+
+Are things broken? Use an appropriate reset to fall back.
+
+Are things improving? Commit but **amend** the previous commit.
+
+Keep going like this until you've built up a commit you can be proud of.
+
+**Now push.**
+
+It is important to not push amended commits unless you really know what you're doing and you can be quite sure that no one else has pulled your work.
 
 ## Disaster recovery
 
+<http://stackoverflow.com/questions?sort=votes>
+
 Break it down:
 
-  * Is something wrong with my filesystem, files?
+  * Is something wrong with my filesystem/files?
   * Is my git repo messed up?
   * How can I keep this from happening again?
   
-Best case, you have no filesystem problem, only a git problem. And some sort of reset usually works.
-
-Practice burn it all down.
-
-Editing most recent commit or just its message.
-
 Rebase avoidance techniques.
 
 Headless state. Rebase hell.
 
-<http://stackoverflow.com/questions?sort=votes>
-
-Commiting things you didn't mean to (too big, secret)
-
-Not being able to do something, like edit last commit (technically I wanted to do interactive rebase, in order to edit last commit w/o amending it), because of having unstaged changes.
+What to do when you can't, e.g., switch branches. Stashing and WIP commits.
 
 ## Engage with R source on GitHub
 
@@ -71,4 +102,9 @@ Being a useful useR
 
 Stress of working in the open
 
-Workflows for group of 1, 2, 5, 10.
+Workflows for group of 1, 2, 5, 10
+
+  * Fork and Pull vs Shared Repository
+  
+    - <https://help.github.com/articles/types-of-collaborative-development-models/>
+    - <https://help.github.com/articles/using-pull-requests/>
