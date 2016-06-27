@@ -6,6 +6,10 @@ Notes for future
 
 ## Common workflow questions
 
+### Common predicaments and how to recover/avoid
+
+https://twitter.com/JennyBryan/status/743457387730735104
+
 ### Keep something out of Git
 
 List it in `.gitignore.`
