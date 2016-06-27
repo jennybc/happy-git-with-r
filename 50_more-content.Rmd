@@ -4,11 +4,6 @@ placeholders and notes
 
 # stuff
 
-## Clone a project
-
-
-How to keep a fork updated. The browser only method. The 2nd remote method.
-
 ## git stuff
 
 link out to full tutorials w/ good visuals
