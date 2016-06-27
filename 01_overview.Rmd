@@ -44,11 +44,20 @@ If you need to collaborate on data analysis or code development, then all involv
 
 If you care deeply about someone else's project, such as an R package you use heavily, you can track its development on GitHub. You can watch the repository to get notified of major activity. You can fork it to keep your own copy. You can modify your fork to add features or fix bugs and send them back to the owner as a proposed change.
 
+The advantage of Git/GitHub is highlighted by comparing these two ways of collaborating on a document:
+
+  * **Edit, save, attach.** In this workflow, everyone has one (or more!) copies of the document and they circulate via email attachment. Which one is "master"? Is it even possible to say? How do different versions relate to each other? How should versions be reconciled? If you want to see the current best version, how do you get it? All of this usually gets sorted out by social contract and a fairly manual process.
+  * **Google Doc.** In this workflow, there is only one copy of the document and it lives in the cloud. Anyone can access the most recent version on demand. Anyone can edit or comment or propose a change and this is immediately available to everyone else. Anyone can see who's been editing the document and, if disaster strikes, can revert to a previous version. A great deal of ambiguity and annoying reconciliation work has been designed away.
+
+Managing a project via Git/GitHub is much more like the Google Doc scenario and enjoys many of the same advantages. It is definitely more complicated than collaborating on a Google Doc, but this puts you in the right mindset.
+
 ## Who can do what?
 
 A public repository is readable by the world. The owner can grant higher levels of permission to others, such as the ability to push commits.
 
 A private repository is invisible to the world. The owner can grant read, write (push), or admin access to others.
+
+There is also a formal notion of an organization, which can be useful for managing repository permissions for entire teams of people.
 
 ## Special features of GitHub
 
