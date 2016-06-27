@@ -29,9 +29,13 @@ rmd_files: [
   "31_usage-first-use-r-script-and-github.Rmd",
 
   "40_prompt-clone.Rmd",
+  "41_prompt-fork.Rmd",
+
   "50_more-content.Rmd",
 
   "80_shell.Rmd",
+
+  "88_comic-relief.Rmd",
 
   "90_references.Rmd",
 ]
