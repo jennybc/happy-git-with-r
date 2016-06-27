@@ -1,101 +1,122 @@
 # Set up keys for SSH {#ssh-keys}
 
-*instructions via RStudio and the shell to go here*
+If you plan to push/pull using SSH, you need to set up SSH keys. You want to do this (or cache your username and password, chapter \@ref(credential-caching)), so you don't have to authenticate yourself interactively with GitHub over and over again. You'll need to set this up on each computer you want to connect to GitHub from.
 
-In the meantime, here are good instructions:
+## SSH keys
 
-  * How to do via RStudio? see the end of the section on initial set up:
-    - <http://r-pkgs.had.co.nz/git.html#git-init>
+SSH keys provide a more secure way of logging into a server than using a password alone. While a password can eventually be cracked with a brute force attack, SSH keys are nearly impossible to decipher by brute force alone. Generating a key pair provides you with two long string of characters: a public and a private key. You can place the public key on any server, and then unlock it by connecting to it with a client that already has the private key. When the two match up, the system unlocks without the need for a password. You can increase security even more by protecting the private key with a passphrase.
 
-## SSH Keys
-### About SSH Keys
+Adapted from instructions provided by [GitHub](https://help.github.com/categories/ssh/) and [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-set-up-ssh-keys--2).
 
-SSH keys provide a more secure way of logging into a virtual private server with SSH than using a password alone. While a password can eventually be cracked with a brute force attack, SSH keys are nearly impossible to decipher by brute force alone. Generating a key pair provides you with two long string of characters: a public and a private key. You can place the public key on any server, and then unlock it by connecting to it with a client that already has the private key. When the two match up, the system unlocks without the need for a password. You can increase security even more by protecting the private key with a passphrase.
+## Check for existing keys
 
-1.  Create the RSA Key Pair
-The first step is to create the key pair on your computer:
+Go to the shell (appendix \@ref(shell)).
+
+List existing keys (at least, those in the default location):
+
+``` bash
+ls -al ~/.ssh 
 ```
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
+If you are told `.ssh` doesn't exist, you don't have SSH keys! Keep reading to create them.
+
+If you see a pair of files like `id_rsa.pub` and `id_rsa`, you have a key pair already. You can skip to the section about adding a key to the ssh-agent.
+
+## Set up from RStudio
+
+Instructions for setting up SSH keys from RStudio are given in the Git and GitHub chapter of Wickham's [R packages book](http://r-pkgs.had.co.nz/). Look at the end of the section on initial set up:
+
+  * <http://r-pkgs.had.co.nz/git.html#git-init>
+
+## Set up from the shell
+
+### Create SSH key pair
+
+Create the key pair by entering this, but substitute the email address **associated with your GitHub account**:
+
+``` bash
+$ ssh-keygen -t rsa -b 4096 -C "jenny@stat.ubc.ca"
 ```
-2.  Store the Keys and Passphrase
-Once you have entered the Gen Key command, you will get a few more questions:
+
+Accept the proposal to save the key in the default location, i.e., just press Enter here:
+
+``` bash
+Enter file in which to save the key (/Users/jenny/.ssh/id_rsa):
 ```
-Enter file in which to save the key (/home/demo/.ssh/id_rsa):
-```
-You can press enter here, saving the file to the user home (in this case, my example user is called demo).
-```
+
+You have the option to protect the key with a passphrase. If you take it, you will want to configure something called the ssh-agent to manage this for you (more below).
+
+So either enter a passphrase (and store in your favorite password manager!) or decline by leaving this empty.
+
+``` bash
 Enter passphrase (empty for no passphrase):
 ```
-It's up to you whether you want to use a passphrase. Entering a passphrase does have its benefits: the security of a key, no matter how encrypted, still depends on the fact that it is not visible to anyone else. Should a passphrase-protected private key fall into an unauthorized users possession, they will be unable to log in to its associated accounts until they figure out the passphrase, buying the hacked user some extra time. The only downside, of course, to having a passphrase, is then having to type it in each time you use the Key Pair.
 
-The entire key generation process looks like this:
-```
-$ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+The process should complete now and should have looked like this:
+
+``` bash
+jenny@2015-mbp ~ $ ssh-keygen -t rsa -b 4096 -C "jenny@stat.ubc.ca"
 Generating public/private rsa key pair.
-Enter file in which to save the key (/home/demo/.ssh/id_rsa): 
+Enter file in which to save the key (/Users/jenny/.ssh/id_rsa):     
 Enter passphrase (empty for no passphrase): 
 Enter same passphrase again: 
-Your identification has been saved in /home/demo/.ssh/id_rsa.
-Your public key has been saved in /home/demo/.ssh/id_rsa.pub.
+Your identification has been saved in /Users/jenny/.ssh/id_rsa.
+Your public key has been saved in /Users/jenny/.ssh/id_rsa.pub.
 The key fingerprint is:
-4a:dd:0a:c6:35:4e:3f:ed:27:38:8c:74:44:4d:93:67 demo@a
+SHA256:ki0TNHm8qIvpH7/c0qQmdv2xxhYHCwlpn3+rVhKVeDo jenny@stat.ubc.ca
 The key's randomart image is:
-+--[ RSA 2048]----+
-|          .oo.   |
-|         .  o.E  |
-|        + .  o   |
-|     . = = .     |
-|      = S = .    |
-|     o + = +     |
-|      . o + o .  |
-|           . o   |
-|                 |
-+-----------------+
-
-```
-The public key is now located in ```/home/demo/.ssh/id_rsa.pub```
-The private key (identification) is now located in ```/home/demo/.ssh/id_rsa```
-
-3. Add the SSH keys to the SSH agent. First ensure the agent is enabled:
-```
-$ eval "$(ssh-agent -s)"
-Agent pid 59566
-```
-Then add the key to the agent:
-```
-$ ssh-add ~/.ssh/id_rsa
++---[RSA 4096]----+
+|      o+   . .   |
+|     .=.o . +    |
+|     ..= + +     |
+|      .+* E      |
+|     .= So =     |
+|    .  +. = +    |
+|   o.. = ..* .   |
+|  o ++=.o =o.    |
+| ..o.++o.=+.     |
++----[SHA256]-----+
 ```
 
-4. Now copy this public key onto your clipboard.
+### Add key to ssh-agent
 
-### Mac
-```
-pbcopy < ~/.ssh/id_rsa.pub
-```
+Tell your ssh-agent about the key and, especially, set it up to manage the passphrase, if you chose to set one.
 
-### Linux
-```
-sudo apt-get install xclip
-xclip -sel clip < ~/.ssh/id_rsa.pub
+Make sure ssh-agent is enabled:
 
+``` bash
+jenny@2015-mbp ~ $ eval "$(ssh-agent -s)"
+Agent pid 95727
 ```
 
-### Windows
+Add your key. If you set a passphrase, you'll be challenged for it here. Give it.
+
+``` bash
+jenny@2015-mbp ~ $ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /Users/jenny/.ssh/id_rsa: 
+Identity added: /Users/jenny/.ssh/id_rsa (/Users/jenny/.ssh/id_rsa)
 ```
-$ clip < ~/.ssh/id_rsa.pub
-```
 
-5. Go to your profile on [GitHub](GitHub.com)
--   In the top right corner of the page, click your profile photo, then click Settings.
+### Provide public key to GitHub
 
--   In the user settings sidebar, click SSH and GPG keys.
+Copy the public key onto your clipboard. Open `~/.ssh/id_rsa.pub` in an editor and copy the contents to your clipboard or do one of the following at the command line:
 
--   Click New SSH key.
+  * Mac OS: `pbcopy < ~/.ssh/id_rsa.pub`
+  * Windows: `clip < ~/.ssh/id_rsa.pub`
+  * Linux: `xclip -sel clip < ~/.ssh/id_rsa.pub`
 
--   In the "Title" field, add a descriptive label for the new key. For   example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+*Linux: if needed, install via `apt-get` or `yum`. For example, `sudo apt-get install xclip`.*
 
--   Paste your key into the "Key" field.
+In the top right corner of any page on [GitHub](GitHub.com), click your profile photo, then click Settings.
 
--   Click Add SSH key.
+In the user settings sidebar, click SSH and GPG keys.
 
--   Confirm the action by entering your GitHub password
+Click New SSH key.
+
+In the "Title" field, add a descriptive label for the new key. For example, if you're using a personal Mac, you might call this key "Personal MacBook Air".
+
+Paste your key into the "Key" field.
+
+Click Add SSH key.
+
+Confirm the action by entering your GitHub password
