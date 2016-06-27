@@ -6,7 +6,7 @@ Even if you do most of your Git operations via a client, such as RStudio or GitK
 
 ## What is the shell?
 
-The `shell` (or `bash` or terminal) is a program on your computer whose job is to run other programs, rather than do calculations itself. The `shell` is a very old program and in a time before the mouse it was the only way to interact with a computer. It is still extremely popular among programmers because it is very fast, concise, and is particularly powerful at automating repetitive tasks.
+The `shell` (or `bash` or terminal or Command Prompt on Windows) is a program on your computer whose job is to run other programs, rather than do calculations itself. The `shell` is a very old program and in a time before the mouse it was the only way to interact with a computer. It is still extremely popular among programmers because it is very fast, concise, and is particularly powerful at automating repetitive tasks.
 
 Here we use the `shell` for quite modest goals: to navigate the file system, confirm the present working directory, configure Git, and configure Git remotes.
 
@@ -42,3 +42,11 @@ A few Git commands:
 * `git remote add origin GITHUB_URL` adds the remote `GITHUB_URL` with nickname `origin`.
 * `git remote set-url origin GITHUB_URL` changes the remote url of `origin` to `GITHUB_URL`. This way you can fix typos in the remote url.
 * *we should add more*
+
+
+## Note for Windows users
+
+On Windows, the program that runs the shell is called *Command Prompt* or *cmd.exe*.  Unfortunately, the default Windows shell does not support all the commands that other operating systems do. This is where GitBash comes in handy: it installs a light version of a shell that does support all the above commands. When you access the shell through RStudio, RStudio actually tries to open GitBash if it can find it, but it will open the default Windows Command Prompt if GitBash is not found.
+
+If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the previous commands, that means that RStudio could not find GitBash. The most likely cause of this is that you did not install git using the recommended method from this book, so try re-installing git.
+
