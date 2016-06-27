@@ -22,6 +22,7 @@ rmd_files: [
   "15_install-connect-troubleshooting.Rmd",
 
   "20_usage-new-project-github-first.Rmd",
+  "21_usage-existing-project-github-first.Rmd",
 
   "50_more-content.Rmd",
 

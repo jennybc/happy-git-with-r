@@ -2,6 +2,8 @@
 
 placeholders and notes
 
+# stuff
+
 ## R Markdown + GitHub workflow
 
 [Test drive R Markdown](block007_first-use-rmarkdown.html) but embrace the Git/GitHub aspects.
@@ -9,14 +11,6 @@ placeholders and notes
 Push HTML and show how unsatisfactory that is. Push markdown and show how nice that is.
 
 Optional: R script example and properly commented YAML.
-
-## Existing project
-
-~~Create an RStudio project, then make it a Git repo, then make a GitHub repo, then connect them.~~ *oh, let's not*
-
-Easier though less elegant: create repo on GitHub, clone via RStudio, then copy your stuff in.
-
-What if it's an existing project that is also a Git repo with a history you care about? Then you have to do it properly. Using the "RStudio first, then GitHub" template from here: [Test connection between RStudio and GitHub](git07_git-github-rstudio.html).
 
 ## Clone a project
 
