@@ -6,10 +6,6 @@ placeholders and notes
 
 ## R Markdown + GitHub workflow
 
-[Test drive R Markdown](block007_first-use-rmarkdown.html) but embrace the Git/GitHub aspects.
-
-Push HTML and show how unsatisfactory that is. Push markdown and show how nice that is.
-
 Optional: R script example and properly commented YAML.
 
 ## Clone a project
