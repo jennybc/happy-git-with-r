@@ -4,10 +4,6 @@ placeholders and notes
 
 # stuff
 
-## R Markdown + GitHub workflow
-
-Optional: R script example and properly commented YAML.
-
 ## Clone a project
 
 For when you just want a copy of something. But also want to track its evolution, which would not be true if you just, say, downloaded the ZIP archive.

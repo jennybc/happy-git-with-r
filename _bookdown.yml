@@ -26,6 +26,8 @@ rmd_files: [
   "22_usage-existing-project-github-last.Rmd",
 
   "30_usage-first-use-rmd-and-github.Rmd",
+  "31_usage-first-use-r-script-and-github.Rmd",
+
   "50_more-content.Rmd",
 
   "80_shell.Rmd",
