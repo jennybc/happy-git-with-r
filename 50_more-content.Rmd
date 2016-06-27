@@ -1,14 +1,6 @@
 # (PART) More {-} 
 
-# More content
-
-more stuff *coming soon* ... really!!
-
 placeholders and notes
-
-## New project
-
-Revisit and expand "GitHub first, then RStudio" example presented here.
 
 ## R Markdown + GitHub workflow
 
@@ -41,6 +33,16 @@ How to keep a fork updated. The browser only method. The 2nd remote method.
 ## git stuff
 
 link out to full tutorials w/ good visuals
+
+filesystem / working directory
+
+vs
+
+staging area
+
+vs
+
+???
 
 make sure understand you can have a file locally that git is not tracking and is not pushing/pulling to github.  It's ok to not stage everything. If a long-term situation, gitignore so it doesn't clutter things up and bug you.
 

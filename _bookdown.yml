@@ -21,6 +21,8 @@ rmd_files: [
   "14_connect-can-rstudio-use-git.Rmd",
   "15_install-connect-troubleshooting.Rmd",
 
+  "20_usage-new-project-github-first.Rmd",
+
   "50_more-content.Rmd",
 
   "80_shell.Rmd",
