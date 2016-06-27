@@ -6,13 +6,6 @@ placeholders and notes
 
 ## Clone a project
 
-For when you just want a copy of something. But also want to track its evolution, which would not be true if you just, say, downloaded the ZIP archive.
-
-I create a repo (or use one created above). They clone. I make a new commit. They pull to get it.
-
-More practice: Do this once with ... your favorite R package? The polygraphing film data (or something else that is not an R package)?
-
-Need to explain when to do this versus fork.
 
 How to keep a fork updated. The browser only method. The 2nd remote method.
 

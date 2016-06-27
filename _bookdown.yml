@@ -28,6 +28,7 @@ rmd_files: [
   "30_usage-first-use-rmd-and-github.Rmd",
   "31_usage-first-use-r-script-and-github.Rmd",
 
+  "40_prompt-clone.Rmd",
   "50_more-content.Rmd",
 
   "80_shell.Rmd",
