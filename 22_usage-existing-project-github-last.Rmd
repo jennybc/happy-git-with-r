@@ -36,7 +36,7 @@ If your local project was already a Git repo and was up-to-date, move on. Otherw
   * Click the "Git" tab in upper right pane
   * Check "Staged" box for all files you want to commit.
     - Default: stage it.
-    - When to reconsider: this will all go to GitHub. So do consider if that is appropriate for each file. **You can absolutely keep a file locally, without commiting it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
+    - When to reconsider: this will all go to GitHub. So do consider if that is appropriate for each file. **You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
   * If you're not already in the Git pop-up, click "Commit"
   * Type a message in "Commit message".
   * Click "Commit"
@@ -72,7 +72,7 @@ Go back to the browser. I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
-You should see all the project files you commited there.
+You should see all the project files you committed there.
 
 If you click on "commits," you should see one with the message "init".
 

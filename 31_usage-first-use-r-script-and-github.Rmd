@@ -2,7 +2,7 @@
 
 An underappreciated fact is that much of what you can do with R Markdown? ... you can also do with an R script.
 
-If you're in analysis mode and want a report as a side effect, write an R script. If you're writing a report with alot of R code in it, write Rmd. In either case, render to markdown.
+If you're in analysis mode and want a report as a side effect, write an R script. If you're writing a report with a lot of R code in it, write Rmd. In either case, render to markdown.
 
 In R markdown, prose is top-level and code is tucked into chunks.
 

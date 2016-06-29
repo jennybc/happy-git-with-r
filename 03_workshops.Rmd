@@ -49,7 +49,7 @@ Optional reading on "big picture stuff":
   * Create a Git repository and connect the local repo to a GitHub remote, for new and existing projects.
   * Run R code, via R Markdown or a script, and share a presentable report via GitHub.
   * The intersection of GitHub and the R world:
-    - R packages developed on Github and how to make use of [Issues](https://guides.github.com/features/issues/)
+    - R packages developed on GitHub and how to make use of [Issues](https://guides.github.com/features/issues/)
     - [METACRAN](http://www.r-pkg.org) [read-only mirror](https://github.com/cran) of all of CRAN + R-specific searching tips.
   * Propose a change to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
   * Discuss daily workflow:

@@ -12,7 +12,7 @@ If "YES UNDO IT COMPLETELY": `git reset --hard HEAD^`. You will lose any changes
 
 If "YES undo the commit, but leave the files in that state (but unstaged)": `git reset HEAD^`. Your files will stay the same but the commit will be undone and nothing will be staged.
 
-If "YES go right back to the moment before I commited": `git reset --soft HEAD^`. Your files will stay the same but the commit will be undone. Even your staged changes will be restored.
+If "YES go right back to the moment before I committed": `git reset --soft HEAD^`. Your files will stay the same but the commit will be undone. Even your staged changes will be restored.
 
 **If you just want to fiddle the most recent commit or its message, you can amend it. You can do this from RStudio!**
 

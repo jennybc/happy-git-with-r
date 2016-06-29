@@ -65,9 +65,9 @@ There is also a formal notion of an organization, which can be useful for managi
 
 In addition to a well-designed user interface, GitHub offers two especially important features:
 
-  * **Issues.** Remember how we're high-jacking software development tools? Well, this is the bug tracker. It's a list of things ... bugs, feature requests, to do's, whatever.
+  * **Issues.** Remember how we're high-jacking software development tools? Well, this is the bug tracker. It's a list of things ... bugs, feature requests, to dos, whatever.
     - Issues are tightly integrated with email and therefore allow you to copy/embed important conversations in the associated repo.
-    - Issues can be assigned to people (e.g., to do's) and tagged ("bug" or "progress-report").
+    - Issues can be assigned to people (e.g., to dos) and tagged ("bug" or "progress-report").
     - Issues are tightly integrated with commits and therefore allow you to record *that the changes in this commit solve that problem which was discussed in that issue*.
     - As a new user of GitHub, one of the most productive things you can do is to use GitHub issues to provide a clear bug report or feature request for a package you use.
  * **Pull requests.** Git allows a project to have multiple, independent branches of development, with the notion that some should eventually be merged back into the main development branch. These are technical Git terms but hopefully also make sense on their own. A pull request is a formal proposal that says: "Here are some changes I would like to make." It might be linked to a specific issue: "Related to #14." or "Fixes #56". GitHub facilitates and preserves the discussion of the proposal, holistically and line-by-line.

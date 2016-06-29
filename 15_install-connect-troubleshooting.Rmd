@@ -90,7 +90,7 @@ You might have changes on the remote AND on your local repo. Just because you do
 
 Pull first. Resolve any conflicts. Then try your push again.
 
-## RStudio is not making certain files available for staging/commiting
+## RStudio is not making certain files available for staging/committing
 
 Do you have a space in your directory or file names? [A space in a file name is a space in your soul.](https://twitter.com/aaronquinlan/status/711593127551733761) Get rid of it.
 
