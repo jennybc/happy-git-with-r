@@ -21,7 +21,7 @@ Read-only mirror of all packages on CRAN by Gábor Csárdi:
 
 What if a function in a package has no examples? Or is poorly exampled? Wouldn't it be nice to find functioning instances of it "in the wild"?
 
-[Via Twitter](https://twitter.com/noamross/status/563422536633839617), Noam Ross taught me a clever way to do such searches on GitHub. Put this into the GitHub search box to see people using the `llply()` function from `plyr`:
+[Via Twitter](https://twitter.com/noamross/status/563422536633839617), Noam Ross taught me a clever way to do such searches on GitHub. Put this into the GitHub search box to see how packages on CRAN use the `llply()` function from `plyr`:
 
 ``` bash
 "llply" user:cran language:R
