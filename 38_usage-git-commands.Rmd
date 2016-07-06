@@ -28,6 +28,7 @@ Check on the state of the Git world:
 ``` bash
 git status
 git log
+git log --oneline
 ```
 
 Compare versions:
