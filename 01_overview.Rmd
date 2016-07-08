@@ -93,3 +93,7 @@ Although we will show alternatives for most Git operations, we will inevitably s
 ## What this is NOT
 
 We aim to teach novices about Git on a strict "need to know" basis. Git was built to manage development of the Linux kernel, which is probably very different from what you do. Most people need a small subset of Git's functionality and that will be our focus. If you want a full-blown exposition of Git as a directed acyclic graph or a treatise on the Git-Flow branching strategy, you will be sad.
+
+*pardon us while we test something*
+
+Testing square bracket cross-references: [Windows] and [windows] and [installation-pain] or [Installation-pain] or [contributors] or [contrib]
