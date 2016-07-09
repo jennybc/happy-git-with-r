@@ -38,7 +38,7 @@ Mac OS users might get an immediate offer to install command line developer tool
 
 ## Mac OS
 
-**Option 1** (*highly recommended*): Install the Xcode command line tools (not all of Xcode), which includes Git.
+**Option 1** (*highly recommended*): Install the Xcode command line tools (not all of Xcode), which includes Git. If your OS is older than 10.11 El Capitan, it is possible that you **must** install the Xcode command line tools in order for RStudio to find and use Git.
 
 Go to the shell and enter one of these commands to elicit an offer to install developer command line tools:
 
