@@ -42,7 +42,8 @@ From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the bo
 
     Here is a [screenshot](http://www.molecularecologist.com/wp-content/uploads/2013/11/Screenshot-2013-11-12-09.53.56-Copy1.png) of someone doing this on a Windows machine.
 
-    - __WARNING__: On Windows, do __NOT__ use `C:/Program Files (x86)/Git/cmd/git.exe`. `bin` is GOOD YES! `cmd` is BAD NO!
+    - __WARNING__: On Windows, do __NOT__ use `C:/Program Files (x86)/Git/cmd/git.exe`. `bin` in the path is GOOD YES! `cmd` in the path is BAD NO!
+    - __WARNING__: On Windows, do __NOT__ use `git-bash.exe`. Something that ends in `git.exe` is GOOD YES! `git-bash.exe` is BAD NO!
 
   * At times, we've had trouble navigating to the necessary directory on Mac OS, once we've clicked "Browse" and are working with a Finder-type window. The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able type or paste any path you want.
   
