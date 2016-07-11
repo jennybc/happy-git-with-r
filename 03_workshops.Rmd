@@ -6,22 +6,15 @@ These materials can be used for independent study, but I also use them to suppor
   * [STAT 545](http://stat545.com) at UBC
   * [UBC Master of Data Science](http://masterdatascience.science.ubc.ca)
 
-## useR! 2016 Stanford
+## Pre-workshop set-up
 
-### Logistics
+Optional reading on "big picture stuff":
 
-Monday, June 27, 2016  
-8:15am - 9:00 TAs available to help complete system set up  
-9:00am - 12:00pm Workshop, with coffee break 10:15am - 10:30am  
-Lyons & Lodato 326 Galvez Street Stanford, CA 94305-6105 [Google Maps](https://goo.gl/maps/wkvKkBkbs1J2)  
-Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
-[Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
+  * Read "Why Git? Why GitHub?" in chapter \@ref(big-picture).
 
-### Pre-tutorial set-up
+**It is vital that you attempt to set up your system in advance. You cannot show up at with no preparation and keep up!**
 
-**It is vital that you attempt to set up your system in advance. You cannot show up at 9am with no preparation and keep up!**
-
-These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to useR! (no promises). We will have TAs in the room starting at 8:15am and throughout the workshop.
+These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to your workshop (no promises).
 
 Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
@@ -32,17 +25,23 @@ Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
   * Prove local Git can talk to GitHub (chapter \@ref(push-pull-github)).
   * Cache your username and password (chapter \@ref(credential-caching)) or set up SSH keys (chapter \@ref(ssh-keys)) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
   * Prove RStudio can find local Git and, therefore, can talk to GitHub (chapter \@ref(rstudio-git-github)).
-    - FYI: this is where our hands-on activities will start. We walk through a similar activity together, with narrative, and build from there.
+    - FYI: this is where our hands-on activities usually start. We walk through a similar activity together, with narrative, and build from there.
 
 Troubleshooting:
 
   * If RStudio is having a hard time finding Git, see chapter \@ref(rstudio-see-git).
   * For all manner of problems, both installation and usage related, see chapter \@ref(troubleshooting).
-  
-Optional reading on "big picture stuff":
 
-  * Read "Why Git? Why GitHub?" in chapter \@ref(big-picture).
-    
+## useR! 2016 Stanford
+
+Monday, June 27, 2016  
+8:15am - 9:00 TAs available to help complete system set up  
+9:00am - 12:00pm Workshop, with coffee break 10:15am - 10:30am  
+Lyons & Lodato 326 Galvez Street Stanford, CA 94305-6105 [Google Maps](https://goo.gl/maps/wkvKkBkbs1J2)  
+Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
+[Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
+
+<!--    
 ### What we can do together
 
   * Verify and complete the most difficult part: installation and configuration!
@@ -57,12 +56,11 @@ Optional reading on "big picture stuff":
     - Data files and the dilemmas they present.
     - Most common Git predicaments. How to avoid and recover.
     - How do groups of 1, 5, or 10 people structure their work with Git(Hub)?
+-->
 
 ## CSAMA 2016: Statistical Data Analysis for Genome Biology
 
-### Logistics
-
 <http://www.huber.embl.de/csama2016/>  
 July 10 - 15, 2016, Bressanone-Brixen, Italy  
-Monday July 11, Lab 2, 15:30 - 17:00 Reproducible research and R authoring with markdown and knitr  
-Thursday July 14, Lab 4, 14:00 - 15:30 Use of Git and GitHub with R, RStudio, and R Markdown
+Monday July 11, Lab 2, 15:30 - 17:00 Use of Git and GitHub with R, RStudio, and R Markdown  
+Thursday July 14, Lab 4, 14:00 - 15:30 Reproducible research and R authoring with markdown and knitr  
