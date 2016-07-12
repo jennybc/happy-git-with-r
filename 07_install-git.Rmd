@@ -8,17 +8,19 @@ Otherwise, find installation instructions below for your operating system.
 
 ## Git already installed?
 
-Go to the shell (Appendix \@ref(shell)) and enter `which git` and `git --version`:
+Go to the shell (Appendix \@ref(shell)). Enter `which git` to request the path to your Git exectuable
 
-``` bash
-jenny@2015-mbp happy-git-with-r $ which git
-/usr/bin/git
-
-jenny@2015-mbp happy-git-with-r $ git --version
-git version 2.7.4 (Apple Git-66)
+```{bash collapse = TRUE}
+which git
 ```
 
-If Git reports a path to an executable and a version, that's great! You have Git already. No need to install! Move on.
+and `git --version` to see its version.
+ 
+```{bash collapse = TRUE}
+git --version
+```
+
+If you are successful, that's great! You have Git already. No need to install! Move on.
 
 If, instead, you see something more like `git: command not found`, keep reading.
 
@@ -26,7 +28,7 @@ Mac OS users might get an immediate offer to install command line developer tool
 
 ## Windows
 
-**Option 1** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/), previously known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. Use all the default settings during installation.
+**Option 1** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/), previously known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. You may accept all the default settings during installation.
 
   * This approach leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the Bash shell will be useful as you venture outside of R/RStudio.
   * This also leaves you with a Git client, though not a very good one. So check out Git clients we recommend (chapter \@ref(git-client)).

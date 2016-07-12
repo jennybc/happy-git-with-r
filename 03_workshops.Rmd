@@ -8,9 +8,7 @@ These materials can be used for independent study, but I also use them to suppor
 
 ## Pre-workshop set-up
 
-Optional reading on "big picture stuff":
-
-  * Read "Why Git? Why GitHub?" in chapter \@ref(big-picture).
+Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-picture)
 
 **It is vital that you attempt to set up your system in advance. You cannot show up at with no preparation and keep up!**
 
@@ -18,19 +16,19 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 
 Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
-  * Register a free GitHub account (chapter \@ref(github-acct)).
-  * Install or update R and RStudio (chapter \@ref(install-r-rstudio)).
-  * Install Git (chapter \@ref(install-git)).
-  * Introduce yourself to Git (chapter \@ref(hello-git)).
-  * Prove local Git can talk to GitHub (chapter \@ref(push-pull-github)).
-  * Cache your username and password (chapter \@ref(credential-caching)) or set up SSH keys (chapter \@ref(ssh-keys)) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
-  * Prove RStudio can find local Git and, therefore, can talk to GitHub (chapter \@ref(rstudio-git-github)).
+  * [Register a free GitHub account](#github-acct).
+  * [Install or update R and RStudio](#install-r-rstudio).
+  * [Install Git](#install-git).
+  * [Introduce yourself to Git](#hello-git).
+  * [Prove local Git can talk to GitHub](#push-pull-github).
+  * [Cache your username and password](#credential-caching) or [set up SSH keys](#ssh-keys) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
+  * [Prove RStudio can find local Git](#rstudio-git-github) and, therefore, can talk to GitHub.
     - FYI: this is where our hands-on activities usually start. We walk through a similar activity together, with narrative, and build from there.
 
 Troubleshooting:
 
-  * If RStudio is having a hard time finding Git, see chapter \@ref(rstudio-see-git).
-  * For all manner of problems, both installation and usage related, see chapter \@ref(troubleshooting).
+  * Sometimes RStudio [needs a little help finding Git](#rstudio-see-git).
+  * General troubleshooting: [RStudio, Git, GitHub Hell](#troubleshooting).
 
 ## useR! 2016 Stanford
 
