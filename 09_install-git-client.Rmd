@@ -16,6 +16,18 @@ Fair warning: for some things, you will have to use the command line. But the mo
 
 Fantastic news: because all of the clients are just forming and executing Git commands on your behalf, you don't have to pick one. You can literally do one operation from the command line, do another from RStudio, and another from SourceTree, one after the other, and it just works. *Very rarely, both clients will scan the repo at the same time and you'll get an error message about `.git/index.lock`. Try the operation again at least once before doing any further troubleshooting.*
 
+## A picture is worth a thousand words
+
+Here's a screenshot of SourceTree (see below) open to the repository for this site. You get a nice graphical overview of the recent commit history, branches, and diffs, as well as a GUI that facilitates the most common Git operations.
+
+![SourceTree screenshot](img/sourcetree-screenshot.png)
+
+In contrast, here's a shell session where I've used command line Git to access some of the same information.
+
+![Command line Git](img/command-line-git-screenshot.png)
+
+Which do you prefer?
+
 ## Recommended Git clients
 
 <!-- https://twitter.com/JennyBryan/status/734894596019224576 -->
