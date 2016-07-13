@@ -81,6 +81,7 @@ demo_code <- c(
   "#' date: \"`r format(Sys.Date())`\"",
   "#' output: github_document",
   "#' ---",
+  "#'",
   demo_code
 )
 writeLines(demo_code, "render-r-script-demo.R")
@@ -90,6 +91,11 @@ writeLines(demo_code, "render-r-script-demo.R")
 ```
 
 Behind the scenes here we have used `rmarkdown::render()` to render this script and you can go visit it on GitHub.
+
+```{r render-demo-code, include = FALSE}
+rmarkdown::render("render-r-script-demo.R", output_format = "github_document")
+```
+
 
 ```{r clean-up, include = FALSE, eval = FALSE}
 ## for now, I'm just letting the files created here persist
