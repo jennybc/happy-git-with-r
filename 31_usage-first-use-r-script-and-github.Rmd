@@ -96,7 +96,6 @@ Behind the scenes here we have used `rmarkdown::render()` to render this script 
 rmarkdown::render("render-r-script-demo.R", output_format = "github_document")
 ```
 
-
 ```{r clean-up, include = FALSE, eval = FALSE}
 ## for now, I'm just letting the files created here persist
 ## but maybe I will regret that one day, so this is ready to activate
