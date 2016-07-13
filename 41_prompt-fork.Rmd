@@ -22,7 +22,7 @@ When/if you are ready to propose a change, you place a pull request from your fo
 
 Here's a sketch of how this looks:
 
-![](git-fork-new-project-push-pull-request.png)
+![](img/git-fork-new-project-push-pull-request.png)
 
 ## Updating your fork
 
@@ -40,4 +40,4 @@ In the long run, you will want to learn how to configure a second remote for you
   
 *Here's a [handwritten sketch](https://twitter.com/minisciencegirl/status/697236466867445760) devised with [Bill Mills](http://billmills.github.io) in a bar, but that will have to do for now!*
 
-![](git-fork-update.jpg)
+![](img/git-fork-update.jpg)
