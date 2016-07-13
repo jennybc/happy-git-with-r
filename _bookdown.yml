@@ -25,9 +25,10 @@ rmd_files: [
   "21_usage-existing-project-github-first.Rmd",
   "22_usage-existing-project-github-last.Rmd",
 
-  "30_usage-first-use-rmd-and-github.Rmd",
-  "31_usage-first-use-r-script-and-github.Rmd",
-  "38_usage-git-commands.Rmd",
+  "30_workflow-first-use-rmd-and-github.Rmd",
+  "31_workflow-first-use-r-script-and-github.Rmd",
+  "32_workflow-make-github-repo-browsable.Rmd",
+  "38_workflow-git-commands.Rmd",
 
   "40_prompt-clone.Rmd",
   "41_prompt-fork.Rmd",

@@ -1,4 +1,4 @@
-# (PART) Early Usage {-} 
+# (PART) Early GitHub Usage {-} 
 
 # New project, GitHub first {#new-github-first}
 
