@@ -51,6 +51,17 @@ Git for Ages 4 and Up
 Learn Git Branching  
 http://learngitbranching.js.org
 
+A Git Workflow Walkthrough Series
+http://vallandingham.me/git-workflow.html
+
+  * Part 1: Feature Branches
+  * Part 2: Reviewing Pull Requests
+  * Part 3: Reviewing Pull Requests Locally
+  * Part 4: Merging Pull Requests
+
+Git from the inside out  
+https://codewords.recurse.com/issues/two/git-from-the-inside-out
+
 ## The repeated amend
 
 A way to commit often, without exposing your WIP on GitHub or without creating a very cluttered history.

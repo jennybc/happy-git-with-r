@@ -17,3 +17,5 @@ Long-term, you should understand more about what you are doing. Rote clicking in
   * Find a powerful Git client (chapter \@ref(git-client)) if you'd like to minimize your usage of Git from the command line.
   
   * Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz) has an excellent [chapter on the use of Git, GitHub, and RStudio](http://r-pkgs.had.co.nz/git.html) in R package development. He covers more advanced usage, such as commit best practices, issues, branching, and pull requests.
+  
+  * Ten Simple Rules for Taking Advantage of Git and GitHub <http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947>
