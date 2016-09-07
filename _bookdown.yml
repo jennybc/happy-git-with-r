@@ -41,6 +41,8 @@ rmd_files: [
 
   "80_shell.Rmd",
 
+  "81_github-api-tokens.Rmd",
+
   "88_comic-relief.Rmd",
 
   "90_references.Rmd",
