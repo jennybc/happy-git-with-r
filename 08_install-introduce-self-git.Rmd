@@ -14,6 +14,8 @@ substituting your name and **the email associated with your GitHub account**.
 
 From RStudio, go to *Tools > Shell* and tell Git your name and **GitHub email** by typing (use your own name and email):
 
+Note: If you are on Windows, make sure this has opened *Git Bash*, and not Windows Command Prompt! If it has not, restarting RStudio may fix this issue. Otherwise, you can open *Git Bash* from the Windows menu, or [change the option](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) via *Options -> Version Control*. 
+
   * `git config --global user.name 'Jennifer Bryan'`
   
     - This does __NOT__ have to be your GitHub username, although it can be. Another good option is your actual first name and last name. Your commits will be labelled with this name, so this should be informative to potential collaborators.
