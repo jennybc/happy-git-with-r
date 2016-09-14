@@ -39,23 +39,6 @@ Lyons & Lodato 326 Galvez Street Stanford, CA 94305-6105 [Google Maps](https://g
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
 
-<!--    
-### What we can do together
-
-  * Verify and complete the most difficult part: installation and configuration!
-  * Create a Git repository and connect the local repo to a GitHub remote, for new and existing projects.
-  * Run R code, via R Markdown or a script, and share a presentable report via GitHub.
-  * The intersection of GitHub and the R world:
-    - R packages developed on GitHub and how to make use of [Issues](https://guides.github.com/features/issues/)
-    - [METACRAN](http://www.r-pkg.org) [read-only mirror](https://github.com/cran) of all of CRAN + R-specific searching tips.
-  * Propose a change to someone else's project, i.e. "make a [pull request](https://help.github.com/articles/using-pull-requests/)".
-  * Discuss daily workflow:
-    - How often should I commit? Which files should I commit?
-    - Data files and the dilemmas they present.
-    - Most common Git predicaments. How to avoid and recover.
-    - How do groups of 1, 5, or 10 people structure their work with Git(Hub)?
--->
-
 ## CSAMA 2016: Statistical Data Analysis for Genome Biology
 
 <http://www.huber.embl.de/csama2016/>  

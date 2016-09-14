@@ -16,6 +16,7 @@ Read-only mirror of all packages on CRAN by Gábor Csárdi:
 
   * <https://github.com/cran>
   * <http://cran.github.io>
+  * [METACRAN](http://www.r-pkg.org)
 
 ## Use case
 
