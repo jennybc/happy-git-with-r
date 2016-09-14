@@ -24,6 +24,8 @@ Don't get too caught up on public versus private at this point. There are many w
 
 ## Is it going to hurt?
 
+Yes.
+
 You have to install Git, get local Git talking to GitHub, and make sure RStudio can talk to local Git (and, therefore, GitHub). This is one-time or once-per-computer pain.
 
 For new or existing projects, you will:
@@ -38,17 +40,17 @@ For new or existing projects, you will:
   
 This is a change to your normal, daily workflow. It feels weird at first but quickly becomes second nature. FWIW, [STAT 545](http://stat545.com) students are required to submit all coursework via GitHub. This is a major topic in class and office hours for the first two weeks. Then we practically never discuss it again.
 
+More bad news. The [STAT 545](http://stat545.com) pain is short-lived because students primarily work in their own repositories. Do you use GitHub to work with other people or to coordinate your own work from multiple computers? If so, after you recover from the initial setup, Git will crush you again with **merge conflicts**. And this is not one-time pain, this could be a dull ache for a long time. The best remedy is prevention, but also understanding how to back out of tricky situations and tackle them on your own terms.
+
 The rest of this site is dedicated to walking you through the necessary setup and creating your first few Git projects. We conclude with prompts that guide you through some of the more advanced usage that makes all of this initial pain worthwhile.
 
 ## What is the payoff?
 
-If someone needs to see your work or if you want them to try out your code, they can easily get it from GitHub. If they use Git, they can clone or fork your repository. If they don't use Git, they can still browse your project on GitHub like a normal website and even grab everything by downloading a zip archive.
+**Exposure**: If someone needs to see your work or if you want them to try out your code, they can easily get it from GitHub. If they use Git, they can clone or fork your repository. If they don't use Git, they can still browse your project on GitHub like a normal website and even grab everything by downloading a zip archive.
 
-If you need to collaborate on data analysis or code development, then all involved should use Git. Use GitHub as your clearinghouse: individuals work independently, then send work back to GitHub for reconciliation and transmission to the rest of the team.
+**Be a keener!** If you care deeply about someone else's project, such as an R package you use heavily, you can track its development on GitHub. You can watch the repository to get notified of major activity. You can fork it to keep your own copy. You can modify your fork to add features or fix bugs and send them back to the owner as a proposed change.
 
-If you care deeply about someone else's project, such as an R package you use heavily, you can track its development on GitHub. You can watch the repository to get notified of major activity. You can fork it to keep your own copy. You can modify your fork to add features or fix bugs and send them back to the owner as a proposed change.
-
-The advantage of Git/GitHub is highlighted by comparing these two ways of collaborating on a document:
+**Collaboration**: If you need to collaborate on data analysis or code development, then everyone should use Git. Use GitHub as your clearinghouse: individuals work independently, then send work back to GitHub for reconciliation and transmission to the rest of the team. The advantage of Git/GitHub is highlighted by comparing these two ways of collaborating on a document:
 
   * **Edit, save, attach.** In this workflow, everyone has one (or more!) copies of the document and they circulate via email attachment. Which one is "master"? Is it even possible to say? How do different versions relate to each other? How should versions be reconciled? If you want to see the current best version, how do you get it? All of this usually gets sorted out by social contract and a fairly manual process.
   * **Google Doc.** In this workflow, there is only one copy of the document and it lives in the cloud. Anyone can access the most recent version on demand. Anyone can edit or comment or propose a change and this is immediately available to everyone else. Anyone can see who's been editing the document and, if disaster strikes, can revert to a previous version. A great deal of ambiguity and annoying reconciliation work has been designed away.
@@ -78,13 +80,13 @@ In addition to a well-designed user interface, GitHub offers two especially impo
 
 ## What's special about using R and with Git and GitHub?
 
-  * the active R package development community on GitHub
-  * workflows for R scripts and [R Markdown](http://rmarkdown.rstudio.com) files that make it easy to share source and rendered results on GitHub
-  * Git- and GitHub-related features of the [RStudio IDE](https://www.rstudio.com/products/rstudio-desktop/)
+  * The active R package development community on GitHub. Read about R-specific GitHub resources and searching [here](#search).
+  * Specific workflows make it rewarding to share source code, rendered reports, and entire projects. Read more about [R Markdown](#rmd-test-drive), [R scripts](#r-test-drive), and [R-heavy projects](#repo-browsability).
+  * Git- and GitHub-related features of the [RStudio IDE](https://www.rstudio.com/products/rstudio-desktop/). This is covered throughout.
 
 ## Audience and pre-reqs
 
-The target audience for this site is someone who analyzes data, probably with R, though much of the content may be useful to analysts using other languages. While R package development with Git(Hub) is absolutely in scope, it's not an explicit focus or requirement.
+The target audience for this site is someone who analyzes data, probably with R, though some of the content may be useful to analysts using other languages. R package development with Git(Hub) is absolutely in scope, but it is not an explicit focus or requirement.
 
 The site is aimed at intermediate to advanced R users, who are comfortable writing R scripts and managing R projects. You should have a good grasp of files and directories and be generally knowledgeable about where things live on your computer.
 

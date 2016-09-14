@@ -1,4 +1,4 @@
-# Make a GitHub repo browsable
+# Make a GitHub repo browsable {#repo-browsability}
 
 **The unreasonable effectiveness of GitHub browsability**. One of my favorite aspects of GitHub is the ability to inspect a repository's files in a browser. Certain practices make browsing more rewarding and can postpone the day when you must create a proper website for a project. Perhaps indefinitely.
 
