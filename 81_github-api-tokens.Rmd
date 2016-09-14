@@ -79,3 +79,9 @@ Now commands you run from the `devtools` package, which consults `GITHUB_PAT` by
 
 Many R packages that access web services, such as [those maintained by
 rOpenSci](http://ropensci.org/packages/), give the option of storing API "tokens" or "keys" as environment variables in your `.Renviron` file. These tokens and this file, should *never be committed to GitHub, stored in Dropbox, or on any other online service*. They should not appear in your code or code comments. This is one reason why this file is stored *outside* your project folder. These tokens can be used to access your accounts [and wreak all kinds of havoc](https://securosis.com/blog/my-500-cloud-security-screwup). If you mistakenly share your tokens, log into the relevant site via the browser, revoke the compromised token, and generate a new one.
+
+## Why `.Renviron` instead of bash config?
+
+**FAQ**: Why define this environment variable via `.Renviron` instead of in `.bash_profile` or `.bashrc`?*
+
+Because there are many combinations of OS and ways of running R where the `.Renviron` approach "just works" and the bash stuff does not. When R is a child process of, say, Emacs or RStudio, you can't always count on environment variables being passed to R. Put them in an R-specific start-up file and save yourself some grief.
