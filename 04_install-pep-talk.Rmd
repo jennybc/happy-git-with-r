@@ -20,15 +20,16 @@ In their defense, it's hard to write installation instructions. Failures can be 
 }
 </style>
 
-Our installation instructions have been forged in the fires of [STAT 545](http://stat545.com), [STAT 540](https://stat540-ubc.github.io), and assorted workshops, over several years. We regularly hear from [grateful souls on the internet](https://twitter.com/millsGT49/status/647059167509921793) who also have success.
+Our installation instructions have been forged in the fires of [STAT 545](http://stat545.com), [STAT 540](https://stat540-ubc.github.io), and assorted workshops, over several years. We regularly hear from [grateful souls](https://twitter.com/ibddoctor/status/777610645617475584) [on the internet](https://twitter.com/millsGT49/status/647059167509921793) who also have success.
 
-Here's some recent data on the subset of STAT 545 students for which we recorded the operating system: half Mac, just under half Windows (various flavours), and a dash of Linux. 
+Here's data on the operating systems we encounter in STAT 545 and other workshops: overall the bulk are split sort of evenly between Mac and Windows (various flavours), with a dash of Linux. 
 
-|            |     2014 |     2015 |
-|-----------:|---------:|---------:|
-|        Mac | 16 (41%) | 38 (52%) |
-|  Windows 7 |  9 (23%) | 13 (18%) |
-|  Windows 8 | 12 (31%) |  9 (12%) |
-| Windows 10 |   0 (0%) |  8 (11%) |
-|      Linux |   2 (5%) |   5 (7%) |
+|             |     2014 |     2015 |     2016 | useR! 2016 | CSAMA 2016 |
+|------------:|---------:|---------:|---------:|-----------:|-----------:|
+|        Mac  | 16 (41%) | 38 (52%) | 35 (43%) |   28 (44%) |   25 (58%) |
+| Windows 10* |   0 (0%) |  8 (11%) | 30 (37%) |   27 (43%) |    6  (6%) |
+|  Windows 8  | 12 (31%) |  9 (12%) |  4  (5%) |            |            |  
+|  Windows 7  |  9 (23%) | 13 (18%) | 10 (12%) |            |            |  
+|      Linux  |   2 (5%) |   5 (7%) |   2 (2%) |    8 (13%) |   12 (28%) |
 
+\* Windows 10 is the Windows catchall, when I don't have more specific info.
