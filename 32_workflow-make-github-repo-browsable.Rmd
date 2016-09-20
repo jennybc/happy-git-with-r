@@ -102,7 +102,8 @@ You can form two different types of URLs with [rawgit.com](http://rawgit.com):
     
 This sort of enhanced link might be one of the useful things to put in a `README.md` or other Markdown file in the repo.
 
-You may also want to check out this [Chrome extension](https://chrome.google.com/webstore/detail/github-html-preview/cphnnfjainnhgejcpgboeeakfkgbkfek?hl=en) or [GitHub & BitBucket HTML Preview](https://htmlpreview.github.io), though recently I've more success with [rawgit.com](http://rawgit.com).
+You may also want to check out this [Chrome extension](https://chrome.google.com/webstore/detail/github-html-preview/cphnnfjainnhgejcpgboeeakfkgbkfek?hl=en) or [GitHub & BitBucket HTML Preview](https://htmlpreview.github.io), though recently I've more success with [rawgit.com](http://rawgit.com). (Neither work with private GitHub repos, which is all the more reason
+to keep intermediate markdown files for HTML, as described above.)
 
 Sometimes including HTML files will cause GitHub to think that your R repository is HTML. Besides being slightly annoying, this can make it difficult for people to find your work if they are searching specifically for R repos.  You can exclude these files or directories from GitHub's language statistics by [adding a .gitattributes file](https://github.com/github/linguist#using-gitattributes) that marks them as 'documentation' rather than code. [See an example here](https://github.com/jennybc/googlesheets/blob/master/.gitattributes).
 
