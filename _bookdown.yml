@@ -39,6 +39,8 @@ rmd_files: [
 
   "50_more-content.Rmd",
 
+  "70_classroom-overview.Rmd",
+
   "80_shell.Rmd",
 
   "81_github-api-tokens.Rmd",
