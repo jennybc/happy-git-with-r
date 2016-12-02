@@ -19,7 +19,7 @@ Let's acknowledge the discomfort some people feel about putting derived products
 
 The taboo of keeping derived products under version control originates from compilation of binary executables from source. Software built on a Mac would not work on Windows and so it made sense to keep these binaries out of the holy source code repository. Also, you could assume the people with access to the repository have the full development stack and relish opportunities to use it. None of these arguments really apply to the `foo.Rmd --> foo.md --> foo.html` workflow. We don't have to blindly follow traditions from the compilation domain!
 
-In fact, looking at the diffs for `foo.md` or `foo-figure-01.png` can be extremely informative. This is also true in larger data analytic projects projects after a `make clean; make all` operation. By looking at the diffs in the downstream products, you often catch unexpected changes. This can tip you off to changes in the underlying data and/or the behavior of packages you depend on.
+In fact, looking at the diffs for `foo.md` or `foo-figure-01.png` can be extremely informative. This is also true in larger data analytic projects after a `make clean; make all` operation. By looking at the diffs in the downstream products, you often catch unexpected changes. This can tip you off to changes in the underlying data and/or the behavior of packages you depend on.
 
 This chapter explores cool things GitHub can do with various file types, if they happen to end up in your repo. I won't ask you how they got there.
   
