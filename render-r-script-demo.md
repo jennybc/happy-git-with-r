@@ -1,7 +1,7 @@
 R scripts can be rendered!
 ================
 Jenny Bryan
-2016-07-13
+2017-01-12
 
 Here's some prose in a very special comment. Let's summarize the built-in dataset `VADeaths`.
 
