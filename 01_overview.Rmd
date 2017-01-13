@@ -8,7 +8,7 @@ Why would a data analyst use hosted version control?
 
 Git has been re-purposed by the data science community. In addition to using it for source code, we use it to manage the motley collection of files that make up typical data analytical projects, which often consist of data, figures, reports, and, yes, source code.
 
-A solo data analyst, working on a single computer, will benefit from adopting version control. But not nearly enough to justify the pain of installation and workflow upheaval. There are much easier ways ways to get versioned back ups of your files, if that's all you're worried about.
+A solo data analyst, working on a single computer, will benefit from adopting version control. But not nearly enough to justify the pain of installation and workflow upheaval. There are much easier ways to get versioned back ups of your files, if that's all you're worried about.
 
 In my opinion, **for new users**, the pros of Git only outweigh the cons when you factor in the overhead of communicating and collaborating with other people. Who among us does not need to do that? Your life is much easier if this is baked into your workflow, as opposed to being a separate process that you dread or neglect.
 
@@ -78,7 +78,7 @@ In addition to a well-designed user interface, GitHub offers two especially impo
     - As a new user of GitHub, one of the most productive things you can do is to use GitHub issues to provide a clear bug report or feature request for a package you use.
  * **Pull requests.** Git allows a project to have multiple, independent branches of development, with the notion that some should eventually be merged back into the main development branch. These are technical Git terms but hopefully also make sense on their own. A pull request is a formal proposal that says: "Here are some changes I would like to make." It might be linked to a specific issue: "Related to #14." or "Fixes #56". GitHub facilitates and preserves the discussion of the proposal, holistically and line-by-line.
 
-## What's special about using R and with Git and GitHub?
+## What's special about using R with Git and GitHub?
 
   * The active R package development community on GitHub. Read about R-specific GitHub resources and searching [here](#search).
   * Specific workflows make it rewarding to share source code, rendered reports, and entire projects. Read more about [R Markdown](#rmd-test-drive), [R scripts](#r-test-drive), and [R-heavy projects](#repo-browsability).
