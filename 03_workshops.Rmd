@@ -14,6 +14,8 @@ Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-pict
 
 These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to your workshop (no promises).
 
+*For rstudio::conf 2017 Orlando, we will have a few TAs roaming at the tutorial to help sort out issues. Get as far as you can. Every bit helps.*
+
 Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
   * [Register a free GitHub account](#github-acct).
@@ -30,6 +32,19 @@ Troubleshooting:
   * Sometimes RStudio [needs a little help finding Git](#rstudio-see-git).
   * General troubleshooting: [RStudio, Git, GitHub Hell](#troubleshooting).
 
+## rstudio::conf 2017
+
+<https://www.rstudio.com/conference/>  
+January 13 - 14, 2017, Orlando, FL  
+Saturday January 14, 10:15am to 12:30pm, Sun Ballroom B
+
+## CSAMA 2016: Statistical Data Analysis for Genome Biology
+
+<http://www.huber.embl.de/csama2016/>  
+July 10 - 15, 2016, Bressanone-Brixen, Italy  
+Monday July 11, Lab 2, 15:30 - 17:00 Use of Git and GitHub with R, RStudio, and R Markdown  
+Thursday July 14, Lab 4, 14:00 - 15:30 Reproducible research and R authoring with markdown and knitr  
+
 ## useR! 2016 Stanford
 
 Monday, June 27, 2016  
@@ -38,10 +53,3 @@ Monday, June 27, 2016
 Lyons & Lodato 326 Galvez Street Stanford, CA 94305-6105 [Google Maps](https://goo.gl/maps/wkvKkBkbs1J2)  
 Sessions in the useR! schedule website: [part 1](http://schedule.user2016.org/event/7Bad/using-git-and-github-with-r-rstudio-and-r-markdown-part-1), [part 2](http://schedule.user2016.org/event/7Bav/using-git-and-github-with-r-rstudio-and-r-markdown-part-2)  
 [Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
-
-## CSAMA 2016: Statistical Data Analysis for Genome Biology
-
-<http://www.huber.embl.de/csama2016/>  
-July 10 - 15, 2016, Bressanone-Brixen, Italy  
-Monday July 11, Lab 2, 15:30 - 17:00 Use of Git and GitHub with R, RStudio, and R Markdown  
-Thursday July 14, Lab 4, 14:00 - 15:30 Reproducible research and R authoring with markdown and knitr  
