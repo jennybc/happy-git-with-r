@@ -92,7 +92,7 @@ Now is the perfect time to do this, since you have a functioning test repo.
 
 ## Clean up
 
-**Local** When you're ready to clean up, you delete the local repo any way you like. It's just a regular directory on your computer.
+**Local** When you're ready to clean up, you can delete the local repo any way you like. It's just a regular directory on your computer.
 
 **GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
 
