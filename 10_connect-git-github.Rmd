@@ -109,7 +109,7 @@ git add -A
 git commit -m "A commit from my local computer"
 git push
 ```
-The `-m` flag is an important message that must be included with every commit! Failure to supply a commit message 
+The `-m` flag is an important message that must be included with every commit! Git requires a commit message for every commit, so if you forget the `-m` flag, git will prompt you for a commit message anyways. It is good practice to write meaningful commit messages so in the future, potential collaborators (and your future self) will understand the progression of a project.
 
 This should look something like this:
 
