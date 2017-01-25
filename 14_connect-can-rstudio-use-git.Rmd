@@ -24,7 +24,7 @@ RStudio can only act as a GUI front-end for Git if Git has been successfully ins
 
 A basic test for successful installation of Git is to simply enter `git` in the shell. If you get a complaint about Git not being found, it means installation was unsuccessful or that it is not being found, i.e. it is not on your `PATH`.
 
-If you are not sure where the Bit executable lives, try this in a shell:
+If you are not sure where the Git executable lives, try this in a shell:
   
 * `which git` (Mac, Linux)
 
@@ -45,11 +45,11 @@ From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the bo
     - __WARNING__: On Windows, do __NOT__ use `C:/Program Files (x86)/Git/cmd/git.exe`. `bin` in the path is GOOD YES! `cmd` in the path is BAD NO!
     - __WARNING__: On Windows, do __NOT__ use `git-bash.exe`. Something that ends in `git.exe` is GOOD YES! `git-bash.exe` is BAD NO!
 
-  * At times, we've had trouble navigating to the necessary directory on Mac OS, once we've clicked "Browse" and are working with a Finder-type window. The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able type or paste any path you want.
+  * At times, we've had trouble navigating to the necessary directory on Mac OS, once we've clicked "Browse" and are working with a Finder-type window. The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able to type or paste any path you want.
   
 **Restart RStudio if you make any changes.** Don't make me stop this car again and restart RStudio for you in office hours. DO IT.
 
-Do the steps at the top of the page to see if RStudio and git are communicating now.
+Do the steps at the top of the page to see if RStudio and Git are communicating now.
 
 No joy?
 
