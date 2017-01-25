@@ -10,14 +10,14 @@ We assume you've got your existing R project isolated in a directory on your com
 
 Go to <https://github.com> and make sure you are logged in.
 
-Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+Click the green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
 
 Pick a repository name that actually reminds you what the project is about! But try to be concise.
 
 Public  
 YES Initialize this repository with a README
 
-Click big green button "Create repository."
+Click the big green button "Create repository."
 
 Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
 
@@ -79,4 +79,6 @@ If you click on "commits," you should see one with the message "init".
 
 ## The end
 
-Now just ... repeat. Do work somewhere. Commit it. Push it or pull it depending on where you did it, but get local and remote "synced up". Repeat.
+Now just ... repeat. Do work somewhere. Commit it. Push it or pull it\* depending on where you did it, but get local and remote "synced up". Repeat.
+
+\* Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made. For this reaon, it's a good idea to try and get into the habit of pulling before you attempt to push.

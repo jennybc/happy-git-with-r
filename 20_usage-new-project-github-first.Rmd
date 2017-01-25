@@ -18,7 +18,7 @@ Repository name: `myrepo` (or whatever you wish)
 Public  
 YES Initialize this repository with a README
 
-Click big green button "Create repository."
+Click the big green button "Create repository."
 
 Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
 
@@ -95,7 +95,7 @@ Add a line to this file, such as "Line added from GitHub."
 
 Edit the commit message in "Commit changes" or accept the default.
 
-Click big green button "Commit changes."
+Click the big green button "Commit changes."
 
 ## Pull from GitHub
 
@@ -109,4 +109,6 @@ Look at README.md again. You should now see the new line there.
 
 ## The end
 
-Now just ... repeat. Do work somewhere. Commit it. Push it or pull it depending on where you did it, but get local and remote "synced up". Repeat.
+Now just ... repeat. Do work somewhere. Commit it. Push it or pull it\* depending on where you did it, but get local and remote "synced up". Repeat.
+
+\* Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made. For this reaon, it's a good idea to try and get into the habit of pulling before you attempt to push.
