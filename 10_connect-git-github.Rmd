@@ -145,7 +145,7 @@ If you have made it this far, you are ready to graduate to using Git and GitHub 
 
 It is likely that your first push, above, leads to a challenge for your GitHub username and password.
 
-This will drive you crazy in the long-run and make you reluctant to push. Do one of the follow to eliminate this annoyance:
+This will drive you crazy in the long-run and make you reluctant to push. Do one of the following to eliminate this annoyance:
 
   * Credential caching for HTTPS access, chapter \@ref(credential-caching).
   * Set up SSH keys, chapter \@ref(ssh-keys).
@@ -154,7 +154,7 @@ Now is the perfect time to do this, since you have a functioning test repo.
 
 ## Clean up
 
-**Local** When you're ready to clean up, you delete the local repo any way you like. It's just a regular directory on your computer.
+**Local** When you're ready to clean up, you can delete the local repo any way you like. It's just a regular directory on your computer.
 
 Here's how to do that in the shell, if current working directory is `myrepo`:
 
