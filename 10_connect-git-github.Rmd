@@ -48,7 +48,7 @@ Make this new repo your working directory, list its files, display the README, a
 ``` bash
 cd myrepo
 ls
-less README.md
+head README.md
 git remote show origin
 ```
 
@@ -60,7 +60,7 @@ jenny@2015-mbp ~ $ cd myrepo
 jenny@2015-mbp myrepo $ ls
 README.md
 
-jenny@2015-mbp myrepo $ less README.md 
+jenny@2015-mbp myrepo $ head README.md 
 # myrepo
 tutorial development
 
@@ -109,6 +109,7 @@ git add -A
 git commit -m "A commit from my local computer"
 git push
 ```
+The `-m` flag is an important message that must be included with every commit! Git requires a commit message for every commit, so if you forget the `-m` flag, git will prompt you for a commit message anyways. It is good practice to write meaningful commit messages so in the future, potential collaborators (and your future self) will understand the progression of a project.
 
 This should look something like this:
 
