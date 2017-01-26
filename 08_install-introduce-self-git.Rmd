@@ -14,7 +14,9 @@ substituting your name and **the email associated with your GitHub account**.
 
 From RStudio, go to *Tools > Shell* and tell Git your name and **GitHub email** by typing (use your own name and email):
 
-Note: If you are on Windows, make sure this has opened *Git Bash*, and not Windows Command Prompt! If it has not, restarting RStudio may fix this issue. Otherwise, you can open *Git Bash* from the Windows menu, or [change the option](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN) via *Options -> Version Control*. 
+Note: If you are on Windows, check the title bar of the shell that was opened! If you see `cmd.exe` at the end of the status bar, this is the Windows Command Prompt. If you instead see `MINGW64` at the beginning, you have successfully opened Git Bash!
+
+Note: If you are **not** in an R Project that is version controlled with git, *Tools > Shell* will open Windows Command Prompt. If this is the case and RStudio still opens `cmd.exe`, check *Tools > Global Options > Git/SVN* and tick the box for "Use Git Bash as shell for Git projects". You may need to restart RStudio.
 
   * `git config --global user.name 'Jennifer Bryan'`
   
