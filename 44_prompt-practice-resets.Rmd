@@ -2,7 +2,7 @@
 
 Practice recovering from mistakes.
 
-Use a repository you've create earlier in tutorial for this. It only needs to be local, i.e. this does not involve GitHub.
+Use a repository you've created earlier in the tutorial for this. It only needs to be local, i.e. this does not involve GitHub.
 
 If it's not your most recent commit, seriously consider just letting that go. Just. Let. It. Go.
 
@@ -14,7 +14,7 @@ If "YES undo the commit, but leave the files in that state (but unstaged)": `git
 
 If "YES go right back to the moment before I committed": `git reset --soft HEAD^`. Your files will stay the same but the commit will be undone. Even your staged changes will be restored.
 
-**If you just want to fiddle the most recent commit or its message, you can amend it. You can do this from RStudio!**
+**If you just want to fiddle with the most recent commit or its message, you can amend it. You can do this from RStudio!**
 
   * Make the change you want and amend the commit.
   * Do you only want to change the commit message?
