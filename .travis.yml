@@ -1,11 +1,9 @@
 language: r
 cache: packages
 sudo: false
-before_install:
 before_script:
 - chmod +x ./_build.sh
 - chmod +x ./_deploy.sh
-- echo "options(repos = c(CRAN='http://cran.rstudio.com'))" >> ~/.Rprofile
 script:
 - ./_build.sh
 after_success:
