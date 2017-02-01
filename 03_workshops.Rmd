@@ -14,7 +14,7 @@ Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-pict
 
 These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to your workshop (no promises).
 
-*For rstudio::conf 2017 Orlando, we will have a few TAs roaming at the tutorial to help sort out issues. Get as far as you can. Every bit helps.*
+*For satRday Cape Town, we will have a few helpers in the tutorial to help sort out issues. Get as far as you can. Every bit helps.*
 
 Try this. Give it about 1 - 2 hours. If you hit a wall, we will help:
 
@@ -31,6 +31,13 @@ Troubleshooting:
 
   * Sometimes RStudio [needs a little help finding Git](#rstudio-see-git).
   * General troubleshooting: [RStudio, Git, GitHub Hell](#troubleshooting).
+
+## satRday Cape Town 2017
+
+<http://capetown2017.satrdays.org>  
+Cape Town, South Africa  
+Workshops February 16 - 17 (exact time slot for the Git/GitHub workshop TBA)  
+Full day of talks February 18
 
 ## rstudio::conf 2017
 
