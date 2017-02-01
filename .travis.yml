@@ -11,5 +11,5 @@ after_success:
   _deploy.sh
 env:
   global:
-    CRAN=http://cran.rstudio.com
+    CRAN: http://cran.rstudio.com
     secure: IjJ5v+fiPiRYgmU1OSazwO7DNYqdg8x5u6rwWW27HOhJfpo3z+I6SwoEUe0qzd+WlPGC91XB8b9rXENfbCKpbITYIhhn3eqL0ARBwMsaalGr9z8Tid1wc+/QfaiRDJBGfzRdqpkepOpuR/ikliXBLbWu42MFxc/6VxX0F+mGjxlyVIOdvN5v4gwHz9/b7YCROheud5/B4ESaEUbQX2Cv22djTUECpMjAd6IpmCUMMm4jpdAZDRPbPaLIzEw1ftTdBM3xRI2B2c9Y9ok3teTViP45+Uh/+QWVVzLw0m53gTo5qo1T73MCc+QRtuFg4X5CjyG7K75nmSTkU4rFzDWmhj8WH/iYnB7lK4G+4FS4yY8qoNk2L5cX+wmpkT6L0JinLvfHZrlAXc5Q+OfNUjvJhcU4VARGbcNhCkyCeM5XrmQDWjIp4uwXNlf26IujVwt0wYTEhxQiGhRsZFqR24/9L3wP4RZ3h4SvC1IOxac4h+I3pCRXsdiq1/wIgtkYBWMA5yy8cRdkP94pTozkUhzQZrRCPPfWxfclQHa6pM44ZEzX0Ya/BA6WNsm8gNOpttiftVJrrFogajgd0vcQLdfemijaIpUggK74K4vtf13U66rX3qTUY5h9/lpsqoZdv217JYZMt+c+3XrJDONvDBPSO0gx7TKMpPfneU/BHTQRcZ8=
