@@ -10,7 +10,7 @@ These materials can be used for independent study, but I also use them to suppor
 
 Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-picture)
 
-**It is vital that you attempt to set up your system in advance. You cannot show up at with no preparation and keep up!**
+**It is vital that you attempt to set up your system in advance. You cannot show up at the workshop with no preparation and keep up!**
 
 These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to your workshop (no promises).
 
@@ -35,9 +35,8 @@ Troubleshooting:
 ## satRday Cape Town 2017
 
 <http://capetown2017.satrdays.org>  
-Cape Town, South Africa  
-Workshops February 16 - 17 (exact time slot for the Git/GitHub workshop TBA)  
-Full day of talks February 18
+February 16 - 18, 2017, Cape Town, South Africa
+Thursday, February 16, 8:30am-12:00pm Git with R Workshop, with coffee break from 10:00am - 10:30am
 
 ## rstudio::conf 2017
 
