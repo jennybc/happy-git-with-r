@@ -11,6 +11,7 @@ If you're not crying already, these fictional-but-realistic Git man pages should
 If you can tolerate adult and often offensive language, you might enjoy:
 
   * <http://www.commitlogsfromlastnight.com>
+  * <http://ohshitgit.com/>
 
 Your commits will look more glorious scrolling by Star Wars style:
 
