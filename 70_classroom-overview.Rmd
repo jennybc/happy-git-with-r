@@ -64,7 +64,39 @@ TAs leave feedback here. Actual marks are stored elsewhere and distributed via e
 
 After homework submission, we randomly assign each student to review the work of two peers. Each peer review assignment takes the form of an issue, assigned to the reviewer. Students leave feedback for each other here. As the TAs mark, they read and assess these peer reviews (also marked!) and close the issues.
 
-## Repo as sampler
+
+## GitHub as course management system
+
+*2017-05-29 This section was excised from an article I am writing. It is partially redundant with the above and the the two will be merged.*
+
+[STAT 545](http://stat545.com) is a data wrangling and analysis course at the University of British Columbia. I was the instructor in charge for several years, which coincided with my own adoption of Git/GitHub. GitHub is used to manage the development of course material, to serve the course website, to create a discussion forum, and to host all student-submitted work. 
+
+Given that students must submit their work and provide peer review of others' work via GitHub, the use of hosted version control is an explicit, though modest, part of the course. The website [Happy Git and GitHub for the useR](http://happygitwithr.com) holds our battle-tested instructions for setup and early usage. The students achieve basic competence quite quickly and find it gratifying to see their formatted, figure-rich R Markdown reports up on the internet. Since it’s easy to expose their work within the class, we conduct peer review, which helps expertise to spread quickly through the group.
+
+### Use a GitHub Organization
+
+[GitHub Organizations](https://help.github.com/articles/differences-between-user-and-organization-accounts/) are "shared accounts where groups of people can collaborate across many projects at once". This is the most appropriate structure for stewarding course resources, since I can grant TAs and students different levels of access to various repositories. Access can be controlled at the individual user level or, more conveniently, for entire [Teams](https://help.github.com/articles/setting-up-teams/). The TA Team shares write access with me on a private repository for internal matters. I provide each student with their own private repository for coursework and grant other members of the Students Team read access, in order to facilitate peer review. There is a public repository that underpins the course website (see below). We have one other public repository that exists solely so the [Issues](https://github.com/STAT545-UBC/Discussion/issues) can be used as a discussion forum.
+
+GitHub actively encourages the use of its platform in teaching. As an instructor you can request a [free Organization account](https://help.github.com/articles/discounted-organization-accounts/) that provides features normally available only on paid plans, such as private repositories. In fact, GitHub provides tooling for specific teaching workflows via [GitHub Classroom](https://classroom.github.com/), although I do not use it. That is not an intentional knock on their tools. I started teaching with GitHub several years before this existed and developed a different way of using the platform. I also find the [GitHub Education](https://education.github.com) resources to be geared more towards computer science than data science.
+
+### GitHub Pages for course website
+
+All course content is provided on the [STAT 545 website](http://stat545.com). Each page is generated from an R Markdown document that is rendered to HTML locally using the rmarkdown package, retaining the intermediate Markdown. These pages are a mix of prose and rendered R code, reflecting the live coding done in class. All of these files and their history can be explored in the [source repository](https://github.com/STAT545-UBC/STAT545-UBC.github.io). The TA team has permission to write to this repo, meaning they can (and do!) help me maintain the website. I rejoice that I am no longer the webmaster. We also get typo corrections and other input from the world at large, since this is entirely public.
+
+If I were starting from scratch today, I would continue to use R Markdown, RStudio, and GitHub Pages (see below), but would upgrade to a more modern, automated approach to rendering the pages. I now recommend [R Markdown websites](http://rmarkdown.rstudio.com/rmarkdown_websites.html), [bookdown](https://bookdown.org), or [blogdown](https://bookdown.org/yihui/blogdown/) to manage the process of creating a static website from a large and inter-related set of `.Rmd` files.
+
+GitHub offers several ways to host a website directly from a repository, collectively known as [GitHub Pages](https://help.github.com/categories/github-pages-basics/). The STAT 545 website is a very simple [Organization Page](https://help.github.com/articles/user-organization-and-project-pages/) that uses a [custom domain](https://help.github.com/articles/custom-domain-redirects-for-github-pages-sites/), `stat545.com`, instead of the default `orgname.github.io`.
+
+This system for managing course content is a great example of integrating the doing of work and the sharing of it. We analyze data live in class, using R, based on the scripts on the website. I re-render the associated `.R` or `.Rmd`, commit the changed files, push, and see it reflected right away on http://stat545.com. There is no separation between having an idea, implementing it, and posting on the website.
+
+### Student-specific private repos
+
+Early in the course I elicit GitHub usernames for registered students, via a [Shiny app](https://shiny.rstudio.com), and invite them to join the course Organization. I then create one private repository per student, in the STAT 545 Organization. The targeted student has write access and the other students have read access. This is somewhat controversial, due to the possibility of cheating, but I have seen more pros than cons for this setup, in the STAT 545 context. In other settings, I have also used one repo per student *per homework assignment*, which allows you to keep the repos completely private until homework submission, then increase their visibility during marking and peer review. Some courses will work better with one model or the other.
+
+Each student does their work in this repo, submitting a major assignment approximately once a week. The first assignment is simply to claim the repository and create a README, which proves they have all the relevant software setup and they can write a little Markdown. Each week we tackle some new data analysis or wrangling task, with increasing latitude for independence. Homework is implemented in R Markdown documents, rendered to Markdown, and pushed to GitHub. Students submit their work by opening an issue in their repo, naming the assignment in the title, providing the SHA of the associated final commit, and linking to the main `.md` file. We leave feedback as comments in the issue thread or, occasionally, propose changes to code via "pull requests". Two peers are selected at random to review each assignment, a process that we also implement via GitHub Issues.
+
+At the end of term, the student (and their instructor!) can visit the repo to find an organized, navigable sequence of ~10 assignments. Each student leaves with self-written documentation of everything they've done, ready to consult in future projects. The last assignments require writing an R package or Shiny app, which they generally do in public repositories under their own accounts. They finish STAT 545 with several months of Git/GitHub experience and the start of a data science portfolio.
+
 
 
 
