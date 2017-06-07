@@ -1,6 +1,6 @@
 # Set git config information
 git config --global user.name "Jenny Bryan (Travis-CI)"
-git config --global user.email "jenny@stat.ubc.ca"
+git config --global user.email "jenny.f.bryan@gmail.com"
 
 # Clone the gh-pages repository
 git clone -b gh-pages \
