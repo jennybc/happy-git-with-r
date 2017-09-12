@@ -19,3 +19,7 @@ Your commits will look more glorious scrolling by Star Wars style:
   * <http://starlogs.net/#jennybc/googlesheets>
   * Do this for any repo: `http://starlogs.net/#USER/REPO`
   
+Amazing animations of all that frantic activity:
+
+  * <http://gource.io>
+  
