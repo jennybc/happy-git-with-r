@@ -160,7 +160,7 @@ HTML files, such as `foo.html`, are not immediately useful on GitHub (though you
 
 I have more [general ideas](#repo-browsability) about how to make a GitHub repo function as a website.
 
-## Troubleshooting
+## Troubleshooting {#rmd-troubleshooting}
 
 __Make sure RStudio and the `rmarkdown` package (and its dependencies) are up-to-date.__ In case of catastrophic failure to render the boilerplate R Markdown document, consider that your software may be too old. Details on the system used to render this document and how to check your setup:
 
