@@ -28,7 +28,7 @@ Mac OS users might get an immediate offer to install command line developer tool
 
 ## Windows
 
-**Option 1** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/), previously known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. You may accept all the default settings during installation.
+**Option 1** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/), previously known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing. You must select the "Use Git from the Windows Command Prompt" option during installation. You may accept all of the other default settings during installation.
 
   * This approach leaves the Git executable in a conventional location, which will help you and other programs, e.g. RStudio, find it and use it. This also supports a transition to more expert use, because the Bash shell will be useful as you venture outside of R/RStudio.
   * This also leaves you with a Git client, though not a very good one. So check out Git clients we recommend (chapter \@ref(git-client)).
