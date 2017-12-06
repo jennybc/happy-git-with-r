@@ -2,7 +2,7 @@
 
 If you Git push or pull via the command line, you can avoid the constant authentication challenge by [caching your username and password](#credential-caching) for HTTPS access or by [setting up SSH keys](#ssh-keys). This includes any Git operations done by RStudio on your behalf.
 
-But for some operations you must call the [GitHub API](https://developer.github.com/v3/) (**A**pplication **P**rogramming **I**interface). And this requires that you [authenticate yourself](https://developer.github.com/v3/#authentication) in a different way.
+But for some operations you must call the [GitHub API](https://developer.github.com/v3/) (**A**pplication **P**rogramming **I**nterface). And this requires that you [authenticate yourself](https://developer.github.com/v3/#authentication) in a different way.
 
 ## GitHub API
 
