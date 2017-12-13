@@ -16,6 +16,22 @@ You may be able to find Git after the fact with these commands in the shell:
 
 It is not entirely crazy to just re-install Git, using a method that leaves it in a more conventional location, and to pay very close attention to where it's being installed. Live and learn.
 
+## RStudio Git pane disappears on Mac OS
+
+After a Mac OS upgrade, you might need to trigger the Xcode command line tools to prompt you for what it needs, i.e. to re-install or re-agree to the license agreement. We have seen this cause the RStudio Git pane to disappear on a system where it was previously working. Use commands like these below to tickle Xcode:
+
+``` bash
+xcode-select --install
+```
+
+or
+
+``` bash
+git config --global --list
+```
+
+Then **restart RStudio**.
+
 ## Dysfunctional PATH
 
 I'm pretty sure that most cases of RStudio *not* automatically detecting the Git executable stem from problems with `PATH`. This is the set of directories where your computer will look for executables, such as Git (today) or `make` (later in this course). Certain methods of Git installation, especially on Windows and/or older OSes, have a higher tendency to put Git in an unconventional location or to fail to add the relevant directory to `PATH`.

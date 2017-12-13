@@ -52,7 +52,15 @@ git config
 
 Accept the offer! Click on "Install".
 
-Another way to request this is via `xcode-select --install`. We just happen to find this Git-based trigger apropos.
+Here's another way to request this installation, more directly:
+
+``` bash
+xcode-select --install
+```
+
+We just happen to find this Git-based trigger apropos.
+
+Note also that, after upgrading your Mac OS, you might need to re-do the above and/or re-agree to the Xcode license agreement. We have seen this cause the RStudio Git pane to disappear on a system where it was previously working. Use commands like those above to tickle Xcode into prompting you for what it needs, then restart RStudio.
 
 **Option 2** (*recommended*): Install Git from here: <http://git-scm.com/downloads>.
 
