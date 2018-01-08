@@ -42,7 +42,7 @@ From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the bo
 
     Here is a [screenshot](http://www.molecularecologist.com/wp-content/uploads/2013/11/Screenshot-2013-11-12-09.53.56-Copy1.png) of someone doing this on a Windows machine, _although_ it is a bit outdated. 
     
-    As of RStudio version v1.1.383, the option to “Use Git Bash as shell for Git projects” is no longer an option for Windows users. The RStudio dev team found that people were confusing the type of shell (Git Bash, Comman Prompt, Windows Powershell, etc) that launched  between Git and non-Git projects. 
+    As of RStudio version v1.1.383, the option to “Use Git Bash as shell for Git projects” is no longer an option for Windows users. The RStudio dev team found that people were confusing the type of shell (Git Bash, Command Prompt, Windows Powershell, etc) that launched  between Git and non-Git projects. 
     
     You can adjust the terminal with `Tools -> Global Options -> Terminal pane` 
     
