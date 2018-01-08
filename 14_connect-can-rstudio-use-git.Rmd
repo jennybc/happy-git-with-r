@@ -40,7 +40,13 @@ From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the bo
 
   * `C:/Program Files (x86)/Git/bin/git.exe` (Windows)
 
-    Here is a [screenshot](http://www.molecularecologist.com/wp-content/uploads/2013/11/Screenshot-2013-11-12-09.53.56-Copy1.png) of someone doing this on a Windows machine.
+    Here is a [screenshot](http://www.molecularecologist.com/wp-content/uploads/2013/11/Screenshot-2013-11-12-09.53.56-Copy1.png) of someone doing this on a Windows machine, _although_ it is a bit outdated. 
+    
+    As of RStudio version v1.1.383, the option to “Use Git Bash as shell for Git projects” is no longer an option for Windows users. The RStudio dev team found that people were confusing the type of shell (Git Bash, Comman Prompt, Windows Powershell, etc) that launched  between Git and non-Git projects. 
+    
+    You can adjust the terminal with `Tools -> Global Options -> Terminal pane` 
+    
+    Here is a [screenshot](https://user-images.githubusercontent.com/1976582/32399220-8647604e-c0b1-11e7-95fd-9d58ae0e537a.png) that shows how to change the terminal to GitBash if you prefer. 
 
     - __WARNING__: On Windows, do __NOT__ use `C:/Program Files (x86)/Git/cmd/git.exe`. `bin` in the path is GOOD YES! `cmd` in the path is BAD NO!
     - __WARNING__: On Windows, do __NOT__ use `git-bash.exe`. Something that ends in `git.exe` is GOOD YES! `git-bash.exe` is BAD NO!
