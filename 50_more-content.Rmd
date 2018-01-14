@@ -121,7 +121,7 @@ Workflows for group of 1, 2, 5, 10
 
   * Fork and Pull vs Shared Repository
   
-    - <https://help.github.com/articles/types-of-collaborative-development-models/>
+    - <https://help.github.com/articles/about-collaborative-development-models/>
     - <https://help.github.com/articles/using-pull-requests/>
 
 ## How the square bracket links work
