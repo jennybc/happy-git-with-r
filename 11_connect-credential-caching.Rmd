@@ -1,6 +1,8 @@
 # Cache credentials for HTTPS {#credential-caching}
 
-If you plan to push/pull using HTTPS, you want Git to cache your credentials (username, password) (or you should set up SSH keys, chapter \@ref(ssh-keys)), so you don't need to enter them over and over again. You'll need to set this up on each computer you want to connect to GitHub from.
+If you plan to push/pull using HTTPS, you want Git to cache your credentials (username, password) (or you should set up SSH keys, chapter \@ref(ssh-keys)), so you don't need to enter them over and over again. I suggest you set up one of these methods of authentication on each computer you want to connect to GitHub from.
+
+I find HTTPS easier to get working quickly. [It is what GitHub recommends](https://stackoverflow.com/a/11041782/2825349), presumably for exactly the same reasons. I started with HTTPS, but eventually swiched over to SSH. Either is fine and you can change your mind later.
 
 I do not explain all the [shell](http://stat545.com/git09_shell.html) and Git commands in detail. This is a black box diagnostic / configuration exercise.
 
