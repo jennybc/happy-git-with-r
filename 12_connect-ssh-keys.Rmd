@@ -189,7 +189,7 @@ Copy the public key onto your clipboard. For example, open `~/.ssh/id_rsa.pub` i
 
 Make sure you're signed into GitHub. Click on your profile pic in upper right corner and go *Settings*, then *SSH and GPG keys*. Click "New SSH key". Paste your public key in the "Key" box. Give it an informative title, presumably related to the comment you used abov, during key creation. For example, you might use `2018-mbp` to record the year and computer. Click "Add SSH key".
 
-In theory, we're done! Work through a usage example here to confirm that all is well, then rejoice.
+In theory, we're done! You can use [`ssh -T git@github.com`](https://help.github.com/articles/testing-your-ssh-connection/) to test your connection to GitHub. If you're not sure what to make of the output, see the link for details. Of course, the best test is to work through the realistic usage examples elsewhere in this guide.
 
 ## Troubleshooting
 
