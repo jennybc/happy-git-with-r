@@ -190,3 +190,39 @@ Copy the public key onto your clipboard. For example, open `~/.ssh/id_rsa.pub` i
 Make sure you're signed into GitHub. Click on your profile pic in upper right corner and go *Settings*, then *SSH and GPG keys*. Click "New SSH key". Paste your public key in the "Key" box. Give it an informative title, presumably related to the comment you used abov, during key creation. For example, you might use `2018-mbp` to record the year and computer. Click "Add SSH key".
 
 In theory, we're done! Work through a usage example here to confirm that all is well, then rejoice.
+
+## Troubleshooting
+
+### HTTPS vs SSH
+
+If you think you have SSH set up correctly and yet you are still challenged for credentials, consider this: for the repo in question, have you possibly set up GitHub, probably called `origin`, as an HTTPS remote?
+
+How to see the remote URL associated with the current repo in the shell:
+
+``` bash
+git remote -v
+```
+
+An SSH remote will look like this:
+
+```
+git@github.com:USERNAME/REPOSITORY.git
+```
+
+whereas an HTTPS remote will look like this:
+
+```
+https://github.com/USERNAME/REPOSITORY.git
+```
+
+You can toggle between these with `git remote set-url`:
+
+  * <https://help.github.com/articles/changing-a-remote-s-url/>
+
+### Other
+
+Other things to double-check:
+
+  * Did you add the SSH to your ssh-agent?
+  * Did you configure Mac OS Sierra or High Sierra to persistently store your passphrase in the keychain?
+  * Did you add the public key to GitHub?
