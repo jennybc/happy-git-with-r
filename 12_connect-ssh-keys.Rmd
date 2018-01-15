@@ -54,16 +54,16 @@ If you see a pair of files like `id_rsa.pub` and `id_rsa`, you have a key pair a
 
 Go to *Tools > Global Options...> Git/SVN > Create RSA Key...*.
 
-RStudio prompts you for a passphrase. It is optional, but also a best practice. Configuring your system for smooth operation with a passphrase-protected key introduces more moving parts. If you're completely new at all this, skip the passphrase and implement it next time, when you are more comfortable with system configuration. I did not use a passphrase at first, but I do now, and record it in a password manager.
+RStudio prompts you for a passphrase. It is optional, but also a best practice. Configuring your system for smooth operation with a passphrase-protected key introduces more moving parts. If you're completely new at all this, skip the passphrase (or use HTTPS!) and implement it next time, when you are more comfortable with system configuration. I did not use a passphrase at first, but I do now, and record it in a password manager.
 
 Click "Create" and RStudio will generate an SSH key pair, stored in the files `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`.
 
 ### Option 2: Set up from the shell
 
-Create the key pair like so, but substitute a comment that means something to you, especially if you'll have multiple SSH keys in your life. Consider the email associated with your GitHub account or the name of your computer, e.g. `jenny@example.com` or `2018-mbp`.
+Create the key pair like so, but substitute a comment that means something to you, especially if you'll have multiple SSH keys in your life. Consider the email associated with your GitHub account or the name of your computer, e.g. `you@example.com` or `2018-mbp`.
 
 ``` bash
-$ ssh-keygen -t rsa -b 4096 -C "USEFUL-COMMENT-GOES-HERE"
+$ ssh-keygen -t rsa -b 4096 -C "USEFUL-COMMENT"
 ```
 
 Accept the proposal to save the key in the default location. Just press Enter here:
@@ -81,7 +81,7 @@ Enter passphrase (empty for no passphrase):
 The process should complete now and should have looked like this:
 
 ``` bash
-jenny@2015-mbp ~ $ ssh-keygen -t rsa -b 4096 -C "USEFUL-COMMENT-GOES-HERE"
+jenny@2015-mbp ~ $ ssh-keygen -t rsa -b 4096 -C "USEFUL-COMMENT"
 Generating public/private rsa key pair.
 Enter file in which to save the key (/Users/jenny/.ssh/id_rsa):     
 Enter passphrase (empty for no passphrase): 
@@ -89,7 +89,7 @@ Enter same passphrase again:
 Your identification has been saved in /Users/jenny/.ssh/id_rsa.
 Your public key has been saved in /Users/jenny/.ssh/id_rsa.pub.
 The key fingerprint is:
-SHA256:ki0TNHm8qIvpH7/c0qQmdv2xxhYHCwlpn3+rVhKVeDo USEFUL-COMMENT-GOES-HERE
+SHA256:ki0TNHm8qIvpH7/c0qQmdv2xxhYHCwlpn3+rVhKVeDo USEFUL-COMMENT
 The key's randomart image is:
 +---[RSA 4096]----+
 |      o+   . .   |
