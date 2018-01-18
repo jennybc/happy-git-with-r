@@ -2,6 +2,8 @@
 
 Why would a data analyst use hosted version control?
 
+*This intro has grown into a stand-alone article that is arguably a better introduction at this point. Until I merge it back in, consider reading the article instead: "Excuse me, do you have a moment to talk about version control?" <https://dx.doi.org/10.7287%2Fpeerj.preprints.3159v2>.*
+
 ## Why Git?
 
 [Git](http://git-scm.com) is a __version control system__. Its original purpose was to help groups of developers work collaboratively on big software projects. Git manages the evolution of a set of files -- called a __repository__ -- in a sane, highly structured way. If you have no idea what I'm talking about, think of it as the "Track Changes" features from Microsoft Word on steroids.
