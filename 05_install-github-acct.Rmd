@@ -15,7 +15,7 @@ A few tips, which sadly tend to contradict each other:
   * Pick a username you will be comfortable revealing to your future boss.
   * Shorter is better than longer.
   * Be as unique as possible in as few characters as possible. In some settings GitHub auto-completes or suggests usernames.
-  * Make it timeless. Don't highlight your current university, employer, or place of residence.
+  * Make it timeless. Don't highlight your current university, employer, or place of residence, e.g. JennyFromTheBlock.
   * Avoid words laden with special meaning in programming. In my first inept efforts to script around the GitHub API, I assigned lots of issues to [the guy with username `NA`](https://github.com/na) because my vector of GitHub usernames contained missing values. A variant of [Little Bobby Tables](https://xkcd.com/327/).
 
 You can change your username later, but better to get this right the first time.
