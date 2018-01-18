@@ -12,7 +12,7 @@ Git and your Git client are not the same thing, just like R and RStudio are not 
 
 RStudio offers a very basic Git client. I use this often for simple operations, but you probably want another, more powerful one as well.
 
-Fair warning: for some things, you will have to use the command line. But the more powerful your Git client is, the less often this happens.
+Fair warning: for some things, you will have to use the command line. But the more powerful your Git client is, the less often this happens. The visual overview given by your Git client can also be invaluable for understanding the current state of things, even when preparing calls to command line Git.
 
 Fantastic news: because all of the clients are just forming and executing Git commands on your behalf, you don't have to pick one. You can literally do one operation from the command line, do another from RStudio, and another from SourceTree, one after the other, and it just works. *Very rarely, both clients will scan the repo at the same time and you'll get an error message about `.git/index.lock`. Try the operation again at least once before doing any further troubleshooting.*
 
