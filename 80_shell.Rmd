@@ -78,7 +78,7 @@ ComSpec              C:\WINDOWS\system32\cmd.exe
 
 #### Bash via Windows Services for Linux
 
-In 2017, Microsoft launched the Windows Subsystem for Linux (WSL), "a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows". At the time of writing (January 2018), you will only have this if you're running Windows 10 64-bit and have chosen to install the optional WSL system component. Therefore, I expect only keeners to have this and, in that case, you probably don't need this chapter. It looks something like this:
+In 2016, Microsoft launched the Windows Subsystem for Linux (WSL), "a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows". Overall, this is a fantastic development. However, at the time of writing (January 2018), you will only have this if you're running Windows 10 64-bit and have chosen to install the optional WSL system component. Therefore, I expect only keeners to have this and, in that case, you probably don't need this chapter. It looks something like this:
 
 ![](img/2018-01-15_bash-windows-services-for-linux.png)
 
