@@ -111,4 +111,4 @@ A few Git commands:
 * `git remote -v` lists all remotes. Very useful for making sure `git` knows about your remote and that the remote address is correct.
 * `git remote add origin GITHUB_URL` adds the remote `GITHUB_URL` with nickname `origin`.
 * `git remote set-url origin GITHUB_URL` changes the remote url of `origin` to `GITHUB_URL`. This way you can fix typos in the remote url.
-* *we should add more*
+* *Feel free to suggest other commands that deserve listing in a [GitHub issue](https://github.com/jennybc/happy-git-with-r/issues).*

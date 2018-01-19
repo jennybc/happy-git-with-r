@@ -30,11 +30,11 @@ You can check this from RStudio or from the shell.
 
 Global advice: if you do have existing keys, but have no clue where they came from or why you created them, you should seriously consider creating a new SSH key pair. It's up to you to figure out whether/how to delete the old ones. But don't let that keep you from creating new keys and moving forward.
 
-### RStudio
+### From RStudio
 
 Go to *Tools > Global Options...> Git/SVN*. If you see `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys. Caveat: RStudio only looks for a key pair named `id_rsa` and `id_rsa.pub`. This makes sense, because it's the default and very common. But SSH keys *can* have other names. If you want to be completely certain, you should also check in the shell.
 
-### Shell
+### From the shell
 
 Go to the shell (appendix \@ref(shell)).
 
