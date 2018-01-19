@@ -58,6 +58,8 @@ Notice the `cmd.exe` in the title bar.
 
 In Command Prompt, `echo %comspec%` gives `C:\WINDOWS\system32\cmd.exe`.
 
+If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the previous commands, that suggests you have somehow launched into `cmd.exe`. 
+
 #### Power Shell
 
 Another Windows shell, more modern than the command prompt. Also probably not what you want. It looks something like this:
@@ -110,12 +112,3 @@ A few Git commands:
 * `git remote add origin GITHUB_URL` adds the remote `GITHUB_URL` with nickname `origin`.
 * `git remote set-url origin GITHUB_URL` changes the remote url of `origin` to `GITHUB_URL`. This way you can fix typos in the remote url.
 * *we should add more*
-
-
-## Note for Windows users
-
-On Windows, the program that runs the shell is called *Command Prompt* or *cmd.exe*.  Unfortunately, the default Windows shell does not support all the commands that other operating systems do. This is where GitBash comes in handy: it installs a light version of a shell that does support all the above commands. When you access the shell through RStudio, RStudio actually tries to open GitBash if it can find it, but it will open the default Windows Command Prompt if GitBash is not found.
-
-If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the previous commands, that means that RStudio could not find GitBash. The most likely cause of this is that you did not install git using the recommended method from this book, so try re-installing git.
-
-
