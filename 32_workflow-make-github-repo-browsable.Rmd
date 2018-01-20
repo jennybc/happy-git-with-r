@@ -29,7 +29,11 @@ You will quickly discover that GitHub renders Markdown files very nicely. By cli
 
 Exploit this aggressively. Make Markdown your default format for narrative text files and use them liberally to embed notes to yourself and others in a repository hosted on Github. It's an easy way to get pseudo-webpages inside a project "for free". You may never even compile these files to HTML explicitly; in many cases, the HTML preview offered by GitHub is all you ever need.
 
-What does this mean for R Markdown files? **Keep intermediate Markdown. Or only render to Markdown.** Commit both `foo.Rmd` and `foo.md`, even if you choose to `.gitignore` the final `foo.html`. From [September 2014](https://github.com/github/markup/pull/343), GitHub renders R Markdown files nicely, like Markdown, and with proper syntax highlighting, which is great. But, of course, the code blocks just sit there un-executed, so my advice about keeping intermediate Markdown still holds. You want YAML frontmatter that looks something like [this](https://gist.github.com/jennybc/402761e30b9be8023af9#file-yaml_frontmatter_rmd_keep_md-yml) for `.Rmd`:
+## R Markdown
+
+What does this mean for R Markdown files? **Keep intermediate Markdown. Or only render to Markdown.** Commit both `foo.Rmd` and `foo.md`, even if you choose to `.gitignore` the final product, e.g. `foo.html` or `foo.pdf` or `foo.docx`. From [September 2014](https://github.com/github/markup/pull/343), GitHub renders R Markdown files nicely, like Markdown, and with proper syntax highlighting, which is great. But, of course, the code blocks just sit there un-executed, so my advice about keeping Markdown still holds.
+
+If your target output format is not Markdown, you want [YAML frontmatter](https://gist.github.com/jennybc/402761e30b9be8023af9) that looks something like this for `.Rmd`:
 
 ```{r include = FALSE}
 rinline <- function(code) {
@@ -49,7 +53,7 @@ output:
 ---
 ```
 
-or like [this](https://gist.github.com/jennybc/402761e30b9be8023af9#file-yaml_frontmatter_r_keep_md-yml) for `.R`:
+or like this for `.R`:
 
 ``` yaml
 #' ---
@@ -62,19 +66,44 @@ or like [this](https://gist.github.com/jennybc/402761e30b9be8023af9#file-yaml_fr
 #' ---
 ```
 
-In RStudio, when editing `.Rmd`, click on the gear next to "Knit HTML" for YAML authoring help. As of early 2016, `rmarkdown` offers a [custom output format for GitHub-flavored markdown, `github_document`](http://rmarkdown.rstudio.com/github_document_format.html). Read about [R Markdown workflows](#rmd-test-drive) for explicit examples of how to use this.
+The `keep_md: TRUE` part says to keep the intermediate Markdown. In RStudio, when editing `.Rmd`, click on the gear next to "Knit HTML" for YAML authoring help.
 
-For a quick, stand-alone document that doesn't fit neatly into a repository or project (yet), make it a [Gist](https://gist.github.com). Example: Hadley Wickham's [advice on what you need to do to become a data scientist](https://gist.github.com/hadley/820f09ded347c62c2864). Gists can contain multiple files, so you can still provide the R script or R Markdown source __and__ the resulting Markdown, as I've done in this write-up of [Twitter-sourced tips for cross-tabulation](https://gist.github.com/jennybc/04b71bfaaf0f88d9d2eb).
+Since 2016, `rmarkdown` offers a [custom output format for GitHub-flavored markdown, `github_document`](http://rmarkdown.rstudio.com/github_document_format.html). Read about [R Markdown workflows](#rmd-test-drive) for explicit examples of how to use this. If Markdown is your target output format, your [YAML can be even simpler](https://gist.github.com/jennybc/402761e30b9be8023af9) and look like this for `.Rmd`:
+
+```{r include = FALSE}
+rinline <- function(code) {
+  sprintf('`r %s`', code)
+}
+```
+
+
+``` yaml
+---
+output: github_document:
+---
+```
+
+or like this for `.R`:
+
+``` yaml
+#' ---
+#' output: github_document:
+#' ---
+```
+
+For a quick, stand-alone document that doesn't fit neatly into a repository or project (yet), make it a [Gist](https://gist.github.com). Example: Hadley Wickham's [advice on what you need to do to become a data scientist](https://gist.github.com/hadley/820f09ded347c62c2864). Gists can contain multiple files, so you can still provide the R script or R Markdown source __and__ the resulting Markdown, as I've done in this write-up of [Twitter-sourced tips for cross-tabulation](https://gist.github.com/jennybc/04b71bfaaf0f88d9d2eb). I've collected [YAML examples](https://gist.github.com/jennybc/402761e30b9be8023af9) for all the above scenarios in a gist.
 
 ## `README.md`
 
 You probably already know that GitHub renders `README.md` at the top-level of your repo as the *de facto* landing page. This is analogous to what happens when you point a web browser at a directory instead of a specific web page: if there is a file named `index.html`, that's what the server will show you by default. On GitHub, files named `README.md` play exactly this role for directories in your repo. 
 
-Implication: for any logical group of files or mini project-within-your-project, create a sub-directory in your repository. And then create a `README.md` file to annotate these files, collect relevant links, etc. Now when you navigate to the sub-directory on GitHub the nicely rendered `README.md` will simply appear.
+Implication: for any logical group of files or mini project-within-your-project, create a sub-directory in your repository. And then create a `README.md` file to annotate these files, collect relevant links, etc. Now when you navigate to the sub-directory on GitHub the nicely rendered `README.md` will simply appear. The GitHub repo that backs the [gapminder](https://cran.r-project.org/package=gapminder) data package has a [README in the `data-raw` subdirectory](https://github.com/jennybc/gapminder/tree/master/data-raw#readme) that explains exactly how the package data is created. In fact, it is generated programmatically from [`README.Rmd`](https://github.com/jennybc/gapminder/blob/master/data-raw/README.Rmd).
 
 Some repositories consist solely of `README.md`. Examples: Jeff Leek's write-ups on [How to share data with a statistician](https://github.com/jtleek/datasharing) or [Developing R packages](https://github.com/jtleek/rpackages). I am becoming a bigger fan of `README`-only repos than gists because repo issues trigger notifications, whereas comments on gists do not.
 
-If you've got a directory full of web-friendly figures, such as PNGs, you can use [code like this](https://gist.github.com/jennybc/0239f65633e09df7e5f4) to generate a `README.md` for a quick DIY gallery, as Karl Broman has done with [his FruitSnacks](https://github.com/kbroman/FruitSnacks/blob/master/PhotoGallery.md). I have also used this device to share Keynote slides on GitHub (*mea culpa!*). Export them as PNGs images and throw 'em into a README gallery: slides on [file organization](https://github.com/Reproducible-Science-Curriculum/rr-organization1/tree/27883c8fc4cdd4dcc6a8232f1fe5c726e96708a0/slides/organization-slides) and some on [file naming](https://github.com/Reproducible-Science-Curriculum/rr-organization1/tree/27883c8fc4cdd4dcc6a8232f1fe5c726e96708a0/slides/naming-slides).
+If you've got a directory full of web-friendly figures, such as PNGs, you can use [code like this](https://gist.github.com/jennybc/0239f65633e09df7e5f4) to generate a `README.md` for a quick DIY gallery, as Karl Broman has done with [his FruitSnacks](https://github.com/kbroman/FruitSnacks/blob/master/PhotoGallery.md). I did same for all the [fantastic O RLY book covers](https://github.com/jennybc/orly-full-res#readme) made by The Practical Dev.
+
+I have also used this device to share Keynote slides on GitHub (*mea culpa!*). Export them as PNGs images and throw 'em into a README gallery: slides on [file organization](https://github.com/Reproducible-Science-Curriculum/rr-organization1/tree/27883c8fc4cdd4dcc6a8232f1fe5c726e96708a0/slides/organization-slides) and some on [file naming](https://github.com/Reproducible-Science-Curriculum/rr-organization1/tree/27883c8fc4cdd4dcc6a8232f1fe5c726e96708a0/slides/naming-slides).
 
 ## Finding stuff
 
