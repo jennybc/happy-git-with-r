@@ -79,7 +79,7 @@ rinline <- function(code) {
 
 ``` yaml
 ---
-output: github_document:
+output: github_document
 ---
 ```
 
@@ -87,7 +87,7 @@ or like this for `.R`:
 
 ``` yaml
 #' ---
-#' output: github_document:
+#' output: github_document
 #' ---
 ```
 
