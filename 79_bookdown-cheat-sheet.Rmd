@@ -1,0 +1,48 @@
+# Bookdown cheat sheet
+
+Here's where I park _little_ *examples* **for myself** about bookdown mechanics that I keep forgetting.
+
+## Heading blah blah
+
+## About labelling things {#id-example}
+
+You can label chapter and section titles using `{#label}` after them, e.g., we can reference Section \@ref(id-example). If you do not manually label them, there will be automatic labels anyway, e.g., this reference to the unlabelled heading \@ref(heading-blah-blah) uses the automatically generated label `\@ref(heading-blah-blah)`.
+
+## Cross-references
+
+Add an explicit label by adding `{#label}` to the end of the section header. If you know you're going to refer to something, this is probably a good idea.
+
+To refer to in a chapter- or section-number-y way, use `\@ref(label)`.
+
+  * `\@ref(install-git)` example: In chapter \@ref(install-git) we explain how to install Git.
+
+If you are happy with the section header as the link text, use it inside a single set of square brackets:
+
+  * `[A picture is worth a thousand words]`: example "A picture is worth a thousand words" via [A picture is worth a thousand words]
+
+There are two ways to specify custom link text:
+
+  * `[link text][Section header text]`, e.g., "pic = 1000 words" via [pic = 1000 words][A picture is worth a thousand words]
+  * `[link text](#label)`, e.g., "RStudio, meet Git" via [RStudio, meet Git](#rstudio-see-git)
+  
+The Pandoc documentation provides more details on automatic section IDs and implicit header references.
+
+## Figures, tables, citations
+
+Figures and tables with captions will be placed in `figure` and `table` environments, respectively.
+
+```{r nice-fig, fig.cap='Here is a nice figure!', out.width='80%', fig.asp=.75, fig.align='center'}
+par(mar = c(4, 4, .1, .1))
+plot(pressure, type = 'b', pch = 19)
+```
+
+Reference a figure by its code chunk label with the `fig:` prefix, e.g., see Figure \@ref(fig:nice-fig). Similarly, you can reference tables generated from `knitr::kable()`, e.g., see Table \@ref(tab:nice-tab).
+
+```{r nice-tab, tidy=FALSE}
+knitr::kable(
+  head(iris, 20), caption = 'Here is a nice table!',
+  booktabs = TRUE
+)
+```
+
+You can write citations, too. For example, we are using the **bookdown** package [@R-bookdown] in this sample book, which was built on top of R Markdown and **knitr** [@xie2015].
