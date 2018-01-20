@@ -263,7 +263,7 @@ Two workarounds:
   * Tell git2r explicitly where to find your public and private key. Example using `usethis::use_github()`:
   
     ``` r
-    cred <- cred_ssh_key(
+    cred <- git2r::cred_ssh_key(
       publickey = "~/../.ssh/id_rsa.pub",
       privatekey = "~/../.ssh/id_rsa"
     )
