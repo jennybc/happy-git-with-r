@@ -181,20 +181,20 @@ Go look in your downloads folder!
 
 They love that!
 
-You can create a link that takes people directly to an editing interface in the browser. Behind the scenes, assuming the clicker is signed into GitHub but is not you, this will create a fork in their account and send you a pull request. When I click the link below, I am able to actually commit directly to `master` for this repo.
+You can create a link that takes people directly to an editing interface in the browser. Behind the scenes, assuming the click-er is signed into GitHub but is not you, this will create a fork in their account and send you a pull request. When I click the link below, I am able to actually commit directly to `master` for this repo.
 
-[CLICK HERE to suggest an edit to this page!](https://github.com/STAT545-UBC/STAT545-UBC.github.io/edit/master/bit006_github-browsability-wins.md)
+[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/32_workflow-make-github-repo-browsable.Rmd)
 
 Here's what that link looks like in the Markdown source:
 
 ```
-[CLICK HERE to suggest an edit to this page!](https://github.com/STAT545-UBC/STAT545-UBC.github.io/edit/master/bit006_github-browsability-wins.md)
+[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/32_workflow-make-github-repo-browsable.Rmd)
 ```
 
 and here it is with placeholders:
 
 ```
-[INVITATION TO EDIT](<URL to your repo>/edit/master/<path to your md file>)
+[INVITATION TO EDIT](<URL to your repo>/edit/master/<path to target source file>)
 ```
 
 AFAIK, to do that in a slick automatic way across an entire repo/site, you need to be using Jekyll or some other automated system. But you could easily handcode such links on a small scale.
