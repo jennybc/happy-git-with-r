@@ -34,7 +34,7 @@ There are no fewer than 4 possible shells you can end up in. Unless you know bet
 
 #### Git Bash
 
-This is a bash shell that ships with Git for Windows. It is hopefully what RStudio will launch for you, especially from v1.1.383 and on. You can inspect and influence this directly via *Tools > Global Options > Terminal*. Unless you have good reason to do otherwise, you want to select "Git Bash" here.
+This is a bash shell that ships with Git for Windows, which is [the Happy Git way to install Git on Windows](#install-git-windows). It is hopefully what RStudio will launch for you, especially from v1.1.383 and on. You can inspect and influence this directly via *Tools > Global Options > Terminal*. Unless you have good reason to do otherwise, you want to select "Git Bash" here.
 
 A Git Bash shell should look something like this:
 
@@ -58,7 +58,7 @@ Notice the `cmd.exe` in the title bar.
 
 In Command Prompt, `echo %comspec%` gives `C:\WINDOWS\system32\cmd.exe`.
 
-If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the previous commands, that suggests you have somehow launched into `cmd.exe`. 
+If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the commands given here, that suggests you have somehow launched into `cmd.exe`. 
 
 #### Power Shell
 

@@ -26,7 +26,7 @@ If, instead, you see something more like `git: command not found`, keep reading.
 
 Mac OS users might get an immediate offer to install command line developer tools. Yes, you should accept! Click "Install" and read more below.
 
-## Windows
+## Windows  {#install-git-windows}
 
 **Option 1** (*highly recommended*): Install [Git for Windows](https://git-for-windows.github.io/), also known as `msysgit` or "Git Bash", to get Git in addition to some other useful tools, such as the Bash shell. Yes, all those names are totally confusing, but you might encounter them elsewhere and I want you to be well-informed.
 
