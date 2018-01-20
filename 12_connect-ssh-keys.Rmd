@@ -275,7 +275,7 @@ Two workarounds:
     MKLINK /D "C:\Users\username\Documents\.ssh" "C:\Users\username\.ssh"
     ```
     
-Finally, if git2r seems unable to get your SSH passphrase from ssh-agent, install the askPass package:
+Finally, if git2r seems unable to get your SSH passphrase from ssh-agent, install the getPass package:
 
 ``` r
 install.packages("getPass")
