@@ -20,7 +20,7 @@ Advice:
 
   * If you are new to programming and the shell, you'll probably find HTTPS easier at first (chapter \@ref(credential-caching)). You can always switch to SSH later. You can use one method from computer A and the other from computer B.
   * You should swap out your SSH keys periodically. Something like once a year.
-  * It's best practice to protect your private key with a passphrase.
+  * It's best practice to protect your private key with a passphrase. This can make setup and usage harder, so if you're not up for that (yet), either don't use a passphrase or seriously consider using HTTPS instead.
   * Don't do weird gymnastics in order to have only one key pair, re-used over multiple computers. You should probably have one key per computer (I do this). Some people even have one key per computer, per service (I do not do this).
   * It is normal to associate multiple public keys with your GitHub account. For example, one public key for each computer you connect with.
 
@@ -32,7 +32,7 @@ Global advice: if you do have existing keys, but have no clue where they came fr
 
 ### From RStudio
 
-Go to *Tools > Global Options...> Git/SVN*. If you see `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys. Caveat: RStudio only looks for a key pair named `id_rsa` and `id_rsa.pub`. This makes sense, because it's the default and very common. But SSH keys *can* have other names. If you want to be completely certain, you should also check in the shell.
+Go to *Tools > Global Options...> Git/SVN*. If you see something like `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys. Caveat: RStudio only looks for a key pair named `id_rsa` and `id_rsa.pub`. This makes sense, because it's the default and very common. But SSH keys *can* have other names. If you want to be completely certain, you should also check in the shell.
 
 ### From the shell
 
@@ -197,7 +197,7 @@ In theory, we're done! You can use [`ssh -T git@github.com`](https://help.github
 
 If you think you have SSH set up correctly and yet you are still challenged for credentials, consider this: for the repo in question, have you possibly set up GitHub, probably called `origin`, as an HTTPS remote?
 
-How to see the remote URL associated with the current repo in the shell:
+How to see the remote URL(s) associated with the current repo in the shell:
 
 ``` bash
 git remote -v
@@ -218,6 +218,70 @@ https://github.com/USERNAME/REPOSITORY.git
 You can toggle between these with `git remote set-url`:
 
   * <https://help.github.com/articles/changing-a-remote-s-url/>
+
+### git2r can't find SSH keys on Windows
+
+Have you seen this error message?
+
+```
+Error in .local(object, ...) : 
+  Error in 'git2r_push': error authenticating: failed connecting agent
+```
+
+We've seen it when working with Git/GitHub from R via the [git2r](https://cran.r-project.org/web/packages/git2r/index.html) package, which is used under the hood by many R packages, such as devtools, ghit, and usethis.
+
+git2r uses the libgit2 library, not the Git you installed. This means you can have SSH keys configured properly for Git work in a Git Bash shell and from RStudio and still have problems with git2r! Ugh.
+
+The root cause is confusion about the location of `.ssh/` on Windows. R's idea of your home directory on Windows often differs from the default location of config files for Git and ssh, such as `.ssh/`. On *nix systems, these generally coincide and there's no problem.
+
+Two important directories on Windows are the user's HOME and USERPROFILE. R usually associates `~` with HOME, but Git and ssh often consult USERPROFILE for their config files. On my Windows 10 VM, I see:
+
+``` r
+normalizePath("~")
+#> [1] "C:\\Users\\JennyVM\\Documents"
+
+as.list(Sys.getenv(
+  c("HOME", "USERPROFILE")
+))
+#> $HOME
+#> [1] "C:/Users/JennyVM/Documents"
+#> 
+#> $USERPROFILE
+#> [1] "C:\\Users\\JennyVM"
+
+list.files(
+  Sys.getenv("USERPROFILE"),
+  pattern = "ssh|git",
+  include.dirs = TRUE,
+  all.files = TRUE
+)
+#> [1] ".gitconfig" ".ssh"
+```
+
+Two workarounds:
+
+  * Tell git2r explicitly where to find your public and private key. Example using `usethis::use_github()`:
+  
+    ``` r
+    cred <- cred_ssh_key(
+      publickey = "~/../.ssh/id_rsa.pub",
+      privatekey = "~/../.ssh/id_rsa"
+    )
+    use_github(credentials = cred)
+    ```
+  * [Create a symbolic link](https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/) so that `.ssh/` in R's home directory points to your actual `.ssh/` directory. Example contributed by Ian Lyttle on Windows 7 using Command Prompt:
+  
+    ``` bash   
+    MKLINK /D "C:\Users\username\Documents\.ssh" "C:\Users\username\.ssh"
+    ```
+    
+Finally, if git2r seems unable to get your SSH passphrase from ssh-agent, install the askPass package:
+
+``` r
+install.packages("getPass")
+```
+
+and git2r should launch a popup where you can enter your passphrase. Thanks to Ian Lyttle for this tip.
 
 ### Other
 
