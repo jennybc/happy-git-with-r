@@ -32,7 +32,7 @@ Troubleshooting:
 
 ## rstudio::conf 2018
 
-**[rstudio::conf 2018 What They Forgot to Teach You About R](https://www.rstudio.com/conference/#training2)** Workshop content is ~25% Git/GitHub + R/Rmd/Rstudio. Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup/4339?u=jennybryan) on community.rstudio.com to discuss system prep woes. We will also have helpers on site to help sort out issues. Get as far as you can! Every bit helps.
+**[rstudio::conf 2018 What They Forgot to Teach You About R](https://www.rstudio.com/conference/#training2)** Workshop content is ~25% Git/GitHub + R/Rmd/Rstudio. Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup/4339?u=jennybryan) on community.rstudio.com to discuss system prep woes. We will also have helpers on site to help sort out issues, especially during morning break and lunch on day 1. First use of Git is after lunch on day 1. Get as far as you can! Every bit helps.
 
 Workshop runs during Training Days = Wed January 31 and Thurs February 1, 2018
 
