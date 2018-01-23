@@ -28,12 +28,9 @@ What if a function in a package has no examples? Or is poorly exampled? Wouldn't
 "llply" user:cran language:R
 ```
 
-Or just [click here](https://github.com/search?l=r&q=%22llply%22+user%3Acran+language%3AR&ref=searchresults&type=Code&utf8=✓).
+Or just [click here](https://github.com/search?l=r&q=%22llply%22+user%3Acran+language%3AR&ref=searchresults&type=Code&utf8=✓). There's also an [OpenSearch plugin](https://salim_b_public.gitlab.io/opensearch_plugins/github-r/) which you can add to your browser to conveniently perform this type of search whenever you need.
 
-Another example that recently came up on r-package-devel:
+Another example that recently came up on r-package-devel: How to see lots of examples of roxygen templates?
 
-How to see lots of examples of roxygen templates?
-
-This search finds >1400 examples of roxygen templates in the wild:
-
+This search finds >1400 examples of roxygen templates in the wild:  
 <https://github.com/search?utf8=✓&q=man-roxygen+in%3Apath&type=Code&ref=searchresults>
