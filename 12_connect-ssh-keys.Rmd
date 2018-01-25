@@ -195,7 +195,7 @@ In theory, we're done! You can use [`ssh -T git@github.com`](https://help.github
 
 ### HTTPS vs SSH
 
-If you think you have SSH set up correctly and yet you are still challenged for credentials, consider this: for the repo in question, have you possibly set up GitHub, probably called `origin`, as an HTTPS remote?
+If you think you have SSH set up correctly and yet you are still challenged for credentials, consider this: for the repo in question, have you possibly set up GitHub, probably called `origin`, as an HTTPS remote, instead of SSH?
 
 How to see the remote URL(s) associated with the current repo in the shell:
 
@@ -219,7 +219,7 @@ You can toggle between these with `git remote set-url`:
 
   * <https://help.github.com/articles/changing-a-remote-s-url/>
 
-### git2r can't find SSH keys on Windows
+### git2r -- or some other tool -- can't find SSH keys on Windows
 
 Have you seen this error message?
 
@@ -282,6 +282,8 @@ install.packages("getPass")
 ```
 
 and git2r should launch a popup where you can enter your passphrase. Thanks to Ian Lyttle for this tip.
+
+This link provides a great explanation of the uncertainty about where `.ssh/` and user's `.gitconfig` are located on Windows: [git on Windows - location of configuration files](https://www.onwebsecurity.com/configuration/git-on-windows-location-of-global-configuration-file.html). Bottom line: locate where your main tool expects and create symbolic links to help other tools find this stuff.
 
 ### Other
 
