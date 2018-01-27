@@ -50,37 +50,49 @@ Go [here](http://www.troubleshooters.com/linux/prepostpath.htm) for instructions
 
 ## Push/Pull buttons greyed out in RStudio
 
-Are you sure your local repository is tracking a remote repository, e.g. a GitHub repo? In a shell with working directory set to the local Git repo, enter these commands:
+Are you sure your local repository is associated with a remote repository, e.g. a GitHub repo? In a shell with working directory set to the local Git repo, enter this command:
   
 ``` sh
 jenny@2015-mbp myrepo $ git remote -v
 origin	https://github.com/jennybc/myrepo (fetch)
 origin	https://github.com/jennybc/myrepo (push)
+```
+We want to see that fetch and push are set to remote URLs that point to the remote repo. Note also that the GitHub repo is a remote named `origin`, as far as your local repo is concerned. This is typical and, though I think `github` is a vastly superior name, `origin` is such a strong convention that I follow it. 
 
+If you discover you still need to set a remote, get the HTTPS or SSH URL, as appropriate, for your GitHub repo. This is easy to get onto your clipboard from the repo's GitHub page. Do this in the shell:
+  
+``` sh
+git remote add origin https://github.com/jennybc/myrepo.git
+```
+
+Download all the files from the online GitHub repository and deal with any conflicts.
+  
+``` sh
+git pull origin master
+```
+
+Call `git remote -v` again. Once you can prove that your GitHub remote is set properly, you can move on to the next step.
+
+Are you sure the current branch is *tracking* a branch on the remote? In that same shell, in your repo, do this:
+
+``` sh
 jenny@2015-mbp myrepo $ git branch -vv
 * master b8e03e3 [origin/master] line added locally
 ```
 
-We want to see that fetch and push are set to remote URLs that point to the remote repo. We also want to see that your local master branch has your GitHub master branch as upstream remote.
+The above shows successful confirmation that the local `master` branch is tracking `origin/master`, i.e. the master branch on GitHub. If you don't see the `[origin/master]` bit, that is a problem. By the way, `git branch -r` is another handy way to examine your remote-tracking branches. (If you're working with a branch other than `master`, adjust everything accordingly.)
 
-If you discover you still need to set a remote, go to the shell and get into the working directory of the RStudio Project and Git repo of interest.
+When connecting a local repo to a new GitHub repo, a lot of people remember to add the GitHub remote, but forget to also cement this tracking relationship for any relevant branches.
 
-  * Initiate the "upstream" or "tracking" relationship by adding a remote. Substitute the HTTPS URL for **your GitHub repo**.
-
-    ``` shell
-    git remote add origin https://github.com/jennybc/myrepo.git
-    ```
-  * Download all the files from the online GitHub repository and deal with any conflicts.
+If you discover your local `master` branch is not yet tracking `master` on GitHub, fix that like so:
   
-    ``` shell
-    git pull origin master
-    ```
+``` sh
+git push --set-upstream origin master
+```
 
-  * Cement the tracking relationship between your GitHub repository and the local repo by pushing and setting the "upstream" remote:
-  
-    ``` shell
-    git push -u origin master
-    ```
+This is equivalent to `git push -u origin master` but conveys more about what you are doing.
+
+Call `git branch -vv` or `git branch -r` again to confirm that the `master` branch on GitHub is the upstream or tracking branch for the local `master` branch.
 
 ## I have no idea if my local repo and my remote repo are connected.
 
