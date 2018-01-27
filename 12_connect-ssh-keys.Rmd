@@ -191,7 +191,7 @@ Make sure you're signed into GitHub. Click on your profile pic in upper right co
 
 In theory, we're done! You can use [`ssh -T git@github.com`](https://help.github.com/articles/testing-your-ssh-connection/) to test your connection to GitHub. If you're not sure what to make of the output, see the link for details. Of course, the best test is to work through the realistic usage examples elsewhere in this guide.
 
-## Troubleshooting
+## Troubleshooting {#ssh-troubleshooting}
 
 ### HTTPS vs SSH
 
