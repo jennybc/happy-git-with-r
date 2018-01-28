@@ -49,7 +49,7 @@ If you use the [usethis](https://cran.r-project.org/package=usethis) package AND
 
     usethis::use_github()
     
-This will create a new repo on GitHub, add it as a remote, set up a tracking branch, and open it in your browser. Read the `use_github()` help to learn about its arguments and advice on configuring a PAT.
+This will create a new repo on GitHub, add it as a remote, set up a tracking branch, and open it in your browser. Read the `use_github()` help to learn about its arguments and advice on configuring a PAT. This is extremely handy for a variety of workflows that call the GitHub API. Consider setting this up if you use usethis, devtools, or gh regularly.
 
 ## Make and connect a GitHub repo, option 2
 
