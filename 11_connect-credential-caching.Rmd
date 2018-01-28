@@ -4,7 +4,7 @@ If you plan to push/pull using HTTPS, you want Git to cache your credentials (us
 
 I find HTTPS easier to get working quickly. [It is what GitHub recommends](https://stackoverflow.com/a/11041782/2825349), presumably for exactly the same reasons. I started with HTTPS, but eventually swiched over to SSH. Either is fine and you can change your mind later.
 
-I do not explain all the [shell](http://stat545.com/git09_shell.html) and Git commands in detail. This is a black box diagnostic / configuration exercise.
+I do not explain all the shell (Appendix \@ref(shell)) and Git commands in detail. This is a black box diagnostic / configuration exercise.
 
 ## Get a test repository
 
@@ -21,7 +21,7 @@ You may proceed when
     - `/home/jenny/tmp/myrepo`
   * You know where it lives on GitHub. Example:
     - `https://github.com/jennybc/myrepo`
-  * You know local is tracking remote. In a [shell](http://stat545.com/git09_shell.html) with working directory set to the local Git repo, enter:
+  * You know the GitHub repo is setup as a remote. In a shell (Appendix \@ref(shell)) working directory set to the local Git repo, enter:
   
         git remote -v
         
@@ -34,13 +34,13 @@ You may proceed when
     
         git branch -vv
         
-    Here we confirm that the local `master` branch has your GitHub master branch (`origin/master`) as upstream remote. Gibberish? Just check that your output looks similar to mine:
+    Here we confirm that the local `master` branch is tracking your GitHub master branch (`origin/master`). Gibberish? Just check that your output looks similar to mine:
     
         master b8e03e3 [origin/master] line added locally
 
 ## Verify that your Git is new enough to have a credential helper
 
-In a [shell](http://stat545.com/git09_shell.html), do:
+In a shell (Appendix \@ref(shell)), do:
 
     git --version
 

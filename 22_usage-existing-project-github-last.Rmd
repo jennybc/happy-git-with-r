@@ -58,13 +58,13 @@ Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" but
 
 ## Connect to GitHub
 
-Initiate the "upstream" or "tracking" relationship by adding a remote. Go to *Tools > shell* and do this, substituting the HTTPS or SSH URL for **your GitHub repo**, according to your setup:
+Add your GitHub repo as a remote on your local repo. Go to *Tools > shell* and do this, substituting the HTTPS or SSH URL for **your GitHub repo**, according to your setup:
 
         git remote add origin https://github.com/jennybc/myrepo.git
 
-  * Push and cement the tracking relationship between your GitHub repository and the local repo by pushing and setting the "upstream" remote:
+  * Push and cement the tracking relationship between your local `master` branch and `master` on GitHub:
   
-        git push -u origin master
+        git push --set-upstream origin master
 
 ## Confirm the local change propagated to the GitHub remote
 

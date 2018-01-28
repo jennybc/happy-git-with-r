@@ -4,7 +4,7 @@
 
 Objective: make sure that you can pull from and push to GitHub from your computer.
 
-I do not explain all the [shell](http://stat545.com/git09_shell.html) and Git commands in detail. This is a black box diagnostic / configuration exercise. In later chapters and in live workshops, we revisit these operations with much more narrative.
+I do not explain all the shell (Appendix \@ref(shell)) and Git commands in detail. This is a black box diagnostic / configuration exercise. In later chapters and in live workshops, we revisit these operations with much more narrative.
 
 ## Make a repo on GitHub
 
@@ -22,11 +22,11 @@ Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" but
 
 ## Clone the repo to your local computer
 
-Go to the [shell](http://stat545.com/git09_shell.html).
+Go to the shell (Appendix \@ref(shell)).
 
 Take charge of -- or at least notice! -- what directory you're in. `pwd` to display working directory. `cd` to move around. Personally, I would do this sort of thing in `~/tmp`.
 
-Clone `myrepo` from GitHub to your computer. This URL should have **your GitHub username** and the name of **your practice repo**. If your [shell](http://stat545.com/git09_shell.html) cooperates, you should be able to paste the whole `https://....` bit that we copied above. But some shells are not (immediately) clipboard aware. In that sad case, you must type it. **Accurately.**
+Clone `myrepo` from GitHub to your computer. This URL should have **your GitHub username** and the name of **your practice repo**. If your shell (Appendix \@ref(shell)) cooperates, you should be able to paste the whole `https://....` bit that we copied above. But some shells are not (immediately) clipboard aware. In that sad case, you must type it. **Accurately.**
 
 ``` bash
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
