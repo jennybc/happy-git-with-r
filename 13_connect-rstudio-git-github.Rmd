@@ -2,7 +2,7 @@
 
 Here we verify that RStudio can issue Git commands on your behalf. Assuming that you've gotten local Git to talk to GitHub, this means you'll also be able to pull from and push to GitHub from RStudio.
 
-In later chapters and in live workshops˜, we revisit these operations with much more explanation.
+In later chapters and in live workshops, we revisit these operations with much more explanation.
 
 If you succeed here, your set up is DONE.
 
