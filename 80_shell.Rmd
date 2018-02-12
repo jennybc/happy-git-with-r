@@ -26,7 +26,7 @@ You should see a simple blinking cursor, waiting for input and look similar to t
 
 ![](img/440px-Bash_screenshot.png)
 
-## Windows is special ... and not in a good way
+## Windows is special ... and not in a good way {#windows-shell-hell}
 
 Windows is not the ideal platform for scientific computing and software development. A lot of the functionality is going to feel janky and strapped on. Because it is.
 
