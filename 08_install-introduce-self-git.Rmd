@@ -25,7 +25,7 @@ These commands return nothing. You can check that Git understood what you typed 
 Another Git option that many people eventually configure is the editor. At some point, you will fail to give Git what it wants in terms of a commit message and it will kick you into an editor. This can be distressing, if it's not your editor of choice and you don't even know how to save and quit. You can enforce your will with something along these lines:
 
 ``` bash
-git config --global core.editor emacs
+git config --global core.editor 'emacs'
 ```
 
 Substitute your preferred editor for `emacs` here.
