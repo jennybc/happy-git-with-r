@@ -22,10 +22,12 @@ What email should you give to Git? This __must__ be the email associated with yo
 
 These commands return nothing. You can check that Git understood what you typed by looking at the output of `git config --global --list`.
 
+### Configure the Git editor
+
 Another Git option that many people eventually configure is the editor. At some point, you will fail to give Git what it wants in terms of a commit message and it will kick you into an editor. This can be distressing, if it's not your editor of choice and you don't even know how to save and quit. You can enforce your will with something along these lines:
 
 ``` bash
-git config --global core.editor 'emacs'
+git config --global core.editor "emacs"
 ```
 
-Substitute your preferred editor for `emacs` here.
+Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](http://swcarpentry.github.io/git-novice/02-setup/). 
