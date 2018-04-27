@@ -163,6 +163,16 @@ Examples:
   
 Hopefully we are moving towards a world where you can have "web friendly" and "vector" at the same time, without undue headaches. As of [October 2014](https://github.com/blog/1902-svg-viewing-diffing), GitHub provides enhanced viewing and diffing of SVGs. So don't read this advice as discouraging SVGs. Make them! But consider keeping a PNG around as emergency back up for now.
   
+## Other document formats
+
+You may also have a document you want others to be able to browse and interact with, but it is not in the markdown format. Fortunately, the open-source Pandoc program, written by John MacFarlane, allows you to convert a range of formats into markdown, including the widely used docx format.
+
+When you click the Knit button in Rstudio it is actually Pandoc which performs the final conversion to HTML or word (docx) formats. If you are willing to use the command-line, you can perform the opposite conversion (eg docx to markdown), commonly retaining features such as headings, tables, equations and even figures.
+
+As some boilerplate, running in Windows PowerShell `pandoc --extract-media .\media  -f docx .\example.docx -t markdown_github -o example_image.md` converts a word document called example.docx to markdown, and extracts the images into a directory which corresponds to a filepath in the newly created example.md document. A full list of supported formats and example code for conversions are available at https://pandoc.org/.
+
+For simpler conversions between the different markdown flavours supported by Pandoc (mmd, php_extra and strict), you can convert these to Github using the Rstudio gui by simply renaming their extension to .Rmd.
+
 ## Linking to a ZIP archive of your repo
 
 The browsability of GitHub makes your work accessible to people who care about your content but who don't (yet) use Git themselves. What if such a person wants all the files? Yes, there is a clickable "Download ZIP" button offered by GitHub. But what if you want a link to include in an email or other document? If you add `/archive/master.zip` *to the end* of the URL for your repo, you construct a link that will download a ZIP archive of your repository. Click here to try this out on a very small repo:
