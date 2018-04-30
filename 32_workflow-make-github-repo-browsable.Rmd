@@ -171,7 +171,7 @@ When you click the Knit button in RStudio it is actually Pandoc which performs t
 
 As some boilerplate, running in Windows PowerShell `pandoc --extract-media .\media  -f docx .\example.docx -t markdown_github -o example_image.md` converts a word document called `example.docx` to markdown, and extracts the images into a directory which corresponds to a filepath in the newly created `example.md` document. A full list of supported formats and example code for conversions are available at https://pandoc.org/.
 
-You can also perform simple conversions to GitHub-flavored mardkown from different markdown flavours (Pandoc support `markdown_mmd`, `markdown_php_extra` and `markdown_strict`) from within RStudio. To do so you need to rename the file by chaning the extension (eg from `foo.mmd` to `foo.Rmd`), then open the renamed file in RStudio and add the following text to the top of the document.
+You can also perform simple conversions to GitHub-flavored mardkown from different markdown flavours (Pandoc supports `markdown_mmd`, `markdown_php_extra` and `markdown_strict`) from within RStudio. To do so you need to rename the file by changing the extension (eg from `foo.mmd` to `foo.Rmd`), then open the renamed file in RStudio and add the following text to the top of the document.
 
 ``` yaml
 ---
