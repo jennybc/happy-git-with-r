@@ -79,12 +79,14 @@ This combines ideas from the three above approaches, but with a few tweaks. I ha
 
 Tweak #1: figure out the PR parent SHA. You can do this by clicking around in the GitHub UI, but my R code below show how to get via the API.
 
-Create and check out a new local PR branch based on the PR parent.
+Create and check out a new local PR branch based on the PR parent. By explicitly setting the parent you should NOT be slapped with immediate merge conflicts.
 
 ```
 git checkout -b completions a1c46a8
 git checkout -b PR_BRANCH PARENT_SHA
 ```
+
+Tweak #2: don't clone the fork, even though you plan to push to it. Just pull from it on-the-fly as an anonymous remote.
 
 Pull from the fork and branch associated with the PR. Make a deliberate choice re: HTTPS or SSH, based on what you usually use. I show SSH here. Note the branch name here is the *fork branch* and recall that this may or may not be same as PR branch.
 
@@ -92,6 +94,8 @@ Pull from the fork and branch associated with the PR. Make a deliberate choice r
 git pull --ff git@github.com:jimhester/readxl.git completions
 git pull --ff git@github.com:OWNER/REPO.git FORK_BRANCH
 ```
+
+*A slight variant of the above is to add the PR remote as an actual remote to your local repo, so it's easier to pull and push. For example, this would appear to be necessary to use git2r to accomplish this workflow. You would then want to delete that remote when the PR is handled.*
 
 Experiment with the PR and **make more commits if you need to**.
 
