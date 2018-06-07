@@ -59,7 +59,7 @@ GitHub has another set of instructions: [Checking out pull requests locally](htt
 
 It starts out by referring to the Version 1 instructions, but goes on to address an inactive pull request", defined as a PR "whose owner has either stopped responding, or, more likely, has deleted their fork".
 
-This workflow may NOT give the original PR author credit (next time it's easy to test this, I'll update with a definitive answer). I've never used it verbatim because I've never had this exact problem.
+This workflow may NOT give the original PR author credit (next time it's easy to test this, I'll update with a definitive answer). I've never used it verbatim because I've never had this exact problem re: deleted fork.
 
 ## Official GitHub advice, Version 3
 
