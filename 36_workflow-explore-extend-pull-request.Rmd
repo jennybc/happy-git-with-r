@@ -56,7 +56,7 @@ This combines ideas from the two above approaches, but with some tweaks. I have 
 
 Determine the name of the local PR branch. If PR came from non-`master` branch, use that branch name. Otherwise, you'll have to make something up, maybe based on the PR number and/or PR username.
 
-Determine the parent commit of the PR, i.e. the SHA in master the PR is based on. The GitHub API reports on the `base` when you `GET` a PR, but that is not the correct SHA, although it seems like it should be do and this baffles me. At this point, I determine the target SHA "manually" by looking at the fork's history in the browser.
+Determine the parent commit of the PR, i.e. the SHA in master the PR is based on.
 
 Create and check out a new local PR branch with the chosen name and chosen SHA as parent.
 
@@ -82,3 +82,59 @@ git push git@github.com:OWNER/REPO.git HEAD:FORK_BRANCH
 ```
 
 Merge or squash-and-merge the updated PR from GitHub in the browser.
+
+Partial draft of R code to do the above
+
+```{r, eval = FALSE}
+library(gh)
+library(git2r)
+
+## the number of the pull request you want to work on
+pr <- 320
+## assuming wd = active project/package, gets OWNER/REPO
+repo_info <- gh_tree_remote(".")
+
+x <- gh(
+  "/repos/:owner/:repo/pulls/:number",
+  owner = repo_info$username,
+  repo = repo_info$repo,
+  number = pr
+)
+
+## get name of the fork's branch used for the PR
+(fork_branch <- x$head$ref)
+## determine name of local PR branch
+(pr_branch <- if (fork_branch == "master") paste0("pr-", pr) else fork_branch)
+
+## get the parent SHA for the PR
+
+## why is this not correct?!?!?
+# (sha <- x$base$sha)
+
+## alternative approach
+## GET all commits for the PR and parent SHA of the first commit
+y <- gh(
+  "/repos/:owner/:repo/pulls/:number/commits",
+  owner = repo_info$username,
+  repo = repo_info$repo,
+  number = pr
+)
+(sha <- purrr::pluck(y, list(1, "parents", 1, "sha")))
+
+## create and checkout the local PR branch, with correct parent
+b <- branch_create(commit = lookup(sha = sha), name = pr_branch)
+checkout(b)
+
+## haven't figured out how to pull / push to arbitrary remote with git2r
+## perhaps you'd have to actually add the fork as a remote?
+## doing with command line Git for now
+
+## form the pull command
+glue::glue("git pull --ff {x$head$repo$ssh_url} {fork_branch}")
+
+## make commit(s) HERE
+
+## form the push command
+glue::glue("git push {x$head$repo$ssh_url} HEAD:{fork_branch}")
+```
+
