@@ -1,0 +1,84 @@
+# Explore and extend a pull request {#pr-extend}
+
+Scenario: you maintain an R package on GitHub with pull requests (PRs) from external contributors. Sometimes you need to experiment with the PR in order to provide feedback or to decide whether or not to merge. Going further, sometimes you want to add a few commits and then merge. Or maybe there are just some merge conflicts that require your personal, local attention.
+
+How do you checkout and possibly extend an external PR?
+
+## Official GitHub advice, Version 1
+
+Every PR on GitHub has a link to "command line instructions" on how to merge the PR locally via command line Git. On this journey, there is a point at which you can pause and explore the PR locally.
+
+The steps are:
+
+  * Create a local branch with an intentional name. Ideally the PR is based on a non-`master` branch with a decent name and you can use it. But you can't count on this and might need to take charge. Call this the local PR branch.
+  * Check out the local PR branch.
+  
+        git checkout -b fix-fluffy-bunny master 
+        git checkout -b LOCAL_PR_BRANCH master 
+    
+  * Pull from the fork and branch associated with the PR into this local PR branch. Hopefully this branch name is same as PR branch name, but if the PR came from `master` they will differ. Call this the fork PR branch.
+  
+        git pull https://github.com/janedoe/yourpackage.git fix-fluffy-bunny
+        git pull https://github.com/OWNER/REPO.git FORK_PR_BRANCH
+  
+  * Satisfy yourself that all is well and you want to merge.
+  * Checkout `master` locally.
+  
+        git checkout master
+  
+  * Merge the local PR branch into master with `--no-ff`, meaning "no fast forward merge". This ensures you get a true merge commit, with two parents.
+  
+        git merge --no-ff LOCAL_PR_BRANCH
+  
+  * Push `master` to GitHub.
+  
+        git push origin master
+  
+What's not to like? The parent commit of the local PR branch will almost certainly not be the parent commit of the fork PR branch, where the external contributor did their work. This often means you get merge conflicts in `git pull`, which you'll have to deal with ASAP. The older the PR, the more likely this is and the hairier the conflicts will be.
+
+I would prefer to deal with the merge conflicts only *after* I've vetted the PR and to resolve the conflicts locally, not on GitHub. So I don't use this exact workflow.
+
+## Official GitHub advice, Version 2
+
+GitHub has another set of instructions: [Committing changes to a pull request branch created from a fork](https://help.github.com/articles/committing-changes-to-a-pull-request-branch-created-from-a-fork/)
+
+The page linked above explains all the pre-conditions, but the short version is that a maintainer can probably push new commits to a PR, effectively pushing commits to a fork. Strange, but true!
+
+This set of instructions suggests that you clone the fork, checkout the branch from which the PR was made, make any commits you wish, and then push. Any new commits you make will appear in the PR. And then you could merge.
+
+My main takeaway: maintainer can push to the branch of a fork associated with a PR.
+
+## My under-development workflow
+
+*work in progress*
+
+This combines ideas from the two above approaches, but with some tweaks. I have the start of a workflow from R, but it's incomplete, so will sketch with command line Git.
+
+Determine the name of the local PR branch. If PR came from non-`master` branch, use that branch name. Otherwise, you'll have to make something up, maybe based on the PR number and/or PR username.
+
+Determine the parent commit of the PR, i.e. the SHA in master the PR is based on. The GitHub API reports on the `base` when you `GET` a PR, but that is not the correct SHA, although it seems like it should be do and this baffles me. At this point, I determine the target SHA "manually" by looking at the fork's history in the browser.
+
+Create and check out a new local PR branch with the chosen name and chosen SHA as parent.
+
+```
+git checkout -b completions a1c46a8
+git checkout -b PR_BRANCH PARENT_SHA
+```
+
+Pull from the fork and branch associated with the PR into the local PR branch. Make a deliberate choice re: HTTPS or SSH, based on what you usually use. I show SSH here.
+
+```
+git pull --ff git@github.com:jimhester/readxl.git completions
+git pull --ff git@github.com:OWNER/REPO.git FORK_BRANCH
+```
+
+Experiment with the PR and make more commits.
+
+Push back to the fork branch associated with the PR.
+
+```
+git push git@github.com:jimhester/readxl.git HEAD:completions
+git push git@github.com:OWNER/REPO.git HEAD:FORK_BRANCH
+```
+
+Merge or squash-and-merge the updated PR from GitHub in the browser.

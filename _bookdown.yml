@@ -28,6 +28,7 @@ rmd_files: [
   "30_workflow-first-use-rmd-and-github.Rmd",
   "31_workflow-first-use-r-script-and-github.Rmd",
   "32_workflow-make-github-repo-browsable.Rmd",
+  "36_workflow-explore-extend-pull-request.Rmd",
   "38_workflow-git-commands.Rmd",
 
   "40_prompt-clone.Rmd",
