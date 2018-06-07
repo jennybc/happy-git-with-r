@@ -124,8 +124,12 @@ x <- gh(
 
 ## get name of the fork's branch used for the PR
 (fork_branch <- x$head$ref)
+
 ## determine name of local PR branch
 (pr_branch <- if (fork_branch == "master") paste0("pr-", pr) else fork_branch)
+
+## Suggestion from @jimhester for setting pr_branch
+## remote_name-remote_branch? and maybe without a condition?
 
 ## get the parent SHA for the PR
 
@@ -142,6 +146,11 @@ y <- gh(
 )
 (sha <- purrr::pluck(y, list(1, "parents", 1, "sha")))
 
+## Comment from @jimhester
+## I don't think this is the right strategy, you should create the new branch
+## directly off of the remote, rather than creating a new branch from the
+## master.
+
 ## create and checkout the local PR branch, with correct parent
 b <- branch_create(commit = lookup(sha = sha), name = pr_branch)
 checkout(b)
@@ -149,6 +158,11 @@ checkout(b)
 ## haven't figured out how to pull / push to arbitrary remote with git2r
 ## perhaps you'd have to actually add the fork as a remote?
 ## doing with command line Git for now
+
+## comment from @jimhester:
+## It doesn't look like git2r has an API that lets you use anonymous remotes, I
+## think you need to explicitly add the remote then fetch, then do the branch,
+## e.g. remote_add(), fetch(), branch() etc.
 
 ## form the pull command
 glue::glue("git pull --ff {x$head$repo$ssh_url} {fork_branch}")
