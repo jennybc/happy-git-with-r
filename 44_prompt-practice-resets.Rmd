@@ -34,4 +34,4 @@ git commit --amend -m "New commit message"
 
 Git Reset Demystified:
 
-<https://git-scm.com/blog>
+<https://git-scm.com/book/en/v2/Git-Tools-Reset-Demystified>
