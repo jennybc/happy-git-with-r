@@ -75,105 +75,41 @@ My main takeaway: maintainer can push to the branch of a fork associated with a 
 
 *work in progress*
 
-This combines ideas from the three above approaches, but with a few tweaks. I have the start of a workflow from R, but it's incomplete, so will sketch with command line Git first, then show my draft R code.
+This combines ideas from the three above approaches, but with a few tweaks. I am sketching this up in R code, with the hope of putting this into a function and package at some point. This is a revision of an earlier approach, based on feedback from Jim Hester.
 
-Tweak #1: figure out the PR parent SHA. You can do this by clicking around in the GitHub UI, but my R code below show how to get via the API.
-
-Create and check out a new local PR branch based on the PR parent. By explicitly setting the parent you should NOT be slapped with immediate merge conflicts.
-
-```
-git checkout -b completions a1c46a8
-git checkout -b PR_BRANCH PARENT_SHA
-```
-
-Tweak #2: don't clone the fork, even though you plan to push to it. Just pull from it on-the-fly as an anonymous remote.
-
-Pull from the fork and branch associated with the PR. Make a deliberate choice re: HTTPS or SSH, based on what you usually use. I show SSH here. Note the branch name here is the *fork branch* and recall that this may or may not be same as PR branch.
-
-```
-git pull --ff git@github.com:jimhester/readxl.git completions
-git pull --ff git@github.com:OWNER/REPO.git FORK_BRANCH
-```
-
-*A slight variant of the above is to add the PR remote as an actual remote to your local repo, so it's easier to pull and push. For example, this would appear to be necessary to use git2r to accomplish this workflow. You would then want to delete that remote when the PR is handled.*
-
-Experiment with the PR and **make more commits if you need to**.
-
-Push back to the fork branch associated with the PR.
-
-```
-git push git@github.com:jimhester/readxl.git HEAD:completions
-git push git@github.com:OWNER/REPO.git HEAD:FORK_BRANCH
-```
-
-Merge or squash-and-merge the updated PR from GitHub in the browser.
-
-Partial draft of R code to do the above
+Example of a PR from the `master` branch (suboptimal but often happens) from fictional GitHub user `abcde` on usethis.
 
 ```{r, eval = FALSE}
-library(gh)
 library(git2r)
 
-## the number of the pull request you want to work on
-pr <- 320
-## assuming wd = active project/package, gets OWNER/REPO
-repo_info <- gh_tree_remote(".")
+## add the pull requester's fork as a named remote
+remote_add(name = "abcde", url = "git@github.com:abcde/usethis.git")
 
-x <- gh(
-  "/repos/:owner/:repo/pulls/:number",
-  owner = repo_info$username,
-  repo = repo_info$repo,
-  number = pr
-)
+## fetch
+fetch(name = "abcde")
 
-## get name of the fork's branch used for the PR
-(fork_branch <- x$head$ref)
+## list remote branches and isolate the one I want
+b <- branches(flags = "remote")
+b <- b[["abcde/master"]]
 
-## determine name of local PR branch
-(pr_branch <- if (fork_branch == "master") paste0("pr-", pr) else fork_branch)
+## get the SHA of HEAD on this branch
+sha <- branch_target(b)
 
-## Suggestion from @jimhester for setting pr_branch
-## remote_name-remote_branch? and maybe without a condition?
+## create local branch
+branch_create(commit = lookup(sha = sha), name = "abcde-master")
 
-## get the parent SHA for the PR
+## check it out
+checkout(object = ".", branch = "abcde-master")
 
-## why is this not correct?!?!?
-# (sha <- x$base$sha)
+## set upstream tracking branch
+branch_set_upstream(repository_head(), name = "abcde/master")
 
-## alternative approach
-## GET all commits for the PR and parent SHA of the first commit
-y <- gh(
-  "/repos/:owner/:repo/pulls/:number/commits",
-  owner = repo_info$username,
-  repo = repo_info$repo,
-  number = pr
-)
-(sha <- purrr::pluck(y, list(1, "parents", 1, "sha")))
+## confirm upstream tracking branch
+branch_get_upstream(repository_head())
 
-## Comment from @jimhester
-## I don't think this is the right strategy, you should create the new branch
-## directly off of the remote, rather than creating a new branch from the
-## master.
+## make one or more commits here
 
-## create and checkout the local PR branch, with correct parent
-b <- branch_create(commit = lookup(sha = sha), name = pr_branch)
-checkout(b)
-
-## haven't figured out how to pull / push to arbitrary remote with git2r
-## perhaps you'd have to actually add the fork as a remote?
-## doing with command line Git for now
-
-## comment from @jimhester:
-## It doesn't look like git2r has an API that lets you use anonymous remotes, I
-## think you need to explicitly add the remote then fetch, then do the branch,
-## e.g. remote_add(), fetch(), branch() etc.
-
-## form the pull command
-glue::glue("git pull --ff {x$head$repo$ssh_url} {fork_branch}")
-
-## make commit(s) HERE
-
-## form the push command
-glue::glue("git push {x$head$repo$ssh_url} HEAD:{fork_branch}")
+## push to the branch in the fork and, therefore, into the PR
+push()
 ```
 
