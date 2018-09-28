@@ -12,8 +12,6 @@ Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-pict
 
 **It is vital that you attempt to set up your system in advance. You cannot show up at the workshop with no preparation and keep up!**
 
-These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, reach out for help and stick with it. If we have not pointed you to a specific forum dedicated to your workshop (check below), you can open an issue [here](https://github.com/jennybc/happy-git-with-r/issues) and we *might* be able to help in the days leading up to your workshop (no promises).
-
 Try this. Best case scenario is about 1 - 2 hours. If you hit a wall, we will help:
 
   * [Register a free GitHub account](#github-acct).
@@ -30,18 +28,34 @@ Troubleshooting:
   * Sometimes RStudio [needs a little help finding Git](#rstudio-see-git).
   * General troubleshooting: [RStudio, Git, GitHub Hell](#troubleshooting).
 
+These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, reach out for help and stick with it. Where to get help:
+
+  * If you are enrolled in an upcoming workshop, find it below to get specifics on pre-workshop support.
+  * We *might* be able to respond to a GitHub issue [here](https://github.com/jennybc/happy-git-with-r/issues).
+  * If there is a clear R/RStudio angle, post on <https://community.rstudio.com>.
+  * General advice: search with Google and on <https://stackoverflow.com>, see also <https://github.community>.
+
+## rstudio::conf 2019
+
+2-day workshop: What They Forgot to Teach You About R  
+Will have substnatial coverage of Git/GitHub + R/Rmd/RStudio  
+January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX REGISTRATION OPEN
+
+## What They Forgot to Teach You About R, October 2018
+
+2-day workshop: [What They Forgot to Teach You About R](https://whattheyforgot.org/index.html#seattle-2018-october-4-5)  
+3 / 8 units cover Git/GitHub + R/Rmd/Rstudio  
+Oct 4-5, 2018, The Westin Seattle REGISTRATION OPEN
+
+Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-seattle-oct-2018-system-setup/15287) on community.rstudio.com to discuss system prep woes.
+
 ## rstudio::conf 2018
 
-**[rstudio::conf 2018 What They Forgot to Teach You About R](https://www.rstudio.com/conference/#training2)** Workshop content is ~25% Git/GitHub + R/Rmd/Rstudio. Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup/4339?u=jennybryan) on community.rstudio.com to discuss system prep woes. We will also have helpers on site to help sort out issues, especially during morning break and lunch on day 1. First use of Git is after lunch on day 1. Get as far as you can! Every bit helps.
+2-day workshop: What They Forgot to Teach You About R  
+~25% of content was Git/GitHub + R/Rmd/Rstudio  
+Jan 31 & Feb 1, 2018, San Diego, CA
 
-Workshop runs during Training Days = Wed January 31 and Thurs February 1, 2018
-
-  * Manchester Grand Hyatt San Diego, our room = Seaport F
-  * 9am start, light breakfast available beforehand
-  * 10:30 - 11:00 break for snacks and coffee
-  * 12:00 - 13:00 lunch
-  * 15:00 - 15:30 break for snacks and coffee
-  * 5pm end of workday
+System prep thread on [community.rstudio.com](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup/4339?u=jennybryan)
 
 ## CSAMA 2017: Statistical Data Analysis for Genome Biology
 
