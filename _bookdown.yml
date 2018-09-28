@@ -34,15 +34,17 @@ rmd_files: [
   "31_workflow-first-use-r-script-and-github.Rmd",
   "32_workflow-make-github-repo-browsable.Rmd",
   "36_workflow-explore-extend-pull-request.Rmd",
-  "38_workflow-git-commands.Rmd",
+  "37_workflow-git-commands.Rmd",
+  "38_workflow-git-branches.Rmd",
+  "39_workflow-git-remotes.Rmd",
 
   "40_prompt-clone.Rmd",
   "41_prompt-fork.Rmd",
   "42_prompt-fork-pr-bingo.Rmd",
   "43_prompt-burn-it-all-down.Rmd",
   "44_prompt-practice-resets.Rmd",
-  "45_prompt-search-github.Rmd",
   "46_prompt-pull.Rmd",
+  "47_prompt-search-github.Rmd",
 
   "60_classroom-overview.Rmd",
 
