@@ -5,6 +5,7 @@ Authors@R: person("Jennifer", "Bryan", role=c("aut", "cre"),
   email = "jenny@stat.ubc.ca")
 Depends: R (>= 3.3.0)
 Imports:
-  bookdown
+  bookdown,
+  fs
 Remotes:
   rstudio/bookdown

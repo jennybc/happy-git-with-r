@@ -45,6 +45,11 @@ Instead of morphing an R Markdown file, let's create a render-ready R script dir
 
 Create a new R script and copy/paste this code into it.
 
+```{r create-temp-dir, include = FALSE}
+va_home <- fs::dir_create(fs::file_temp(pattern = "va-example-"))
+```
+
+
 ```{r define-demo-code, include = FALSE}
 demo_code <- c(
   "#' Here's some prose in a very special comment. Let's summarize the built-in",
@@ -59,7 +64,7 @@ demo_code <- c(
   "#+ dotchart",
   "dotchart(VADeaths, main = \"Death Rates in Virginia - 1940\")"
 )
-writeLines(demo_code, "render-r-script-demo.R")
+writeLines(demo_code, fs::path(va_home, "render-r-script-demo.R"))
 ```
 
 ```{r eval = FALSE, code = demo_code}
@@ -85,7 +90,7 @@ demo_code <- c(
   "#'",
   demo_code
 )
-writeLines(demo_code, "render-r-script-demo.R")
+writeLines(demo_code, fs::path(va_home, "render-r-script-demo.R"))
 ```
 
 ```{r eval = FALSE, code = demo_code}
@@ -93,15 +98,23 @@ writeLines(demo_code, "render-r-script-demo.R")
 
 Behind the scenes here we have used `rmarkdown::render()` to render this script and you can go [visit it on GitHub](https://github.com/jennybc/happy-git-with-r/blob/master/render-r-script-demo.md).
 
-```{r render-demo-code, include = FALSE}
-rmarkdown::render("render-r-script-demo.R", output_format = "github_document")
-## for some reason I am
-## [a] having to specify output_format in render(); why YAML not working?
-## [b] having to do this "by hand" in R Console in order to actually get the
-## figure left behind
-```
+```{r render-demo-code, include = FALSE, error = TRUE}
+## render must happen elsewhere, othewise bookdown yaml clobbers doc yaml
+## this is, in fact, why we're working below session temp
+rmarkdown::render(fs::path(va_home, "render-r-script-demo.R"))
 
-```{r clean-up, include = FALSE}
-leftovers <- list.files(pattern = "render-r-script", ignore.case = TRUE)
-if (length(leftovers)) file.remove(leftovers)
+## copy files back into the book
+va_files <- fs::dir_ls(va_home, recursive = TRUE)
+va_files_rel <- fs::path_rel(va_files, va_home)
+
+md_file <- va_files[fs::path_ext(va_files) == "md"]
+fs::file_copy(md_file, fs::path_rel(md_file, va_home), overwrite = TRUE)
+
+fig_dir <- va_files[grepl("_files", fs::path_file(va_files))]
+fig_dir_rel <- fs::path_rel(fig_dir, va_home)
+fs::dir_delete(fig_dir_rel)
+## TODO: figure out why this directory is deleted in the context of bookdown
+fs::dir_copy(fig_dir, fig_dir_rel)
+
+fs::dir_delete(va_home)
 ```
