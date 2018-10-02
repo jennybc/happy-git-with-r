@@ -13,7 +13,7 @@ description: "Using Git and GitHub with R, Rstudio, and R Markdown"
 twitter-handle: jennybryan
 ---
 
-# A work in progress {-}
+# A living book {-}
 
 <img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />  
 
