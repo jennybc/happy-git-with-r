@@ -39,6 +39,27 @@ This should download the `README.md` file that we created on GitHub in the previ
 
 There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is added as a remote for your local repo and your local `master` branch is now tracking `master` on GitHub. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes and tracking branches on the command line.
 
+### Optional: peek under the hood
+
+Completely optional activity: use command line Git to see what we're talking about above, i.e. the remote and tracking branch setup.
+
+`git remote -v`or `git remote --verbose` shows the remotes you have setup. Here's how that looks for someone using SSH with GitHub and calling it `origin` (a convention I hate but am resigned to):
+
+``` sh
+$ git remote -v
+origin  git@github.com:jennybc/myrepo.git (fetch)
+origin  git@github.com:jennybc/myrepo.git (push)
+```
+
+`git branch -vv` prints info about the current branch. In particular, we can see that local `master` is tracking the `master` branch on `origin`, a.k.a. `origin/master`.
+
+``` sh
+$ git branch -vv
+* master 7c98308 [origin/master] Initial commit
+```
+
+`git clone`, which RStudio did for us, sets all of this up automatically. This is why "GitHub first, then RStudio" is the preferred way to start projects early in your Git/GitHub life.
+
 ## Make local changes, save, commit
 
 **Do this every time you finish a valuable chunk of work, probably many times a day.**
