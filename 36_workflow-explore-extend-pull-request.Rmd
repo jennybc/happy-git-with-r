@@ -1,6 +1,6 @@
 # Explore and extend a pull request {#pr-extend}
 
-Scenario: you maintain an R package on GitHub with pull requests (PRs) from external contributors. Sometimes you need to experiment with the PR in order to provide feedback or to decide whether or not to merge. Going further, sometimes you want to add a few commits and then merge. Or maybe there are just some merge conflicts that require your personal, local attention. Let's also assume that you want the original PR author to get credit for their commits, i.e. you want to preserve history and provenance, not just diffs.
+Scenario: you maintain an R package on GitHub with pull requests (PRs) from external contributors e.g. Jane Doe, janedoe on GitHub. Sometimes you need to experiment with the PR in order to provide feedback or to decide whether or not to merge. Going further, sometimes you want to add a few commits and then merge. Or maybe there are just some merge conflicts that require your personal, local attention. Let's also assume that you want the original PR author to get credit for their commits, i.e. you want to preserve history and provenance, not just diffs.
 
 How do you checkout and possibly extend an external PR?
 
@@ -20,17 +20,21 @@ Vocabulary I use throughout.
 
 Every PR on GitHub has a link to "command line instructions" on how to merge the PR locally via command line Git. On this journey, there is a point at which you can pause and explore the PR locally.
 
-Here are their steps with my vocuabulary and some example commands:
+Here are their steps with my vocabulary and some example commands:
 
   * Create and check out the local PR branch, anticipating its relationship to the fork branch. Template of the Git command, plus an example of how it looks under both naming scenarios:
-  
+
+        # Template of the Git command
         git checkout -b LOCAL_PR_BRANCH master 
+        # How it looks under both naming scenarios
         git checkout -b fix-fluffy-bunny master 
         git checkout -b janedoe-master master 
     
   * Pull from the fork branch of the PR remote:
-  
+        
+        # Template of the Git command
         git pull REMOTE FORK_PR_BRANCH
+        # How it looks under both naming scenarios
         git pull https://github.com/janedoe/yourpackage.git fix-fluffy-bunny
         git pull https://github.com/janedoe/yourpackage.git master
   
@@ -41,7 +45,9 @@ Here are their steps with my vocuabulary and some example commands:
   
   * Merge the local PR branch into master with `--no-ff`, meaning "no fast forward merge". This ensures you get a true merge commit, with two parents.
   
+        # Template of the Git command
         git merge --no-ff LOCAL_PR_BRANCH
+        # How it looks under both naming scenarios
         git merge --no-ff fix-fluffy-bunny
         git merge --no-ff janedoe-master
   
