@@ -80,7 +80,6 @@ demo_code <- c(
   "#' ---",
   "#' title: \"R scripts can be rendered!\"",
   "#' author: \"Jenny Bryan\"",
-  "#' date: \"`r format(Sys.Date())`\"",
   "#' output: github_document",
   "#' ---",
   "#'",
@@ -102,9 +101,7 @@ rmarkdown::render("render-r-script-demo.R", output_format = "github_document")
 ## figure left behind
 ```
 
-```{r clean-up, include = FALSE, eval = FALSE}
-## for now, I'm just letting the files created here persist
-## but maybe I will regret that one day, so this is ready to activate
+```{r clean-up, include = FALSE}
 leftovers <- list.files(pattern = "render-r-script", ignore.case = TRUE)
 if (length(leftovers)) file.remove(leftovers)
 ```
