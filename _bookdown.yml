@@ -1,4 +1,9 @@
-new_session: yes
+book_filename: "happygitwithr"
+language:
+  ui:
+    chapter_name: "Chapter "
+delete_merged_file: true
+new_session: true
 
 rmd_files: [
   "index.Rmd",
@@ -50,5 +55,5 @@ rmd_files: [
 
   "88_comic-relief.Rmd",
 
-  "90_references.Rmd",
+  "90_references.Rmd"
 ]
