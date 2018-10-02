@@ -1,3 +1,5 @@
+# (PART) Git basics {-} 
+
 # Git commands {#usage-git-cmds}
 
 Here's a start on the various Git commands that have been largely going on under the hood. We've tried to pick workflows that have RStudio doing this for us. But all of this can be done from the command line.

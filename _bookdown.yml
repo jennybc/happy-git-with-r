@@ -29,22 +29,25 @@ rmd_files: [
   "20_usage-new-project-github-first.Rmd",
   "21_usage-existing-project-github-first.Rmd",
   "22_usage-existing-project-github-last.Rmd",
-
   "30_workflow-first-use-rmd-and-github.Rmd",
   "31_workflow-first-use-r-script-and-github.Rmd",
-  "32_workflow-make-github-repo-browsable.Rmd",
-  "36_workflow-explore-extend-pull-request.Rmd",
-  "37_workflow-git-commands.Rmd",
-  "38_workflow-git-branches.Rmd",
-  "39_workflow-git-remotes.Rmd",
 
-  "40_prompt-clone.Rmd",
-  "41_prompt-fork.Rmd",
-  "42_prompt-fork-pr-bingo.Rmd",
-  "43_prompt-burn-it-all-down.Rmd",
-  "44_prompt-practice-resets.Rmd",
-  "46_prompt-pull.Rmd",
-  "47_prompt-search-github.Rmd",
+  "33_git-commands.Rmd",
+  ## TODO: commit, diff
+  "35_git-branches.Rmd",
+  "36_git-remotes.Rmd",
+
+  "40_workflow-pull.Rmd",
+  "49_workflow-explore-extend-pull-request.Rmd",
+
+  "50_prompt-clone.Rmd",
+  "51_prompt-fork.Rmd",
+  "52_prompt-fork-pr-bingo.Rmd",
+  "53_prompt-burn-it-all-down.Rmd",
+  "54_prompt-practice-resets.Rmd",
+  "57_prompt-search-github.Rmd",
+
+  "60_article-make-github-repo-browsable.Rmd",
 
   "60_classroom-overview.Rmd",
 
