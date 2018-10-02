@@ -37,6 +37,7 @@ rmd_files: [
   "43_prompt-burn-it-all-down.Rmd",
   "44_prompt-practice-resets.Rmd",
   "45_prompt-search-github.Rmd",
+  "46_prompt-pull.Rmd",
 
   "60_classroom-overview.Rmd",
 
