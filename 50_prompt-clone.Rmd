@@ -1,4 +1,4 @@
-# (PART) Tutorial prompts {-} 
+# (PART) Activity prompts {-} 
 
 # Clone a repo {#clone}
 

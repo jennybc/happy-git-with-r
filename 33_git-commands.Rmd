@@ -1,4 +1,4 @@
-# (PART) Git basics {-} 
+# (PART) Git basics and workflows {-} 
 
 # Git commands {#usage-git-cmds}
 
