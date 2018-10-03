@@ -101,7 +101,7 @@ Behind the scenes here we have used `rmarkdown::render()` to render this script 
 ```{r render-demo-code, include = FALSE, error = TRUE}
 ## render must happen elsewhere, othewise bookdown yaml clobbers doc yaml
 ## this is, in fact, why we're working below session temp
-rmarkdown::render(fs::path(va_home, "render-r-script-demo.R"))
+withr::with_dir(va_home, rmarkdown::render("render-r-script-demo.R"))
 
 ## copy files back into the book
 va_files <- fs::dir_ls(va_home, recursive = TRUE)
