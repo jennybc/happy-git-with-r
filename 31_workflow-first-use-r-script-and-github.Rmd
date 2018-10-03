@@ -112,7 +112,7 @@ fs::file_copy(md_file, fs::path_rel(md_file, va_home), overwrite = TRUE)
 
 fig_dir <- va_files[grepl("_files", fs::path_file(va_files))]
 fig_dir_rel <- fs::path_rel(fig_dir, va_home)
-fig_fs::dir_delete(fig_dir_rel)
+fs::dir_delete(fig_dir_rel)
 ## TODO: figure out why this directory is deleted in the context of local
 ## bookdown render
 fs::dir_copy(fig_dir, fig_dir_rel)
