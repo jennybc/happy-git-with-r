@@ -98,7 +98,7 @@ writeLines(demo_code, fs::path(va_home, "render-r-script-demo.R"))
 
 Behind the scenes here we have used `rmarkdown::render()` to render this script and you can go [visit it on GitHub](https://github.com/jennybc/happy-git-with-r/blob/master/render-r-script-demo.md).
 
-```{r render-demo-code, include = FALSE, error = TRUE}
+```{r render-demo-code, include = FALSE, error = TRUE, eval = as.logical(Sys.getenv("TRAVIS", unset = "FALSE"))}
 ## render must happen elsewhere, othewise bookdown yaml clobbers doc yaml
 ## this is, in fact, why we're working below session temp
 withr::with_dir(va_home, rmarkdown::render("render-r-script-demo.R"))
@@ -112,8 +112,9 @@ fs::file_copy(md_file, fs::path_rel(md_file, va_home), overwrite = TRUE)
 
 fig_dir <- va_files[grepl("_files", fs::path_file(va_files))]
 fig_dir_rel <- fs::path_rel(fig_dir, va_home)
-fs::dir_delete(fig_dir_rel)
-## TODO: figure out why this directory is deleted in the context of bookdown
+fig_fs::dir_delete(fig_dir_rel)
+## TODO: figure out why this directory is deleted in the context of local
+## bookdown render
 fs::dir_copy(fig_dir, fig_dir_rel)
 
 fs::dir_delete(va_home)
