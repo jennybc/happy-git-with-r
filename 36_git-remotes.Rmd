@@ -9,7 +9,7 @@ remotes. You pull others changes from remotes and push your changes to remotes.
 ## Listing what remotes exist
 
 `git remote` lists the names of available remotes, but usually it is more
-useful to see what ULRs each note corresponds to (with `-v`).
+useful to see what URLs each note corresponds to (with `-v`).
 
 ```{bash}
 git remote -v
@@ -18,7 +18,7 @@ git remote -v
 ## Adding a new remote
 
 `git clone` automatically adds a new remote, so often you do not need to do
-this manually initially. However after the initial clone it is often useful to
+this manually initially. However, after the initial clone, it is often useful to
 add additional remotes.
 
 Use `git remote add` to add a new remote
@@ -27,18 +27,21 @@ Use `git remote add` to add a new remote
 git remote add happygit https://github.com/jennybc/happy-git-with-r.git
 ```
 
-Note when you add a remote you give it a name (here `happygit`), which you can use instead of the entire URL.
+Note: when you add a remote you give it a nickname (here `happygit`), which you can use in git commands in place of the entire URL.
 
 ```shell
 git fetch happygit
 ```
 
+Sidebar on nicknames: there is a strong convention to use `origin` as the nickname of your main remote. At this point, it is common for the main remote of a repo to be hosted on GitHub (or GitLab or Bitbucket). It is tempting to use a more descriptive nickname (such as `github`), but you might find that following convention is worth it. It makes your setup easier for others to understand and for you to transfer information that you read in documentation, on Stack Overflow, or in blogs.
+
+A common reason to add a  second remote is when you have done a "fork and clone" of a repo and your personal copy is set up as the `origin` remote. Eventually you will want to pull changes from the original repository. It is common to use `upstream` as the nickname for this remote.
+
 ## Fetching data from remotes
 
 To get new data from a remote use `git fetch <remote_name>`. This retrieves the
 data locally, but importantly it does _not_ change the state of your repository
-in any way. To incorporate the data into your repository you need to merge or
-rebase your project with the remote project.
+or your files in any way. To incorporate the data into your repository, you need to merge or rebase your project with the remote project.
 
 ```shell
 # Fetch the data
@@ -50,6 +53,8 @@ git merge happygit/master master
 # git pull is a shortcut which does the above in one command
 git pull happygit master
 ```
+
+For more detail on `git pull` workflows, see \@ref(pull-tricky).
 
 ## Pushing to remotes
 
@@ -82,9 +87,7 @@ git remote set-url happygit git@github.com:jennybc/happy-git-with-r.git
 
 One fairly common workflow is you initially cloned a repository on GitHub
 locally (without forking it), but now want to create your own fork and push
-changes to it. I generally like to have the main repository called `upstream`
-and my forked repository called `origin`. So in this case you will need to
-first rename the repository, then add your fork as a new remote.
+changes to it. As described earlier, it is common to call the main repository `upstream` and to call your fork `origin`. So, in this case, you need to first rename the existing remote (from `origin` to `upstream`). Then add your fork as a new remote, with the name `origin`.
 
 ```shell
 git remote rename origin upstream
