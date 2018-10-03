@@ -25,18 +25,16 @@ Present and quite stable, goal is to stay very current:
 
   * Instructions for Git/GitHub/R/RStudio installation and set-up
   * Early and fundamental workflows using Git and GitHub with R and RStudio.
+    - Including special tips for the effective use of R Markdown and the rmarkdown package with GitHub.
 
 Present and still growing, within some limits:
 
   * More on Git itself. However we have no ambitions to be a full substitute for other comprehensive Git references.
-  * Intermediate and advanced workflows.
+  * Intermediate and advanced workflows, with a special emphasis on concerns relevant to useRs, data analysts, etc.
     
 Present but stale / stalled.
 
-  * Use of the GitHub API for bulk operations.
   * Using GitHub to run a course.
-
-Slides I draw on in live workshops: <https://speakerdeck.com/jennybc/happy-git-and-github-for-the-user>
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Happy Git and GitHub for the useR</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/jennybc/happy-git-with-r" property="cc:attributionName" rel="cc:attributionURL">Jennifer Bryan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
