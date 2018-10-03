@@ -98,7 +98,7 @@ writeLines(demo_code, fs::path(va_home, "render-r-script-demo.R"))
 
 Behind the scenes here we have used `rmarkdown::render()` to render this script and you can go [visit it on GitHub](https://github.com/jennybc/happy-git-with-r/blob/master/render-r-script-demo.md).
 
-```{r render-demo-code, include = FALSE, error = TRUE, eval = as.logical(Sys.getenv("TRAVIS", unset = "FALSE"))}
+```{r render-demo-code, include = FALSE, error = TRUE, eval = !as.logical(Sys.getenv("TRAVIS", unset = "FALSE"))}
 ## render must happen elsewhere, othewise bookdown yaml clobbers doc yaml
 ## this is, in fact, why we're working below session temp
 withr::with_dir(va_home, rmarkdown::render("render-r-script-demo.R"))
