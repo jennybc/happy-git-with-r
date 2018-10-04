@@ -1,7 +1,5 @@
 # Remotes {#remotes}
 
-Practice managing your remotes.
-
 Remote repositories are versions of your project that are hosted on the
 Internet or another network. A single project can have 1, 2 or even hundreds of
 remotes. You pull others changes from remotes and push your changes to remotes.

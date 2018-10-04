@@ -1,7 +1,5 @@
 # Branches {#branches}
 
-Practice creating and managing your git branches.
-
 Branching means that you take a detour from the main stream of development and
 do work without changing the main stream. It allows one or many people to work
 in parallel without overwriting each other's work.
