@@ -45,7 +45,7 @@ If your local project was already a Git repo and was up-to-date, move on. Otherw
 
 ## Make and connect a GitHub repo, option 1
 
-If you use the [usethis](https://cran.r-project.org/package=usethis) package AND you have configured a GitHub Personal Access Token (PAT), do this in R:
+If you use the [usethis](https://cran.r-project.org/package=usethis) package AND you have configured a GitHub Personal Access Token (PAT) (see [the appendix][GitHub Personal Access Tokens] for how to set this up.), do this in R:
 
     usethis::use_github()
     
