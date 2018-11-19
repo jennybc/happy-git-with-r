@@ -40,30 +40,19 @@ Put your PAT in your `.Renviron` file. Have a line that looks like this:
 GITHUB_PAT=8c70fd8419398999c9ac5bacf3192882193cadf2
 ```
 
-but with *your* PAT instead of mine. Don't worry, I've revoked this one! This file should live in your home directory. Not sure what that is? In R, do:
+but with *your* PAT instead of mine. Don't worry, I've revoked this one! 
+
+`.Renviron` is a hidden file that lives in your home directory. Not sure where that is? The easiest way to find and edit `.Renviron` is with a function from the **usethis** package. In R, do:
 
 ```{r eval = FALSE}
-normalizePath("~/")
+usethis::edit_r_environ()
 ```
 
-If you have no idea how to do any of this, here's one way from R:
+Your `.Renviron` file should pop up in your editor.  Add your `GITHUB_PAT` as above, save and close it. 
 
-```{r eval = FALSE}
-cat("GITHUB_PAT=8c70fd8419398999c9ac5bacf3192882193cadf2\n",
-    file = file.path(normalizePath("~/"), ".Renviron"), append = TRUE)
-```
+Put a line break at the end!  If you’re using an editor that shows line numbers, there should be two lines, where the second one is empty.
 
-but with *your* PAT instead of mine.
-
-Here's another way with RStudio (or other text editor): Do *File > New File > Text file*. Create a line like this:
-
-```
-GITHUB_PAT=8c70fd8419398999c9ac5bacf3192882193cadf2
-```
-
-Put a line break at the end! If you’re using an editor that shows line numbers, there should be two lines, where the second one is empty.
-
-Save in your home directory with the filename `.Renviron`. If questioned, YES you do want to use a filename that begins with a dot `.`. Note that, by default, dotfiles are hidden in RStudio, but `.Renviron` should always be visible and therefore easy to edit in the future.
+If questioned, YES you do want to use a filename that begins with a dot `.`. Note that, by default, most dotfiles are hidden in the RStudio file browser, but `.Renviron` should always be visible.
 
 Restart R (*Session > Restart R* in the RStudio menu bar), as environment variables are loaded from `.Renviron` only [at the start of an R session](http://stat.ethz.ch/R-manual/R-patched/library/base/html/Startup.html). Check that the PAT is now available like so:
 
