@@ -30,9 +30,9 @@ It is harder to keep a fork updated than a clone. Why? Because the primary remot
 
 You need to have more than one *remote* associated with your local repo.
 
-If you're nervous about command line Git, you update your fork on GitHub purely via the browser. Then pull to get the commits into your local repo:
+If you're nervous about command line Git, you update your fork on GitHub purely via the browser: In your forked repo, you should see a message that you are behind the original repository by a certain number of commits. To bring in these changes, click: "New Pull Request", "switching the base", "Create new pull request". Add a title, then click "Create pull request", "Merge pull request", and finally "Confirm merge".
 
-  * [Updating a fork directly from GitHub](http://www.hpique.com/2013/09/updating-a-fork-directly-from-github/)
+Then, in your local setup, pull to get the commits into your local repo. 
   
 In the long run, you will want to learn how to configure a second remote for your local repo. Pull the new commits into your local repo, then push them to your own fork:
 
