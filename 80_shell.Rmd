@@ -54,11 +54,11 @@ This is the native Windows command line interpreter. It's rarely what you want, 
 
 ![](img/2018-01-15_command-prompt.png)
 
-Notice the `cmd.exe` in the title bar.
+Notice the `cmd.exe` in the title bar, although it is not *always* present. You might also see "Command Prompt".
 
-In Command Prompt, `echo %comspec%` gives `C:\WINDOWS\system32\cmd.exe`.
+Here's a better way to investigate: in Command Prompt, `echo %comspec%` gives `C:\WINDOWS\system32\cmd.exe`.
 
-If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from any of the commands given here, that suggests you have somehow launched into `cmd.exe`. 
+If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from some of the other commands given here, that also suggests you have somehow launched into `cmd.exe`. 
 
 #### Power Shell
 
