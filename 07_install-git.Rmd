@@ -37,7 +37,7 @@ We like this because Git for Windows leaves the Git executable in a conventional
 
 This also leaves you with a Git client, though not a very good one. So check out Git clients we recommend (chapter \@ref(git-client)).
 
-FYI, this appears to be equivalent to what you would download from here: <https://git-scm.com/download/win>.
+FYI, this appears to be equivalent to what you would download from here: <https://git-scm.com/download/>.
 
 **Option 2** (*recommended*): Install [Git for Windows](https://git-for-windows.github.io/) via the [Chocolatey](https://chocolatey.org) package manager. If this means anything to you, Chocolatey is like [`apt-get`](https://en.wikipedia.org/wiki/APT_(Debian)) or [Homebrew](https://brew.sh), but for Windows instead of Debian/Ubuntu Linux or macOS. As far as I can tell, using Chocolatey to install Git for Windows is pretty equivalent to installing it yourself.
 
