@@ -1,6 +1,6 @@
 # Workshops
 
-These materials can be used for independent study, but I also use them to support
+These materials can be used for independent study, but they have also been used to support:
 
   * in-person workshops (see below)
   * [STAT 545](http://stat545.com) at UBC
@@ -38,24 +38,22 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 ## rstudio::conf 2019
 
 2-day workshop: What They Forgot to Teach You About R  
-Will have substnatial coverage of Git/GitHub + R/Rmd/RStudio  
-January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX REGISTRATION OPEN
+Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
+January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX
+
+Registered workshop participants should use this thread (WILL EXIST SOON) on community.rstudio.com to discuss system prep woes.
 
 ## Seattle October 2018
 
 2-day workshop: [What They Forgot to Teach You About R](https://whattheyforgot.org/index.html#seattle-2018-october-4-5)  
-3 / 8 units cover Git/GitHub + R/Rmd/Rstudio  
+3 of 8 units cover Git/GitHub + R/Rmd/RStudio  
 Oct 4-5, 2018, The Westin Seattle [REGISTRATION OPEN](https://www.rstudio.com/workshops/what-they-forgot-to-teach-you-about-r/)
-
-Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-seattle-oct-2018-system-setup/15287) on community.rstudio.com to discuss system prep woes.
 
 ## rstudio::conf 2018
 
 2-day workshop: What They Forgot to Teach You About R  
-~25% of content was Git/GitHub + R/Rmd/Rstudio  
+~25% of content was Git/GitHub + R/Rmd/RStudio  
 Jan 31 & Feb 1, 2018, San Diego, CA
-
-System prep thread on [community.rstudio.com](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup/4339?u=jennybryan)
 
 ## CSAMA 2017: Statistical Data Analysis for Genome Biology
 
