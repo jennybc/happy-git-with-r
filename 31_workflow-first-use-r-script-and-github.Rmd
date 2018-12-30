@@ -85,6 +85,7 @@ demo_code <- c(
   "#' ---",
   "#' title: \"R scripts can be rendered!\"",
   "#' author: \"Jenny Bryan\"",
+  "#' date: \"April 1, 2014\"",
   "#' output: github_document",
   "#' ---",
   "#'",
