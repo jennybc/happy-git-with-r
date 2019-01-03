@@ -43,40 +43,30 @@ January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Trainin
 
 Registered workshop participants should use this thread (WILL EXIST SOON) on community.rstudio.com to discuss system prep woes.
 
-## Seattle October 2018
+## Previous workshops
 
-2-day workshop: [What They Forgot to Teach You About R](https://whattheyforgot.org/index.html#seattle-2018-october-4-5)  
-3 of 8 units cover Git/GitHub + R/Rmd/RStudio  
-Oct 4-5, 2018, The Westin Seattle [REGISTRATION OPEN](https://www.rstudio.com/workshops/what-they-forgot-to-teach-you-about-r/)
-
-## rstudio::conf 2018
-
-2-day workshop: What They Forgot to Teach You About R  
-~25% of content was Git/GitHub + R/Rmd/RStudio  
-Jan 31 & Feb 1, 2018, San Diego, CA
-
-## CSAMA 2017: Statistical Data Analysis for Genome Biology
-
-<http://www.huber.embl.de/csama2017/>  
-June 11-16, 2017, Bressanone-Brixen, Italy  
-
-## satRday Cape Town 2017
-
-<http://capetown2017.satrdays.org>  
-February 16 - 18, 2017, Cape Town, South Africa
-
-## rstudio::conf 2017
-
-<https://www.rstudio.com/conference/>  
-January 13 - 14, 2017, Orlando, FL  
-Saturday January 14, 10:15am to 12:30pm, Sun Ballroom B
-
-## CSAMA 2016: Statistical Data Analysis for Genome Biology
-
-<http://www.huber.embl.de/csama2016/>  
-July 10 - 15, 2016, Bressanone-Brixen, Italy  
-
-## useR! 2016 Stanford
-
-Monday, June 27, 2016  
-[Full description](http://user2016.org/tutorials/01.html) on the main useR! website  
+  * Seattle October 2018
+    - 2-day workshop: [What They Forgot to Teach You About R](https://whattheyforgot.org/index.html#seattle-2018-october-4-5)  
+    - 3 of 8 units on Git/GitHub + R/Rmd/RStudio  
+    - Oct 4-5, 2018, The Westin Seattle
+  * rstudio::conf 2018
+    - 2-day workshop: What They Forgot to Teach You About R  
+    - ~25% of content was Git/GitHub + R/Rmd/RStudio  
+    - Jan 31 & Feb 1, 2018, San Diego, CA
+  * CSAMA 2017: Statistical Data Analysis for Genome Biology
+    - <http://www.huber.embl.de/csama2017/>  
+    - June 11-16, 2017, Bressanone-Brixen, Italy  
+  * satRday Cape Town 2017
+    - <http://capetown2017.satrdays.org>  
+    - February 16 - 18, 2017, Cape Town, South Africa
+  * rstudio::conf 2017
+    - <https://www.rstudio.com/conference/>  
+    - January 13 - 14, 2017, Orlando, FL  
+    - Saturday January 14, 10:15am to 12:30pm
+  * CSAMA 2016: Statistical Data Analysis for Genome Biology
+    - <http://www.huber.embl.de/csama2016/>  
+    - July 10 - 15, 2016, Bressanone-Brixen, Italy  
+  * useR! 2016 Stanford
+    - <http://user2016.r-project.org>  
+    - Monday, June 27, 2016  
+    - [Using Git and GitHub with R, RStudio, and R Markdown](http://user2016.r-project.org/tutorials/01.html)
