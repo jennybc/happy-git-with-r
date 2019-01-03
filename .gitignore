@@ -1,10 +1,6 @@
 .Rproj.user
 .Rhistory
 .RData
-.*.Rnb.cached
-_publish.R
-ubc-practice-emails.csv
-_main.rds
 README.html
 _book
 _bookdown_files

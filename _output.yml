@@ -1,6 +1,5 @@
 bookdown::gitbook:
   css: style.css
-
   config:
     sharing:
       github: yes
@@ -13,5 +12,4 @@ bookdown::gitbook:
         <li><a href="./">Happy Git and GitHub for the useR</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit:
-      link: https://github.com/jennybc/happy-git-with-r/edit/master/%s
+    edit: https://github.com/jennybc/happy-git-with-r/edit/master/%s
