@@ -18,13 +18,13 @@ script:
 
 deploy:
   - provider: script
-    script: netlify deploy --dir _book
+    script: netlify deploy --dir _book --prod --message "$TRAVIS_COMMIT"
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: netlify deploy --dir _book --message "$TRAVIS_COMMIT"
     skip_cleanup: true
     on:
       all_branches: true
       condition: $TRAVIS_BRANCH != "master"
-  - provider: script
-    script: netlify deploy --dir _book --prod
-    skip_cleanup: true
-    on:
-      branch: master
