@@ -11,6 +11,8 @@ link-citations: yes
 github-repo: jennybc/happy-git-with-r
 description: "Using Git and GitHub with R, Rstudio, and R Markdown"
 twitter-handle: jennybryan
+url: 'https\://happygitwithr.com/'
+cover-image: img/watch-me-diff-watch-me-rebase-smaller.png
 ---
 
 # A living book {-}
