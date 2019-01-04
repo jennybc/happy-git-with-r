@@ -10,7 +10,7 @@ before_install:
   - npm install netlify-cli -g
 
 env:
-  - NETLIFY_SITE_ID=8a4ebbfd-3dcb-4ad7-86b2-0085312fd41a
+  - NETLIFY_SITE_ID=4e9fea2e-d99c-484e-be1a-9d8605393f4e
   # NETLIFY_AUTH_TOKEN set in travis settings
 
 script:
