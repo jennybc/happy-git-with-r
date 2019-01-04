@@ -6,7 +6,7 @@ Register an account with GitHub. It's free!
 
 ## Username advice
 
-You will be able upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't fret about any of that now. **Except your username. You might want to give that some thought.**
+You will be able to upgrade to a paid level of service, apply discounts, join organizations, etc. in the future, so don't fret about any of that now. **Except your username. You might want to give that some thought.**
 
 A few tips, which sadly tend to contradict each other:
 
