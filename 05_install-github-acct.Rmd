@@ -35,6 +35,8 @@ Go ahead and register your free account NOW and then pursue any special offer th
   
 ## Pay for private repos
 
-Everyone else can pay for some private repos. A personal plan with unlimited private repos is $7 / month at the time of writing. See the current plans and pricing here:
+Anyone can pay to have private repos. A personal plan with unlimited private repos is $7 / month at the time of writing. See the current plans and pricing here:
 
   * <https://github.com/pricing>
+
+Go ahead and register your free account NOW. You can decide later if you'd like to upgrade to a paid plan.
