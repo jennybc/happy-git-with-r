@@ -3,20 +3,30 @@
 In the shell (Appendix \@ref(shell)):
 
 ``` bash
-git config --global user.name 'Jennifer Bryan'
-git config --global user.email 'jenny@stat.ubc.ca'
+git config --global user.name 'Jane Doe'
+git config --global user.email 'jane@example.com'
 git config --global --list
 ```
 
-substituting your name and **the email associated with your GitHub account**. 
+substituting your name and **the email associated with your GitHub account**.
+
+The [usethis package](https://usethis.r-lib.org) offers an alternative approach. You can set your Git user name and email from within R:
+
+```{r, eval = FALSE}
+## install if needed (do this exactly once):
+## install.packages("usethis")
+
+library(usethis)
+use_git_config(user.name = "Jane Doe", user.email = "jane@example.org")
+```
 
 ## More about `git config`
 
 An easy way to get into a shell from RStudio is *Tools > Terminal* or *Tools > Shell*. More about the shell in the Appendix \@ref(shell).
 
-Special Windows gotchas: If you are struggling on Windows, consider there are different types of shell and you might be in the wrong one. Short version: you want to see `MSYS` or `MINGW64` in the status bar, not `cmd.exe`. Read more in [the Appendix](#windows-shell-hell).
+Special Windows gotchas: If you are struggling on Windows, consider there are different types of shell and you might be in the wrong one. You want to be in a "Git Bash" shell, as opposed to Power Shell or the legacy `cmd.exe` command prompt. Read more in [the Appendix](#windows-shell-hell). This might also be a reason to do this configuration via the usethis package in R.
 
-What user name should you give to Git? This does not have to be your GitHub username, although it can be. Another good option is your actual first name and last name. Your commits will be labelled with this name, so this should be informative to potential collaborators.
+What user name should you give to Git? This does not have to be your GitHub user name, although it can be. Another good option is your actual first name and last name. If you commit from different machines, sometimes people work that info into the user name. Your commits will be labelled with this user name, so make it informative to potential collaborators and future you.
 
 What email should you give to Git? This __must__ be the email associated with your GitHub account.
 
@@ -30,4 +40,4 @@ Another Git option that many people eventually configure is the editor. At some 
 git config --global core.editor "emacs"
 ```
 
-Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](http://swcarpentry.github.io/git-novice/02-setup/). 
+Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](http://swcarpentry.github.io/git-novice/02-setup/).
