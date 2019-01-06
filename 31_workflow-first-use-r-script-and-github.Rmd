@@ -72,7 +72,7 @@ writeLines(demo_code, fs::path(va_home, "render-r-script-demo.R"))
 
 Render the R script through one of these methods:
 
-  *  Click on the "notebook" icon in RStudio to "Compile Report".
+  * Click on the "notebook" icon in RStudio to "Compile Report".
   * In RStudio, do *File > Knit Document*.
   * In R, do `rmarkdown::render("YOURSCRIPT.R")`.
 
@@ -113,7 +113,9 @@ fs::file_copy(md_file, fs::path_rel(md_file, va_home), overwrite = TRUE)
 
 fig_dir <- va_files[grepl("_files", fs::path_file(va_files))]
 fig_dir_rel <- fs::path_rel(fig_dir, va_home)
-fs::dir_delete(fig_dir_rel)
+if (fs::dir_exists(fig_dir_rel)) {
+  fs::dir_delete(fig_dir_rel)  
+}
 ## TODO: figure out why this directory is deleted in the context of local
 ## bookdown render
 fs::dir_copy(fig_dir, fig_dir_rel)
