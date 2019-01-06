@@ -2,17 +2,19 @@
 
 This is optional but **highly recommended**.
 
-Unless specified, it is not required for live workshops and will not be explicitly taught, though you might see us using one of these clients.
+Learning to use version control can be rough at first. I found the use of a GUI – as opposed to the command line – extremely helpful when I was getting started. I call this sort of helper application a Git client. It's really a Git(Hub) client because it also helps you interact with GitHub or other remotes.
 
-## What and why
+A Git client is not required for live workshops and will not be explicitly taught, though you might see us using one of these clients.
 
-Learning to use version control can be rough at first. I found the use of a GUI – as opposed to the command line – extremely helpful when I was getting started. I call this sort of helper application a Git client. It's really a Git(Hub) client because they also help you interact with GitHub or other remotes.
+## What is a Git client? Why would you want one?
 
-Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and the RStudio IDE are not necessary to use Git or R, respectively, but they make the experience more pleasant because they reduce the amount of [command line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm).
+"Git" is really just a collection of individual commands you execute in the shell. This interface is not appealing for everyone. Some may prefer to do Git operations via a client with a graphical interface.
 
-RStudio offers a very basic Git client. I use this often for simple operations, but you probably want another, more powerful one as well.
+Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment), such as RStudio, are not necessary to use Git or R, respectively. But they make the experience more pleasant because they reduce the amount of [command line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm) and provide a richer visual representation of the current state.
 
-Fair warning: for some things, you will have to use the command line. But the more powerful your Git client is, the less often this happens. The visual overview given by your Git client can also be invaluable for understanding the current state of things, even when preparing calls to command line Git.
+RStudio offers a very basic Git client via its Git pane. I use this often for simple operations, but you probably want another, more powerful one as well.
+
+Fair warning: for some tasks, you must use the command line. But the more powerful your Git client is, the less often this happens. The visual overview given by your Git client can also be invaluable for understanding the current state of things, even when preparing calls to command line Git. 
 
 Fantastic news: because all of the clients are just forming and executing Git commands on your behalf, you don't have to pick one. You can literally do one operation from the command line, do another from RStudio, and another from SourceTree, one after the other, and it just works. *Very rarely, both clients will scan the repo at the same time and you'll get an error message about `.git/index.lock`. Try the operation again at least once before doing any further troubleshooting.*
 
@@ -28,17 +30,25 @@ In contrast, here's a shell session where I've used command line Git to access s
 
 Which do you prefer?
 
+## No one is giving out Git Nerd merit badges
+
+Work with Git in whatever way makes you most effective. Feel free to revisit your approach over time or to use different approaches for different tasks. No one can tell whether you use the command line or a GUI when they look at your Git history or your GitHub repo.
+
+I sometimes encounter people who feel it's "better" to use command line Git, but for very ill-defined reasons. These people may feel like they *should* work in the shell, even if it leads to Git-avoidance, frequent mistakes, or limiting themselves to a small set of ~3 Git commands. This is counterproductive.
+
+I had two false starts with Git, where I failed to get proficient enough, quickly enough to truly incorporate version control into my daily work. I found a visual Git client invaluable -- SourceTree, in my case. It made me willing to use Git multiple times per day, for a sustained period of time. This helped me build the mental model necessary for more advanced Git operations like rebasing, cherry-picking, and resetting.
+
+If your Git life happens on your own computer, there is no reason to deny yourself a GUI if that's what you like. If you prefer working in the shell or if you frequently log into a remote server, then it makes sense to prioritize building Git skills at the command line. Do whatever works for you, but don't do anything for the sake of purity or heroism.  
+
 ## Recommended Git clients
 
-<!-- https://twitter.com/JennyBryan/status/734894596019224576 -->
+  * [SourceTree](https://www.sourcetreeapp.com) is a free, powerful Git(Hub) client that I highly recommend. It was my first Git client and is still my favorite for nontrivial Git tasks. Available for Mac and Windows. If I'm teaching you in a course or workshop, you might see me using this.
 
-  * [SourceTree](http://www.sourcetreeapp.com) is a free, powerful Git(Hub) client that I highly recommend. It was my first Git client and is still my favorite for nontrivial Git tasks. Available for Mac and Windows. If I'm teaching you in a course or workshop, you might see me using this.
+  * [GitKraken](https://www.gitkraken.com), which is also free, arrived on the scene more recently. It's exciting because it works across all three OSes our students use: Windows, macOS, and Linux. I hear very good reviews, especially from long-suffering Linux users who haven't had any great options until now.
 
-  * [GitKraken](https://www.gitkraken.com) is quite new on the scene and is free. I would probably start here if I was starting today. Why? Because it works across all three OSes my students use: Windows, Mac, and Linux. I hear very good reviews, especially from long-suffering Linux users who haven't had any great options until now.
-
-  * [GitUp](http://gitup.co) is a free, open source client for Mac OS. I've heard really good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I'm so used to SourceTree. YMMV.
+  * [GitUp](https://gitup.co) is a free, open source client for macOS. I've heard good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I'm so used to SourceTree. YMMV.
   
-  * GitHub also offers [a free Git(Hub) client](https://desktop.github.com/) for Windows and Mac. We do NOT recommend it for Windows and have serious reservations even for Mac OS. What do we object to?
+  * GitHub also offers [a free Git(Hub) client](https://desktop.github.com/) for Windows and macOS. We do NOT recommend it for Windows and have serious reservations even for macOS. What do we object to?
     - The degree of hand-holding offered by GitHub's clients borders on hand-*cuffs*.
     - The Windows client sometimes leaves the Git executable so well hidden that we can't find it. This is a deal-killer, because that means RStudio can't find it either.
     - These clients wrap Git functionality so thoroughly that we've had students make some destructive mistakes. For example, we've seen a "sync" operation that resulted in the loss of local uncommitted changes. Exactly which Git operations, in what order, are implied by "sync", is [not entirely clear](http://stackoverflow.com/questions/12104513/what-does-github-for-windows-sync-do). We prefer clients that expose Git more explicitly.
