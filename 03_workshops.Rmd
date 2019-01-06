@@ -41,7 +41,7 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
 January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX
 
-Registered workshop participants should use this thread (WILL EXIST SOON) on community.rstudio.com to discuss system prep woes.
+Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup-for-rstudio-conf-2019/20914?u=jennybryan) on community.rstudio.com to discuss system prep woes.
 
 ## Previous workshops
 
