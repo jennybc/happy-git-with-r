@@ -18,6 +18,7 @@ Try this. Best case scenario is about 1 - 2 hours. If you hit a wall, we will he
   * [Install or update R and RStudio](#install-r-rstudio).
   * [Install Git](#install-git).
   * [Introduce yourself to Git](#hello-git).
+  * Contemplate if you'd like to [install an optional Git client](#git-client), now or in future.
   * [Prove local Git can talk to GitHub](#push-pull-github).
   * [Cache your username and password](#credential-caching) or [set up SSH keys](#ssh-keys) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
   * [Prove RStudio can find local Git](#rstudio-git-github) and, therefore, can talk to GitHub.
