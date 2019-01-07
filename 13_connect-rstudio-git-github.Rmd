@@ -16,31 +16,37 @@ We assume the following:
   * You've introduced yourself to Git (chapter \@ref(hello-git)).
   * You've confirmed that you can push to / pull from GitHub from the command line (chapter \@ref(push-pull-github)).
 
-## Make a new repo on GitHub
+## Make a repo on GitHub
 
 Go to <https://github.com> and make sure you are logged in.
 
 Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
 
-Repository name: `myrepo` (or whatever you wish, we will delete this)  
-Public  
-YES Initialize this repository with a README
+How to fill this in:
+
+  * Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
+  * Description: "testing my setup" (or whatever, but some text is good for the README).
+  * Public.
+  * YES Initialize this repository with a README.
+  
+For everything else, just accept the default.
 
 Click big green button "Create repository."
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button.
 
 ## Clone the new GitHub repository to your computer via RStudio
 
 In RStudio, start a new Project:
 
-  * *File > New Project > Version Control > Git*. In the "repository URL" paste the URL of your new GitHub repository. It will be something like this `https://github.com/jennybc/myrepo.git`.
-    - Do you NOT see an option to get the Project from Version Control? Go to chapter \@ref(rstudio-see-git) for tips on how to help RStudio find Git.
-  * Take charge of -- or at least notice! -- the local directory for the Project. A common rookie mistake is to have no idea where you are saving files or what your working directory is. Pay attention. Be intentional. Personally, I would do this in `~/tmp`.
+  * *File > New Project > Version Control > Git*. In "Repository URL", paste the URL of your new GitHub repository. It will be something like this `https://github.com/jennybc/myrepo.git`.
+    - Do you NOT see an option to get the Project from Version Control? Restart RStudio and try again. Still no luck? Go to chapter \@ref(rstudio-see-git) for tips on how to help RStudio find Git.
+  * Accept the default project directory name, e.g. `myrepo`, which coincides with the GitHub repo name.
+  * Take charge of -- or at least notice! -- where the Project will be saved locally. A common rookie mistake is to have no idea where you are saving files or what your working directory is. Pay attention. Be intentional. Personally, I would do this in `~/tmp`.
   * I suggest you check "Open in new session", as that's what you'll usually do in real life.
   * Click "Create Project".
 
-This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
+You should find yourself in a new local RStudio Project that represents the new test repo we just created on GitHub. This should download the `README.md` file from GitHub. Look in RStudio's file browser pane for the `README.md` file.
 
 ## Make local changes, save, commit
 
@@ -60,7 +66,7 @@ From RStudio:
   
 Click the green "Push" button to send your local changes to GitHub. If you are challenged for username and password, provide them (but see below). You should see some message along these lines.
 
-``` sh
+``` bash
 [master dc671f0] blah
  3 files changed, 22 insertions(+)
  create mode 100644 .gitignore
@@ -75,7 +81,7 @@ Refresh.
 
 You should see the new "This is a line from RStudio" in the README.
 
-If you click on "commits," you should see one with the message "Commit from RStudio".
+If you click on "commits", you should see one with the message "Commit from RStudio".
 
 If you have made it this far, you are DONE with set up. But first ...
 
@@ -83,7 +89,9 @@ If you have made it this far, you are DONE with set up. But first ...
 
 If you somehow haven't done so yet, now is the perfect time to make sure you don't need to keep providing username and password on each push.
 
-Pick one:
+First, make another small change locally and push again, to make sure we've given your system every opportunity to cache your credentials and retrieve them from the cache. It might "just work".
+
+Are you still challenged? Pick one:
 
   * Credential caching for HTTPS access, chapter \@ref(credential-caching).
   * Set up SSH keys, chapter \@ref(ssh-keys).
@@ -97,4 +105,3 @@ Now is the perfect time to do this, since you have a functioning test repo.
 **GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
 
 Scroll down, click on "delete repository," and do as it asks.
-
