@@ -14,12 +14,12 @@ Click green "New repository" button. Or, if you are on your own profile page, cl
 
 How to fill this in:
 
-  * Repository name: `myrepo` (or whatever you wish, we're going to delete this soon anyway).
-  * Description: "testing my setup" (or whatever, but this text shows up in the default README, which is nice).
-  * Public
-  * YES Initialize this repository with a README
+  * Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
+  * Description: "testing my setup" (or whatever, but some text is good for the README).
+  * Public.
+  * YES Initialize this repository with a README.
   
-If we don't mention it, just accept the default.
+For everything else, just accept the default.
 
 Click big green button "Create repository."
 
@@ -115,7 +115,7 @@ git commit -m "A commit from my local computer"
 git push
 ```
 
-The `-m "blah blah blah"` piece is very important! Git requires a commit message for every commit, so if you forget the `-m` flag, git will prompt you for a commit message anyway. And you might not like [the editor that Git chooses](#git-editor). It is good practice to write meaningful commit messages, so that, in the future, potential collaborators (and your future self) will understand the progression of a project.
+The `-m "blah blah blah"` piece is very important! Git requires a commit message for every commit, so if you forget the `-m` flag, Git will prompt you for a commit message anyway. And you might not like [the editor that Git chooses](#git-editor). It is good practice to write meaningful commit messages, so that, in the future, potential collaborators (and your future self) will understand the progression of a project.
 
 This should look something like this:
 
