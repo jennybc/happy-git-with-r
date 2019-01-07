@@ -8,14 +8,15 @@ cache:
 before_install:
   - nvm install stable
   - npm install netlify-cli -g
-  - export DEPLOY_MSG="${TRAVIS_COMMIT:0:7} ${TRAVIS_COMMIT_MESSAGE:0:70}"
+  - export COMMIT_MSG=$(echo "$TRAVIS_COMMIT_MESSAGE" | head -n1)
+  - export DEPLOY_MSG="${TRAVIS_COMMIT:0:7} ${COMMIT_MSG:0:50}"
 
 env:
   - NETLIFY_SITE_ID=4e9fea2e-d99c-484e-be1a-9d8605393f4e
   # NETLIFY_AUTH_TOKEN set in travis settings
 
 script:
-- Rscript -e 'bookdown::render_book("index.Rmd")'
+  - Rscript -e 'bookdown::render_book("index.Rmd")'
 
 deploy:
   - provider: script
