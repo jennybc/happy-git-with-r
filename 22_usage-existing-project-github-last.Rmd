@@ -66,7 +66,7 @@ DO NOT initialize this repository with a README.
 
 Click the big green button "Create repository."
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button in the upper right hand corner of the main page of the repo. (If you don't see it, you may have navigated to some other page within the repo; navigate to the tab that says `Code`.) Alternatively, copy the SSH URL if you chose to set up SSH keys.
 
 ### Connect local repo to GitHub repo
 
@@ -87,6 +87,28 @@ In a shell, do this, substituting your URL:
 Push and cement the tracking relationship between your local `master` branch and `master` on GitHub:
   
         git push --set-upstream origin master
+
+If you did not follow instructions, and created a repo with `README.md` file, as some of the readers reportedly did, and then quickly erased that file pretending like nothing happened, this `git push` operation will not go through. (Do you remember that the whole idea of version control is that nothing gets forgotten?) Namely, `git` will issue an error message that reads something like this:
+
+    hint: Updates were rejected because the tip of your current branch is behind
+    hint: its remote counterpart. Integrate the remote changes (e.g.
+    hint: 'git pull ...') before pushing again.
+    hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Error messages from `git` are often cryptic even to a seasoned user. The relevant bit of information that this error message does contain is to pull the changes from GitHub:
+
+    $ git pull origin master --allow-unrelated-histories
+    * branch            master     -> FETCH_HEAD
+    Already up to date!
+    Merge made by the 'recursive' strategy.
+
+For the full disclosure of potential hickups, note that the straightforward pull is not goigng to work:
+
+    $ git pull origin master
+    * branch            master     -> FETCH_HEAD
+    fatal: refusing to merge unrelated histories
+
+Translating this into human language, `git` discovered two branches that seemed to have lived independenly from one another, with no common root. In plant science terms, it is natural for a tree to have one trunk and possibly more than branch, but it is difficult to conceptualize a tree that starts growing with two trunks that then become one branch. That is what `git` is complaining about here. The option `--allow-unrelated-histories` instructs `git` to ignore the issue and graft one history on top of the other.
 
 ## Confirm the local files propagated to the GitHub remote
 
