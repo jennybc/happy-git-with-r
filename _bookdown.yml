@@ -57,11 +57,10 @@ rmd_files: [
   "notes-ideas.Rmd",
   "notes-bookdown-cheat-sheet.Rmd",
 
-  "80_shell.Rmd",
+  "appendix.Rmd",
+  "shell.Rmd",
+  "github-api-tokens.Rmd",
+  "comic-relief.Rmd",
 
-  "81_github-api-tokens.Rmd",
-
-  "88_comic-relief.Rmd",
-
-  "90_references.Rmd"
+  "references.Rmd"
 ]
