@@ -43,6 +43,7 @@ rmd_files: [
   "workflows-intro.Rmd",
   "workflows-pull.Rmd",
   "workflows-explore-extend-pull-request.Rmd",
+  "workflows-make-github-repo-browsable.Rmd",
 
   "50_prompt-clone.Rmd",
   "51_prompt-fork.Rmd",
@@ -50,8 +51,6 @@ rmd_files: [
   "53_prompt-burn-it-all-down.Rmd",
   "54_prompt-practice-resets.Rmd",
   "57_prompt-search-github.Rmd",
-
-  "60_article-make-github-repo-browsable.Rmd",
 
   "60_classroom-overview.Rmd",
 

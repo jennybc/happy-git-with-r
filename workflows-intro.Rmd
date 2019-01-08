@@ -1,6 +1,6 @@
 # (PART) Daily workflows {-} 
 
-# Doing your work (and undoing it) {#workflows-intro .unnumbered}
+# Useful Git patterns for real life {#workflows-intro .unnumbered}
 
 *most of this only exists in workshop materials but will eventually be recorded here as well*
 
@@ -21,6 +21,8 @@ Git patterns that come up frequently in real work:
     - Pull, oops merge conflicts, abort. Come back later.
     - Pull, oops merge conflicts, resolve them. Push.
 
-Collaborative development:
 
+Play well with others:
+
+  * [Make your repo rewarding to browse on GitHub](#workflows-browsability).
   * [Explore and extend a pull request](#pr-extend)
