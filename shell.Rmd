@@ -1,5 +1,3 @@
-# (APPENDIX) Appendix {-}
-
 # The shell {#shell}
 
 Even if you do most of your Git operations via a client, such as RStudio or GitKraken, you must sometimes work in the shell. As you get more comfortable with Git, you might prefer to do more and more via the command line. You might also need to use Git or file system operations on a server that lacks your usual Git client. For all these reasons, you have to know a little bit about this.

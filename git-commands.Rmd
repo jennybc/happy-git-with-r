@@ -1,8 +1,6 @@
-# (PART) Git basics and workflows {-} 
+# Git commands {#git-commands}
 
-# Git commands {#usage-git-cmds}
-
-Here's a start on the various Git commands that have been largely going on under the hood. We've tried to pick workflows that have RStudio doing this for us. But all of this can be done from the command line.
+A collection of some of the Git commands that have been largely going on under the hood. We've emphasized early workflows that are possible in RStudio. But all of this and much more can be done from the command line. This list is here mostly so we can consult it during live workshops if needed.
 
 *Unless you use the [GitHub API](https://developer.github.com/v3/), most of the GitHub bits really have to be done from the browser.*
 

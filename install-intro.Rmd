@@ -1,8 +1,8 @@
 # (PART) Installation {-} 
 
-# Installation pain {#installation-intro .unnumbered}
+# Half the battle {#install-intro .unnumbered}
 
-Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle here. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.
+Getting all the necessary software installed, configured, and playing nicely together is honestly half the battle when first adopting Git. Brace yourself for some pain. The upside is that you can give yourself a pat on the back once you get through this. And you WILL get through this.
 
 You will find far more resources for how to *use Git* than for installation and configuration. Why? The experts ...
 
@@ -12,7 +12,7 @@ You will find far more resources for how to *use Git* than for installation and 
 
 In their defense, it's hard to write installation instructions. Failures can be specific to an individual OS or even individual computer. If you have some new problem and, especially, the corresponding solution, [we'd love to hear from you!](https://github.com/jennybc/happy-git-with-r/issues)
 
-## Success and operating systems {#operating-system-table .unnumbered}
+## Success and operating systems {-}
 
 <style type="text/css">
 #success-and-operating-systems table {

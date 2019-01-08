@@ -1,6 +1,6 @@
-# (PART) Classroom {-} 
-
 # Run a course with GitHub {#classroom-overview}
+
+*This content is rather stale and unlikely to see further development.*
 
 GitHub makes a wonderful platform on which to run a course. I've been doing this on [github.com](https://github.com) since 2014 in [STAT 545](http://stat545.com), an 80-student grad course in data analysis with R, and in a second large, code-intensive graduate course in statistical genomics. We're running all of the courses for UBC's [Master of Data Science program](https://ubc-mds.github.io) off a private instance of [GitHub Enterprise](https://enterprise.github.com/home) hosted in Canada.
 

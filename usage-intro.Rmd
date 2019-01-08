@@ -1,0 +1,14 @@
+# (PART) Early GitHub Wins {-} 
+
+# Get started with GitHub {#usage-intro .unnumbered}
+
+Now that we've verified your Git/GitHub/RStudio setup, we can demo the workflows you'll use to get your work onto GitHub:
+
+  * [New project, GitHub first] is the easiest way to get a working project.
+  * [Existing project, GitHub first] is a deeply pragmatic way to get pre-existing work onto GitHub.
+  * [Existing project, GitHub last] is the more proper way to connect existing local work to a remote on GitHub, especially if there's already a Git history.
+  
+This part concludes with two R-specific workflows that show off how well [R Markdown (the format)](https://rmarkdown.rstudio.com) and [rmarkdown (the package)](https://cran.r-project.org/package=rmarkdown) work with GitHub:
+
+  * [Test drive R Markdown]
+  * [Render an R script]
