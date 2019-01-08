@@ -12,7 +12,7 @@ rmd_files: [
   "contributors.Rmd",
   "workshops.Rmd",
 
-  "install-pep-talk.Rmd",
+  "install-intro.Rmd",
   "install-github-acct.Rmd",
   "install-r-rstudio.Rmd",
   "install-git.Rmd",
