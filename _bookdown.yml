@@ -52,10 +52,10 @@ rmd_files: [
   "prompt-practice-resets.Rmd",
   "prompt-search-github.Rmd",
 
-  "60_classroom-overview.Rmd",
-
-  "70_more-content.Rmd",
-  "79_bookdown-cheat-sheet.Rmd",
+  "notes-intro.Rmd",
+  "classroom-overview.Rmd",
+  "ideas.Rmd",
+  "bookdown-cheat-sheet.Rmd",
 
   "80_shell.Rmd",
 
