@@ -8,16 +8,16 @@ new_session: true
 rmd_files: [
   "index.Rmd",
 
-  "01_overview.Rmd",
-  "02_contributors.Rmd",
-  "03_workshops.Rmd",
+  "overview.Rmd",
+  "contributors.Rmd",
+  "workshops.Rmd",
 
-  "04_install-pep-talk.Rmd",
-  "05_install-github-acct.Rmd",
-  "06_install-r-rstudio.Rmd",
-  "07_install-git.Rmd",
-  "08_install-introduce-self-git.Rmd",
-  "09_install-git-client.Rmd",
+  "install-pep-talk.Rmd",
+  "install-github-acct.Rmd",
+  "install-r-rstudio.Rmd",
+  "install-git.Rmd",
+  "install-introduce-self-git.Rmd",
+  "install-git-client.Rmd",
 
   "10_connect-git-github.Rmd",
   "11_connect-credential-caching.Rmd",
