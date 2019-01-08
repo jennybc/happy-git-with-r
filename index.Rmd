@@ -1,9 +1,7 @@
 --- 
 title: "Happy Git and GitHub for the useR"
 author: "Jenny Bryan, the STAT 545 TAs, Jim Hester"
-date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-output: bookdown::gitbook
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -15,32 +13,26 @@ url: 'https\://happygitwithr.com/'
 cover-image: img/watch-me-diff-watch-me-rebase-smaller.png
 ---
 
-# A living book {-}
+# Let's Git started {-}
 
-<img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />  
+<div class="figure">
+<img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />
+<p class="caption">Still from <a href=”https://www.youtube.com/watch?v=uBWrpVrazzA”>Heaven King video</a></p>
+</div>
 
-Still from [Heaven King video](https://www.youtube.com/watch?v=uBWrpVrazzA)
+Happy Git provides opinionated instructions on how to:
 
-Repo that makes this site: <https://github.com/jennybc/happy-git-with-r>
+  * Install Git and get it working smoothly with GitHub, in the shell and through the [RStudio IDE](https://www.rstudio.com/products/rstudio/).
+  * Integrate Git and GitHub into your daily work with R and [R Markdown](https://rmarkdown.rstudio.com).
+  * Develop a few key workflows that cover your most common tasks.
+  
+The target reader is someone who uses R for data analysis or who works on R packages, but some of the content may be useful to those working in adjacent areas.
 
-Present and quite stable, goal is to stay very current:
-
-  * Instructions for Git/GitHub/R/RStudio installation and set-up
-  * Early and fundamental workflows using Git and GitHub with R and RStudio.
-    - Including special tips for the effective use of R Markdown and the rmarkdown package with GitHub.
-
-Present and still growing, within some limits:
-
-  * More on Git itself. However we have no ambitions to be a full substitute for other comprehensive Git references.
-  * Intermediate and advanced workflows, with a special emphasis on concerns relevant to useRs, data analysts, etc.
-    
-Present but stale / stalled.
-
-  * Using GitHub to run a course.
+## License {-}
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Happy Git and GitHub for the useR</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://github.com/jennybc/happy-git-with-r" property="cc:attributionName" rel="cc:attributionURL">Jennifer Bryan</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
-```{r include=FALSE}
+```{r include = FALSE}
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
