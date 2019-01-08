@@ -27,11 +27,12 @@ rmd_files: [
   "connect-can-rstudio-use-git.Rmd",
   "connect-troubleshooting.Rmd",
 
-  "20_usage-new-project-github-first.Rmd",
-  "21_usage-existing-project-github-first.Rmd",
-  "22_usage-existing-project-github-last.Rmd",
-  "30_workflow-first-use-rmd-and-github.Rmd",
-  "31_workflow-first-use-r-script-and-github.Rmd",
+  "usage-intro.Rmd",
+  "usage-new-project-github-first.Rmd",
+  "usage-existing-project-github-first.Rmd",
+  "usage-existing-project-github-last.Rmd",
+  "usage-rmd-and-github.Rmd",
+  "usage-r-script-and-github.Rmd",
 
   "33_git-commands.Rmd",
   ## TODO: commit, diff
