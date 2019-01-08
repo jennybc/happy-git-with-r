@@ -1,4 +1,4 @@
-# (PART) Daily workflows {-} 
+# (PART) Daily Workflows {-} 
 
 # Useful Git patterns for real life {#workflows-intro .unnumbered}
 

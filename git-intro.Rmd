@@ -1,6 +1,6 @@
 # (PART) Basic Git concepts {-} 
 
-# Some Git basics {#git-intro .unnumbered}
+# Some Git fundamentals {#git-intro .unnumbered}
 
 We've told you shockingly little about Git so far! To a large extent, this is by design. There are lots of [general Git resources](#resources) out there that do a great job explaining the core concepts and terminology. Happy Git is designed to fill what we see as some gaps:
 
