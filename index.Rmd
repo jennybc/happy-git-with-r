@@ -17,7 +17,7 @@ cover-image: img/watch-me-diff-watch-me-rebase-smaller.png
 
 <div class="figure">
 <img src="img/watch-me-diff-watch-me-rebase-smaller.png" width="669" height="400" alt="Cover image" />
-<p class="caption">Still from <a href=”https://www.youtube.com/watch?v=uBWrpVrazzA”>Heaven King video</a></p>
+<p class="caption">Still from <a href="https://www.youtube.com/watch?v=uBWrpVrazzA">Heaven King video</a></p>
 </div>
 
 Happy Git provides opinionated instructions on how to:
