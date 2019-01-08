@@ -35,7 +35,7 @@ rmd_files: [
   "usage-r-script-and-github.Rmd",
 
   "git-intro.Rmd",
-   ## TODO: commit, diff
+  "git-basics.Rmd",
   "git-commands.Rmd",
   "git-branches.Rmd",
   "git-remotes.Rmd",
