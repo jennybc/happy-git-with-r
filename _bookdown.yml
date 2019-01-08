@@ -34,10 +34,11 @@ rmd_files: [
   "usage-rmd-and-github.Rmd",
   "usage-r-script-and-github.Rmd",
 
-  "33_git-commands.Rmd",
-  ## TODO: commit, diff
-  "35_git-branches.Rmd",
-  "36_git-remotes.Rmd",
+  "git-intro.Rmd",
+   ## TODO: commit, diff
+  "git-commands.Rmd",
+  "git-branches.Rmd",
+  "git-remotes.Rmd",
 
   "40_workflow-pull.Rmd",
   "49_workflow-explore-extend-pull-request.Rmd",

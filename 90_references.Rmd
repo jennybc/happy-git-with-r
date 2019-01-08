@@ -1,6 +1,6 @@
 `r if (knitr:::is_html_output()) '# References'`
 
-### Resources
+### Resources {#resources}
 
 We practice what we preach! This site is created with Git and R markdown, using the [`bookdown`](https://github.com/rstudio/bookdown/) package. Go ahead and [peek behind the scenes](https://github.com/jennybc/happy-git-with-r).
 

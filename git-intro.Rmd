@@ -1,0 +1,13 @@
+# (PART) Basic Git concepts {-} 
+
+# Some Git basics {#git-intro .unnumbered}
+
+We've told you shockingly little about Git so far! To a large extent, this is by design. There are lots of [general Git resources](#resources) out there that do a great job explaining the core concepts and terminology. Happy Git is designed to fill what we see as some gaps:
+
+  * A "batteries included" guide for early success with basic workflows.
+  * Advice on how to use Git/GitHub in data science, which differs from pure software development in several aspects.
+  * Special considerations relevant to people who use R and RStudio.
+  
+In live workshops, we also intoduce the most important basic ideas in the context of guided activities.
+
+This part collects anything we've written about core Git concepts, is a work in progress, and should be used to complement [external Git resources](#resources).
