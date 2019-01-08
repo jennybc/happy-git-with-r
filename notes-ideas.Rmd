@@ -1,8 +1,4 @@
-# (PART) Meta {-} 
-
-# Notes
-
-Notes for future
+Ideas for content
 
 ## Common workflow questions
 
@@ -123,31 +119,3 @@ Workflows for group of 1, 2, 5, 10
   
     - <https://help.github.com/articles/about-collaborative-development-models/>
     - <https://help.github.com/articles/using-pull-requests/>
-
-## How the square bracket links work
-
-Context: you prefer to link with text, not a chapter or section number.
-
-  * GOOD! Here's a link to [Contributors].
-  * BAD. You can see contributors in \@ref(contrib).
-
-Facts and vocabulary
-
-  * Each chapter is a file. These files should begin with the chapter title using a level-one header, e.g., `# Chapter Title`.
-  * A chapter can be made up of sections, indicated by lower-level headers, e.g., `## A section within the chapter`.
-  * There are three ways to address a section when creating links within your book:
-    - **Explicit identifier**: In `# My header {#foo}` the explicit identifier is `foo`.
-    - **Automatically generated identifier**: `my-header` is the auto-identifier for `# My header`. Pandoc creates auto-identifiers according to rules laid out in [Extension: auto_identifiers](http://pandoc.org/README.html#extension-auto_identifiers).
-    - The header text, e.g., `My header` be used verbatim as an **implicit header reference**. See [Extension: implicit_header_references](http://pandoc.org/README.html#extension-implicit_header_references) for more.
-  * All 3 forms can be used to create cross-references but you build the links differently.
-  * Advantage of explicit identification: You are less likely to update the section header and then forget to make matching edits to references elsewhere in the book.
-
-How to make text-based links using explicit identifiers, automatic identifiers, and implicit references:
-
-  * Use implicit reference alone to get a link where the text is exactly the section header:
-    - `[Introduce yourself to Git]` [Introduce yourself to Git]
-    - `[Success and operating systems]` [Success and operating systems]
-  * You can provide custom text for the link with all 3 methods of addressing a section:
-    - Implicit header reference: `[link text][Recommended Git clients]` [link text][Recommended Git clients]    
-    - Explicit identifier: `[hello git! I'm Jenny](#hello-git)` [hello git! I'm Jenny](#hello-git)
-    - Automatic identifier: `[Any text you want](#recommended-git-clients)` [Any text you want](#recommended-git-clients)

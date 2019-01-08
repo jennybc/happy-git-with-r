@@ -53,9 +53,9 @@ rmd_files: [
   "prompt-search-github.Rmd",
 
   "notes-intro.Rmd",
-  "classroom-overview.Rmd",
-  "ideas.Rmd",
-  "bookdown-cheat-sheet.Rmd",
+  "notes-classroom-overview.Rmd",
+  "notes-ideas.Rmd",
+  "notes-bookdown-cheat-sheet.Rmd",
 
   "80_shell.Rmd",
 
