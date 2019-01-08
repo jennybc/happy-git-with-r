@@ -1,4 +1,4 @@
-Rendered product: <http://happygitwithr.com>
+Rendered product: <https://happygitwithr.com>
 
 [![TravisCI Build Status](https://travis-ci.org/jennybc/happy-git-with-r.svg?branch=master)](https://travis-ci.org/jennybc/happy-git-with-r)
 

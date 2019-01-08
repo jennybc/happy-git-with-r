@@ -22,6 +22,7 @@ Try this. Best case scenario is about 1 - 2 hours. If you hit a wall, we will he
   * [Cache your username and password](#credential-caching) or [set up SSH keys](#ssh-keys) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
   * [Prove RStudio can find local Git](#rstudio-git-github) and, therefore, can talk to GitHub.
     - FYI: this is where our hands-on activities usually start. We walk through a similar activity together, with narrative, and build from there.
+  * Contemplate if you'd like to [install an optional Git client](#git-client), now or in future.
 
 Troubleshooting:
 
@@ -41,7 +42,7 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
 January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX
 
-Registered workshop participants should use this thread (WILL EXIST SOON) on community.rstudio.com to discuss system prep woes.
+Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup-for-rstudio-conf-2019/20914?u=jennybryan) on community.rstudio.com to discuss system prep woes.
 
 ## Previous workshops
 
