@@ -40,8 +40,9 @@ rmd_files: [
   "git-branches.Rmd",
   "git-remotes.Rmd",
 
-  "40_workflow-pull.Rmd",
-  "49_workflow-explore-extend-pull-request.Rmd",
+  "workflows-intro.Rmd",
+  "workflows-pull.Rmd",
+  "workflows-explore-extend-pull-request.Rmd",
 
   "50_prompt-clone.Rmd",
   "51_prompt-fork.Rmd",
