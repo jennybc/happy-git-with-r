@@ -1,6 +1,6 @@
 # The Repeated Amend {#repeated-amend}
 
-One of the principle joys of version control is the freedom to experiment without fear. If you make a mess of things, you can always go back to a happier version of your project. We describe several methods of such time travel in *link to come*. But you must have a good commit to fall back to!
+One of the principal joys of version control is the freedom to experiment without fear. If you make a mess of things, you can always go back to a happier version of your project. We describe several methods of such time travel in *link to come*. But you must have a good commit to fall back to!
 
 ## Rock climbing analogy
 
