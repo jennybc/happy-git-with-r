@@ -58,26 +58,6 @@ http://vallandingham.me/git-workflow.html
 Git from the inside out  
 https://codewords.recurse.com/issues/two/git-from-the-inside-out
 
-## The repeated amend
-
-A way to commit often, without exposing your WIP on GitHub or without creating a very cluttered history.
-
-Make changes. Reach a decent stopping point. Test, check, if a package ... Render if an analysis .... Nothing broken?
-
-Commit. **Don't push.**
-
-Make more progress. Keep testing or checking or rendering. Inspect diffs to watch what's changing.
-
-Are things broken? Use an appropriate reset to fall back.
-
-Are things improving? Commit but **amend** the previous commit.
-
-Keep going like this until you've built up a commit you can be proud of.
-
-**Now push.**
-
-It is important to not push amended commits unless you really know what you're doing and you can be quite sure that no one else has pulled your work.
-
 ## Disaster recovery
 
 <http://stackoverflow.com/questions?sort=votes>

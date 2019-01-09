@@ -41,6 +41,7 @@ rmd_files: [
   "git-remotes.Rmd",
 
   "workflows-intro.Rmd",
+  "workflows-repeated-amend.Rmd",
   "workflows-pull.Rmd",
   "workflows-explore-extend-pull-request.Rmd",
   "workflows-make-github-repo-browsable.Rmd",
