@@ -34,6 +34,8 @@ Instead, you've got pull the commit `C` and somehow integrate it into your `D`-c
 
 This is covered in the workflow [Pull, but you have local work](#pull-tricky).
 
+But before you behold the full horror of that, this is a great time to reflect on what we can learn from this situation.
+
 ## She who pushes first wins!
 
 You may have noticed that you -- the author of `D` -- is faffing around with Git more than the person who committed and pushed `C`, i.e. your collaborator.
@@ -44,7 +46,7 @@ If you had pushed `D` first, you'd be relaxing and they'd be figuring out how to
 
 Obviously, you should push work to `master` because it's "ready" to share (or at least "ready enough"), not to avoid Git merges.
 
-There is a truy legitimate point here: It is better for the overall health of a project to be committing, pushing, and integrating more often, not less. This does not eliminate the need to integrate different lines of work, but it makes each integration smaller, less burdensome, and less prone to error.
+There is a truly legitimate point here: It is better for the overall health of a project to be committing, pushing, and integrating more often, not less. This does not eliminate the need to integrate different lines of work, but it makes each integration smaller, less burdensome, and less prone to error.
 
 ## Stay in touch
 
