@@ -2,25 +2,23 @@
 
 # Useful Git patterns for real life {#workflows-intro .unnumbered}
 
-*most of this only exists in workshop materials but will eventually be recorded here as well*
+*much of this originates as live workshop materials; we are gradually creating nice prose versions*
 
 Git patterns that come up frequently in real work:
 
-  * Commit early and often. The Repeated Amend.
+  * Commit early and often. [The Repeated Amend](#repeated-amend).
+  * [Help, I can't push due to upstream changes!](#pull-tricky)
+    - Pull (rebase? merge?), then push. Yay. 
+    - Pull, oops merge conflicts, abort. Come back later.
+    - Pull, oops merge conflicts, resolve them. Push.
+  * [Fork and clone](#fork-and-clone).
+  * [Get upstream changes for a fork](#upstream-changes).
   * Burn it all down.
-  * Fork and clone.
-  * Adding a remote.
-  * Branching.
   * Time travel:
     - "I just need to see the past". Browse and search on GitHub.
     - "I need to visit the past". Create a checkout a branch.
     - "I want to return to the past". `git revert`, `git reset`
     - "I had a great cookie last October". `git cherry pick`, `git checkout REF -- path`
-  * [Can't push due to upstream changes?](#pull-tricky)
-    - Pull (rebase? merge?), then push. Yay. 
-    - Pull, oops merge conflicts, abort. Come back later.
-    - Pull, oops merge conflicts, resolve them. Push.
-
 
 Play well with others:
 
