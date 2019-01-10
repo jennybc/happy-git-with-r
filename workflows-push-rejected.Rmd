@@ -38,7 +38,7 @@ But before you behold the full horror of that, this is a great time to reflect o
 
 ## She who pushes first wins!
 
-You may have noticed that you -- the author of `D` -- is faffing around with Git more than the person who committed and pushed `C`, i.e. your collaborator.
+You may have noticed that you -- the author of `D` -- are faffing around with Git more than the person who committed and pushed `C`, i.e. your collaborator.
 
 There is a lesson to be learned here!
 
