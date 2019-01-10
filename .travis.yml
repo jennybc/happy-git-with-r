@@ -9,6 +9,7 @@ before_install:
   - nvm install stable
   - npm install netlify-cli -g
   - export COMMIT_MSG=$(git log -1 --format='%h %<(50,trunc)%s')
+  - echo $COMMIT_MSG
   - export DEPLOY_MSG=${COMMIT_MSG//[\'\"]/}
   - echo $DEPLOY_MSG
 
