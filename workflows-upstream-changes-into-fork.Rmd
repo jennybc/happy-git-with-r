@@ -6,7 +6,7 @@ Sometimes you set this up right away, when you fork and clone, even though you d
 
 It's also very typical to do this step a few days or months later. Maybe you're taking an interest in someone else's work for the second time and you want to make another pull request. Or you just want your copy to reflect their recent work. It is also totally normal to set this up upon first need.
 
-Vocabulary: `OWNER/REPO` refers to the original GitHub repo, owned by `OWNER`, who is not you. `YOU/REPO` refers to your copy on GitHub or "fork".
+Vocabulary: `OWNER/REPO` refers to the original GitHub repo, owned by `OWNER`, who is not you. `YOU/REPO` refers to your copy on GitHub, i.e. your fork.
 
 ## No, you can't do this via GitHub
 
@@ -14,11 +14,11 @@ You might hope that GitHub could automatically keep your fork `YOU/REPO` synced 
 
 But you can't.
 
-There are some tantalizing, janky ways to sort of do parts of this. But they have fatal flaws that make them unsustainable. I believe you really do need to [add `upstream` as a second remote on your repo and pull from there](#upstream-changes).
+There are some tantalizing, janky ways to sort of do parts of this. But they have fatal flaws that make them unsustainable. I believe you really do need to add `OWNER/REPO` as a second remote on your repo and pull from there.
 
 ## Initial conditions
 
-Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal within RStudio for some Git work.
+Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal within RStudio for some Git work via *Tools > Terminal > New Terminal*.
 
 Make sure you are on the `master` branch and your "working tree is clean". BTW I recommend that you [never make your own commits to the `master` branch of a fork](#dont-touch-master).`git status` should show something like:
 
@@ -37,20 +37,20 @@ Let's inspect [the current remotes](#git-remotes) for your local repo. In the sh
 git remote -v
 ```
 
-Most of you will see output along these lines (call this BEFORE):
+Most of you will see output along these lines (let's call this BEFORE):
 
 ``` bash
 origin  https://github.com/YOU/REPO.git (fetch)
 origin  https://github.com/YOU/REPO.git (push)
 ```
 
-There is only one remote, named `origin`, corresponding to your fork on GitHub. This figure depicts such a BEFORE scenario:
+There is only one remote, named `origin`, corresponding to your fork on GitHub. This figure depicts a BEFORE scenario:
 
 ![](img/fork-no-upstream-sad.png)
 
-This is sad, because there is no direct connection betwen `OWNER/REPO` and your local copy of the repo.
+This is sad, because there is no direct connection between `OWNER/REPO` and your local copy of the repo.
 
-The state we want to see is like this (call this AFTER):
+The state we want to see is like this (let's call this AFTER):
 
 ``` bash
 origin    https://github.com/YOU/REPO.git (fetch)
@@ -63,7 +63,7 @@ Notice the second remote, named `upstream`, corresponding to the original repo o
 
 ![](img/fork-triangle-happy.png)
 
-Sidebar: If you used `usethis::create_from_github("OWNER/REPO")` for your original "fork and clone", the `upstream` should already be set up. In that case, you can skip the next step.
+Sidebar: If you used `usethis::create_from_github("OWNER/REPO")` for your original "fork and clone", the `upstream` should already be set up. In that case, you can skip to the part where we pull from `upstream`.
 
 ## Add the `upstream` remote
 
@@ -74,6 +74,8 @@ On [GitHub](https://github.com), make sure you are signed in and navigate to the
 Use the big green "Clone or download" button to get the URL for `OWNER/REPO` on your clipboard. Be intentional about whether you copy the HTTPS or SSH URL.
 
 ### Command line Git
+
+Use a command like this, but make an intentional choice about using an HTTPS vs SSH URL.
 
 ``` bash
 git remote add upstream https://github.com/OWNER/REPO.git
@@ -139,3 +141,52 @@ git push
 ```
 
 Or use the green "Push" button in RStudio.
+
+## Um, what if I did touch `master`?
+
+I told you not to!
+
+But OK here we are.
+
+Let's imagine this is the state of the original repo `OWNER/REPO`:
+
+``` bash
+... -- A -- B -- C -- D -- E -- F
+```
+
+and and this is the state of the `master` branch in your local copy:
+
+``` bash
+... -- A -- B -- C -- X -- Y -- Z
+```
+
+The two histories agree, up to commit or state `C`, then they diverge.
+
+If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!). Then checkout `master` via `git checkout master`.
+
+I now assume you have either preserved the work in `X`, `Y`, and `Z` (with a branch) or have decided to let it go.
+
+Do a hard reset of the `master` branch to `C`.
+
+``` bash
+git reset --hard C
+```
+
+You will have to figure out how to convey `C` in Git-speak. Specify it relative to `HEAD` or provide the SHA. See *future link about resets* for more support.
+
+The instructions above for pulling changes from upstream should now work. Your `master` branch should reflect the history of `OWNER/REPO`:
+
+``` bash
+... -- A -- B -- C -- D -- E -- F
+```
+
+If you chose to create a branch with your work, you will also have that locally:
+
+
+``` bash
+                    -- D -- E -- F (master)
+                   /
+... -- A -- B -- C
+                   \
+                    -- X -- Y -- Z (my-great-innovations)
+```
