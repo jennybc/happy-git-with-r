@@ -116,13 +116,23 @@ Notice the second remote, named `upstream`, corresponding to the original repo o
 
 Now we can pull the changes that we don't have from `OWNER/REPO` into our local copy.
 
+
 ``` bash
-git pull upstream master
+git pull upstream master --ff-only
 ```
 
-This says: "pull the changes from the remote known as `upstream` into the `master` branch of my local repo".
+This says: "pull the changes from the remote known as `upstream` into the `master` branch of my local repo". We are being explicit about the remote and the branch in this case, because (as our `git remote -v` commands reveal), `upstream/master` is **not** the default tracking branch for local `master`.
 
-We are being explicit about the remote and the branch in this case, because (as our `git remote -v` commands reveal), `upstream/master` is **not** the default tracking branch for local `master`.
+I **highly recommend** using the `--ff-only` flag in this case, so that you also say "if I have made my own commits to `master`, please force me to confront this problem NOW". Here's what it looks like if a fast-forward merge isn't possible:
+
+``` bash
+$ git pull upstream master --ff-only
+From github.com:OWNER/REPO
+ * branch              master     -> FETCH_HEAD
+fatal: Not possible to fast-forward, aborting.
+```
+
+See [Um, what if I did touch `master`?](#touched-master) to get yourself back on the happy path.
 
 ## Push these changes to `origin/master`
 
@@ -132,7 +142,7 @@ If you take my advice to [never work in `master` of a fork](#dont-touch-master),
 
 If, however, your grasp of all these Git concepts is tenuous at best, it can be helpful to try to keep things simple and orderly and synced up.
 
-Feel free to push the state of local `master` to your fork and enjoy the satisfaction of being "caught up".
+Feel free to push the newly updated state of local `master` to your fork `YOU/REPO` and enjoy the satisfaction of being "caught up" with `OWNER/REPO`.
 
 In the shell:
 
@@ -142,7 +152,7 @@ git push
 
 Or use the green "Push" button in RStudio.
 
-## Um, what if I did touch `master`?
+## Um, what if I did touch `master`? {#touched-master}
 
 I told you not to!
 
@@ -190,3 +200,5 @@ If you chose to create a branch with your work, you will also have that locally:
                    \
                     -- X -- Y -- Z (my-great-innovations)
 ```
+
+If you pushed your alternative history (with commits `X`, `Y`, and `Z`) to your fork `YOU/REPO` and you like keeping everything synced up, you will also need to force push that.

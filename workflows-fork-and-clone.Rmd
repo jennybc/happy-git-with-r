@@ -41,7 +41,7 @@ Explore the new repo in some suitable way. If it is a package, you could run the
 
 If you make any commits in your local repository, I **strongly recommend** that you work in [a new branch](#git-branches), not `master`.
 
-I **strongly recommend** that you do not make commits to `master` of a fork.
+I **strongly recommend** that you do not make commits to `master` of a repo you have forked.
 
 This will make your life much easier if you want to [pull upstream work](#upstream-changes) into your copy. The `OWNER` of `REPO` will also be happier to receive your pull request from a non-`master` branch.
 
