@@ -43,6 +43,8 @@ rmd_files: [
   "workflows-intro.Rmd",
   "workflows-repeated-amend.Rmd",
   "workflows-pull.Rmd",
+  "workflows-fork-and-clone.Rmd",
+  "workflows-upstream-changes-into-fork.Rmd",
   "workflows-explore-extend-pull-request.Rmd",
   "workflows-make-github-repo-browsable.Rmd",
 
