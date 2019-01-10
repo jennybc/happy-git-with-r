@@ -10,6 +10,7 @@ before_install:
   - npm install netlify-cli -g
   - export COMMIT_MSG=$(git log -1 --format='%h %<(50,trunc)%s')
   - export DEPLOY_MSG=${COMMIT_MSG//[\'\"]/}
+  - echo $DEPLOY_MSG
 
 env:
   - NETLIFY_SITE_ID=4e9fea2e-d99c-484e-be1a-9d8605393f4e
