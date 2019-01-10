@@ -20,7 +20,7 @@ There are some tantalizing, janky ways to sort of do parts of this. But they hav
 
 Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal within RStudio for some Git work via *Tools > Terminal > New Terminal*.
 
-Make sure you are on the `master` branch and your "working tree is clean". BTW I recommend that you [never make your own commits to the `master` branch of a fork](#dont-touch-master).`git status` should show something like:
+Make sure you are on the `master` branch and your "working tree is clean". `git status` should show something like:
 
 ``` bash
 On branch master
@@ -28,6 +28,8 @@ Your branch is up to date with 'origin/master'.
 
 nothing to commit, working tree clean
 ```
+
+BTW I recommend that you [never make your own commits to the `master` branch of a fork](#dont-touch-master). However, if you have already done so, we are going to address your sorry situation below.
 
 ## List your remotes
 
