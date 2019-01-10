@@ -163,7 +163,9 @@ A -- B -- C -- WIP* (6e884e6)
 
 I'm deliberately showing two histories that sort of look the same, in terms of commit messages. But the last SHA reveals they are actually different.
 
-You are in a pickle now, as you can neither push nor pull. You have two choices:
+You are in a pickle now, as you can't do a simple push or pull. A push will be rejected and a pull will probably lead to a merge that you don't want.
+
+You have two choices:
 
   * Hard reset your local repo to `C` (`git reset --hard HEAD^`) and pull from GitHub. Do this if you have collaborators who may have pulled that state. GitHub and local history now show this:
     ``` bash
