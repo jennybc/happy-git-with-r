@@ -1,8 +1,8 @@
 # Pull, but you have local work {#pull-tricky}
 
-Problem: You want to pull changes from upstream, but you have done some new work locally since the last time you pulled. This often comes up because what you actually want to do is *push*, but Git won't let you until you first incorporate the upstream changes.
+Problem: You want to pull changes from upstream, but you have done some new work locally since the last time you pulled. This often comes up because [what you actually want to do is *push*](#push-rejected), but Git won't let you until you first incorporate the upstream changes.
 
-For the sake of simplicity, assume we're dealing with the `master` branch and the upstream remote is called `origin`.
+For the sake of simplicity, assume we're dealing with the `master` branch and the remote is called `origin`.
 
 Recent commit history of `origin/master`:
 

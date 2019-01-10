@@ -6,13 +6,9 @@
 
 Git patterns that come up frequently in real work:
 
-  * Commit early and often. [The Repeated Amend](#repeated-amend).
-  * [Help, I can't push due to upstream changes!](#pull-tricky)
-    - Pull (rebase? merge?), then push. Yay. 
-    - Pull, oops merge conflicts, abort. Come back later.
-    - Pull, oops merge conflicts, resolve them. Push.
-  * [Fork and clone](#fork-and-clone).
-  * [Get upstream changes for a fork](#upstream-changes).
+  * Commit early and often. Push less often. [The Repeated Amend](#repeated-amend).
+  * [Help, my push was rejected!](#push-rejected)
+  * [Integrating remote and local work](#pull-tricky). Probably so you can push again.
   * Burn it all down.
   * Time travel:
     - "I just need to see the past". Browse and search on GitHub.
@@ -22,5 +18,8 @@ Git patterns that come up frequently in real work:
 
 Play well with others:
 
+  * [Fork and clone](#fork-and-clone).
+  * [Get upstream changes for a fork](#upstream-changes).
+  * Disposable fork.
   * [Make your repo rewarding to browse on GitHub](#workflows-browsability).
   * [Explore and extend a pull request](#pr-extend)
