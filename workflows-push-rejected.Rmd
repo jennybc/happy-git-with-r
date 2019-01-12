@@ -16,6 +16,8 @@ hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 
 This means that your local Git history and that on the GitHub remote are not compatible, i.e. they have diverged.
 
+I suggest that you use `git status`, your [Git client](#git-client ), or visit your GitHub remote in the browser to get more information about the situation, i.e. to get a sense of this work that you do not have.
+
 In the abstract, this is the state on GitHub:
 
 ```

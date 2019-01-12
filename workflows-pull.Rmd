@@ -86,6 +86,14 @@ For more details about stashing, I recommend
 
 Here's the best case scenario for "stash, pull, unstash" in the example above:
 
+``` bash
+git stash save
+git pull
+git stash pop
+```
+
+And here's the output from our example:
+
 ``` sh
 jenny@2015-mbp ethel $ git stash save
 Saved working directory and index state WIP on master: db046b4 Merge branch 'master'of github.com:jennybc/ethel
