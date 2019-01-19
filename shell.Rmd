@@ -112,6 +112,18 @@ Opening Terminal brings you to a bash shell opened to your home directory `~/` w
 
 ![](img/terminal_mac.png)
 
+
+### Windows
+
+Sometimes you will need to run Git Bash outside of RStudio, which can be useful in doing some file operations within a repository. The easiest way to open up a Git Shell outside of RStudio is to click the "Git" menu under the windows menu, and select "Git Bash":
+
+![](img/2018-01_git_bash_windows.png)
+
+Sometimes you will want to run the Git Shell as administrator. You may want to do this because of file permission issues within windows may prevent you from deleting files. The easiest way to do this is to select the "Git" menu item under the startup, and *right-clicking* on Git Bash, which will open up a submenu. Selecting "more" in this submenu will pop up the "Run as Administrator" Option. You'll then get a git bash shell with Administrative privileges. 
+
+![](img/2018-01-git-windows-administrator.png)
+
+
 ## Using the shell
 
 The most basic commands are listed below:
