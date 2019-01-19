@@ -46,9 +46,9 @@ If you're seeing different shell-launching behavior *and you are running a very 
 
 Older versions of RStudio have a tick box in *Tools > Global Options > Terminal* for "Use Git Bash as shell for Git projects". If you won't or can't upgrade, then by all means select that. You might need to restart RStudio to see the effect and you must realize it only affects Projects that use Git. Let me be clear: my real advice to you is to upgrade RStudio.
 
-#### Accessing Git shell outside of Rstudio (Windows)
+#### Accessing Git Bash outside of Rstudio (Windows)
 
-Sometimes you will need to run git shell outside of RStudio, which can be useful in doing some file operations within a repository. The easiest way to open up a Git Shell outside of RStudio is to click the "Git" menu under the windows menu, and select "Git Bash":
+Sometimes you will need to run Git Bash outside of RStudio, which can be useful in doing some file operations within a repository. The easiest way to open up a Git Shell outside of RStudio is to click the "Git" menu under the windows menu, and select "Git Bash":
 
 ![](img/2018-01_git_bash_windows.png)
 
@@ -96,7 +96,7 @@ FYI Microsoft also refers to WSL as Bash on Ubuntu on Windows.
 
 #### Windows bottom line
 
-When in doubt, you probably want to be in a Git Bash shell.
+When in doubt, you probably want to be in a Git Bash shell, either within the terminal tab in or out of RStudio
 
 ## Using the shell
 
