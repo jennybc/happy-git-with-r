@@ -30,7 +30,7 @@ Windows is not the ideal platform for scientific computing and software developm
 
 There are no fewer than 4 possible shells you can end up in. Unless you know better, you almost certainly want to be in a Git Bash shell.
 
-#### Git Bash
+#### Git Bash (Recommended)
 
 This is a bash shell that ships with Git for Windows, which is [the Happy Git way to install Git on Windows](#install-git-windows). It is hopefully what RStudio will launch for you, especially from v1.1.383 and on. You can inspect and influence this directly via *Tools > Global Options > Terminal*. Unless you have good reason to do otherwise, you want to select "Git Bash" here.
 
@@ -46,7 +46,17 @@ If you're seeing different shell-launching behavior *and you are running a very 
 
 Older versions of RStudio have a tick box in *Tools > Global Options > Terminal* for "Use Git Bash as shell for Git projects". If you won't or can't upgrade, then by all means select that. You might need to restart RStudio to see the effect and you must realize it only affects Projects that use Git. Let me be clear: my real advice to you is to upgrade RStudio.
 
-#### Command prompt
+#### Accessing Git shell outside of Rstudio (Windows)
+
+Sometimes you will need to run git shell outside of RStudio, which can be useful in doing some file operations within a repository. The easiest way to open up a Git Shell outside of RStudio is to click the "Git" menu under the windows menu, and select "Git Bash":
+
+![](img/2018-01_git_bash_windows.png)
+
+Sometimes you will want to run the Git Shell as administrator. You may want to do this because of file permission issues within windows may prevent you from deleting files. The easiest way to do this is to select the "Git" menu item under the startup, and *right-clicking* on Git Bash, which will open up a submenu. Selecting "more" in this submenu will pop up the "Run as Administrator" Option. You'll then get a git bash shell with Administrative privileges. 
+
+![](img/2018-01-git-windows-administrator.png)
+
+#### Command prompt (Not recommended)
 
 This is the native Windows command line interpreter. It's rarely what you want, at least for the work described in this book. It looks something like this:
 
@@ -58,7 +68,7 @@ Here's a better way to investigate: in Command Prompt, `echo %comspec%` gives `C
 
 If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from some of the other commands given here, that also suggests you have somehow launched into `cmd.exe`. 
 
-#### Power Shell
+#### Power Shell (Not recommended)
 
 Another Windows shell, more modern than the command prompt. Also probably not what you want. It looks something like this:
 
@@ -74,7 +84,7 @@ Name                 Value
 ComSpec              C:\WINDOWS\system32\cmd.exe
 ```
 
-#### Bash via Windows Services for Linux
+#### Bash via Windows Services for Linux (For power users only)
 
 In 2016, Microsoft launched the Windows Subsystem for Linux (WSL), "a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows". Overall, this is a fantastic development. However, at the time of writing (January 2018), you will only have this if you're running Windows 10 64-bit and have chosen to install the optional WSL system component. Therefore, I expect only keeners to have this and, in that case, you probably don't need this chapter. It looks something like this:
 
