@@ -61,7 +61,7 @@ Click the green "New repository" button. Or, if you are on your own profile page
 
 Pick a repository name -- it should probably match the name of your local Project and directory. Why confuse yourself?
 
-Public or private, as appropriate and possible  
+Public or private, as appropriate  
 DO NOT initialize this repository with a README.
 
 Click the big green button "Create repository."
