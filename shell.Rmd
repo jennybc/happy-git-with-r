@@ -88,6 +88,19 @@ FYI Microsoft also refers to WSL as Bash on Ubuntu on Windows.
 
 When in doubt, you probably want to be in a Git Bash shell.
 
+## Opening the shell outside of Rstudio
+
+Sometimes you might want to open the shell (called Terminal in Mac) outside of Rstudio, or without opening Rstudio.
+
+### MacOS
+
+On a Mac, you can use Spotlight Search (cmd-space) to search "Terminal". Opening Terminal brings you to a bash shell opened to your home directory `~/` which is an alias for `/Users/YOURUSERNAME`. You should see a blinking cursor.
+
+<!--- 
+- how to get into a shell in general, i.e. not just from within RStudio. 
+- sudo
+--->
+
 ## Using the shell
 
 The most basic commands are listed below:
@@ -110,3 +123,6 @@ A few Git commands:
 * `git remote add origin GITHUB_URL` adds the remote `GITHUB_URL` with nickname `origin`.
 * `git remote set-url origin GITHUB_URL` changes the remote url of `origin` to `GITHUB_URL`. This way you can fix typos in the remote url.
 * *Feel free to suggest other commands that deserve listing in a [GitHub issue](https://github.com/jennybc/happy-git-with-r/issues).*
+
+### Administrative rights
+
