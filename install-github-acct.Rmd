@@ -25,7 +25,7 @@ You can change your username later, but better to get this right the first time.
 
 ## Free private repos
 
-GitHub offers free unlimited private repositories for users and organizations in education, academic research, nonprofits, and charities.
+GitHub offers free unlimited private repositories for all users. These private repositories support up to three external collaborators, making them a perfect place for your personal projects, for job applications, and testing things out before making your project open source.
 
 Go ahead and register your free account NOW and then pursue any special offer that applies to you:
 
@@ -35,7 +35,7 @@ Go ahead and register your free account NOW and then pursue any special offer th
   
 ## Pay for private repos
 
-Anyone can pay to have private repos. A personal plan with unlimited private repos is $7 / month at the time of writing. See the current plans and pricing here:
+Anyone can pay to have private repos with support for unlimited collaborators. A personal plan with private repos supporting unlimited collaborators is $7 / month at the time of writing, and includes several [advanced features](https://help.github.com/articles/github-s-products/#github-pro). See the current plans and pricing here:
 
   * <https://github.com/pricing>
 
