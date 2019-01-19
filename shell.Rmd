@@ -94,12 +94,13 @@ Sometimes you might want to open the shell (called Terminal in Mac) outside of R
 
 ### MacOS
 
-On a Mac, you can use Spotlight Search (cmd-space) to search "Terminal". Opening Terminal brings you to a bash shell opened to your home directory `~/` which is an alias for `/Users/YOURUSERNAME`. You should see a blinking cursor.
+On a Mac, you can use Spotlight Search (cmd-space) to search "Terminal".
 
-<!--- 
-- how to get into a shell in general, i.e. not just from within RStudio. 
-- sudo
---->
+![](img/terminal_mac_search.png)
+
+Opening Terminal brings you to a bash shell opened to your home directory `~/` which is an alias for `/Users/YOURUSERNAME`. You should see a blinking cursor.
+
+![](img/terminal_mac.png)
 
 ## Using the shell
 
