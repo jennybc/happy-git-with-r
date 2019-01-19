@@ -129,7 +129,7 @@ A few Git commands:
 
 When running commands in the shell you may come across an error telling you that you don't have permission to perform that action. There are ways around this.
 
-## MacOS
+#### MacOS
 
 If you have administrative rights on your computer, prefacing any command with `sudo` will ask you force the command to run after asking for your password. If you need to change administrative privileges or your password, [apple support pages](https://support.apple.com/en-us/HT204012) can be helpful.
 
