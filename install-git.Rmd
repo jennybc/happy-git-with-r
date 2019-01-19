@@ -10,13 +10,13 @@ Otherwise, find installation instructions below for your operating system.
 
 Go to the shell (Appendix \@ref(shell)). Enter `which git` to request the path to your Git executable:
 
-```{bash collapse = TRUE}
+```{bash collapse = TRUE, eval=Sys.info()['sysname']!= "Windows"}
 which git
 ```
 
 and `git --version` to see its version:
  
-```{bash collapse = TRUE}
+```{bash collapse = TRUE, eval=Sys.info()['sysname']!= "Windows"}
 git --version
 ```
 

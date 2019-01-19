@@ -9,7 +9,7 @@ remotes. You pull others changes from remotes and push your changes to remotes.
 `git remote` lists the names of available remotes, but usually it is more
 useful to see what URLs each note corresponds to (with `-v`).
 
-```{bash}
+```{bash eval=Sys.info()['sysname']!= "Windows"}
 git remote -v
 ```
 
