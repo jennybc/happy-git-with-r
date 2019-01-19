@@ -4,7 +4,7 @@
 
 In the previous prompt (chapter \@ref(clone)), we *cloned* someone else's repo to get a copy that we could keep up to date, by pulling new commits into our local copy.
 
-What if you suspect you might want to propose a change to a repository? Then you should **fork** it, instead of clone it.
+What if you suspect you might want to propose a change to a repository? Then you should **fork** it, instead of cloning it.
 
 ## Fork then clone
 
