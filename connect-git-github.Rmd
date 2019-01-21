@@ -145,6 +145,14 @@ $ git config --show-origin --get core.autocrlf
 file:"C:\\ProgramData/Git/config"      true
 ```
 
+If your value shows as `false`, you can set it to `true` with this command:
+
+``` bash
+$ git config --global core.autocrlf true
+```
+
+`true` is the current default setting for `core.autocrlf` for [Git for Windows](#install-git-windows), our recommended method for installing Git on Windows. The need to set this explicitly in your global user config suggests you should consider reinstalling or updating Git for Windows.
+
 ## Confirm the local change propagated to the GitHub remote
 
 Go back to the browser. I assume we're still viewing your new GitHub repo.
