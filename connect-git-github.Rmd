@@ -145,6 +145,12 @@ $ git config --show-origin --get core.autocrlf
 file:"C:\\ProgramData/Git/config"      true
 ```
 
+If your value shows as `false`, you can set it to `true` with this command:
+
+``` bash
+$ git config --global core.autocrlf true
+```
+
 ## Confirm the local change propagated to the GitHub remote
 
 Go back to the browser. I assume we're still viewing your new GitHub repo.
