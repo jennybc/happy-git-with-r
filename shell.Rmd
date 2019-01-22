@@ -54,7 +54,7 @@ Sometimes you will need to run Git Bash outside of RStudio, which can be useful 
 
 Sometimes you will want to run the Git Shell as administrator. You may want to do this because of file permission issues within windows may prevent you from deleting files. The easiest way to do this is to select the "Git" menu item under the startup, and *right-clicking* on Git Bash, which will open up a submenu. Selecting "more" in this submenu will pop up the "Run as Administrator" Option. You'll then get a git bash shell with Administrative privileges. 
 
-![](img/2018-01-git-windows-administrator.png)
+![](img/2019-01-git-windows-administrator.png)
 
 #### Command prompt (Not recommended)
 
