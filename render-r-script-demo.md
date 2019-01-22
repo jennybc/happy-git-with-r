@@ -1,9 +1,10 @@
-R scripts can be rendered!
+R scripts can be rendered\!
 ================
 Jenny Bryan
 April 1, 2014
 
-Here's some prose in a very special comment. Let's summarize the built-in dataset `VADeaths`.
+Here’s some prose in a very special comment. Let’s summarize the
+built-in dataset `VADeaths`.
 
 ``` r
 ## here is a regular code comment, that will remain as such
@@ -18,10 +19,13 @@ summary(VADeaths)
     ##  3rd Qu.:41.00   3rd Qu.:30.90   3rd Qu.:54.60   3rd Qu.:35.10  
     ##  Max.   :66.00   Max.   :54.30   Max.   :71.10   Max.   :50.00
 
-Here's some more prose. I can use usual markdown syntax to make things **bold** or *italics*. Let's use an example from the `dotchart()` help to make a Cleveland dot plot from the `VADeaths` data. I even bother to name this chunk, so the resulting PNG has a decent name.
+Here’s some more prose. I can use usual markdown syntax to make things
+**bold** or *italics*. Let’s use an example from the `dotchart()` help
+to make a Cleveland dot plot from the `VADeaths` data. I even bother to
+name this chunk, so the resulting PNG has a decent name.
 
 ``` r
 dotchart(VADeaths, main = "Death Rates in Virginia - 1940")
 ```
 
-![](render-r-script-demo_files/figure-markdown_github/dotchart-1.png)
+![](render-r-script-demo_files/figure-gfm/dotchart-1.png)<!-- -->
