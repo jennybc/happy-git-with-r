@@ -4,12 +4,16 @@ Remote repositories are versions of your project that are hosted on the
 Internet or another network. A single project can have 1, 2 or even hundreds of
 remotes. You pull others changes from remotes and push your changes to remotes.
 
+```{r setup, include = FALSE}
+has_bash <- Sys.which('bash') != '' && .Platform$OS.type != 'windows'
+```
+
 ## Listing what remotes exist
 
 `git remote` lists the names of available remotes, but usually it is more
 useful to see what URLs each note corresponds to (with `-v`).
 
-```{bash eval=Sys.info()['sysname']!= "Windows"}
+```{bash eval = has_bash}
 git remote -v
 ```
 

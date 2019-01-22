@@ -6,17 +6,21 @@ If there's any chance it's installed already, verify that, rejoice, and skip thi
 
 Otherwise, find installation instructions below for your operating system.
 
+```{r setup, include = FALSE}
+has_bash <- Sys.which('bash') != '' && .Platform$OS.type != 'windows'
+```
+
 ## Git already installed?
 
 Go to the shell (Appendix \@ref(shell)). Enter `which git` to request the path to your Git executable:
 
-```{bash collapse = TRUE, eval=Sys.info()['sysname']!= "Windows"}
+```{bash collapse = TRUE, eval = has_bash}
 which git
 ```
 
 and `git --version` to see its version:
  
-```{bash collapse = TRUE, eval=Sys.info()['sysname']!= "Windows"}
+```{bash collapse = TRUE, eval = has_bash}
 git --version
 ```
 
