@@ -1,22 +1,8 @@
 # The shell {#shell}
 
-Even if you do most of your Git operations via a client, such as RStudio or GitKraken, you must sometimes work in the shell. As you get more comfortable with Git, you might prefer to do more and more via the command line. You might also need to use Git or file system operations on a server that lacks your usual Git client. For all these reasons, you have to know a little bit about this.
+Even if you do most of your Git operations via a client, such as RStudio or GitKraken, you must sometimes work in the shell. As you get more comfortable with Git, you might prefer to do more and more via the command line. You might also need to use Git or file system operations on a server that lacks your usual Git client. For all these reasons, it is a good idea to learn your way around the shell.
 
-## What is the shell?
-
-The `shell` is a program on your computer whose job is to run other programs. Pseudo-synonyms are "terminal", "command line", and "console". There's a whole StackExchange thread on the differences ([What is the difference between Terminal, Console, Shell, and Command Line?](https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line)), but I don't find it to be terribly enlightening. Your mileage may vary.
-
-Many programmers spend lots of time in a shell, as opposed to in GUIs, because it is very fast, concise, and ubiquitous in their relevant computing environments. This is how all work was done before we got the mouse and GUIs.
-
-The most common shell is `bash` and it gets thrown around as a proxy for "shell" sometimes, just like "Coke" and "Kleenex" are proxies for cola and tissues.
-
-Here we demo the use of a shell for quite modest goals: to navigate the file system, confirm the present working directory, configure Git, and configure Git remotes.
-
-## Starting the shell
-
-In RStudio, go to *Tools > Terminal* or *Tools > Shell*. The main difference is that *Tools > Terminal* launches a shell within RStudio, whereas *Tools > Shell* launches one external to RStudio. In both cases, RStudio makes every effort to launch the shell in a sane working directory, i.e. in the current project.
-
-You should see a simple blinking cursor, waiting for input and look similar to this (white text on black background, or black text on white background):
+Here's a typical look for a shell. You'll see a simple blinking cursor, waiting for input:
 
 <!-- why can bookdown not find this?!?
 ![](http://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Bash_screenshot.png/440px-Bash_screenshot.png)
@@ -24,63 +10,146 @@ You should see a simple blinking cursor, waiting for input and look similar to t
 
 ![](img/440px-Bash_screenshot.png)
 
+## What is the shell?
+
+The shell is a program on your computer whose job is to run other programs. Pseudo-synonyms are "terminal", "command line", and "console". There's a whole StackExchange thread on the differences ([What is the difference between Terminal, Console, Shell, and Command Line?](https://askubuntu.com/questions/506510/what-is-the-difference-between-terminal-console-shell-and-command-line)), but I don't find it to be terribly enlightening. Your mileage may vary.
+
+Many programmers spend lots of time in a shell, as opposed to in GUIs, because it is very fast, concise, and ubiquitous in their relevant computing environments. This is how all work was done before we got the mouse and GUIs.
+
+The most common shell is `bash` and it gets thrown around as a proxy for "shell" sometimes, just like "Coke" and "Kleenex" are proxies for cola and tissues.
+
+In Happy Git, sometimes we demo the use of a shell for certain tasks, like navigating the file system and doing Git operations, when we don't want to or can't use RStudio. Providing shell commands is also less ambiguous and less perishable than describing human interactions with a GUI.
+
+## Starting the shell
+
+### From within RStudio
+
+You can launch a shell from RStudio. This is often handy, because RStudio makes every effort to put you in a sane working directory, i.e. in the current project.
+
+There are two ways:
+
+  * *Tools > Terminal* launches a shell within RStudio, graphically and process-wise. I believe this is usually what you want.
+  * *Tools > Shell ...* launches a shell external to RStudio.
+
+### Outside of RStudio
+
+#### macOS
+
+The shell is often called the "terminal" on macOS, by which people mean Terminal.app. One way to launch is via Spotlight Search. Type Command + space and start typing "terminal". This process will something like so:
+	
+![](img/terminal_mac_search.png)
+
+Terminal.app is typically located at */Applications/Utilities/Terminal.app*.
+	
+Opening Terminal.app brings you to a bash shell opened to your home directory `~/`, which is shorthand for `/Users/YOURUSERNAME`. You should see something like this:
+
+![](img/terminal_mac.png)
+
+If you have administrative rights on your computer, prefacing any command with `sudo` will allow you to run the command as an administrator. Expect to be challenged for your password. If you need to change administrative privileges or your password, see [this article](https://support.apple.com/en-us/HT204012) from Apple.
+
+#### Windows
+
+We defer this until the next section, due to the more complex shell situation on Windows.
+
 ## Windows is special ... and not in a good way {#windows-shell-hell}
 
 Windows is not the ideal platform for scientific computing and software development. A lot of the functionality is going to feel janky and strapped on. Because it is.
 
-There are no fewer than 4 possible shells you can end up in. Unless you know better, you almost certainly want to be in a Git Bash shell.
+There are no fewer than 4 possible shells you can end up in. Unless you know better, you almost certainly want to be in a Git Bash shell, especially here in Happy Git.
 
-#### Git Bash
+Windows users will want to understand the different types of shell, how to launch them, and how to tell which one you're in.
 
-This is a bash shell that ships with Git for Windows, which is [the Happy Git way to install Git on Windows](#install-git-windows). It is hopefully what RStudio will launch for you, especially from v1.1.383 and on. You can inspect and influence this directly via *Tools > Global Options > Terminal*. Unless you have good reason to do otherwise, you want to select "Git Bash" here.
+### Git Bash
 
-A Git Bash shell should look something like this:
+*TL;DR how to tell if you're in a Git Bash shell? Do this:*
+
+``` bash
+$ echo $SHELL
+/usr/bin/bash
+```
+
+Git Bash is a bash shell that ships with Git for Windows, which is [the Happy Git way to install Git on Windows](#install-git-windows). Therefore, you will not have Git Bash on your system until you install Git for Windows.
+
+Git Bash is always the Windows shell we are targeting in Happy Git instructions.
+
+RStudio should automatically detect the presence of Git Bash. You can inspect and influence this directly via *Tools > Global Options > Terminal*. Unless you have good reason to do otherwise, you want to see "Git Bash" in the "New terminals open with ..." dropdown menu.
+
+![](img/git-bash-as-rstudio-terminal.png)
+
+Troubleshooting tips:
+
+  * Restart RStudio. You need to restart all instances of RStudio after installing Git for Windows (+ Git Bash), in order for RStudio to auto-detect Git Bash.
+  * Update RStudio. The shell handling in RStudio has improved dramatically over time, so older versions might not behave as described here.
+
+#### Accessing Git Bash outside of RStudio
+	
+Sometimes you want to run Git Bash outside of RStudio. Here's the easiest way: click the "Git" menu in the Windows menu and select "Git Bash".
+	
+![](img/2019-01_git_bash_windows.png)
+
+A Git Bash shell running outside of RStudio looks something like this:
 
 ![](img/2018-01-15_git-bash.png)
 
 Notice `MSYS` in the title bar. You might also see `MINGW64`.
 
-If you execute `echo $SHELL` in Git Bash, you should see `/usr/bin/bash`.
+Sometimes you need to run Git Bash as administrator, e.g. to run with higher privileges. Easiest way: click the "Git" menu in the Windows menu and *right-click* on "Git Bash". This reveals a submenu. Select "more" and then "Run as administrator".
+	
+![](img/2019-01-git-windows-administrator.png)
 
-If you're seeing different shell-launching behavior *and you are running a very current version of RStudio and you followed the Happy Git installation instructions*, we [want to know](https://github.com/jennybc/happy-git-with-r/issues). Because that's not right.
+### Command prompt
 
-Older versions of RStudio have a tick box in *Tools > Global Options > Terminal* for "Use Git Bash as shell for Git projects". If you won't or can't upgrade, then by all means select that. You might need to restart RStudio to see the effect and you must realize it only affects Projects that use Git. Let me be clear: my real advice to you is to upgrade RStudio.
+*TL;DR how to tell if you're in Command Prompt? Do this:*
 
-#### Command prompt
+``` bash
+C:\Users\jenny>echo %COMSPEC%
+C:\WINDOWS\system32\cmd.exe
+```
 
-This is the native Windows command line interpreter. It's rarely what you want, at least for the work described in this book. It looks something like this:
+This is the native Windows command line interpreter. It's rarely what you want, especially for the work described in Happy Git.
+
+A Command Prompt session running outside of RStudio looks something like this:
 
 ![](img/2018-01-15_command-prompt.png)
 
 Notice the `cmd.exe` in the title bar, although it is not *always* present. You might also see "Command Prompt".
 
-Here's a better way to investigate: in Command Prompt, `echo %comspec%` gives `C:\WINDOWS\system32\cmd.exe`.
+If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from a shell command, that suggests you have somehow launched into `cmd.exe` when you did not mean to.
 
-If you get an error message such as `'pwd' is not recognized as an internal or external command, operable program or batch file.` from some of the other commands given here, that also suggests you have somehow launched into `cmd.exe`. 
+### PowerShell
 
-#### Power Shell
+*TL;DR how to tell if you're in PowerShell? Do this:*
 
-Another Windows shell, more modern than the command prompt. Also probably not what you want. It looks something like this:
+``` bash
+PS C:\Users\jenny> Get-ChildItem Env:ComSpec
+
+Name                           Value
+----                           -----
+ComSpec                        C:\WINDOWS\system32\cmd.exe
+```
+
+PowerShell is yet another Windows shell, a more modern successor to Command Prompt.  It's also rarely what you want, especially for the work described in Happy Git.
+
+A PowerShell session running outside of RStudio looks something like this:
 
 ![](img/2018-01-15_power-shell.png)
 
 Notice the `powershell.exe` in the title bar.
 
-In PowerShell ... wait for it ... `Get-ChildItem Env:ComSpec` gives:
+### Bash via Windows Services for Linux
+
+*TL;DR how to tell if you're in Bash via WSL? Do this:*
 
 ``` bash
-Name                 Value
--------              --------
-ComSpec              C:\WINDOWS\system32\cmd.exe
+$ echo $SHELL
+/bin/bash
 ```
 
-#### Bash via Windows Services for Linux
+In 2016, Microsoft launched the Windows Subsystem for Linux (WSL), "a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows". Overall, this is a fantastic development. However, at the time of writing (January 2019), you will only have this if you're running Windows 10 64-bit and have chosen to [install the optional WSL system component](https://docs.microsoft.com/en-us/windows/wsl/install-win10). Therefore, I expect only keeners to have this and, in that case, you probably don't need this chapter.
 
-In 2016, Microsoft launched the Windows Subsystem for Linux (WSL), "a new Windows 10 feature that enables you to run native Linux command-line tools directly on Windows". Overall, this is a fantastic development. However, at the time of writing (January 2018), you will only have this if you're running Windows 10 64-bit and have chosen to install the optional WSL system component. Therefore, I expect only keeners to have this and, in that case, you probably don't need this chapter. It looks something like this:
+A WSL bash shell running outside of RStudio looks something like this:
 
 ![](img/2018-01-15_bash-windows-services-for-linux.png)
-
-In this bash shell, `echo $SHELL` returns `/bin/bash`.
 
 FYI Microsoft also refers to WSL as Bash on Ubuntu on Windows.
 
@@ -88,7 +157,7 @@ FYI Microsoft also refers to WSL as Bash on Ubuntu on Windows.
 
 When in doubt, you probably want to be in a Git Bash shell.
 
-## Using the shell
+## Basic shell commands
 
 The most basic commands are listed below:
 
