@@ -21,7 +21,7 @@ Your mission:
   * Commit!
   * Push your changes back to your copy of the repo on GitHub.
   * Make a pull request back to the main `bingo` repo.
-  * If you card is appropriate, we'll merge your request and it will become part of the package and available via the [Shiny app](http://daattali.com/shiny/bingo/).
+  * If your card is appropriate, we'll merge your request and it will become part of the package and available via the [Shiny app](http://daattali.com/shiny/bingo/).
   
 **Special inspiration for useR**:
 

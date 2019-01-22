@@ -36,7 +36,7 @@ If Git appears to be installed and findable, launch RStudio. Quit and re-launch 
 
 From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the box *Git executable* points to your Git executable.
 
-On macOS and Linux, the path usually looks something like so:
+On macOS and Linux, the path usually looks something like this:
 
 ``` bash
 /usr/bin/git
@@ -44,7 +44,7 @@ On macOS and Linux, the path usually looks something like so:
 
 If you need to set this on macOS, it can sometimes be hard to navigate to the necessary directory, once you've clicked "Browse" and are working with a Finder-type window. The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able to type or paste any path you want.
 
-On Windows, this path should look something like so:
+On Windows, this path should look something like this:
 
 ``` bash
 C:/Program Files/Git/bin/git.exe
