@@ -1,0 +1,73 @@
+# Workshops
+
+These materials can be used for independent study, but they have also been used to support:
+
+  * in-person workshops (see below)
+  * [STAT 545](http://stat545.com) at UBC
+  * [UBC Master of Data Science](http://masterdatascience.science.ubc.ca)
+
+## Pre-workshop set-up
+
+Optional reading on the big picture motivation: [Why Git? Why GitHub?](#big-picture)
+
+**It is vital that you attempt to set up your system in advance. You cannot show up at the workshop with no preparation and keep up!**
+
+Try this. Best case scenario is about 1 - 2 hours. If you hit a wall, we will help:
+
+  * [Register a free GitHub account](#github-acct).
+  * [Install or update R and RStudio](#install-r-rstudio).
+  * [Install Git](#install-git).
+  * [Introduce yourself to Git](#hello-git).
+  * [Prove local Git can talk to GitHub](#push-pull-github).
+  * [Cache your username and password](#credential-caching) or [set up SSH keys](#ssh-keys) so you don't need to authenticate yourself to GitHub interactively *ad nauseum*.
+  * [Prove RStudio can find local Git](#rstudio-git-github) and, therefore, can talk to GitHub.
+    - FYI: this is where our hands-on activities usually start. We walk through a similar activity together, with narrative, and build from there.
+  * Contemplate if you'd like to [install an optional Git client](#git-client), now or in future.
+
+Troubleshooting:
+
+  * Sometimes RStudio [needs a little help finding Git](#rstudio-see-git).
+  * General troubleshooting: [RStudio, Git, GitHub Hell](#troubleshooting).
+
+These are battle-tested instructions, so most will succeed. We believe in you! If you have trouble, reach out for help and stick with it. Where to get help:
+
+  * If you are enrolled in an upcoming workshop, find it below to get specifics on pre-workshop support.
+  * We *might* be able to respond to a GitHub issue [here](https://github.com/jennybc/happy-git-with-r/issues).
+  * If there is a clear R/RStudio angle, post on <https://community.rstudio.com>.
+  * General advice: search with Google and on <https://stackoverflow.com>, see also <https://github.community>.
+
+## rstudio::conf 2019
+
+2-day workshop: What They Forgot to Teach You About R  
+Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
+January 15-16, [rstudio::conf 2019](https://www.rstudio.com/conference/) Training Days, Austin, TX
+
+Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-system-setup-for-rstudio-conf-2019/20914?u=jennybryan) on community.rstudio.com to discuss system prep woes.
+
+## Previous workshops
+
+  * Seattle October 2018
+    - 2-day workshop: [What They Forgot to Teach You About R](https://whattheyforgot.org/index.html#seattle-2018-october-4-5)  
+    - 3 of 8 units on Git/GitHub + R/Rmd/RStudio  
+    - Oct 4-5, 2018, The Westin Seattle
+  * rstudio::conf 2018
+    - 2-day workshop: What They Forgot to Teach You About R  
+    - ~25% of content was Git/GitHub + R/Rmd/RStudio  
+    - Jan 31 & Feb 1, 2018, San Diego, CA
+  * CSAMA 2017: Statistical Data Analysis for Genome Biology
+    - <http://www.huber.embl.de/csama2017/>  
+    - June 11-16, 2017, Bressanone-Brixen, Italy  
+  * satRday Cape Town 2017
+    - <http://capetown2017.satrdays.org>  
+    - February 16 - 18, 2017, Cape Town, South Africa
+  * rstudio::conf 2017
+    - <https://www.rstudio.com/conference/>  
+    - January 13 - 14, 2017, Orlando, FL  
+    - Saturday January 14, 10:15am to 12:30pm
+  * CSAMA 2016: Statistical Data Analysis for Genome Biology
+    - <http://www.huber.embl.de/csama2016/>  
+    - July 10 - 15, 2016, Bressanone-Brixen, Italy  
+  * useR! 2016 Stanford
+    - <http://user2016.r-project.org>  
+    - Monday, June 27, 2016  
+    - [Using Git and GitHub with R, RStudio, and R Markdown](http://user2016.r-project.org/tutorials/01.html)

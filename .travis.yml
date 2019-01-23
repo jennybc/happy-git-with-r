@@ -1,14 +1,34 @@
 language: r
-cache: packages
 sudo: false
-before_script:
-- chmod +x ./_build.sh
-- chmod +x ./_deploy.sh
-script:
-- ./_build.sh
-after_success:
-- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash
-  _deploy.sh
+cache:
+  packages: true
+  directories:
+  - $HOME/.npm
+
+before_install:
+  - nvm install stable
+  - npm install netlify-cli -g
+  - export COMMIT_MSG=$(git log -1 --format='%h %<(50,trunc)%s')
+  - echo $COMMIT_MSG
+  - export DEPLOY_MSG=${COMMIT_MSG//[\'\"\`]/}
+  - echo $DEPLOY_MSG
+
 env:
-  global:
-    secure: Bv8FTixp0WNQufYJ1D6YAPxFqTCVe31ZXK49FLnrmTkIPD5u4DjT7s1ad/0UDE+vsC9T9qYhZ6CU9cIjHYtoAayA+7Y/NNHiyxqzXOrL+hAhGQBP+dr31CO7RbyxJ/azzoul1CeVUMwgwVCXEaoA12zWxuqX2WrblVaVYr/qwG+qRw3r9KWNCZWnWBZ3uP/eACr1/H9cc6BWdt/FqxrCq8DOklor+9Vwh9hVeBKj1/Yh04fX/WevqWYn+iwyNAVWyN1+xxpdrfYsHgy5b+mlT84icZKvvDRs/1TwozaE0M/N/PjALlTR4Th8+ZMIVhp6O7ivoS3LmjdusycFsxu7yMn0QBlbVFKAZB3JKXxSgpYKDdt3SxI0hisy9kHkwqjVQr6Fq/cT+tRO4u6sWnhXP6Zx36Ug6bO9i5lK4W+yE1aMrkTdjoC6IEN5BAgE2e2YteT8L8POrRdTVdTbhPOFaWEWqO4oHL88TLaA3u6fSfNIZLXhhwceO9jRUv1DkePGUUa9sTnDeH714Xc4chf8HPqy/XjK/QZ+lx9IPPXcHSx/MgmMHDQYj7Ci14V6LmgQWu0rGPioUSmBSg5j4CCMokIL9lWgCzvKkQYPwhAV+8eqX8ARlrpvEc+q+F9bhS0/otFlj0cCMkL+kkcGnQ26hG9WGMS/6K9LH2404gMFAYM=
+  - NETLIFY_SITE_ID=4e9fea2e-d99c-484e-be1a-9d8605393f4e
+  # NETLIFY_AUTH_TOKEN set in travis settings
+
+script:
+  - Rscript -e 'bookdown::render_book("index.Rmd")'
+
+deploy:
+  - provider: script
+    script: netlify deploy --dir _book --prod --message "$DEPLOY_MSG"
+    skip_cleanup: true
+    on:
+      branch: master
+  - provider: script
+    script: netlify deploy --dir _book --message "$DEPLOY_MSG"
+    skip_cleanup: true
+    on:
+      all_branches: true
+      condition: $TRAVIS_BRANCH != "master"

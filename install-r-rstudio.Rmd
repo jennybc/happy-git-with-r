@@ -1,0 +1,32 @@
+# Install or upgrade R and RStudio {#install-r-rstudio}
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  comment = "#>",
+  collapse = TRUE
+)
+```
+
+1. Install a pre-compiled binary of R for your OS from here:  
+    <https://cloud.r-project.org>  
+    Already have R installed? **Hold on: This is a great time to make sure your R installation is current.** Check your current version like so:
+    ```{r}
+    R.version.string
+    ```
+1. Install RStudio Desktop.  
+   Already have RStudio? **Hold on: This is a great time to upgrade to the latest Preview version.** Download it here:  
+    <https://www.rstudio.com/products/rstudio/download/preview/>
+1. Update your R packages:
+    ```{r, eval = FALSE}
+    update.packages(ask = FALSE, checkBuilt = TRUE)
+    ```
+
+## How to think about upgrading R and RStudio
+
+**Get current, people.** You don't want to adopt new things on day one. But at some point, running old versions of software adds unnecessary difficulty.
+
+In live workshops, there is a limit to how much we can help with ancient versions of R or RStudio. Also, frankly, there is a limit to our motivation. By definition, these problems are going away and we'd rather focus on edge cases with current versions, which affect lots of people.
+
+Is your R version "old"? It is good to be on the current minor version. For example, when the released version of R is 3.5.2, you want to be on 3.5.something. The previous minor version, referred to as "r-oldrel", would be 3.4.something in this example. This probably won't cause trouble. Once you are 2 minor versions behind (3.3 or earlier in our example), you will start to suffer. In particular, you can no longer install pre-built binary add-on packages from CRAN.
+
+Is your RStudio "old"? Unless you have a specific reason to prefer the released version, try the Preview. RStudio is fairly conservative with official releases, so the Preview version is used by many people for their daily work. This allows you to enjoy the latest goodies much sooner. The Preview version updates much more frequently (and in smaller increments) than the released version. This is something you might update once every month or so.

@@ -1,0 +1,196 @@
+# Connect to GitHub {#push-pull-github}
+
+Objective: make sure that you can pull from and push to GitHub from your computer.
+
+I do not explain all the shell (Appendix \@ref(shell)) and Git commands in detail. This is a black box diagnostic / configuration exercise. In later chapters and in live workshops, we revisit these operations with much more narrative.
+
+## Make a repo on GitHub
+
+Go to <https://github.com> and make sure you are logged in.
+
+Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+
+How to fill this in:
+
+  * Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
+  * Description: "testing my setup" (or whatever, but some text is good for the README).
+  * Public.
+  * YES Initialize this repository with a README.
+  
+For everything else, just accept the default.
+
+Click big green button "Create repository."
+
+Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button.
+
+## Clone the repo to your local computer
+
+Go to the shell (Appendix \@ref(shell)).
+
+Take charge of -- or at least notice! -- what directory you're in. `pwd` displays the working directory. `cd` is the command to change directory. Personally, I would do this sort of thing in `~/tmp`.
+
+Clone `myrepo` from GitHub to your computer. This URL should have **your GitHub username** and the name of **your practice repo**. If your shell (Appendix \@ref(shell)) cooperates, you should be able to paste the whole `https://....` bit that we copied above. But some shells are not (immediately) clipboard aware. In that sad case, you must type it. **Accurately.**
+
+``` bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
+```
+        
+This should look something like this:
+
+``` bash
+jenny@2015-mbp tmp $ git clone https://github.com/jennybc/myrepo.git
+Cloning into 'myrepo'...
+remote: Counting objects: 3, done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+Checking connectivity... done.
+```
+
+Make this new repo your working directory, list its files, display the README, and get some information on its connection to GitHub:
+
+``` bash
+cd myrepo
+ls
+head README.md
+git remote show origin
+```
+
+This should look something like this:
+
+``` bash
+jenny@2015-mbp ~ $ cd myrepo
+
+jenny@2015-mbp myrepo $ ls
+README.md
+
+jenny@2015-mbp myrepo $ head README.md 
+# myrepo
+tutorial development
+
+jenny@2015-mbp myrepo $ git remote show origin
+* remote origin
+  Fetch URL: https://github.com/jennybc/myrepo.git
+  Push  URL: https://github.com/jennybc/myrepo.git
+  HEAD branch: master
+  Remote branch:
+    master tracked
+  Local branch configured for 'git pull':
+    master merges with remote master
+  Local ref configured for 'git push':
+    master pushes to master (up to date)
+```
+
+## Make a local change, commit, and push
+
+Add a line to README and verify that Git notices the change:
+
+``` bash
+echo "A line I wrote on my local computer" >> README.md
+git status
+```
+
+This should look something like this:
+
+``` bash
+jenny@2015-mbp myrepo $ echo "A line I wrote on my local computer" >> README.md
+jenny@2015-mbp myrepo $ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+```
+
+Stage ("add") and commit this change and push to your remote repo on GitHub. If you're a new GitHub user, you will be challenged for your GitHub username and password. Provide them!
+
+``` bash
+git add -A
+git commit -m "A commit from my local computer"
+git push
+```
+
+The `-m "blah blah blah"` piece is very important! Git requires a commit message for every commit, so if you forget the `-m` flag, Git will prompt you for a commit message anyway. And you might not like [the editor that Git chooses](#git-editor). It is good practice to write meaningful commit messages, so that, in the future, potential collaborators (and your future self) will understand the progression of a project.
+
+This should look something like this:
+
+``` bash
+jenny@2015-mbp myrepo $ git add -A
+
+jenny@2015-mbp myrepo $ git commit -m "A commit from my local computer"
+[master de669ba] A commit from my local computer
+ 1 file changed, 1 insertion(+)
+ 
+jenny@2015-mbp myrepo $ git push
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 311 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jennybc/myrepo.git
+   b4112c5..de669ba  master -> master
+```
+
+### Windows and line endings
+
+On Windows, you might see a message about `LF will be replaced by CRLF`. This is normal and does not require any action on your part. Windows handles line endings differently from other operating systems, but the default setup for Git for Windows is appropriate for most people and situations.
+
+Here's a command to reveal the current line ending configuration and some typical output **on Windows**:
+
+``` bash
+$ git config --show-origin --get core.autocrlf
+file:"C:\\ProgramData/Git/config"      true
+```
+
+If your value shows as `false`, you can set it to `true` with this command:
+
+``` bash
+$ git config --global core.autocrlf true
+```
+
+`true` is the current default setting for `core.autocrlf` for [Git for Windows](#install-git-windows), our recommended method for installing Git on Windows. The need to set this explicitly in your global user config suggests you should consider reinstalling or updating Git for Windows.
+
+## Confirm the local change propagated to the GitHub remote
+
+Go back to the browser. I assume we're still viewing your new GitHub repo.
+
+Refresh.
+
+You should see the new "A line I wrote on my local computer" in the README.
+
+If you click on "commits," you should see one with the message "A commit from my local computer."
+
+If you have made it this far, you are ready to graduate to using Git and GitHub with RStudio (chapter \@ref(rstudio-git-github)). But first ...
+
+## Am I really going to type GitHub username and password on each push?
+
+It is likely that your first push, above, leads to a challenge for your GitHub username and password. This will drive you crazy in the long-run and make you reluctant to push. You want to eliminate this annoyance.
+
+Luckily, if you've installed Git one of the ways recommended by Happy Git, it is likely that Git is already using a credential helper provided by your operating system! If so, your GitHub credentials were cached when you successfully pushed above. This setup applies across repos, i.e. it's not limited to our current test repo.
+
+I suggest you make another local change to README.md, stage (i.e. "add") it, commit it, and push, using the commands shown above. If this "just works" and shows up on GitHub, rejoice. You are ready to work with GitHub via HTTPS without constantly re-entering your credentials. You are ready to delete this toy repo.
+
+If you are challenged for your username and password *again*, do one of the following:
+
+  * Cache credentials for HTTPS access, chapter \@ref(credential-caching).
+  * Set up SSH keys, chapter \@ref(ssh-keys).
+
+Now is the perfect time to do this, since you have a functioning test repo.
+
+## Clean up
+
+**Local** When you're ready to clean up, you can delete the local repo any way you like. It's just a regular directory on your computer.
+
+Here's how to do that in the shell, if current working directory is `myrepo`:
+
+``` bash
+cd ..
+rm -rf myrepo/
+```
+
+**GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
+
+Scroll down, click on "delete repository," and do as it asks.

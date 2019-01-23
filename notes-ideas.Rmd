@@ -1,0 +1,100 @@
+# Ideas for content
+
+## Common workflow questions
+
+### Common predicaments and how to recover/avoid
+
+https://twitter.com/JennyBryan/status/743457387730735104
+
+### Keep something out of Git
+
+List it in `.gitignore.`
+
+### I didn't mean to commit that
+
+Committing things you didn't mean to (too big, secret). How to undo.
+
+## git stuff
+
+Git explainers, heavy on the diagrams
+
+https://twitter.com/JennyBryan/status/743548245645791232
+
+A Visual Git Reference  
+http://marklodato.github.io/visual-git-guide/index-en.html
+
+A successful Git branching model  
+http://nvie.com/posts/a-successful-git-branching-model/
+
+A successful Git branching model considered harmful  
+https://barro.github.io/2016/02/a-succesful-git-branching-model-considered-harmful/
+
+Git Tutorials from Atlassian
+https://www.atlassian.com/git/tutorials/
+
+Software Carpentry Git Novice Lesson  
+http://swcarpentry.github.io/git-novice/
+
+Michael Freeman slides on Git collaboration  
+http://slides.com/michaelfreeman/git-collaboration#/
+
+GitHub Training materials  
+https://services.github.com/kit/
+
+Git for Ages 4 and Up  
+<https://www.youtube.com/watch?v=3m7BgIvC-uQ>
+
+Learn Git Branching  
+http://learngitbranching.js.org
+
+A Git Workflow Walkthrough Series
+http://vallandingham.me/git-workflow.html
+
+  * Part 1: Feature Branches
+  * Part 2: Reviewing Pull Requests
+  * Part 3: Reviewing Pull Requests Locally
+  * Part 4: Merging Pull Requests
+
+Git from the inside out  
+https://codewords.recurse.com/issues/two/git-from-the-inside-out
+
+## Disaster recovery
+
+<http://stackoverflow.com/questions?sort=votes>
+
+Break it down:
+
+  * Is something wrong with my filesystem/files?
+  * Is my git repo messed up?
+  * How can I keep this from happening again?
+  
+Rebase avoidance techniques.
+
+Headless state. Rebase hell.
+
+What to do when you can't, e.g., switch branches. Stashing and WIP commits.
+
+## Engage with R source on GitHub
+
+Browsing
+
+Searching
+
+  * My gist, re: the cran user: <https://gist.github.com/jennybc/4a1bf4e9e1bb3a0a9b56>
+
+Being a useful useR
+
+  * stay informed re: development
+  * use issues for bug reports, feature requests
+  * make pull requests
+  
+## Workflow and psychology
+
+Stress of working in the open
+
+Workflows for group of 1, 2, 5, 10
+
+  * Fork and Pull vs Shared Repository
+  
+    - <https://help.github.com/articles/about-collaborative-development-models/>
+    - <https://help.github.com/articles/using-pull-requests/>

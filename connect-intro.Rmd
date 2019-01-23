@@ -1,0 +1,15 @@
+# (PART) Connect Git, GitHub, RStudio {-} 
+
+# Can you hear me now? {#connect-intro .unnumbered}
+
+The next few chapters walk through some basic operations to confirm you have installed the necessary software and that the necessary connections are being made, between tools on your computer and between your computer and GitHub.
+
+This has a lot of overlap with some basic workflows we revisit later, but the second time around (or in a live workshop), we'll spend more time explaining what's happening and why.
+
+In [Connect to GitHub] we use Git in the shell to make sure you can clone a repo from GitHub and establish two-way communications.
+
+In [Cache credentials for HTTPS] and [Set up keys for SSH] we present two approaches for persistently authenticating yourself with GitHub, so you don't need to provide credentials *ad nauseam*.
+
+In [Connect RStudio to Git and GitHub] we confirm that RStudio can work with your Git installation to perform local operations and communicate with GitHub.
+
+Hopefully you won't need it, but this part concludes with two troubleshooting chapters: [Detect Git from RStudio] and [RStudio, Git, GitHub Hell].

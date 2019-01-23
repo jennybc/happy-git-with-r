@@ -1,0 +1,25 @@
+# (PART) Daily Workflows {-} 
+
+# Useful Git patterns for real life {#workflows-intro .unnumbered}
+
+*much of this originates as live workshop materials; we are gradually creating nice prose versions*
+
+Git patterns that come up frequently in real work:
+
+  * Commit early and often. Push less often. [The Repeated Amend](#repeated-amend).
+  * [Help, my push was rejected!](#push-rejected)
+  * [Integrating remote and local work](#pull-tricky). Probably so you can push again.
+  * Burn it all down.
+  * Time travel:
+    - "I just need to see the past". Browse and search on GitHub.
+    - "I need to visit the past". Create a checkout a branch.
+    - "I want to return to the past". `git revert`, `git reset`
+    - "I had a great cookie last October". `git cherry pick`, `git checkout REF -- path`
+
+Play well with others:
+
+  * [Fork and clone](#fork-and-clone).
+  * [Get upstream changes for a fork](#upstream-changes).
+  * Disposable fork.
+  * [Make your repo rewarding to browse on GitHub](#workflows-browsability).
+  * [Explore and extend a pull request](#pr-extend)

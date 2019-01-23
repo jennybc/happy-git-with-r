@@ -1,0 +1,32 @@
+# Create a bingo card {#bingo}
+
+Here's a specific suggestion for practicing "fork and pull".
+
+The general workflow is laid out in chapter \@ref(fork).
+
+Jenny and Dean have a repository that makes bingo cards with R:
+
+  * <https://github.com/jennybc/bingo>
+  * Read the README to learn more about it!
+  
+Your mission:
+
+  * Maybe find a partner? Or a couple of partners?
+  * Fork the `bingo` repo.
+  * Clone it to someone's local machine.
+  * Create a new bingo card by making a file of possible squares.
+    - Follow the instructions in <https://github.com/jennybc/bingo/blob/master/CONTRIBUTING.md> to see how to contribute a new card.
+    - Protip: It's easy to be very funny, but create a very difficult bingo card. Remember to include some easy stuff so people have a chance to bingo.
+  * If you're feeling virtuous, run the tests and check the package. Ask us for help! Or live dangerously and skip this.
+  * Commit!
+  * Push your changes back to your copy of the repo on GitHub.
+  * Make a pull request back to the main `bingo` repo.
+  * If your card is appropriate, we'll merge your request and it will become part of the package and available via the [Shiny app](http://daattali.com/shiny/bingo/).
+  
+**Special inspiration for useR**:
+
+  * Make useR-specific conference bingo.
+  * See this issue thread for lots of square ideas!
+    - <https://github.com/jennybc/bingo/issues/4>
+
+  

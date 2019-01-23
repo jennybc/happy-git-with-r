@@ -1,0 +1,68 @@
+# Dealing with push rejection {#push-rejected}
+
+Problem: You want to push changes to GitHub, but you are rejected like so:
+
+``` bash
+$ git push
+To https://github.com/YOU/REPO.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'https://github.com/YOU/REPO.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+```
+
+This means that your local Git history and that on the GitHub remote are not compatible, i.e. they have diverged.
+
+I suggest that you use `git status`, your [Git client](#git-client ), or visit your GitHub remote in the browser to get more information about the situation, i.e. to get a sense of this work that you do not have.
+
+In the abstract, this is the state on GitHub:
+
+```
+A -- B -- C (on GitHub)
+```
+
+And this is your local state:
+
+```
+A -- B -- D (what you have)
+```
+
+You can't cause some sort of merge to happen to the GitHub copy when you push. 
+
+Instead, you've got pull the commit `C` and somehow integrate it into your `D`-containing history. Then you will be able to push again.
+
+This is covered in the workflow [Pull, but you have local work](#pull-tricky).
+
+But before you behold the full horror of that, this is a great time to reflect on what we can learn from this situation.
+
+## She who pushes first wins!
+
+You may have noticed that you -- the author of `D` -- are faffing around with Git more than the person who committed and pushed `C`, i.e. your collaborator.
+
+There is a lesson to be learned here!
+
+If you had pushed `D` first, you'd be relaxing and they'd be figuring out how to integrate `C` into their history in order to push. So push your work often. Don't go dark and work "offline" for long stretches of time.
+
+Obviously, you should push work to `master` because it's "ready" to share (or at least "ready enough"), not to avoid Git merges.
+
+There is a truly legitimate point here: It is better for the overall health of a project to be committing, pushing, and integrating more often, not less. This does not eliminate the need to integrate different lines of work, but it makes each integration smaller, less burdensome, and less prone to error.
+
+## Stay in touch
+
+Another take away is this: the sooner you know about `C`, the better. Pull (or fetch) often.
+
+Let's think about your commit `D`. Maybe it was built up over a couple of days via the [Repeated Amend pattern](#repeated-amend). Maybe `C` was sitting there on GitHub the whole time or appeared very early in your process.
+
+Consider that it might be easier to integrate `C` into your work `D` sooner rather than later. Sometimes this is not true, but more often it is.
+
+In general, it pays off to be proactively aware of what others are doing (e.g. to pull or fetch often) than to always be in reactive mode, learning about your collaborator's work only when your push is rejected.
+
+## Use branches
+
+Finally, your early experiences collaborating with others and yourself in `master` will give you a visceral understanding of why most Git users eventually start to use [branches](#git-branches).
+
+Branches afford explicit workflows for integrating different lines of work on your own terms. This is much nicer than trying to do a tricky merge or rebase in a frustrated panic, because you need to push your work to GitHub at the end of the day.
+
