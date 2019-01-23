@@ -7,3 +7,4 @@ live six
 line seven
 line added in the browser
 second line added in the browser
+line 10
