@@ -11,7 +11,7 @@ Git patterns that come up frequently in real work:
   * [Integrating remote and local work](#pull-tricky). Probably so you can push again.
   * Burn it all down.
   * Time travel:
-    - "I just need to see the past". Browse and search on GitHub.
+    - ["I just need to see the past".](#time-travel-see-past) Browse and search on GitHub.
     - "I need to visit the past". Create a checkout a branch.
     - "I want to return to the past". `git revert`, `git reset`
     - "I had a great cookie last October". `git cherry pick`, `git checkout REF -- path`

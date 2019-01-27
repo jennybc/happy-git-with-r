@@ -44,6 +44,7 @@ rmd_files: [
   "workflows-repeated-amend.Rmd",
   "workflows-push-rejected.Rmd",
   "workflows-pull.Rmd",
+  "workflows-see-the-past.Rmd",
   "workflows-fork-and-clone.Rmd",
   "workflows-upstream-changes-into-fork.Rmd",
   "workflows-explore-extend-pull-request.Rmd",
