@@ -50,7 +50,6 @@ rmd_files: [
   "workflows-make-github-repo-browsable.Rmd",
 
   "prompt-clone.Rmd",
-  "prompt-fork.Rmd",
   "prompt-fork-pr-bingo.Rmd",
   "prompt-burn-it-all-down.Rmd",
   "prompt-practice-resets.Rmd",
