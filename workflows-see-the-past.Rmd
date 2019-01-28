@@ -78,7 +78,7 @@ These file- and SHA-specific URLs are a great way to point people at particular 
 Search is always available in the upper-righthand corner of GitHub.
 
 ```{r github-repo-search, echo = FALSE, out.width = "100%", fig.cap = "Typing into GitHub search bar."}
-knitr::include_graphics("img/screenshots/github-specific-file.png")
+knitr::include_graphics("img/screenshots/github-repo-search.png")
 ```
 
 Once you enter some text in the search box, a dropdown provides the choice to search in the current repo (the default) or all of GitHub. GitHub searches the contents of files (described as "Code"), commit messages, and issues. Take advantage of the search hits across these different domains. Again, this is a powerful way to zoom in on specific lines of code, revisit an interesting time in project history, or re-discover a conversation thread.
