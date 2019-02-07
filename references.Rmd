@@ -19,5 +19,7 @@ Long-term, you should understand more about what you are doing. Rote clicking in
   * Ten Simple Rules for Taking Advantage of Git and GitHub <http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947>
 
   * RStudio's guide [Version Control with Git and SVN](https://support.rstudio.com/hc/en-us/articles/200532077-Version-Control-with-Git-and-SVN)
+  
+  * The book *[Team Geek](http://shop.oreilly.com/product/0636920018025.do)* has insightful advice for the human and collaborative aspects of version control.  It proposes Git strategies suited to different characteristics of teams.
 
 `r if (knitr:::is_html_output()) '# References'`
