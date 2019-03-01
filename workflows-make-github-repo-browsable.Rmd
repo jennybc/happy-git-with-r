@@ -203,12 +203,12 @@ They love that!
 
 You can create a link that takes people directly to an editing interface in the browser. Behind the scenes, assuming the click-er is signed into GitHub but is not you, this will create a fork in their account and send you a pull request. When I click the link below, I am able to actually commit directly to `master` for this repo.
 
-[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/60_workflow-make-github-repo-browsable.Rmd)
+[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/workflows-make-github-repo-browsable.Rmd)
 
 Here's what that link looks like in the Markdown source:
 
 ```
-[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/60_workflow-make-github-repo-browsable.Rmd)
+[CLICK HERE to suggest an edit to this page!](https://github.com/jennybc/happy-git-with-r/edit/master/workflows-make-github-repo-browsable.Rmd)
 ```
 
 and here it is with placeholders:
