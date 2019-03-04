@@ -14,7 +14,7 @@ For the instructor
 
 For the students
 
-  * I have found that students adjust to Git/GitHub fairly quickly and genuinely like it. They find it gratifying to see their beautiful, figure-rich R Markdown reports up on the internet. Since it's easy to expose their work within the class, we do alot of peer review. I find that expertise spreads around the class like a virus. That applies to the main course substance as well as workflow.
+  * I have found that students adjust to Git/GitHub fairly quickly and genuinely like it. They find it gratifying to see their beautiful, figure-rich R Markdown reports up on the internet. Since it's easy to expose their work within the class, we do a lot of peer review. I find that expertise spreads around the class like a virus. That applies to the main course substance as well as workflow.
   * Many students are specifically interested in learning Git and GitHub, as a complement to the coding and analytical skills we teach in these courses. The fact that we use it for course mechanics kills two birds with one stone. Teaching the use of distributed version control is a valid pedagogical goal in and of itself.
 
 ## The STAT 545 student setup
