@@ -57,10 +57,6 @@ This installs the most current [Git (Install) X.Y.Z](https://chocolatey.org/pack
 
 If you [search Chocolatey packages](https://chocolatey.org/packages) yourself, you might see two packages that install Git -- "Git (Install) 2.20.1" and "Git 2.20.1", at the time of writing. I believe "Git (Install) 2.20.1" is technically the more correct, but I also think it doesn't really matter which one you use. A rather confusing explanation is found [here](https://chocolatey.org/faq#what-is-the-difference-between-packages-no-suffix-as-compared-to-install-portable). Don't worry too much about whether you do `choco install git.install` or `choco install git`.
   
-**Option 3** (*NOT recommended*): The GitHub hosting site offers [GitHub Desktop for Windows](https://desktop.github.com/) that provides Git itself, a client, and smooth integration with GitHub.
-
-  * [Their Windows set-up instructions](https://help.github.com/articles/set-up-git#platform-windows) recommend this method of Git installation.
-  * Why don't we like it? We've seen GitHub Desktop for Windows lead to Git installation in suboptimal locations, such as `~/AppData/Local`, and in other places we could never find. If you were __only__ going to interact with GitHub via this app, maybe that's OK, but that does not apply to you. We are also not very fond of the GitHub Desktop client for using using Git and prefer other clients. Therefore, we strongly recommend options 1 and 2 instead.
 
 ## macOS
 
@@ -97,10 +93,6 @@ Note also that, after upgrading macOS, you might need to re-do the above and/or 
 brew install git
 ```
 
-**Option 4** (*NOT recommended*): The GitHub hosting site offers [GitHub Desktop for Mac](https://desktop.github.com/) that provides *the option* to install Git itself, a client, and smooth integration with GitHub..
-
-  * [Their macOS set-up instructions](https://help.github.com/articles/set-up-git#platform-mac) recommend this method of Git installation.
-  * We don't like GitHub Desktop as a Git client, so this is a very cumbersome way to install Git. Consider this option a last resort.
 
 ## Linux
 
