@@ -48,11 +48,7 @@ If your Git life happens on your own computer, there is no reason to deny yourse
 
   * [GitUp](https://gitup.co) is a free, open source client for macOS. I've heard good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I'm so used to SourceTree. YMMV.
   
-  * GitHub also offers [a free Git(Hub) client](https://desktop.github.com/) for Windows and macOS. We do NOT recommend it for Windows and have serious reservations even for macOS. What do we object to?
-    - The degree of hand-holding offered by GitHub's clients borders on hand-*cuffs*.
-    - The Windows client sometimes leaves the Git executable so well hidden that we can't find it. This is a deal-killer, because that means RStudio can't find it either.
-    - These clients wrap Git functionality so thoroughly that we've had students make some destructive mistakes. For example, we've seen a "sync" operation that resulted in the loss of local uncommitted changes. Exactly which Git operations, in what order, are implied by "sync", is [not entirely clear](http://stackoverflow.com/questions/12104513/what-does-github-for-windows-sync-do). We prefer clients that expose Git more explicitly.
-    - We've heard similar negative reviews from other instructors. It's not just us.
+  * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. It's great for beginners and puts the most useful features of Git front and center so you don't get bogged down in the complexity of rarely used Git functionality.
 
   * Others that I have heard positive reviews for:
   
