@@ -4,6 +4,8 @@ We create a new Project, with the preferred "GitHub first, then RStudio" sequenc
 
 You've actually done this before during set up (chapter \@ref(rstudio-git-github)). We're doing it again, *with feeling*.
 
+The workflow is pretty similar for other repository managers like GitLab or Bitbucket. We will specify below when you may need to do something differently.
+
 ## Make a repo on GitHub
 
 **Do this once per new project.**
@@ -12,13 +14,38 @@ Go to <https://github.com> and make sure you are logged in.
 
 Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
 
-Repository name: `myrepo` (or whatever you wish)  
-Public  
-YES Initialize this repository with a README
+- Repository name: `myrepo` (or whatever you wish)  
+- Public  
+- YES Initialize this repository with a README
 
 Click the big green button "Create repository."
 
 Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+
+### GitLab
+
+Log in at <https://gitlab.com>. Click on the "+" button in the top-right corner, and then on "New project".
+
+- Project name: `myrepo` (or whatever you wish)  
+- Public
+- YES Initialize repository with a README
+
+Click the big green button "Create project."
+
+Copy the HTTPS or SSH clone URL to your clipboard via the blue "Clone" button.
+
+### Bitbucket
+
+Log in at <https://bitbucket.org>. On the left-side pane, click on the "+" button, and then on "Repository" under "Create". 
+
+- Repository name: `myrepo` (or whatever you wish)
+- Access level: Uncheck to make the repository public.
+- Include a README?: Select either "Yes, with a tutorial (for beginners)" or "Yes, with a template"
+- Version control system: Git
+
+Click the big blue button "Create repository."
+
+Copy the HTTPS or SSH clone URL that appears when you click on the blue "Clone" button. Make sure you remove the `git clone ...` that shows up at the beginning.
 
 ## New RStudio Project via git clone
 
@@ -115,6 +142,30 @@ Add a line to this file, such as "Line added from GitHub."
 Edit the commit message in "Commit changes" or accept the default.
 
 Click the big green button "Commit changes."
+
+### GitLab
+
+Click on README.md in the file listing on GitLab.
+
+In the upper right corner, click on "Edit".
+
+Add a line to this file, such as "Line added from GitLab."
+
+Edit the commit message in "Commit changes" or accept the default.
+
+Click the big green button "Commit changes."
+
+### Bitbucket
+
+Click on README.md in the file listing on Bitbucket.
+
+In the upper right corner, click on "Edit".
+
+Add a line to this file, such as "Line added from Bitbucket."
+
+Click on the blue "Commit" button. A pop-up will show up. Edit the commit message or accept the default.
+
+Click the blue "Commit" button.
 
 ## Pull from GitHub
 
