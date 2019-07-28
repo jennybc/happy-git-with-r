@@ -12,7 +12,7 @@ We assume you've got your existing R project isolated in a directory on your com
 
 If it's not already an RStudio Project, make it so:
 
-  * If you use the [usethis](https://cran.r-project.org/package=usethis) package, set the existing directory as the current project with `proj_set()`, then do `usethis::use_rstudio()`.
+  * If you use the [usethis](https://cran.r-project.org/package=usethis) package, set the existing directory as the current project with `usethis::create_project()`.
   * Within RStudio you can do: *File > New Project > Existing Directory* and, if you wish, "Open in new session".
 
 If your project is already an RStudio Project, launch it.
