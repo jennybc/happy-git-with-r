@@ -164,7 +164,7 @@ __Make sure RStudio and the `rmarkdown` package (and its dependencies) are up-to
 
   * rmarkdown version `r packageVersion("rmarkdown")`. Use `packageVersion("rmarkdown")` to check yours.
   * `r R.version.string`. Use `R.version.string` to check yours.
-  * RStudio IDE 1.1.383. Use *RStudio > About RStudio* to check yours.
+  * RStudio IDE 1.1.383. Use *RStudio > About RStudio* or `RStudio.Version()$version` to check yours.
 
 __Get rid of your `.Rprofile`__, at least temporarily. I have found that a "mature" `.Rprofile` that has accumulated haphazardly over the years can cause trouble. Specifically, if you've got anything in there relating to `knitr`, `markdown`, `rmarkdown` and RStudio itself, it may be preventing the installation or usage of the most recent goodies. Comment the whole file out or rename it something else and relaunch or even re-install RStudio.
 
