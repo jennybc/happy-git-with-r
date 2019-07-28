@@ -154,7 +154,7 @@ This is (sort of) another example of keeping things machine- and human-readable,
 
 ## HTML on GitHub
 
-HTML files, such as `foo.html`, are not immediately useful on GitHub (though your local versions are easily viewable). Visit one and you'll see the raw HTML. Yuck. But there are ways to get a preview: such as <https://rawgit.com> or <http://htmlpreview.github.io>. Expect much pain with HTML files inside private repos (hence the recommendations above to emphasize markdown). When it becomes vital for the whole world to see proper HTML in its full glory, it's time to use a more sophisticated web publishing strategy.
+HTML files, such as `foo.html`, are not immediately useful on GitHub (though your local versions are easily viewable). Visit one and you'll see the raw HTML. Yuck. But there are ways to get a preview: such as <http://htmlpreview.github.io>. Expect much pain with HTML files inside private repos (hence the recommendations above to emphasize markdown). When it becomes vital for the whole world to see proper HTML in its full glory, it's time to use a more sophisticated web publishing strategy.
 
 I have more [general ideas](#workflows-browsability) about how to make a GitHub repo function as a website.
 
