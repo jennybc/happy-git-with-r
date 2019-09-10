@@ -42,13 +42,13 @@ If your Git life happens on your own computer, there is no reason to deny yourse
 
 ## Recommended Git clients
 
-  * [SourceTree](https://www.sourcetreeapp.com) is a free, powerful Git(Hub) client that I highly recommend. It was my first Git client and is still my favorite for nontrivial Git tasks. Available for Mac and Windows. If I'm teaching you in a course or workshop, you might see me using this.
+  * [GitKraken](https://www.gitkraken.com) a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who have previously had very few options.
 
-  * [GitKraken](https://www.gitkraken.com), which is also free, arrived on the scene more recently. It's exciting because it works across all three OSes our students use: Windows, macOS, and Linux. I hear very good reviews, especially from long-suffering Linux users who haven't had any great options until now.
+  * [SourceTree](https://www.sourcetreeapp.com) is another free client that I highly recommend, at least on Windows. It was my first and most beloved Git client, but I eventually had to give it up due to a [long-standing bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401) that they will clearly never fix. I still use SourceTree on Windows.
 
   * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above. If you choose GitHub Desktop and it works well for you, we'd love to hear more in an issue, so we can continue to refine this recommendation.
 
-  * [GitUp](https://gitup.co) is a free, open source client for macOS. I've heard good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I'm so used to SourceTree. YMMV.
+  * [GitUp](https://gitup.co) is a free, open source client for macOS. I've heard good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I was already so used to other clients. YMMV.
 
   * Others that I have heard positive reviews for:
   
