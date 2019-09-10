@@ -42,9 +42,9 @@ If your Git life happens on your own computer, there is no reason to deny yourse
 
 ## Recommended Git clients
 
-  * [GitKraken](https://www.gitkraken.com) a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who have previously had very few options.
+  * [GitKraken](https://www.gitkraken.com) is a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who have previously had very few options.
 
-  * [SourceTree](https://www.sourcetreeapp.com) is another free client that I highly recommend, at least on Windows. It was my first and most beloved Git client, but I eventually had to give it up due to a [long-standing bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401) that they will clearly never fix. I still use SourceTree on Windows.
+  * [SourceTree](https://www.sourcetreeapp.com) is another free client that I highly recommend, at least on Windows. It was my first and most beloved Git client, but I eventually had to give it up on macOS, due to a [long-standing bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401) that they will clearly never fix. I still use SourceTree on Windows.
 
   * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above. If you choose GitHub Desktop and it works well for you, we'd love to hear more in an issue, so we can continue to refine this recommendation.
 
