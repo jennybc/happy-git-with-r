@@ -46,9 +46,9 @@ If your Git life happens on your own computer, there is no reason to deny yourse
 
   * [GitKraken](https://www.gitkraken.com), which is also free, arrived on the scene more recently. It's exciting because it works across all three OSes our students use: Windows, macOS, and Linux. I hear very good reviews, especially from long-suffering Linux users who haven't had any great options until now.
 
+  * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above. If you choose GitHub Desktop and it works well for you, we'd love to hear more in an issue, so we can continue to refine this recommendation.
+
   * [GitUp](https://gitup.co) is a free, open source client for macOS. I've heard good things about it and like what I read on the website. However, I tried to make myself use it for a day and went sort of nuts, possibly because I'm so used to SourceTree. YMMV.
-  
-  * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. It's great for beginners and puts the most useful features of Git front and center so you don't get bogged down in the complexity of rarely used Git functionality.
 
   * Others that I have heard positive reviews for:
   
