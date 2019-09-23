@@ -8,7 +8,9 @@ Long-term, you should understand more about what you are doing. Rote clicking in
 
   * The book [Pro Git](http://git-scm.com/book) is fantastic and comprehensive.
   
-  * [Git in Practice](https://www.manning.com/books/git-in-practice) by Mike McQuaid is an more approachable book, probably better than Pro Git for most people starting out. Ancillary materials [on GitHub](https://github.com/GitInPractice).
+  * [Git in Practice](https://www.manning.com/books/git-in-practice) by Mike McQuaid is an more approachable book, probably better than Pro Git for most people starting out. Ancillary materials [on GitHub](https://github.com/MikeMcQuaid/GitInPractice).
+  
+  * [Git for Humans](https://speakerdeck.com/alicebartlett/git-for-humans) is a great set of slides by [Alice Bartlett](https://alicebartlett.co.uk), originally delivered in 2016 at UX Brighton.
 
   * [GitHub's own training materials](http://training.github.com/kit/) may be helpful. They also point to [many other resources](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github)
 
