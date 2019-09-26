@@ -18,7 +18,17 @@ It is not entirely crazy to just re-install Git, using a method that leaves it i
 
 ## RStudio Git pane disappears on Mac OS
 
-After a Mac OS upgrade, you might need to trigger the Xcode command line tools to prompt you for what it needs, i.e. to re-install or re-agree to the license agreement. We have seen this cause the RStudio Git pane to disappear on a system where it was previously working. Use commands like these below to tickle Xcode:
+Sometimes the RStudio Git pane disappears on a system where it was previously working. This usually happens to people who installed Git by installing the Xcode command line tools. It is usually a sign that you need to re-agree to the Xcode license agreement. This is necessary after a Mac OS upgrade, re-installing Xcode, or even quiet Xcode upgrades that happen in normal system maintenance.
+
+In the shell, you could execute `git status` and you might see a message along these lines:
+
+``` bash
+Agreeing to the Xcode/iOS license requires admin privileges, please run “sudo xcodebuild -license” and then retry this command.
+```
+
+If you get such clear instructions, by all means do what it says, i.e. run `sudo xcodebuild -license`, to re-agree to the license.
+
+In any case, you need to tickle the Xcode command line tools to prompt you for whatever it needs. Here are other commands that, depending on the situation, might trigger the necessary prompts:
 
 ``` bash
 xcode-select --install
