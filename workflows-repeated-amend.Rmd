@@ -56,7 +56,7 @@ Imagine we start at commit C, with previous commit B and, before that, A:
 
 Make a small step towards your goal. Re-check that your project "works".
 
-Stage those changes and make a commit with the message "WIP", meaning "work in progress". Do this in RStudio or in the shell:
+Stage those changes and make a commit with the message "WIP", meaning "work in progress". Do this in RStudio or in the shell (Appendix \@ref(shell)):
 
 ``` bash
 git commit -m "WIP"

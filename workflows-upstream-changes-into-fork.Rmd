@@ -18,7 +18,7 @@ There are some tantalizing, janky ways to sort of do parts of this. But they hav
 
 ## Initial conditions
 
-Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal within RStudio for some Git work via *Tools > Terminal > New Terminal*.
+Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal (Appendix \@ref(shell)) within RStudio for some Git work via *Tools > Terminal > New Terminal*.
 
 Make sure you are on the `master` branch and your "working tree is clean". `git status` should show something like:
 
@@ -33,7 +33,7 @@ BTW I recommend that you [never make your own commits to the `master` branch of 
 
 ## List your remotes
 
-Let's inspect [the current remotes](#git-remotes) for your local repo. In the shell:
+Let's inspect [the current remotes](#git-remotes) for your local repo. In the shell (Appendix \@ref(shell)):
 
 ``` bash
 git remote -v

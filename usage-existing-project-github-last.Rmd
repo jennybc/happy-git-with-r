@@ -4,7 +4,7 @@ An explicit workflow for connecting an existing local R project to GitHub, when 
 
 When does this come up? Example: it's an existing project that is already a Git repo with a history you care about. Then you have to do this properly.
 
-This is less desirable for a novice because there are more opportunities to get confused and make a mistake. RStudio and the [usethis](https://cran.r-project.org/package=usethis) package are gradually making this easier, so you can avoid working with Git in the shell. But command line Git remains a viable option. All are covered below.
+This is less desirable for a novice because there are more opportunities to get confused and make a mistake. RStudio and the [usethis](https://cran.r-project.org/package=usethis) package are gradually making this easier, so you can avoid working with Git in the shell (Appendix \@ref(shell)). But command line Git remains a viable option. All are covered below.
 
 ## Make or verify an RStudio Project
 

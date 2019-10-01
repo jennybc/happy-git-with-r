@@ -8,7 +8,7 @@ If you experience some new problem and, especially, find the corresponding solut
 
 When you install Git, try to control or record where it is being installed! Make a mental or physical note of these things.
 
-You may be able to find Git after the fact with these commands in the shell:
+You may be able to find Git after the fact with these commands in the shell (Appendix \@ref(shell)):
 
 * `which git` (Mac, Linux, or anything running a bash shell)
 
