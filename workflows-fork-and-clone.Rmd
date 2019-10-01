@@ -15,7 +15,7 @@ This creates a copy of `REPO` in your GitHub account and takes you there in the 
   * [Existing project, GitHub first](#existing-github-first), an RStudio workflow we've used before.
     - Your fork `YOU/REPO` plays the role of the existing GitHub repo, in this case -- not the original repo!
     - Make a conscious decision about the local destination directory and HTTPS vs SSH URL.
-  * Execute `git clone https://github.com/YOU/REPO.git` (or `git clone git@github.com:YOU/REPO.git`) in the shell.
+  * Execute `git clone https://github.com/YOU/REPO.git` (or `git clone git@github.com:YOU/REPO.git`) in the shell (Appendix \@ref(shell)).
     - Clone your fork `YOU/REPO`-- not the original repo!
     - `cd` to the desired parent directory first. Make a conscious decision about HTTPS vs SSH URL.
     

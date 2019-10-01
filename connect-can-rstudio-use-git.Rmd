@@ -22,7 +22,7 @@ Keep reading if things don't go so well or you want to know more.
 
 RStudio can only act as a GUI front-end for Git if Git has been successfully installed (chapter \@ref(install-git)) **AND RStudio can find it**.
 
-A basic test for successful installation of Git is to simply enter `git` in the shell. If you get a complaint about Git not being found, it means installation was unsuccessful or that it is not being found, i.e. it is not on your `PATH`.
+A basic test for successful installation of Git is to simply enter `git` in the shell (Appendix \@ref(shell)). If you get a complaint about Git not being found, it means installation was unsuccessful or that it is not being found, i.e. it is not on your `PATH`.
 
 If you are not sure where the Git executable lives, try this in a shell:
   
