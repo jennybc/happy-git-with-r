@@ -20,7 +20,7 @@ We assume the following:
 
 Go to <https://github.com> and make sure you are logged in.
 
-Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+Click the green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
 
 How to fill this in:
 
@@ -31,7 +31,7 @@ How to fill this in:
   
 For everything else, just accept the default.
 
-Click big green button "Create repository."
+Click the big green button "Create repository."
 
 Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button.
 
