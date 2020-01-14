@@ -16,6 +16,9 @@ Why install from GitHub instead of CRAN?
 
   * The package is developed on GitHub and you prefer the development version because it has some features or bug fixes not yet on CRAN.
   * You contribute to or use R packages that are in private repositories on GitHub (or GitHub Enterprise). CRAN is not an option.
+  * You want to use helper functions from `usethis` to manage your GitHub projects, including:
+    * `usethis::create_from_github(fork = TRUE)` to fork and clone a GitHub repository.
+    * The `usethis::pr_*()` family of functions (`pr_init()`, `pr_fetch()`, `pr_pull()`, `pr_push()`, etc.) to create, update, and locally review pull requests.
   
 Other reasons to call the GitHub API include doing almost anything you might do in the browser, especially if you need to do it on a grand scale, i.e., create repositories or users or fetch data. I recommend the [`gh` package](https://github.com/gaborcsardi/gh) for this. Which you must install from GitHub!
 
