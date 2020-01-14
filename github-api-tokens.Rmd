@@ -4,6 +4,10 @@ If you Git push or pull via the command line, you can avoid the constant authent
 
 But for some operations you must call the [GitHub API](https://developer.github.com/v3/) (**A**pplication **P**rogramming **I**nterface). And this requires that you [authenticate yourself](https://developer.github.com/v3/#authentication) in a different way.
 
+```{r git-via-ssh-or-https-github-api, echo = FALSE, out.width = "100%", fig.cap = "Ways to authenticate to GitHub's git server and API"}
+knitr::include_graphics("img/git-via-ssh-or-https-github-api.png")
+```
+
 ## GitHub API
 
 The first reason most people need GitHub API access is because they want to use the [`devtools`](https://cran.r-project.org/web/packages/devtools/index.html) package. It is popular for the `devtools::install_github()` function to install directly from GitHub. This is in contrast to installing a package from CRAN via `install.packages()`.
