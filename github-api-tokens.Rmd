@@ -28,18 +28,22 @@ With access via API, what plays the role of the HTTPS username/password or SSH k
 
 You will need to:
 
-  * Obtain a PAT. This is done in the browser.
+  * Obtain a PAT. This is done in the browser or with `usethis::browse_github_pat()`.
   * Store it so packages like `devtools` can find it and use it on your behalf. The path of least resistance is to define it in your `.Renviron` file as the environment variable named `GITHUB_PAT`.
 
 ## Step-by-step
 
-Login to your GitHub account. Go to <https://github.com/settings/tokens>.
+### Create a PAT
 
-"Generate new token". Give it a nickname that reminds you of the intended purpose, e.g., "devtools".
+The easiest way to create a GitHub PAT is with `usethis::browse_github_pat()`. You will be sent to the form to create a PAT, with reasonable default scopes pre-populated.
+
+Alternatively, you can create a PAT by logging in to your GitHub account. Go to <https://github.com/settings/tokens>. "Generate new token". Give it a nickname that reminds you of the intended purpose, e.g., "devtools".
 
 Pick scopes that confer the privileges you need. When in doubt, check the `repo` scope, which is required for typical `devtools` operations. There used to be a set of default scopes, but that no longer appears to be true.
 
 After you click "Generate token", the token will be displayed. It's a string of 40 random letters and digits. This is the last time you will see it SO COPY IT TO THE CLIPBOARD. Leave this window open until you're done. If you somehow goof this up, just generate a new one and try again.
+
+### Add your PAT to .Renviron
 
 Put your PAT in your `.Renviron` file. Have a line that looks like this:
 
