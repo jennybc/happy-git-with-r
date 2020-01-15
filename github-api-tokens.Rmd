@@ -68,10 +68,14 @@ If questioned, YES you do want to use a filename that begins with a dot `.`. Not
 Restart R (*Session > Restart R* in the RStudio menu bar), as environment variables are loaded from `.Renviron` only [at the start of an R session](http://stat.ethz.ch/R-manual/R-patched/library/base/html/Startup.html). Check that the PAT is now available like so:
 
 ```{r eval = FALSE}
-Sys.getenv("GITHUB_PAT")
+usethis::git_sitrep()
 ```
 
-You should see your PAT print to screen. 
+You should see the following line in the output:
+
+```
+* Personal access token: '<found in env var>'
+```
 
 Now commands you run from the `devtools` package, which consults `GITHUB_PAT` by default, will be able to access private GitHub repositories to which you have access, and you can install them with `devtools::install_github('username/reponame')`.
 
