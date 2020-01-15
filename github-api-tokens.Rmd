@@ -4,6 +4,10 @@ If you Git push or pull via the command line, you can avoid the constant authent
 
 But for some operations you must call the [GitHub API](https://developer.github.com/v3/) (**A**pplication **P**rogramming **I**nterface). And this requires that you [authenticate yourself](https://developer.github.com/v3/#authentication) in a different way.
 
+```{r git-via-ssh-or-https-github-api, echo = FALSE, out.width = "100%", fig.cap = "Ways to authenticate to GitHub's git server and API"}
+knitr::include_graphics("img/git-via-ssh-or-https-github-api.png")
+```
+
 ## GitHub API
 
 The first reason most people need GitHub API access is because they want to use the [`devtools`](https://cran.r-project.org/web/packages/devtools/index.html) package. It is popular for the `devtools::install_github()` function to install directly from GitHub. This is in contrast to installing a package from CRAN via `install.packages()`.
@@ -12,6 +16,9 @@ Why install from GitHub instead of CRAN?
 
   * The package is developed on GitHub and you prefer the development version because it has some features or bug fixes not yet on CRAN.
   * You contribute to or use R packages that are in private repositories on GitHub (or GitHub Enterprise). CRAN is not an option.
+  * You want to use helper functions from `usethis` to manage your GitHub projects, including:
+    * `usethis::create_from_github(fork = TRUE)` to fork and clone a GitHub repository.
+    * The `usethis::pr_*()` family of functions (`pr_init()`, `pr_fetch()`, `pr_pull()`, `pr_push()`, etc.) to create, update, and locally review pull requests.
   
 Other reasons to call the GitHub API include doing almost anything you might do in the browser, especially if you need to do it on a grand scale, i.e., create repositories or users or fetch data. I recommend the [`gh` package](https://github.com/gaborcsardi/gh) for this. Which you must install from GitHub!
 
@@ -21,18 +28,22 @@ With access via API, what plays the role of the HTTPS username/password or SSH k
 
 You will need to:
 
-  * Obtain a PAT. This is done in the browser.
+  * Obtain a PAT. This is done in the browser or with `usethis::browse_github_pat()`.
   * Store it so packages like `devtools` can find it and use it on your behalf. The path of least resistance is to define it in your `.Renviron` file as the environment variable named `GITHUB_PAT`.
 
 ## Step-by-step
 
-Login to your GitHub account. Go to <https://github.com/settings/tokens>.
+### Create a PAT
 
-"Generate new token". Give it a nickname that reminds you of the intended purpose, e.g., "devtools".
+The easiest way to create a GitHub PAT is with `usethis::browse_github_pat()`. You will be sent to the form to create a PAT, with reasonable default scopes pre-populated.
+
+Alternatively, you can create a PAT by logging in to your GitHub account. Go to <https://github.com/settings/tokens>. "Generate new token". Give it a nickname that reminds you of the intended purpose, e.g., "devtools".
 
 Pick scopes that confer the privileges you need. When in doubt, check the `repo` scope, which is required for typical `devtools` operations. There used to be a set of default scopes, but that no longer appears to be true.
 
 After you click "Generate token", the token will be displayed. It's a string of 40 random letters and digits. This is the last time you will see it SO COPY IT TO THE CLIPBOARD. Leave this window open until you're done. If you somehow goof this up, just generate a new one and try again.
+
+### Add your PAT to .Renviron
 
 Put your PAT in your `.Renviron` file. Have a line that looks like this:
 
@@ -57,10 +68,14 @@ If questioned, YES you do want to use a filename that begins with a dot `.`. Not
 Restart R (*Session > Restart R* in the RStudio menu bar), as environment variables are loaded from `.Renviron` only [at the start of an R session](http://stat.ethz.ch/R-manual/R-patched/library/base/html/Startup.html). Check that the PAT is now available like so:
 
 ```{r eval = FALSE}
-Sys.getenv("GITHUB_PAT")
+usethis::git_sitrep()
 ```
 
-You should see your PAT print to screen. 
+You should see the following line in the output:
+
+```
+* Personal access token: '<found in env var>'
+```
 
 Now commands you run from the `devtools` package, which consults `GITHUB_PAT` by default, will be able to access private GitHub repositories to which you have access, and you can install them with `devtools::install_github('username/reponame')`.
 
