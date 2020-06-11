@@ -112,14 +112,31 @@ Things get a little OS-specific around here. When in doubt, consult [GitHub's in
 
 #### Mac OS
 
-Make sure ssh-agent is enabled:
+Make sure ssh-agent is enabled. Here's what success look like:
 
 ``` bash
-jenny@2015-mbp ~ $ eval "$(ssh-agent -s)"
+jenny@2020-mbp ~ $ eval "$(ssh-agent -s)"
 Agent pid 95727
 ```
 
-Add your key. If you set a passphrase, you'll be challenged for it here. Give it. The `-K` option stores your passphrase in the keychain.
+Sometimes this fails like so:
+
+``` bash
+jenny@2020-mbp usethis $ eval "$(ssh-agent -s)"
+mkdtemp: private socket dir: No such file or directory
+```
+
+A similar failure might be reported as "Permission denied". You should try again, but as the superuser. Don't forget to use `exit` to go back to your normal user account, when you are done!
+
+``` bash
+jenny@2020-mbp ~ $ sudo su
+Password:
+sh-3.2# eval "$(ssh-agent -s)"
+Agent pid 18772
+sh-3.2# exit
+```
+
+Add your key to the ssh agent. If you set a passphrase, you'll be challenged for it here. Give it. The `-K` option stores your passphrase in the keychain.
 
 ``` bash
 jenny@2015-mbp ~ $ ssh-add -K ~/.ssh/id_rsa
