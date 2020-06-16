@@ -1,4 +1,4 @@
-# (PART) Remote scenarios {-} 
+# (PART) Remote setups {-} 
 
 # Git remote setups {#remote-scenarios-intro .unnumbered}
 

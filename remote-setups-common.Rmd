@@ -1,4 +1,4 @@
-# Supported remote setups {#supported}
+# Common remote setups {#common-remote-setups}
 
 We only consider a very constrained set of remotes here:
 
@@ -98,7 +98,7 @@ This is a less common variation on the fork setup.
 knitr::include_graphics("img/fork-ours.png")
 ```
 
-In this case, you have permission to push to the primary repo, but you elect to create a personal fork anyway. Certain projects favor this approach and it offers maximum development flexibility for advanced users. However, most users are better-served by the simpler "ours" setup in this case.
+In this case, you have permission to push to the primary repo, but you elect to create a personal fork anyway. Certain projects favor this approach and it offers maximum development flexibility for advanced users. However, most users are better served by the simpler "ours" setup in this case.
 
 `usethis::create_from_github("OWNER/REPO", fork = TRUE)` can create this setup, as long as you have configured a `GITHUB_PAT`. usethis describes this setup as "fork".
  
