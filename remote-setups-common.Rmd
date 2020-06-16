@@ -120,4 +120,4 @@ If you only plan to make one pull request, this setup is fine. When the exchange
 
 You can add the primary repo as `upstream` in the shell or with `usethis::use_git_remote()`. Next time you do fork-and-clone, consider using `usethis::create_from_github(fork = TRUE)` instead. In addition to configuring the necessary remotes, `create_from_github()` implements other config that is favorable for making pull requests.
 
-Even though `upstream` is not (yet) configured, usethis still describes this setup as "fork".
+usethis describes this setup as "fork_no_upstream".
