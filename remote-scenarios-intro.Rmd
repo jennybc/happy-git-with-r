@@ -1,0 +1,9 @@
+# (PART) Remote scenarios {-} 
+
+# Git remote setups {#remote-scenarios-intro .unnumbered}
+
+The previous part ended with some basics about [Git remotes](#git-remotes), such as how to define or rename one. Recall that a Git remote is another copy of the repo, usually living elsewhere (hence the term "remote"), that you can pull changes from or push changes to. Remotes are the foundation for all collaborative Git work.
+
+But knowing the mechanics of how to add or rename a remote does little good if you don't know *why* or *when* to do it. Luckily, we have very strong opinions about how you should set up your remotes, all motivated by getting you prepared for smooth, happy collaborative work.
+
+In this part we describe various remote setups that are common (for better or worse) and what they are good for (or what's wrong with them and how to fix).

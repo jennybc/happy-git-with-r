@@ -40,6 +40,10 @@ rmd_files: [
   "git-branches.Rmd",
   "git-remotes.Rmd",
 
+  "remote-scenarios-intro.Rmd",
+  "remote-scenarios-supported.Rmd",
+  "remote-scenarios-unsupported.Rmd",
+
   "workflows-intro.Rmd",
   "workflows-repeated-amend.Rmd",
   "workflows-push-rejected.Rmd",
