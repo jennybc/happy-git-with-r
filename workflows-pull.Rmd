@@ -134,7 +134,7 @@ As above, we have just enjoyed a fast-forward merge, made possible by temporaril
 
 If your local changes have some overlap with changes you are pulling, you will, instead get a merge conflict from `git stash pop`. Now you have some remedial work to do. In this case, you have gained nothing by using `git stash` in the first place, which explains my general lack of enthusiasm for `git stash`.
 
-Here how to execute the `git stash` workflow in our example, in the face of conflicts (based on [this Stack Overflow answer](https://stackoverflow.com/a/27382210/2825349)):
+Here's how to execute the `git stash` workflow in our example, in the face of conflicts (based on [this Stack Overflow answer](https://stackoverflow.com/a/27382210/2825349)):
 
 ``` sh
 jenny@2015-mbp ethel $ git stash save
