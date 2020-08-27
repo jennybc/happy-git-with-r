@@ -9,7 +9,7 @@ evolution of a set of files -- called a __repository__ or __repo__ -- in a highl
 Git has been re-purposed by the data science community [@Ram2013;
 @git-for-humans; @ten-simple-rules-git]. We use it to manage the motley collection of files that make up typical data analytical projects, which consist of data, figures, reports, and, yes, some source code.
 
-For new or existing projects, we recommand that you:
+For new or existing projects, we recommend that you:
 
   * Dedicate a local directory or folder to it.
   * Make it an RStudio Project. *Optional but recommended; obviously only applies to projects involving R and users of RStudio.*
