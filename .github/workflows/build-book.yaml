@@ -16,25 +16,18 @@ jobs:
   build:
     runs-on: macOS-latest
     env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
       NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
       isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
     steps:
-      - name: Checkout repo
         uses: actions/checkout@v2
 
-      - name: Setup R
-        uses: r-lib/actions/setup-r@master
+      - uses: r-lib/actions/setup-r@v1
         with:
           crayon.enabled: 'FALSE'
-          
-      - uses: r-lib/actions/setup-pandoc@master
 
-      - name: Get R version
-        id: get-r-version
-        run: |
-          echo "::set-output name=version::$(Rscript -e 'cat(as.character(getRversion()))')"
-        shell: bash
+      - uses: r-lib/actions/setup-pandoc@v1
 
       - name: Cache R packages
         uses: actions/cache@v2
@@ -46,8 +39,8 @@ jobs:
         uses: actions/cache@v2
         with:
           path: _bookdown_files
-          key: bookdown-9-${{ hashFiles('**/*Rmd') }}
-          restore-keys: bookdown-9-
+          key: bookdown-1-${{ hashFiles('**/*Rmd') }}
+          restore-keys: bookdown-1-
 
       - name: Install pak
         run: |
@@ -63,7 +56,7 @@ jobs:
         run: |
           pak::local_install_dev_deps()
         shell: Rscript {0}
- 
+
       - name: Session info
         run: |
           options(width = 100)
@@ -78,9 +71,6 @@ jobs:
 
       - name: Build site
         run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
-
-      - name: Copy
-        run: cp _redirects _book/
 
       - name: Deploy to Netlify
         if: contains(env.isExtPR, 'false')
