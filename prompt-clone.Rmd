@@ -17,4 +17,4 @@ Once you have the code locally, try to run some of it. Try to understand how it 
 
 Do you want to make a change? Fine do that!
 
-Do you want to send changes back to the original author? Now you have firsthand knowledge of when you should *fork instead of clone*. See chapter \@ref(fork).
+Do you want to send changes back to the original author? Now you have firsthand knowledge of when you should *fork instead of clone*. See chapter \@ref(fork-and-clone).
