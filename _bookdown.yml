@@ -42,7 +42,7 @@ rmd_files: [
 
   "remote-setups-intro.Rmd",
   "remote-setups-common.Rmd",
-  "remote-setups-peculiar.Rmd",
+  "remote-setups-equivocal.Rmd",
 
   "workflows-intro.Rmd",
   "workflows-repeated-amend.Rmd",

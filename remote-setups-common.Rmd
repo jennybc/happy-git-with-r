@@ -21,7 +21,7 @@ This is not very exciting, but sets the stage for what's to come. We introduce t
 
 `usethis::use_git()` can create this setup in a local project, i.e. it initializes a Git repo. usethis describes this setup as "no_github".
 
-## Ours (more specifically, mine)
+## Ours (more specifically, mine) {#ours-you}
 
 A common next step is to associate a local repo with a copy on GitHub, owned by you.
 
@@ -33,7 +33,7 @@ A remote named `origin` is configured and you have permission to push to (and pu
 
 `usethis::use_github()` can create this setup from a local repository, as long as you have configured a GitHub personal access token. usethis describes this setup as "ours".
 
-## Ours
+## Ours {#ours-them}
 
 Here is a variation on "ours" that is equivalent in practice.
 
@@ -55,7 +55,7 @@ Way to get here with usethis:
 
 usethis describes this setup as "ours".
 
-## Theirs
+## Theirs {#theirs}
 
 This is a setup that many people get themselves into, when it's not actually what they need. It's not broken *per se*, but it's limiting.
 
@@ -76,7 +76,7 @@ usethis describes this setup as "theirs".
 
 What if you do want to make a pull request? This means you should have done *fork-and-clone* instead of *clone*. If you've made no changes or they're easy to save somewhere temporarily, just start over with a fork-and-clone workflow (see below) and re-introduce your changes. It is also possible to preserve your work in a local branch, fork the primary repo, re-configure your remotes, re-sync up with the source repo, and get back on track. But this is much easier to goof up. And remember to use `usethis::create_from_github(fork = TRUE)` in the future!
 
-## Fork (of theirs)
+## Fork (of theirs) {#fork-them}
 
 This is an ideal setup if you want to make a pull request and generally follow the development of a source repo owned by someone else.
 
@@ -102,7 +102,7 @@ In this case, you have permission to push to the source repo, but you elect to c
 
 `usethis::create_from_github("OWNER/REPO", fork = TRUE)` can create this setup, as long as you have configured a GitHub personal access token (PAT). usethis describes this setup as "fork".
  
-## Fork (salvageable)
+## Fork (salvageable) {#fork_upstream_is_not_origin_parent}
 
 Here is one last fork setup that's sub-optimal, but it can be salvaged.
 

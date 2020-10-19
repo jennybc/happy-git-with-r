@@ -5,12 +5,12 @@ library(here)
 
 # TODO: soon, I should move the source Keynote document (or part of it)
 # into this project
-img_paths <- dir_ls("~/rrr/happy-git-with-r-slides/github-configs/2020-06_usethis-motivated-git-diagrams/")
+exported_paths <- dir_ls("~/rrr/happy-git-with-r-slides/github-configs/2020-06_usethis-motivated-git-diagrams/")
 
-path_file(img_paths)
+path_file(exported_paths)
 
 # practicing
-y <- image_read(img_paths[[2]])
+y <- image_read(exported_paths[[2]])
 y
 
 # wow much fiddling here to get the crop geometry right
@@ -20,7 +20,11 @@ z %>%
   image_border(color = "blue")
 
 # doing it to all figs
-dir_create(here("img", "github-configs"))
+dir <- here("img", "github-configs")
+dir_create(dir)
+# clean out previous attempts
+dir_ls(dir) %>%
+  file_delete()
 
 f <- function(file) {
   file %>%
@@ -29,16 +33,14 @@ f <- function(file) {
     image_write(here("img", "github-configs", path_file(file)))
 }
 
-walk(img_paths, f)
+walk(exported_paths, f)
 
-cropped_paths <- dir_ls(here("img", "github-configs"))
+cropped_paths <- dir_ls(dir)
 
-path_file(img_paths)
+path_file(cropped_paths)
 
-name_dat <- tibble(
-  raw = path_file(img_paths)
-) %>%
-  mutate(number = str_extract(raw, "\\d+(?=[.]jpeg$)"))
+name_dat <- tibble(filename = path_file(cropped_paths)) %>%
+  mutate(number = str_extract(filename, "\\d+(?=[.]jpeg$)"))
 
 usethis_labels <- tribble(
   ~ number, ~ label,
@@ -49,7 +51,9 @@ usethis_labels <- tribble(
   "005", "fork-them",
   "006", "fork-them-pull-request",
   "007", "fork-ours",
-  "008", "fork_upstream_is_not_origin_parent"
+  "008", "fork_upstream_is_not_origin_parent",
+  "009", "maybe_ours_or_theirs",
+  "010", "maybe_fork"
 )
 
 name_dat <- name_dat %>%
@@ -57,5 +61,6 @@ name_dat <- name_dat %>%
 
 file_copy(
   cropped_paths,
-  here("img", path_ext_set(name_dat$label, "png"))
+  here("img", path_ext_set(name_dat$label, "png")),
+  overwrite = TRUE
 )
