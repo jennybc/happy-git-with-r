@@ -34,7 +34,7 @@ Once a PAT is available, this setup can be identified as being ["ours" (belongin
 
 ## Maybe fork
 
-When we detect just two GitHub remotes, but we can't verify the info above, usethis describes the setup as "maybe_fork".
+When we detect two GitHub remotes, but we can't verify the info above, usethis describes the setup as "maybe_fork".
 
 ```{r maybe_fork, echo = FALSE, out.width = "60%"}
 knitr::include_graphics("img/maybe_fork.png")
