@@ -58,6 +58,12 @@ How to achieve if the local repo exists first:
       window where you can create the `origin` remote with this URL. This
       workflow is described in
       [Existing project, GitHub last](#existing-github-last).
+    - Even now, the setup may not be ideal, because upstream tracking
+      relationships are probably not setup, which means you may not be able to
+      push and pull easily. You may need to explicitly configure an upstream
+      tracking branch for one or more local branches. Next time you want to
+      create a GitHub repo from a local repo, consider using
+      `usethis::use_github()`, which completes all of this setup in one go.
     
 How to achieve if the remote repo exists first:
 
