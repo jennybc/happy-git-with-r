@@ -47,7 +47,7 @@ Click the big blue button "Create repository."
 
 Copy the HTTPS or SSH clone URL that appears when you click on the blue "Clone" button. Make sure you remove the `git clone ...` that shows up at the beginning.
 
-## New RStudio Project via git clone
+## New RStudio Project via git clone {#new-rstudio-project-via-git}
 
 In RStudio, start a new Project:
 
