@@ -92,7 +92,7 @@ Instead it's owned by another GitHub user or organisation.
 How does this happen?
 
 1. The source repo is owned by an organisation and your role in this organisation confers enough power to create repos or to push to this repo.
-2. The owner of the primary repo has added you, specifically, as a collaborator to this specific repo.
+2. The owner of the source repo has added you, specifically, as a collaborator to this specific repo.
 
 How to achieve? The procedure is the same as for the previous "ours" setup. But remember to specify `usethis::use_github(organisation = "ORGNAME")` if you want to create a new repo under an organisation, instead of your personal account.
 
@@ -156,7 +156,7 @@ How to achieve:
       ["fork (salvageable)"](#fork_upstream_is_not_origin_parent), below.
     - You still need to add the source repo as the `upstream` remote. Capture
       the HTTPS or SSH URL of the **source repo**. At the command line, do `git
-      remote add origin <SOURCE_URL>` or click RStudio's *New Branch* button,
+      remote add upstream <SOURCE_URL>` or click RStudio's *New Branch* button,
       which brings up a window where you can add the `upstream` remote.
     - Even then, the setup may not be ideal, because your local default branch
       is probably tracking `origin`, not `upstream`, which is preferable for
@@ -207,7 +207,7 @@ Fix this by adding the source repo as your `upstream` remote.
 Capture the HTTP or SSH URL of the **source repo** and then:
 
   * With usethis: `usethis::use_git_remote(name = "upstream", url = "SOURCE_URL")`
-  * Command line Git: `git remote add origin <SOURCE_URL>`
+  * Command line Git: `git remote add upstream <SOURCE_URL>`
   * With RStudio: click the *New Branch* button, which brings up a window where
     you can add the `upstream` remote with this URL.
 
