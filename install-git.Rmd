@@ -53,10 +53,9 @@ After you install Chocolatey, in a shell (Appendix \@ref(shell)), do:
 choco install git.install
 ```
 
-This installs the most current [Git (Install) X.Y.Z](https://chocolatey.org/packages/git.install) Chocolatey package. At the time of writing, that is "Git (Install) 2.20.1", but that version number will increment over time.
+This installs the most current [Git (Install) X.Y.Z](https://chocolatey.org/packages/git.install) Chocolatey package. At the time of writing, that is "Git (Install) 2.29.2.2", but that version number will increment over time.
 
-If you [search Chocolatey packages](https://chocolatey.org/packages) yourself, you might see two packages that install Git -- "Git (Install) 2.20.1" and "Git 2.20.1", at the time of writing. I believe "Git (Install) 2.20.1" is technically the more correct, but I also think it doesn't really matter which one you use. A rather confusing explanation is found [here](https://chocolatey.org/faq#what-is-the-difference-between-packages-no-suffix-as-compared-to-install-portable). Don't worry too much about whether you do `choco install git.install` or `choco install git`.
-  
+If you [search Chocolatey packages](https://chocolatey.org/packages) yourself, you might see two packages that install Git -- "Git (Install) 2.29.2.2" and "Git 2.29.2.2", at the time of writing. I believe "Git (Install) 2.29.2.2" is technically the more correct, but I also think it doesn't really matter which one you use. A rather confusing explanation is found [here](https://chocolatey.org/docs/chocolatey-faqs#what-is-the-difference-between-packages-no-suffix-as-compared-toinstallportable). Don't worry too much about whether you do `choco install git.install` or `choco install git`.
 
 ## macOS
 
