@@ -11,7 +11,7 @@ merging them back together quickly.
 
 ## Create a new branch
 
-You can create a new branch with `git branch`, then checkout the branch with `git checkout`. To distinguish it from the main stream of development, presumably on `master`, we'll call this a "feature branch".
+You can create a new branch with `git branch`, then checkout the branch with `git checkout`. To distinguish it from the main stream of development, presumably on `main`, we'll call this a "feature branch".
 
 ```shell
 git branch issue-5
@@ -34,7 +34,7 @@ use "WIP" as the commit message to indicate work in progress.
 
 ```shell
 git commit --all -m "WIP"
-git checkout master
+git checkout main
 ```
 
 Then when you come back to the branch and continue your work, you
@@ -49,10 +49,10 @@ If this is difficult to remember, or to roll the commit state back to a differen
 
 ## Merging a branch
 
-Once you have done your work and committed it to the feature branch, you can switch back to `master` and merge the feature branch.
+Once you have done your work and committed it to the feature branch, you can switch back to `main` and merge the feature branch.
 
 ```shell
-git checkout master
+git checkout main
 git merge issue-5
 ```
 
@@ -77,7 +77,7 @@ conflict, which you can do with `git status`:
 
 ```shell
 git status
-# On branch master
+# On branch main
 # You have unmerged paths.
 #   (fix conflicts and run "git commit")
 # 

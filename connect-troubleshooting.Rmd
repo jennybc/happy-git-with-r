@@ -78,7 +78,7 @@ git remote add origin https://github.com/jennybc/myrepo.git
 Download all the files from the online GitHub repository and deal with any conflicts.
   
 ``` sh
-git pull origin master
+git pull origin main
 ```
 
 Call `git remote -v` again. Once you can prove that your GitHub remote is set properly, you can move on to the next step.
@@ -87,22 +87,22 @@ Are you sure the current branch is *tracking* a branch on the remote? In that sa
 
 ``` sh
 jenny@2015-mbp myrepo $ git branch -vv
-* master b8e03e3 [origin/master] line added locally
+* main b8e03e3 [origin/main] line added locally
 ```
 
-The above shows successful confirmation that the local `master` branch is tracking `origin/master`, i.e. the master branch on GitHub. If you don't see the `[origin/master]` bit, that is a problem. By the way, `git branch -r` is another handy way to examine your remote-tracking branches. (If you're working with a branch other than `master`, adjust everything accordingly.)
+The above shows successful confirmation that the local `main` branch is tracking `origin/main`, i.e. the main branch on GitHub. If you don't see the `[origin/main]` bit, that is a problem. By the way, `git branch -r` is another handy way to examine your remote-tracking branches. (If you're working with a branch other than `main`, adjust everything accordingly.)
 
 When connecting a local repo to a new GitHub repo, a lot of people remember to add the GitHub remote, but forget to also cement this tracking relationship for any relevant branches.
 
-If you discover your local `master` branch is not yet tracking `master` on GitHub, fix that like so:
+If you discover your local `main` branch is not yet tracking `main` on GitHub, fix that like so:
   
 ``` sh
-git push --set-upstream origin master
+git push --set-upstream origin main
 ```
 
-This is equivalent to `git push -u origin master` but conveys more about what you are doing.
+This is equivalent to `git push -u origin main` but conveys more about what you are doing.
 
-Call `git branch -vv` or `git branch -r` again to confirm that the `master` branch on GitHub is the upstream or tracking branch for the local `master` branch.
+Call `git branch -vv` or `git branch -r` again to confirm that the `main` branch on GitHub is the upstream or tracking branch for the local `main` branch.
 
 ## I have no idea if my local repo and my remote repo are connected.
 
@@ -119,7 +119,7 @@ error: unable to read askpass response from 'rpostback-askpass'
 Open the shell: *Tools > Shell*.
 
 ``` shell
-git push -u origin master
+git push -u origin main
 ```
 
 ## Push rejected, i.e. fail at the Git/GitHub level

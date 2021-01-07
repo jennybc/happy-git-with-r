@@ -8,9 +8,9 @@ How do you checkout and possibly extend an external PR?
 
 Vocabulary I use throughout.
 
-**fork branch** The name of the branch in the fork from which the PR was made. Best case scenario: informative name like `fix-fluffy-bunny`. Worst case scenario: PR is from `master`.
+**fork branch** The name of the branch in the fork from which the PR was made. Best case scenario: informative name like `fix-fluffy-bunny`. Worst case scenario: PR is from `main`.
 
-**local PR branch** The name of the local branch you'll use to work with the PR. Best case scenario: can be same as fork branch. Worse case scenario: PR is from `master`, so you must make up a new name based on something about the PR, e.g. `pr-666` or `janedoe-master`.
+**local PR branch** The name of the local branch you'll use to work with the PR. Best case scenario: can be same as fork branch. Worse case scenario: PR is from `main`, so you must make up a new name based on something about the PR, e.g. `pr-666` or `janedoe-main`.
 
 **PR parent** The SHA of the commit in the main repo that is the base for the PR.
 
@@ -25,10 +25,10 @@ Here are their steps with my vocabulary and some example commands:
   * Create and check out the local PR branch, anticipating its relationship to the fork branch. Template of the Git command, plus an example of how it looks under both naming scenarios:
 
         # Template of the Git command
-        git checkout -b LOCAL_PR_BRANCH master 
+        git checkout -b LOCAL_PR_BRANCH main 
         # How it looks under both naming scenarios
-        git checkout -b fix-fluffy-bunny master 
-        git checkout -b janedoe-master master 
+        git checkout -b fix-fluffy-bunny main 
+        git checkout -b janedoe-main main 
     
   * Pull from the fork branch of the PR remote:
         
@@ -36,24 +36,24 @@ Here are their steps with my vocabulary and some example commands:
         git pull REMOTE FORK_PR_BRANCH
         # How it looks under both naming scenarios
         git pull https://github.com/janedoe/yourpackage.git fix-fluffy-bunny
-        git pull https://github.com/janedoe/yourpackage.git master
+        git pull https://github.com/janedoe/yourpackage.git main
   
   * Satisfy yourself that all is well and you want to merge.
-  * Checkout `master`:
+  * Checkout `main`:
   
-        git checkout master
+        git checkout main
   
-  * Merge the local PR branch into master with `--no-ff`, meaning "no fast forward merge". This ensures you get a true merge commit, with two parents.
+  * Merge the local PR branch into main with `--no-ff`, meaning "no fast forward merge". This ensures you get a true merge commit, with two parents.
   
         # Template of the Git command
         git merge --no-ff LOCAL_PR_BRANCH
         # How it looks under both naming scenarios
         git merge --no-ff fix-fluffy-bunny
-        git merge --no-ff janedoe-master
+        git merge --no-ff janedoe-main
   
-  * Push `master` to GitHub.
+  * Push `main` to GitHub.
   
-        git push origin master
+        git push origin main
   
 What's not to like? The parent commit of the local PR branch will almost certainly not be the parent commit of the fork PR branch, where the external contributor did their work. This often means you get merge conflicts in `git pull`, which you'll have to deal with ASAP. The older the PR, the more likely this is and the hairier the conflicts will be.
 
@@ -83,7 +83,7 @@ My main takeaway: maintainer can push to the branch of a fork associated with a 
 
 This combines ideas from the three above approaches, but with a few tweaks. I am sketching this up in R code, with the hope of putting this into a function and package at some point. This is a revision of an earlier approach, based on feedback from Jim Hester.
 
-Example of a PR from the `master` branch (suboptimal but often happens) from fictional GitHub user `abcde` on usethis.
+Example of a PR from the `main` branch (suboptimal but often happens) from fictional GitHub user `abcde` on usethis.
 
 ```{r, eval = FALSE}
 library(git2r)
@@ -96,19 +96,19 @@ fetch(name = "abcde")
 
 ## list remote branches and isolate the one I want
 b <- branches(flags = "remote")
-b <- b[["abcde/master"]]
+b <- b[["abcde/main"]]
 
 ## get the SHA of HEAD on this branch
 sha <- branch_target(b)
 
 ## create local branch
-branch_create(commit = lookup(sha = sha), name = "abcde-master")
+branch_create(commit = lookup(sha = sha), name = "abcde-main")
 
 ## check it out
-checkout(object = ".", branch = "abcde-master")
+checkout(object = ".", branch = "abcde-main")
 
 ## set upstream tracking branch
-branch_set_upstream(repository_head(), name = "abcde/master")
+branch_set_upstream(repository_head(), name = "abcde/main")
 
 ## confirm upstream tracking branch
 branch_get_upstream(repository_head())

@@ -49,11 +49,11 @@ or your files in any way. To incorporate the data into your repository, you need
 # Fetch the data
 git fetch happygit
 
-# Now merge it with our local master
-git merge happygit/master master
+# Now merge it with our local main
+git merge happygit/main main
 
 # git pull is a shortcut which does the above in one command
-git pull happygit master
+git pull happygit main
 ```
 
 For more detail on `git pull` workflows, see \@ref(pull-tricky).
@@ -64,8 +64,8 @@ Use `git push <remote> <branch>` to push your local changes to the `<branch>`
 branch on the `<remote>` remote.
 
 ```shell
-# push my local changes to the origin remote's master branch
-git push origin master
+# push my local changes to the origin remote's main branch
+git push origin main
 
 # push my local changes to the happygit remote's test branch
 git push happygit test
@@ -99,7 +99,7 @@ git remote add origin git@github.com:jimhester/happy-git-with-r.git
 ## Upstream tracking branches
 
 It is possible to set the branch on the remote each of your local remotes
-corresponds to. `git clone` sets this up automatically, so for your own master
+corresponds to. `git clone` sets this up automatically, so for your own main
 branch this is not something you will run into. However by default if you
 create a new branch and try to push to it you will see something like this.
 

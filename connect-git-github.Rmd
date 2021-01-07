@@ -71,13 +71,13 @@ jenny@2015-mbp myrepo $ git remote show origin
 * remote origin
   Fetch URL: https://github.com/jennybc/myrepo.git
   Push  URL: https://github.com/jennybc/myrepo.git
-  HEAD branch: master
+  HEAD branch: main
   Remote branch:
-    master tracked
+    main tracked
   Local branch configured for 'git pull':
-    master merges with remote master
+    main merges with remote main
   Local ref configured for 'git push':
-    master pushes to master (up to date)
+    main pushes to main (up to date)
 ```
 
 ## Make a local change, commit, and push
@@ -94,8 +94,8 @@ This should look something like this:
 ``` bash
 jenny@2015-mbp myrepo $ echo "A line I wrote on my local computer" >> README.md
 jenny@2015-mbp myrepo $ git status
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
   (use "git checkout -- <file>..." to discard changes in working directory)
@@ -121,7 +121,7 @@ This should look something like this:
 jenny@2015-mbp myrepo $ git add -A
 
 jenny@2015-mbp myrepo $ git commit -m "A commit from my local computer"
-[master de669ba] A commit from my local computer
+[main de669ba] A commit from my local computer
  1 file changed, 1 insertion(+)
  
 jenny@2015-mbp myrepo $ git push
@@ -131,7 +131,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 311 bytes | 0 bytes/s, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To https://github.com/jennybc/myrepo.git
-   b4112c5..de669ba  master -> master
+   b4112c5..de669ba  main -> main
 ```
 
 ### Windows and line endings

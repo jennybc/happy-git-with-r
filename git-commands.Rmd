@@ -45,12 +45,12 @@ git remote --verbose
 git remote show origin
 ```
 
-Push local master to GitHub master and have local master track master on GitHub:
+Push local main to GitHub main and have local main track main on GitHub:
 
 ``` bash
-git push --set-upstream origin master
+git push --set-upstream origin main
 ## shorter form
-git push -u origin master
+git push -u origin main
 ## you only need to set upstream tracking once!
 ```
 
@@ -59,7 +59,7 @@ Regular push:
 ``` bash
 git push 
 ## the above usually implies (and certainly does in our tutorial)
-git push origin master
+git push origin main
 ## git push [remote-name] [branch-name]
 ```
 

@@ -76,7 +76,7 @@ You can do this in the shell or, with recent versions of RStudio, via RStudio.
 
 Click on the "two purple boxes and a white square" in the Git pane. Click "Add remote". Paste the URL here and pick a remote name, almost certainly `origin`. Now "Add".
 
-We should be back in the "New Branch" dialog (if not, click on the "two purple boxes and a white square" in the Git pane again). I assume you're on the `master` branch want it to track `master` on GitHub. Enter `master` as the branch name and make sure "Sync branch with remote" is checked. Click "Create" (yes, even though the branch already exists). In the next dialog, choose "overwrite".
+We should be back in the "New Branch" dialog (if not, click on the "two purple boxes and a white square" in the Git pane again). I assume you're on the `main` branch want it to track `main` on GitHub. Enter `main` as the branch name and make sure "Sync branch with remote" is checked. Click "Create" (yes, even though the branch already exists). In the next dialog, choose "overwrite".
 
 ### In the shell
 
@@ -84,9 +84,9 @@ In a shell, do this, substituting your URL:
 
         git remote add origin https://github.com/jennybc/myrepo.git
 
-Push and cement the tracking relationship between your local `master` branch and `master` on GitHub:
+Push and cement the tracking relationship between your local `main` branch and `main` on GitHub:
   
-        git push --set-upstream origin master
+        git push --set-upstream origin main
 
 ## Confirm the local files propagated to the GitHub remote
 

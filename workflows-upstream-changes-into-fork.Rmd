@@ -20,16 +20,16 @@ There are some tantalizing, janky ways to sort of do parts of this. But they hav
 
 Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal (Appendix \@ref(shell)) within RStudio for some Git work via *Tools > Terminal > New Terminal*.
 
-Make sure you are on the `master` branch and your "working tree is clean". `git status` should show something like:
+Make sure you are on the `main` branch and your "working tree is clean". `git status` should show something like:
 
 ``` bash
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
 
-BTW I recommend that you [never make your own commits to the `master` branch of a fork](#dont-touch-master). However, if you have already done so, we are going to address your sorry situation below.
+BTW I recommend that you [never make your own commits to the `main` branch of a fork](#dont-touch-main). However, if you have already done so, we are going to address your sorry situation below.
 
 ## List your remotes
 
@@ -120,31 +120,31 @@ Now we can pull the changes that we don't have from `OWNER/REPO` into our local 
 
 
 ``` bash
-git pull upstream master --ff-only
+git pull upstream main --ff-only
 ```
 
-This says: "pull the changes from the remote known as `upstream` into the `master` branch of my local repo". We are being explicit about the remote and the branch in this case, because (as our `git remote -v` commands reveal), `upstream/master` is **not** the default tracking branch for local `master`.
+This says: "pull the changes from the remote known as `upstream` into the `main` branch of my local repo". We are being explicit about the remote and the branch in this case, because (as our `git remote -v` commands reveal), `upstream/main` is **not** the default tracking branch for local `main`.
 
-I **highly recommend** using the `--ff-only` flag in this case, so that you also say "if I have made my own commits to `master`, please force me to confront this problem NOW". Here's what it looks like if a fast-forward merge isn't possible:
+I **highly recommend** using the `--ff-only` flag in this case, so that you also say "if I have made my own commits to `main`, please force me to confront this problem NOW". Here's what it looks like if a fast-forward merge isn't possible:
 
 ``` bash
-$ git pull upstream master --ff-only
+$ git pull upstream main --ff-only
 From github.com:OWNER/REPO
- * branch              master     -> FETCH_HEAD
+ * branch              main     -> FETCH_HEAD
 fatal: Not possible to fast-forward, aborting.
 ```
 
-See [Um, what if I did touch `master`?](#touched-master) to get yourself back on the happy path.
+See [Um, what if I did touch `main`?](#touched-main) to get yourself back on the happy path.
 
-## Push these changes to `origin/master`
+## Push these changes to `origin/main`
 
 This is, frankly, totally optional and many people who are facile with Git do not bother.
 
-If you take my advice to [never work in `master` of a fork](#dont-touch-master), then the state of the `master` branch in your fork `YOU/REPO` does not matter. You will never make a pull request from `master`.
+If you take my advice to [never work in `main` of a fork](#dont-touch-main), then the state of the `main` branch in your fork `YOU/REPO` does not matter. You will never make a pull request from `main`.
 
 If, however, your grasp of all these Git concepts is tenuous at best, it can be helpful to try to keep things simple and orderly and synced up.
 
-Feel free to push the newly updated state of local `master` to your fork `YOU/REPO` and enjoy the satisfaction of being "caught up" with `OWNER/REPO`.
+Feel free to push the newly updated state of local `main` to your fork `YOU/REPO` and enjoy the satisfaction of being "caught up" with `OWNER/REPO`.
 
 In the shell:
 
@@ -154,7 +154,7 @@ git push
 
 Or use the green "Push" button in RStudio.
 
-## Um, what if I did touch `master`? {#touched-master}
+## Um, what if I did touch `main`? {#touched-main}
 
 I told you not to!
 
@@ -166,7 +166,7 @@ Let's imagine this is the state of the original repo `OWNER/REPO`:
 ... -- A -- B -- C -- D -- E -- F
 ```
 
-and and this is the state of the `master` branch in your local copy:
+and and this is the state of the `main` branch in your local copy:
 
 ``` bash
 ... -- A -- B -- C -- X -- Y -- Z
@@ -174,11 +174,11 @@ and and this is the state of the `master` branch in your local copy:
 
 The two histories agree, up to commit or state `C`, then they diverge.
 
-If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!). Then checkout `master` via `git checkout master`.
+If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!). Then checkout `main` via `git checkout main`.
 
 I now assume you have either preserved the work in `X`, `Y`, and `Z` (with a branch) or have decided to let it go.
 
-Do a hard reset of the `master` branch to `C`.
+Do a hard reset of the `main` branch to `C`.
 
 ``` bash
 git reset --hard C
@@ -186,7 +186,7 @@ git reset --hard C
 
 You will have to figure out how to convey `C` in Git-speak. Specify it relative to `HEAD` or provide the SHA. See *future link about resets* for more support.
 
-The instructions above for pulling changes from upstream should now work. Your `master` branch should reflect the history of `OWNER/REPO`:
+The instructions above for pulling changes from upstream should now work. Your `main` branch should reflect the history of `OWNER/REPO`:
 
 ``` bash
 ... -- A -- B -- C -- D -- E -- F
@@ -196,9 +196,9 @@ If you chose to create a branch with your work, you will also have that locally:
 
 
 ``` bash
-... -- A -- B -- C -- D -- E -- F (master)
+... -- A -- B -- C -- D -- E -- F (main)
                    \
                     -- X -- Y -- Z (my-great-innovations)
 ```
 
-If you pushed your alternative history (with commits `X`, `Y`, and `Z`) to your fork `YOU/REPO` and you like keeping everything synced up, you will also need to force push `master` via `git push --force`, but we really really don't like discussing force pushes in Happy Git. We only do so here, because we are talking about a fork, which is fairly easy to replace if things so sideways.
+If you pushed your alternative history (with commits `X`, `Y`, and `Z`) to your fork `YOU/REPO` and you like keeping everything synced up, you will also need to force push `main` via `git push --force`, but we really really don't like discussing force pushes in Happy Git. We only do so here, because we are talking about a fork, which is fairly easy to replace if things so sideways.

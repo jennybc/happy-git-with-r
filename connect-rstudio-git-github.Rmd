@@ -67,7 +67,7 @@ From RStudio:
 Click the green "Push" button to send your local changes to GitHub. If you are challenged for username and password, provide them (but see below). You should see some message along these lines.
 
 ``` bash
-[master dc671f0] blah
+[main dc671f0] blah
  3 files changed, 22 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 myrepo.Rproj

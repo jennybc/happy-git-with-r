@@ -62,7 +62,7 @@ In RStudio, start a new Project:
 
 This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
 
-There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is added as a remote for your local repo and your local `master` branch is now tracking `master` on GitHub. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes and tracking branches on the command line.
+There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is added as a remote for your local repo and your local `main` branch is now tracking `main` on GitHub. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes and tracking branches on the command line.
 
 ### Optional: peek under the hood
 
@@ -76,11 +76,11 @@ origin  git@github.com:jennybc/myrepo.git (fetch)
 origin  git@github.com:jennybc/myrepo.git (push)
 ```
 
-`git branch -vv` prints info about the current branch. In particular, we can see that local `master` is tracking the `master` branch on `origin`, a.k.a. `origin/master`.
+`git branch -vv` prints info about the current branch. In particular, we can see that local `main` is tracking the `main` branch on `origin`, a.k.a. `origin/main`.
 
 ``` sh
 $ git branch -vv
-* master 7c98308 [origin/master] Initial commit
+* main 7c98308 [origin/main] Initial commit
 ```
 
 `git clone`, which RStudio did for us, sets all of this up automatically. This is why "GitHub first, then RStudio" is the preferred way to start projects early in your Git/GitHub life.
@@ -115,7 +115,7 @@ Click the blue "Pull" button in the "Git" tab in RStudio. I doubt anything will 
 Click the green "Push" button to send your local changes to GitHub. You should see some message along these lines.
 
 ``` bash
-[master dc671f0] blah
+[main dc671f0] blah
  3 files changed, 22 insertions(+)
  create mode 100644 .gitignore
  create mode 100644 myrepo.Rproj

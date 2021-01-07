@@ -4,7 +4,7 @@ These materials can be used for independent study, but they have also been used 
 
   * in-person workshops (see below)
   * [STAT 545](http://stat545.com) at UBC
-  * [UBC Master of Data Science](http://masterdatascience.science.ubc.ca)
+  * [UBC Master of Data Science](http://maindatascience.science.ubc.ca)
 
 ## Pre-workshop set-up
 

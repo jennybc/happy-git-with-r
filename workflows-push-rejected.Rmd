@@ -5,7 +5,7 @@ Problem: You want to push changes to GitHub, but you are rejected like so:
 ``` bash
 $ git push
 To https://github.com/YOU/REPO.git
- ! [rejected]        master -> master (fetch first)
+ ! [rejected]        main -> main (fetch first)
 error: failed to push some refs to 'https://github.com/YOU/REPO.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
@@ -46,7 +46,7 @@ There is a lesson to be learned here!
 
 If you had pushed `D` first, you'd be relaxing and they'd be figuring out how to integrate `C` into their history in order to push. So push your work often. Don't go dark and work "offline" for long stretches of time.
 
-Obviously, you should push work to `master` because it's "ready" to share (or at least "ready enough"), not to avoid Git merges.
+Obviously, you should push work to `main` because it's "ready" to share (or at least "ready enough"), not to avoid Git merges.
 
 There is a truly legitimate point here: It is better for the overall health of a project to be committing, pushing, and integrating more often, not less. This does not eliminate the need to integrate different lines of work, but it makes each integration smaller, less burdensome, and less prone to error.
 
@@ -62,7 +62,7 @@ In general, it pays off to be proactively aware of what others are doing (e.g. t
 
 ## Use branches
 
-Finally, your early experiences collaborating with others and yourself in `master` will give you a visceral understanding of why most Git users eventually start to use [branches](#git-branches).
+Finally, your early experiences collaborating with others and yourself in `main` will give you a visceral understanding of why most Git users eventually start to use [branches](#git-branches).
 
 Branches afford explicit workflows for integrating different lines of work on your own terms. This is much nicer than trying to do a tricky merge or rebase in a frustrated panic, because you need to push your work to GitHub at the end of the day.
 
