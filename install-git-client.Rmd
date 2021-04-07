@@ -10,7 +10,7 @@ A Git client is not required for live workshops and will not be explicitly taugh
 
 "Git" is really just a collection of individual commands you execute in the shell (Appendix \@ref(shell)). This interface is not appealing for everyone. Some may prefer to do Git operations via a client with a graphical interface.
 
-Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment), such as RStudio, are not necessary to use Git or R, respectively. But they make the experience more pleasant because they reduce the amount of [command line bullshittery](http://www.pgbovine.net/command-line-bullshittery.htm) and provide a richer visual representation of the current state.
+Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment), such as RStudio, are not necessary to use Git or R, respectively. But they make the experience more pleasant because they reduce the amount of [command line bullshittery](https://web.archive.org/web/20201219080456/https://pg.ucsd.edu/command-line-bullshittery.htm) and provide a richer visual representation of the current state.
 
 RStudio offers a very basic Git client via its Git pane. I use this often for simple operations, but you probably want another, more powerful one as well.
 
