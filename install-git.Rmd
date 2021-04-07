@@ -2,7 +2,7 @@
 
 You need Git, so you can use it at the command line and so RStudio can call it.
 
-If there's any chance it's installed already, verify that, rejoice, and skip this step.
+If there's any chance it's installed already, verify that, rejoice, and skip this step. (But consider *updating* an existing installation.)
 
 Otherwise, find installation instructions below for your operating system.
 
@@ -56,6 +56,15 @@ choco install git.install
 This installs the most current [Git (Install) X.Y.Z](https://chocolatey.org/packages/git.install) Chocolatey package. At the time of writing, that is "Git (Install) 2.29.2.2", but that version number will increment over time.
 
 If you [search Chocolatey packages](https://chocolatey.org/packages) yourself, you might see two packages that install Git -- "Git (Install) 2.29.2.2" and "Git 2.29.2.2", at the time of writing. I believe "Git (Install) 2.29.2.2" is technically the more correct, but I also think it doesn't really matter which one you use. A rather confusing explanation is found [here](https://chocolatey.org/docs/chocolatey-faqs#what-is-the-difference-between-packages-no-suffix-as-compared-toinstallportable). Don't worry too much about whether you do `choco install git.install` or `choco install git`.
+
+### Updating Git for Windows
+
+If you already have Git for Windows, but it's not the latest version, it's a good idea to update.
+Since v2.16, you can [update like so from the command line](https://stackoverflow.com/a/48924212):
+
+``` bash
+git update-git-for-windows
+```
 
 ## macOS
 
