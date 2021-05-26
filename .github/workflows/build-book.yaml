@@ -25,7 +25,7 @@ jobs:
 
       - uses: r-lib/actions/setup-r@v1
         id: install-r
-         with:
+        with:
           crayon.enabled: 'FALSE'
 
       - uses: r-lib/actions/setup-pandoc@v1
