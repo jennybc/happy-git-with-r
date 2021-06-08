@@ -20,7 +20,7 @@ Click green "New repository" button. Or, if you are on your own profile page, cl
 
 Click the big green button "Create repository."
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+Copy the HTTPS clone URL to your clipboard via the green "Code" button. Or copy the SSH URL if you chose to set up SSH keys.
 
 ### GitLab
 
@@ -51,10 +51,10 @@ Copy the HTTPS or SSH clone URL that appears when you click on the blue "Clone" 
 
 In RStudio, start a new Project:
 
-  * *File > New Project > Version Control > Git*. In the "repository URL" paste the URL of your new GitHub repository. It will be something like this `https://github.com/jennybc/myrepo.git`.
+  * *New Project > New Project from Git Repo*. In the "URL of your GitHub repository" paste the URL of your new GitHub repository. It will be something like this `https://github.com/jennybc/myrepo.git`.
   * Be intentional about where you create this Project.
   * Suggest you "Open in new session".
-  * Click "Create Project" to create a new directory, which will be all of these things:
+  * Click "Ok" to create a new directory, which will be all of these things:
     - a directory or "folder" on your computer
     - a Git repository, linked to a remote GitHub repository
     - an RStudio Project
