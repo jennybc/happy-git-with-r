@@ -84,9 +84,13 @@ In a shell, do this, substituting your URL:
 
         git remote add origin https://github.com/jennybc/myrepo.git
 
-Push and cement the tracking relationship between your local `master` branch and `master` on GitHub:
+Renamimng your current branch to `main`: 
+
+        git branch -M main
+
+Pushing and cementing the tracking relationship between your local `main` branch and `main` on GitHub:
   
-        git push --set-upstream origin master
+        git push -u origin main
 
 ## Confirm the local files propagated to the GitHub remote
 
