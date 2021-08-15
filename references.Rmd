@@ -4,7 +4,7 @@ We practice what we preach! This site is created with Git and R markdown, using 
 
 Long-term, you should understand more about what you are doing. Rote clicking in RStudio may be a short-term survival method but won't work for long.
 
-  * [trygit](https://try.github.io/levels/1/challenges/1) is to (command line) Git as [swirl](http://swirlstats.com) is to R. Learn by doing, in small bites.
+  * [Oh My Git!](https://ohmygit.org/) is a free and open source interactive game for learning Git. It's very beginner friendly, using a graph to visualise the worktree. Lessons can be completed using a playing card interface in addition to the built-in command line, which is there for when users become more comfortable.
 
   * The book [Pro Git](http://git-scm.com/book) is fantastic and comprehensive.
   
