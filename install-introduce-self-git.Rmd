@@ -41,3 +41,24 @@ git config --global core.editor "emacs"
 ```
 
 Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](http://swcarpentry.github.io/git-novice/02-setup/).
+
+### Configure the default name for an initial branch
+
+You may also want to configure the default name for the initial branch in a new repo.
+Historically, this has been `master`, as that was baked into Git itself.
+It's increasingly common to use `main` instead, but you have to opt-in to this.
+
+In 2020, the `init.defaultBranch` setting was introduced so that this became user-configurable.
+Shortly thereafter, major Git hosts like GitHub and GitLab made `main` the default initial branch name for repos created on their platforms and also provided considerable support for renaming existing default branches.
+
+You can set your default initial branch name to `main` like so, in the shell:
+
+``` bash
+git config --global init.defaultBranch main
+```
+
+or from R:
+
+```{r eval = FALSE}
+usethis::git_default_branch_configure()
+```
