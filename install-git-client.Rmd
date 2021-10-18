@@ -10,51 +10,69 @@ A Git client is not required for live workshops and will not be explicitly taugh
 
 "Git" is really just a collection of individual commands you execute in the shell (Appendix \@ref(shell)). This interface is not appealing for everyone. Some may prefer to do Git operations via a client with a graphical interface.
 
-Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment), such as RStudio, are not necessary to use Git or R, respectively. But they make the experience more pleasant because they reduce the amount of [command line bullshittery](https://web.archive.org/web/20201219080456/https://pg.ucsd.edu/command-line-bullshittery.htm) and provide a richer visual representation of the current state.
+Git and your Git client are not the same thing, just like R and RStudio are not the same thing. A Git client and an [integrated development environment](https://en.wikipedia.org/wiki/Integrated_development_environment), such as RStudio, are not necessary to use Git or R, respectively. But they make the experience more pleasant because they reduce the amount of "command line bullshittery"[^1] and provide a richer visual representation of the current state.
+
+[^1]: This evocative phrase originally appeared in a blog post by Philip Guo, which has subsequently been removed from the internet.
 
 RStudio offers a very basic Git client via its Git pane. I use this often for simple operations, but you probably want another, more powerful one as well.
 
 Fair warning: for some tasks, you must use the command line. But the more powerful your Git client is, the less often this happens. The visual overview given by your Git client can also be invaluable for understanding the current state of things, even when preparing calls to command line Git. 
 
-Fantastic news: because all of the clients are just forming and executing Git commands on your behalf, you don't have to pick one. You can literally do one operation from the command line, do another from RStudio, and another from SourceTree, one after the other, and it just works. *Very rarely, both clients will scan the repo at the same time and you'll get an error message about `.git/index.lock`. Try the operation again at least once before doing any further troubleshooting.*
+Fantastic news: because all of the clients are just forming and executing Git commands on your behalf, you don't have to pick one.
+You can literally do one operation from the command line, do another from RStudio, and another from GitKraken, one after the other, and it just works.
+*Very rarely, both clients will scan the repo at the same time and you'll get an error message about `.git/index.lock`.
+Try the operation again at least once before doing any further troubleshooting.*
 
 ## A picture is worth a thousand words
 
-Here's a screenshot of SourceTree (see below) open to the repository for this site. You get a nice graphical overview of the recent commit history, branches, and diffs, as well as a GUI that facilitates the most common Git operations.
+Here's a screenshot of GitKraken (see below) open to the repository for the R package [pkgdown](https://pkgdown.r-lib.org).
+You get a nice graphical overview of the recent commit history, branches, and diffs, as well as a GUI that facilitates the most common Git operations.
 
-![SourceTree screenshot](img/sourcetree-screenshot.png)
+![GitKraken screenshot](img/gitkraken-pkgdown-screenshot.png)
 
 In contrast, here's a shell session where I've used command line Git to access some of the same information.
 
-![Command line Git](img/command-line-git-screenshot.png)
+``` bash
+jenny@jennys-MacBook-Pro pkgdown % git log --oneline -n 10
+cd888bed (HEAD -> master, upstream/master, upstream/HEAD, r-lib/master, r-lib/HEAD) Remove accidentally committed snapshot
+ca01d386 Add a skip link (#1833)
+1f07a145 Include section class in generated subsection divs
+26e1dcf2 Restore code colouring
+77503979 Working on docs (#1828)
+3c805e1a Make anchor tweaking stricter
+a6ae3ca4 use_tidy_description()
+d43260fb Tweak authors order
+41c855df Tweak details styling
+7d3c484c Anchor & news tweaks (#1830)
+```
 
 Which do you prefer?
 
 ## No one is giving out Git Nerd merit badges
 
-Work with Git in whatever way makes you most effective. Feel free to revisit your approach over time or to use different approaches for different tasks. No one can tell whether you use the command line or a GUI when they look at your Git history or your GitHub repo.
+Work with Git in whatever way makes you most effective.
+Feel free to revisit your approach over time or to use different approaches for different tasks or in different settings.
+No one can tell whether you use the command line or a GUI when they look at your Git history or your GitHub repo.
 
-I sometimes encounter people who feel it's "better" to use command line Git, but for very ill-defined reasons. These people may feel like they *should* work in the shell, even if it leads to Git-avoidance, frequent mistakes, or limiting themselves to a small set of ~3 Git commands. This is counterproductive.
+I sometimes encounter people who feel it's "better" to use command line Git, but for very ill-defined reasons.
+These people may feel like they *should* work in the shell, even if it leads to Git-avoidance, frequent mistakes, or limiting themselves to a small set of ~3 Git commands.
+This is counterproductive.
 
-I had two false starts with Git, where I failed to get proficient enough, quickly enough to truly incorporate version control into my daily work. I found a visual Git client invaluable -- SourceTree, in my case. It made me willing to use Git multiple times per day, for a sustained period of time. This helped me build the mental model necessary for more advanced Git operations like rebasing, cherry-picking, and resetting.
+I had two false starts with Git, where I failed to get proficient enough, quickly enough to truly incorporate version control into my daily work.
+I found a visual Git client invaluable -- SourceTree, at the time.
+It made me willing to use Git multiple times per day, for a sustained period of time.
+This helped me build the mental model necessary for more advanced Git operations like rebasing, cherry-picking, and resetting.
 
-If your Git life happens on your own computer, there is no reason to deny yourself a GUI if that's what you like. If you prefer working in the shell or if you frequently log into a remote server, then it makes sense to prioritize building Git skills at the command line. Do whatever works for you, but don't do anything for the sake of purity or heroism.  
+If your Git life happens on your own computer, there is no reason to deny yourself a GUI if that's what you like.
+If you prefer working in the shell or if you frequently log into a remote server, then it makes sense to prioritize building Git skills at the command line.
+Do whatever works for you, but don't do anything for the sake of purity or heroism.
 
 ## Recommended Git clients
 
-  * [GitKraken](https://www.gitkraken.com) is a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who have previously had very few options.
+  * [GitKraken](https://www.gitkraken.com) is a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who previously had very few options. I used the free for version for years, which works great, but now I happily pay money for the pro version.
 
-  * [SourceTree](https://www.sourcetreeapp.com) is another free client that I highly recommend, at least on Windows ^[(ref:sourcetree-install)]. It was my first and most beloved Git client, but I eventually had to give it up on macOS, due to a [long-standing bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401) that they will clearly never fix. I still use SourceTree on Windows.
+  * [SourceTree](https://www.sourcetreeapp.com) is another free client that I used to highly recommend. It was my first beloved Git client, but I eventually had to give it up, due to long-standing bugs / deficiencies that seemed like they would never be fixed ([macOS bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401), no ability to control font size). GitKraken feels much more actively developed and has completely supplanted SourceTree for me.
   
-(ref:sourcetree-install) During installation and registration, you'll need to create a free Atlassian Bitbucket account and link that to a free Atlassian Bitbucket Cloud account. Also, feel free to uncheck the checkbox about installing Mercurial (another version control system), unless you feel you need it.
-
-  * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above. If you choose GitHub Desktop and it works well for you, we'd love to hear more in an issue, so we can continue to refine this recommendation.
-
-  * Others that I have heard positive reviews for:
-
-    - [magit](https://magit.vc), for Emacs nerds  
-    - [GitUp](https://gitup.co)
-    - [SmartGit](http://www.syntevo.com/smartgit/)
-    - [git-cola](https://git-cola.github.io)
+  * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above and, consequently, may not develop your mental model of Git as thoroughly.
 
   * Browse [even more Git(Hub) clients](http://git-scm.com/downloads/guis).
