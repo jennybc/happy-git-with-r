@@ -31,10 +31,10 @@ Is your R version "old"? R had a *major* version change in April 2020, with the 
 
 Each major version is followed by several years of smaller releases (minor and patch releases). You can be more relaxed about upgrading minor versions, but you still want to stay reasonably current. As the 4.something series unfolds, I advise that you never fall more than 1 minor version behind.
 
-Concrete example: let's say the released version of R is 4.1.1, which may or may not be true when you read this.
-It's probably OK if you are still on 4.0.5, which is one minor version behind and is called "r-oldrel".
+Concrete example: let's say the released version of R is 4.7.1, which is totally fictional and well beyond the current version of R at the time of writing.
+It's probably OK if you are still on 4.6.whatever, which is one minor version behind and is called "r-oldrel".
 Being one minor version behind usually doesn't cause trouble.
-Once you are 2 minor versions behind (3.6.whatever or earlier in this example), you will start to suffer.
+Once you are 2 minor versions behind (4.5.whatever or earlier in this example), you will start to suffer.
 In particular, you can no longer install pre-built binary add-on packages from CRAN.
 
 Is your RStudio "old"? Unless you have a specific reason to prefer the released version, try the Preview. RStudio is fairly conservative with official releases, so the Preview version is used by many people for their daily work. This allows you to enjoy the latest goodies much sooner. The Preview version updates much more frequently (and in smaller increments) than the released version. This is something you might update once every month or so.
