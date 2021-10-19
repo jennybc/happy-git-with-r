@@ -143,6 +143,8 @@ You have a fork of the source repo (a very special copy, on GitHub) and it is co
 You can push to and pull from `origin`.
 You can make a pull request back to the source repo via your fork.
 
+usethis describes this setup as "fork".
+
 How to achieve:
 
   * With usethis: `usethis::create_from_github("OWNER/REPO", fork = TRUE)`

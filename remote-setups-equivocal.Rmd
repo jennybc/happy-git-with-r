@@ -6,7 +6,7 @@ Just like the previous section about the most common setups, we only consider a 
 * The remote is named `origin` or `upstream`.
 
 The setups described here are characterized by *incomplete information*.
-This section exists mostly to explain feedback that the usethis package might give about a GitHub remote configuration. *2020-10 note: this currently refers to features in a development version of usethis. These features will appear in usethis v2.0.0.*
+This section exists mostly to explain feedback that the usethis package might give about a GitHub remote configuration.
 
 To identify any of the remote setups described in section \@ref(common-remote-setups), we need information from GitHub:
 
@@ -20,7 +20,7 @@ This means that programmatic access to this information, i.e. requests to the Gi
 This means that client packages, like usethis, work best when you have configured a GitHub personal access token (PAT).
 See section \@ref(get-a-pat) for more details on why and how to do that.
 
-(If you've configured a PAT and are being told your GitHub config is problematic, consider these other explanations: Are you offline? Is GitHub down?)
+If you've configured a PAT and are being told your GitHub config is problematic, consider these other explanations: Are you offline? Is GitHub down? Has your PAT expired? By default, they now expire after 30 days.
 
 ## Maybe "ours" or "theirs"
 
