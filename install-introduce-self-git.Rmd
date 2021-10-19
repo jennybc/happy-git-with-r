@@ -57,7 +57,7 @@ You can set your default initial branch name to `main` like so, in the shell:
 git config --global init.defaultBranch main
 ```
 
-or from R:
+or from R (the default for `name` is `"main"`):
 
 ```{r eval = FALSE}
 usethis::git_default_branch_configure()
