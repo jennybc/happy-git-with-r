@@ -1,7 +1,7 @@
 Rendered product: <https://happygitwithr.com>
 
 <!-- badges: start -->
-[![R build status](https://github.com/jennybc/happy-git-with-r/workflows/build-book/badge.svg)](https://github.com/jennybc/happy-git-with-r/actions)
+[![bookdown](https://github.com/jennybc/happy-git-with-r/actions/workflows/bookdown.yaml/badge.svg)](https://github.com/jennybc/happy-git-with-r/actions/workflows/bookdown.yaml)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/4e9fea2e-d99c-484e-be1a-9d8605393f4e/deploy-status)](https://app.netlify.com/sites/happygitwithr/deploys)
 <!-- badges: end -->
 
