@@ -20,7 +20,7 @@ rmd_files: [
   "install-git-client.Rmd",
 
   "connect-intro.Rmd",
-  "connect-credential-caching.Rmd",
+  "connect-https-pat.Rmd",
   "connect-ssh-keys.Rmd",
   "connect-git-github.Rmd",
   "connect-rstudio-git-github.Rmd",
