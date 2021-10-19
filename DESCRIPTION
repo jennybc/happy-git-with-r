@@ -1,12 +1,14 @@
 Package: happygitwithr
 Title: Happy Git and GitHub for the useR
-Version: 0.0.0.9000
-Authors@R: person("Jennifer", "Bryan", role=c("aut", "cre"),
-  email = "jenny@stat.ubc.ca")
-Depends: R (>= 3.3.0)
-Imports:
-  bookdown,
-  fs,
-  sessioninfo
-Remotes:
-  rstudio/bookdown
+Version: 0.1
+Authors@R: 
+    person("Jennifer", "Bryan", , "jenny@rstudio.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-6983-2759"))
+Description: This is not a package, but we just use this file to declare
+    the dependencies of the site.
+URL: https://happygitwithr.com
+Imports: 
+    bookdown,
+    fs,
+    sessioninfo
+Encoding: UTF-8
