@@ -10,7 +10,7 @@ If you use a different host or different remote names, you should still be able 
 Along the way, we note how these setups relate to the usethis package, i.e. how usethis can help you get into a favorable setup or how a favorable setup unlocks the full power of usethis.
 Many of these operations -- including characterizing your GitHub remotes -- require that you have configured a GitHub personal access token.
 See section \@ref(get-a-pat) for more details on why and how to do that.
-If you don't use usethis, feel free to ignore these asides. *2020-10 note: this currently refers to features in a development version of usethis. These features will appear in usethis v2.0.0.*
+If you don't use usethis, feel free to ignore these asides.
 
 ## No GitHub
 
