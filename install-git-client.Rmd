@@ -28,11 +28,15 @@ Try the operation again at least once before doing any further troubleshooting.*
 Here's a screenshot of GitKraken (see below) open to the repository for the R package [pkgdown](https://pkgdown.r-lib.org).
 You get a nice graphical overview of the recent commit history, branches, and diffs, as well as a GUI that facilitates the most common Git operations.
 
-![GitKraken screenshot](img/gitkraken-pkgdown-screenshot.png)
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "100%",
+#| fig.alt = "GitKraken screenshot"
+knitr::include_graphics("img/gitkraken-pkgdown-screenshot.png")
+```
 
 In contrast, here's a shell session where I've used command line Git to access some of the same information.
 
-``` bash
+```console
 jenny@jennys-MacBook-Pro pkgdown % git log --oneline -n 10
 cd888bed (HEAD -> master, upstream/master, upstream/HEAD, r-lib/master, r-lib/HEAD) Remove accidentally committed snapshot
 ca01d386 Add a skip link (#1833)
