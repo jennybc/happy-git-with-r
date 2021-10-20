@@ -1,4 +1,4 @@
-R scripts can be rendered\!
+R scripts can be rendered!
 ================
 Jenny Bryan
 April 1, 2014
