@@ -9,6 +9,9 @@ Description: This is not a package, but we just use this file to declare
 URL: https://happygitwithr.com
 Imports: 
     bookdown,
+    bslib,
+    downlit,
     fs,
-    sessioninfo
+    sessioninfo,
+    xml2
 Encoding: UTF-8
