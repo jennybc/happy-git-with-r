@@ -99,7 +99,7 @@ A properly configured PAT means all of this will "just work":
   * Remote HTTPS operations via the gert R package and, therefore, usethis
   * GitHub API operations via the gh R package and, therefore, usethis
 
-### URL determines the protocol
+### URL determines the protocol {#url-determines-protocol}
 
 Even though I'm suggesting that you adopt HTTPS as a lifestyle, it's good to know that you actually have very granular control over the protocol.
 It is determined by the URL used to access a remote repo.
