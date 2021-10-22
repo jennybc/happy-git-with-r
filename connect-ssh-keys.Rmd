@@ -253,7 +253,7 @@ Or do one of the following at the command line:
   * Windows: `clip < ~/.ssh/id_ed25519.pub`
   * Linux: `xclip -sel clip < ~/.ssh/id_ed25519.pub`
 
-*Linux: if needed, install via `apt-get` or `yum`. For example, `sudo apt-get install xclip`.*
+Linux: if needed, install `xclip` via `apt-get` or `yum`. For example, `sudo apt-get install xclip`.
 
 ### On GitHub
 
