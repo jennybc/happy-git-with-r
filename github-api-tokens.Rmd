@@ -1,7 +1,0 @@
-# GitHub Personal Access Tokens {#github-pat}
-
-This material is now redundant with instructions given earlier in the book.
-
-To understand why you might want a GitHub personal access token, how to get one, and how to configure it for use from R, read:
-
-[Cache credentials for HTTPS](#credential-caching)

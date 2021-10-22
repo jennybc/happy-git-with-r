@@ -6,7 +6,8 @@ If you experience some new problem and, especially, find the corresponding solut
 
 ## I think I have installed Git but damn if I can find it
 
-When you install Git, try to control or record where it is being installed! Make a mental or physical note of these things.
+When you install Git, try to control or record where it is being installed!
+Make a mental or physical note of these things.
 
 You may be able to find Git after the fact with these commands in the shell (Appendix \@ref(shell)):
 
@@ -14,15 +15,18 @@ You may be able to find Git after the fact with these commands in the shell (App
 
 * `where git` (Windows, when not in a bash shell)
 
-It is not entirely crazy to just re-install Git, using a method that leaves it in a more conventional location, and to pay very close attention to where it's being installed. Live and learn.
+It is not entirely crazy to just re-install Git, using a method that leaves it in a more conventional location, and to pay very close attention to where it's being installed.
+Live and learn.
 
 ## RStudio Git pane disappears on Mac OS
 
-Sometimes the RStudio Git pane disappears on a system where it was previously working. This usually happens to people who installed Git by installing the Xcode command line tools. It is usually a sign that you need to re-agree to the Xcode license agreement. This is necessary after a Mac OS upgrade, re-installing Xcode, or even quiet Xcode upgrades that happen in normal system maintenance.
+Sometimes the RStudio Git pane disappears on a system where it was previously working.
+This usually happens to people who installed Git by installing the Xcode command line tools.
+It is usually a sign that you need to re-agree to the Xcode license agreement. This is necessary after a Mac OS upgrade, re-installing Xcode, or even quiet Xcode upgrades that sometimes seem to happen without the user's knowledge.
 
 In the shell, you could execute `git status` and you might see a message along these lines:
 
-``` bash
+```console
 Agreeing to the Xcode/iOS license requires admin privileges, please run “sudo xcodebuild -license” and then retry this command.
 ```
 
@@ -30,13 +34,13 @@ If you get such clear instructions, by all means do what it says, i.e. run `sudo
 
 In any case, you need to tickle the Xcode command line tools to prompt you for whatever it needs. Here are other commands that, depending on the situation, might trigger the necessary prompts:
 
-``` bash
+```console
 xcode-select --install
 ```
 
 or
 
-``` bash
+```console
 git config --global --list
 ```
 
@@ -44,97 +48,105 @@ Then **restart RStudio**.
 
 ## Dysfunctional PATH
 
-I'm pretty sure that most cases of RStudio *not* automatically detecting the Git executable stem from problems with `PATH`. This is the set of directories where your computer will look for executables, such as Git (today) or `make` (later in this course). Certain methods of Git installation, especially on Windows and/or older OSes, have a higher tendency to put Git in an unconventional location or to fail to add the relevant directory to `PATH`.
+Some cases of RStudio *not* automatically detecting the Git executable stem from problems with `PATH`.
+This is the set of directories where your computer will look for executables, such as Git (today) or `make`.
+Certain methods of Git installation, especially on Windows and/or older OSes, have a higher tendency to put Git in an unconventional location or to fail to add the relevant directory to `PATH`.
 
 How to see your `PATH`?
 
 In the shell:
 
-``` sh
+```console
 echo $PATH
 ```
 
-Take a good hard look at this. See the point above about finding your Git executable or re-installing it while you are **wide awake**. Is the host directory in your `PATH`? No? **Fix that.**
+Take a good hard look at this.
+See the point above about finding your Git executable or re-installing it while you are **wide awake**.
+Is the Git executable's parent directory in your `PATH`?
+No?
+**Fix that.**
 
-Go [here](http://www.troubleshooters.com/linux/prepostpath.htm) for instructions on what to put in your `.bash_profile` in order to add a directory to `PATH`.
+At this point I recommend that you do a Google search to find instructions on how to modify `PATH` on your specific operating system.
 
 ## Push/Pull buttons greyed out in RStudio
 
-Are you sure your local repository is associated with a remote repository, e.g. a GitHub repo? In a shell with working directory set to the local Git repo, enter this command:
+Are you sure your local repository is associated with a remote repository, e.g. a GitHub repo?
+In a shell with working directory set to the local Git repo, enter this command:
   
-``` sh
-jenny@2015-mbp myrepo $ git remote -v
-origin	https://github.com/jennybc/myrepo (fetch)
-origin	https://github.com/jennybc/myrepo (push)
+```console
+~/tmp/myrepo % git remote -v                                           
+origin  git@github.com:jennybc/myrepo.git (fetch)
+origin  git@github.com:jennybc/myrepo.git (push)
 ```
-We want to see that fetch and push are set to remote URLs that point to the remote repo. Note also that the GitHub repo is a remote named `origin`, as far as your local repo is concerned. This is typical and, though I think `github` is a vastly superior name, `origin` is such a strong convention that I follow it. 
+We want to see that fetch and push are set to remote URLs that point to the remote repo.
 
-If you discover you still need to set a remote, get the HTTPS or SSH URL, as appropriate, for your GitHub repo. This is easy to get onto your clipboard from the repo's GitHub page. Do this in the shell:
+If you discover you still need to set a remote, get the HTTPS or SSH URL, as appropriate, for your GitHub repo.
+This is easy to get onto your clipboard from the repo's GitHub page.
+Do this in the shell:
   
-``` sh
+```console
 git remote add origin https://github.com/jennybc/myrepo.git
 ```
 
-Download all the files from the online GitHub repository and deal with any conflicts.
+Download all the files from the online GitHub repository and deal with any 
+conflicts (substituting `master` for `main`, if relevant).
   
-``` sh
-git pull origin master
+```console
+git pull origin main
 ```
 
-Call `git remote -v` again. Once you can prove that your GitHub remote is set properly, you can move on to the next step.
+Call `git remote -v` again.
+Once you are satisfied that your GitHub remote is set properly, you can move on to the next step.
 
-Are you sure the current branch is *tracking* a branch on the remote? In that same shell, in your repo, do this:
+Are you sure the current branch is *tracking* a branch on the remote?
+In that same shell, in your repo, do this:
 
-``` sh
-jenny@2015-mbp myrepo $ git branch -vv
-* master b8e03e3 [origin/master] line added locally
+```console
+~/tmp/myrepo % git branch -vv
+* main 2899c91 [origin/main] A commit from my local computer
 ```
 
-The above shows successful confirmation that the local `master` branch is tracking `origin/master`, i.e. the master branch on GitHub. If you don't see the `[origin/master]` bit, that is a problem. By the way, `git branch -r` is another handy way to examine your remote-tracking branches. (If you're working with a branch other than `master`, adjust everything accordingly.)
+The above shows successful confirmation that the local `main` branch is tracking `origin/main`, i.e. the `main` branch on GitHub.
+If you don't see the `[origin/main]` bit, that is a problem.
+By the way, `git branch -r` and `git remote show origin` are two more commands that are helpful for examining your remote setup.
 
 When connecting a local repo to a new GitHub repo, a lot of people remember to add the GitHub remote, but forget to also cement this tracking relationship for any relevant branches.
 
-If you discover your local `master` branch is not yet tracking `master` on GitHub, fix that like so:
+If you discover your local `main` branch is not yet tracking `main` on GitHub, fix that like so:
   
-``` sh
-git push --set-upstream origin master
+```console
+git push --set-upstream origin main
 ```
 
-This is equivalent to `git push -u origin master` but conveys more about what you are doing.
+This is equivalent to `git push -u origin main` but conveys more about what you are doing.
 
-Call `git branch -vv` or `git branch -r` again to confirm that the `master` branch on GitHub is the upstream or tracking branch for the local `master` branch.
+Call `git branch -vv` or `git branch -r` or `git remote show origin` again to confirm that the `main` branch on GitHub is the tracking branch for the local `main` branch.
 
 ## I have no idea if my local repo and my remote repo are connected.
 
 See the above section on "Push/Pull buttons greyed out in RStudio."
 
-## Push fail at the RStudio level
-
-Do you get this error in RStudio?
-
-```
-error: unable to read askpass response from 'rpostback-askpass'
-```
-
-Open the shell: *Tools > Shell*.
-
-``` shell
-git push -u origin master
-```
-
 ## Push rejected, i.e. fail at the Git/GitHub level
 
-You might have changes on the remote AND on your local repo. Just because you don't remember making any edits in the browser doesn't mean you didn't. Humor me.
+You might have changes on the remote AND on your local repo.
+Just because you don't remember making any edits in the browser doesn't mean you didn't.
+Humor me.
 
-Pull first. Resolve any conflicts. Then try your push again.
+Pull first.
+Resolve any conflicts.
+Then try your push again.
 
 ## RStudio is not making certain files available for staging/committing
 
-Do you have a space in your directory or file names? [A space in a file name is a space in your soul.](https://twitter.com/aaronquinlan/status/711593127551733761) Get rid of it.
+Do you have a space in your directory or file names? [A space in a file name is a space in your soul.](https://twitter.com/aaronquinlan/status/711593127551733761)
+Get rid of it.
 
-Is your Git repo / RStudio Project inside a folder that ... eventually rolls up to Google Drive, DropBox, Microsoft OneDrive, or a network drive? If yes, I recommend you move the repo / Project into a plain old directory that lives directly on your computer and that is not managed by, e.g., Google Drive.
+Is your Git repo / RStudio Project inside a folder that ... eventually rolls up to Google Drive, DropBox, Microsoft OneDrive, or a network drive?
+If yes, I recommend you move the repo / Project into a plain old directory that lives directly on your computer and that is not managed by, e.g., Google Drive.
 
-If you cannot deal with the two root causes identified above, then it is possible that a more powerful Git client (chapter \@ref(git-client)) will be able to cope with these situations. But I make no promises. You should also try Git operations from the command line.
+If you cannot deal with the two root causes identified above, then it is possible that a more powerful Git client (chapter \@ref(git-client)) will be able to cope with these situations.
+But I make no promises.
+You should also try Git operations from the command line.
 
 ## I hear you have some Git repo inside your Git repo
 
@@ -142,4 +154,6 @@ Do not create a Git repository inside another Git repository. Just don't.
 
 If you have a genuine need for this, which is really rare, the proper way to do it is via [submodules](http://git-scm.com/book/en/v2/Git-Tools-Submodules).
 
-In STAT 545, we certainly do not need to do this and when we've seen it, it's been a mistake. This has resulted in the unexpected and complete loss of the inner Git repository. To be sure, there was more going on here (cough, GitHub Desktop client), but non-standard usage of Git repos makes it much easier to make costly mistakes.
+In STAT 545, we certainly do not need to do this and when we've seen it, it's been a mistake.
+This has resulted in the unexpected and complete loss of the inner Git repository.
+To be sure, there was more going on here (cough, GitHub Desktop client), but non-standard usage of Git repos makes it much easier to make costly mistakes.

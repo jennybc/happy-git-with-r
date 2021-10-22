@@ -12,9 +12,6 @@ Let's check if RStudio can find the Git executable.
 
   * *File > New Project...* Do you see an option to create from Version Control? If yes, good.
   * Select *New Directory* > *Empty Project*. Do you see a checkbox "Create a git repository"? If yes, good, CHECK IT.
-  * Give this disposable test project a name and click *Create Project*. Do you see a "Git" tab in the upper right pane, the same one that has "Environment" and "History"? If yes, good.
-  
-If all looks good, you can delete this project. Looks like RStudio and Git are talking to each other.
 
 Keep reading if things don't go so well or you want to know more.
 
@@ -22,7 +19,8 @@ Keep reading if things don't go so well or you want to know more.
 
 RStudio can only act as a GUI front-end for Git if Git has been successfully installed (chapter \@ref(install-git)) **AND RStudio can find it**.
 
-A basic test for successful installation of Git is to simply enter `git` in the shell (Appendix \@ref(shell)). If you get a complaint about Git not being found, it means installation was unsuccessful or that it is not being found, i.e. it is not on your `PATH`.
+A basic test for successful installation of Git is to simply enter `git` in the shell (Appendix \@ref(shell)).
+If you get a complaint about Git not being found, it means installation was unsuccessful or that it is not being found, i.e. it is not on your `PATH`.
 
 If you are not sure where the Git executable lives, try this in a shell:
   
@@ -32,17 +30,21 @@ If you are not sure where the Git executable lives, try this in a shell:
 
 ## Tell RStudio where to find Git
 
-If Git appears to be installed and findable, launch RStudio. Quit and re-launch RStudio if there's __any doubt in your mind__ about whether you opened RStudio before or after installing Git. Don't make me stop this car and restart RStudio for you in office hours. DO IT.
+If Git appears to be installed and findable, launch RStudio.
+Quit and re-launch RStudio if there's **any doubt in your mind** about whether you opened RStudio before or after installing Git.
+Don't make me stop this car and restart RStudio for you in office hours.
+DO IT.
 
 From RStudio, go to *Tools > Global Options > Git/SVN* and make sure that the box *Git executable* points to your Git executable.
 
 On macOS and Linux, the path usually looks something like this:
 
-``` bash
+```console
 /usr/bin/git
 ```
 
-If you need to set this on macOS, it can sometimes be hard to navigate to the necessary directory, once you've clicked "Browse" and are working with a Finder-type window. The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able to type or paste any path you want.
+If you need to set this on macOS, it can sometimes be hard to navigate to the necessary directory, once you've clicked "Browse" and are working with a Finder-type window.
+The keyboard shortcut "command + shift + g" will summon "Go To Folder", where you will be able to type or paste any path you want.
 
 On Windows, this path should look something like this:
 
@@ -52,15 +54,23 @@ C:/Program Files/Git/bin/git.exe
 
 and here is a screenshot on Windows:
 
-![RStudio screenshot showing path to Git executable](img/windows-rstudio-git-executable-screenshot.png)
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "100%",
+#| fig.alt = "RStudio screenshot showing path to the Git executable"
+knitr::include_graphics("img/windows-rstudio-git-executable-screenshot.png")
+```
 
-**WARNING**: On Windows, do __NOT__ use `C:/Program Files/Git/cmd/git.exe`. `bin` in the path is GOOD YES! `cmd` in the path is BAD NO!
+**WARNING**: On Windows, do __NOT__ use `C:/Program Files/Git/cmd/git.exe`. `bin` in the path is GOOD YES!
+`cmd` in the path is BAD NO!
 
-**WARNING**: On Windows, do __NOT__ set this to `git-bash.exe`. Something that ends in `git.exe` is GOOD YES! `git-bash.exe` is BAD NO!
+**WARNING**: On Windows, do __NOT__ set this to `git-bash.exe`.
+Something that ends in `git.exe` is GOOD YES! `git-bash.exe` is BAD NO!
   
-**Restart RStudio if you make any changes.** Don't make me stop this car again and restart RStudio for you in office hours. DO IT.
+**Restart RStudio if you make any changes here.**
+Don't make me stop this car again and restart RStudio for you in office hours.
+DO IT.
 
-Do the steps at the top of the page to see if RStudio and Git are communicating now.
+Re-do the steps at the top of the page to see if RStudio and Git are communicating now.
 
 No joy?
 

@@ -20,9 +20,9 @@ rmd_files: [
   "install-git-client.Rmd",
 
   "connect-intro.Rmd",
-  "connect-git-github.Rmd",
-  "connect-credential-caching.Rmd",
+  "connect-https-pat.Rmd",
   "connect-ssh-keys.Rmd",
+  "connect-git-github.Rmd",
   "connect-rstudio-git-github.Rmd",
   "connect-can-rstudio-use-git.Rmd",
   "connect-troubleshooting.Rmd",
@@ -67,7 +67,6 @@ rmd_files: [
 
   "appendix.Rmd",
   "shell.Rmd",
-  "github-api-tokens.Rmd",
   "comic-relief.Rmd",
 
   "references.Rmd"

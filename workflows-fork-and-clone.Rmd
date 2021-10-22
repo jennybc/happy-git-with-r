@@ -25,9 +25,13 @@ We're doing this:
     
 ## `usethis::create_from_github("OWNER/REPO")`
 
-The [usethis package](https://usethis.r-lib.org) has a convenience function, [`create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html), that can do "fork and clone". In fact, it can go even further and [set the `upstream` remote](#upstream-changes). However, `create_from_github()` requires that you have [configured a GitHub personal access token](#github-pat). It hides lots of detail and can feel quite magical.
+The [usethis package](https://usethis.r-lib.org) has a convenience function, [`create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html), that can do "fork and clone".
+In fact, it goes even further and [configures the `upstream` remote](#upstream-changes) and sets the upstream tracking branch for `main` (or whatever the default branch is) to `upstream/main`.
+Note that `create_from_github()` requires that you have [configured a GitHub personal access token](#https-pat).
+It hides lots of detail and can feel quite magical.
 
-Due to these difference, we won't dwell on `create_from_github()` here. But once you get tired of doing all of this "by hand", check it out!
+Due to these difference, we won't dwell on `create_from_github()` here.
+But once you get tired of doing all of this "by hand", check it out!
 
 ## Engage with the new repo
 

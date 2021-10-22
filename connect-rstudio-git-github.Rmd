@@ -1,6 +1,7 @@
 # Connect RStudio to Git and GitHub {#rstudio-git-github}
 
-Here we verify that RStudio can issue Git commands on your behalf. Assuming that you've gotten local Git to talk to GitHub, this means you'll also be able to pull from and push to GitHub from RStudio.
+Here we verify that RStudio can issue Git commands on your behalf. 
+Assuming that you've gotten local Git to talk to GitHub, this means you'll also be able to pull from and push to GitHub from RStudio.
 
 In later chapters and in live workshops, we revisit these operations with much more explanation.
 
@@ -15,27 +16,46 @@ We assume the following:
   * You've installed Git (chapter \@ref(install-git)).
   * You've introduced yourself to Git (chapter \@ref(hello-git)).
   * You've confirmed that you can push to / pull from GitHub from the command line (chapter \@ref(push-pull-github)).
+  
+You will also need a test repository on GitHub.
+
+If you just completed the previous chapter, [Connect to GitHub], that will be perfect!
+However, I encourage you to delete the *local* repository, so you can experience how we use RStudio to clone it and get a local copy.
+Delete the folder corresponding to the local repo any way you like.
+It's just a regular directory on your computer.
+Here's how to do that in the shell, if current working directory is `myrepo`:
+
+```console
+cd ..
+rm -rf myrepo/
+```
+
+If you don't have a suitable test repository on GitHub, follow the instructions in the next section.
 
 ## Make a repo on GitHub
 
 Go to <https://github.com> and make sure you are logged in.
 
-Click the green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+Near "Repositories", click the big green "New" button.
+Or, if you are on your own profile page, click on "Repositories", then click the big green "New" button.
 
 How to fill this in:
 
-  * Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
-  * Description: "testing my setup" (or whatever, but some text is good for the README).
-  * Public.
-  * YES Initialize this repository with a README.
+* Repository template: No template.
+* Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
+* Description: "testing my setup" (or whatever, but some text is good for the README).
+* Public.
+* Initialize this repository with: Add a README file.
   
-For everything else, just accept the default.
+Click the big green button that says "Create repository".
+  
+Now click the big green button that says "<> Code".
 
-Click the big green button "Create repository."
+Copy a clone URL to your clipboard.
+If you're taking our default advice, copy the HTTPS URL.
+But if you're opting for SSH, then make sure to copy the SSH URL.
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button.
-
-## Clone the new GitHub repository to your computer via RStudio
+## Clone the test GitHub repository to your computer via RStudio
 
 In RStudio, start a new Project:
 
@@ -46,7 +66,9 @@ In RStudio, start a new Project:
   * I suggest you check "Open in new session", as that's what you'll usually do in real life.
   * Click "Create Project".
 
-You should find yourself in a new local RStudio Project that represents the new test repo we just created on GitHub. This should download the `README.md` file from GitHub. Look in RStudio's file browser pane for the `README.md` file.
+You should find yourself in a new local RStudio Project that represents your test repo on GitHub.
+This should download the `README.md` file from GitHub.
+Look in RStudio's file browser pane for the `README.md` file.
 
 ## Make local changes, save, commit
 
@@ -64,18 +86,16 @@ From RStudio:
 
 ## Push your local changes online to GitHub
   
-Click the green "Push" button to send your local changes to GitHub. If you are challenged for username and password, provide them (but see below). You should see some message along these lines.
+Click the green "Push" button to send your local changes to GitHub.
 
-``` bash
-[master dc671f0] blah
- 3 files changed, 22 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 myrepo.Rproj
-```
+You should not experience a credential challenge, since one of the pre-requisites was successfully pushing to GitHub from the command line (chapter \@ref(push-pull-github)).
+RStudio's Git pane just exposes a specific subset of command line Git and therefore once your credentials work in the shell, they should work in RStudio.
+If you do experience a credential challenge, that suggests you should have a look at the troubleshooting suggestions for your chosen protocol, either [HTTPS](#pat-troubleshooting) or [SSH](#ssh-troubleshooting).
 
 ## Confirm the local change propagated to the GitHub remote
 
-Go back to the browser. I assume we're still viewing your new GitHub repo.
+Go back to the browser.
+I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
@@ -83,25 +103,24 @@ You should see the new "This is a line from RStudio" in the README.
 
 If you click on "commits", you should see one with the message "Commit from RStudio".
 
-If you have made it this far, you are DONE with set up. But first ...
-
-## Were you challenged for GitHub username and password?
-
-If you somehow haven't done so yet, now is the perfect time to make sure you don't need to keep providing username and password on each push.
-
-First, make another small change locally and push again, to make sure we've given your system every opportunity to cache your credentials and retrieve them from the cache. It might "just work".
-
-Are you still challenged? Pick one:
-
-  * Credential caching for HTTPS access, chapter \@ref(credential-caching).
-  * Set up SSH keys, chapter \@ref(ssh-keys).
-
-Now is the perfect time to do this, since you have a functioning test repo.
+If you have made it this far, you are DONE with set up.
+Congratulations!
 
 ## Clean up
 
-**Local** When you're ready to clean up, you can delete the local repo any way you like. It's just a regular directory on your computer.
+Quit the RStudio instance that's open to your test Project / Git repo.
 
-**GitHub** In the browser, go to your repo's landing page on GitHub. Click on "Settings".
+Delete the local repo any way you like.
+It's just a regular directory on your computer.
+
+Here's how to do that in the shell, if current working directory is `myrepo`:
+
+```console
+cd ..
+rm -rf myrepo/
+```
+
+In the browser, go to your repo's landing page on GitHub.
+Click on "Settings".
 
 Scroll down, click on "delete repository," and do as it asks.

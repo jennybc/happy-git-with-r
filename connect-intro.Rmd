@@ -6,9 +6,11 @@ The next few chapters walk through some basic operations to confirm you have ins
 
 This has a lot of overlap with some basic workflows we revisit later, but the second time around (or in a live workshop), we'll spend more time explaining what's happening and why.
 
-In [Connect to GitHub] we use Git in the shell to make sure you can clone a repo from GitHub and establish two-way communications.
+Unfortunately, we have to front-load a rather fiddly task, which is to decide whether to communicate with GitHub via HTTPS or SSH and setup some credentials accordingly.
+In [Personal access token for HTTPS] we discuss how to choose between HTTPS and SSH and then walk through obtaining a personal access token, which is used with HTTPS.
+Or, alternatively, we will help you [Set up keys for SSH].
 
-In [Cache credentials for HTTPS] and [Set up keys for SSH] we present two approaches for persistently authenticating yourself with GitHub, so you don't need to provide credentials *ad nauseam*.
+Once we have our credentials sorted out, in [Connect to GitHub], we use Git in the shell to make sure you can clone a repo from GitHub and establish two-way communications, i.e. pull and push.
 
 In [Connect RStudio to Git and GitHub] we confirm that RStudio can work with your Git installation to perform local operations and communicate with GitHub.
 
