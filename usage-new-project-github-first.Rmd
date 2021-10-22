@@ -13,8 +13,6 @@ We will specify below when you may need to do something differently.
 
 ## Make a repo on GitHub
 
-## Make a repo on GitHub
-
 Go to <https://github.com> and make sure you are logged in.
 
 Near "Repositories", click the big green "New" button.
