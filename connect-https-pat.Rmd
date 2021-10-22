@@ -1,7 +1,5 @@
 # Personal access token for HTTPS {#https-pat}
 
-TODO: search for and repair instances of the previous label "credential-caching"
-
 When we interact with a remote Git server, such as GitHub, we have to include credentials in the request.
 This proves we are a specific GitHub user, who's allowed to do whatever we're asking to do.
 

@@ -67,7 +67,6 @@ rmd_files: [
 
   "appendix.Rmd",
   "shell.Rmd",
-  "github-api-tokens.Rmd",
   "comic-relief.Rmd",
 
   "references.Rmd"

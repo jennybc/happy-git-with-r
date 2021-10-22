@@ -93,7 +93,7 @@ First, make another small change locally and push again, to make sure we've give
 
 Are you still challenged? Pick one:
 
-  * Credential caching for HTTPS access, chapter \@ref(credential-caching).
+  * Credential caching for HTTPS access, chapter \@ref(https-pat).
   * Set up SSH keys, chapter \@ref(ssh-keys).
 
 Now is the perfect time to do this, since you have a functioning test repo.
