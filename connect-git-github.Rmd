@@ -105,7 +105,7 @@ checking stuff for Happy Git
 Add a line to README and verify that Git notices the change:
 
 ```console
-echo "A line I wrote on my local computer" >> README.md
+echo "A line I wrote on my local computer  " >> README.md
 git status
 ```
 
@@ -128,12 +128,16 @@ no changes added to commit (use "git add" and/or "git commit -a")
 
 Stage ("add") and commit this change and push to your remote repo on GitHub.
 
-If you're a new GitHub user and using HTTPS, you will probably be challenged for your GitHub credentials, which means your personal access token (PAT).
-If so, provide it!
-If you already stored your PAT with `gitcreds::gitcreds_set()`, you should not be challenged again.
+If you're a new GitHub user and using HTTPS, you might be challenged for your username and password.
+Even though GitHub no longer allows username/password authentication, many general Git tools still frame the authentication task with this vocabulary.
+By all means, provide your GitHub username when prompted.
+However, the most critical piece is to **provide your PAT as the password**.
+Do not enter your web password.
+Enter your PAT.
+If you already stored your PAT with `gitcreds::gitcreds_set()`, it should be discovered automatically and you will not see a credential challenge.
 
 ```console
-git add -A
+git add README.md
 git commit -m "A commit from my local computer"
 git push
 ```
@@ -141,7 +145,7 @@ git push
 This should look something like this:
 
 ```console
-~/tmp/myrepo % git add -A
+~/tmp/myrepo % git add README.md
 
 ~/tmp/myrepo % git commit -m "A commit from my local computer"
 [main e92528c] A commit from my local computer
@@ -157,11 +161,6 @@ Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 To https://github.com/jennybc/myrepo.git
    31dcaef..e92528c  main -> main
 ```
-
-The `-m "blah blah blah"` piece is very important!
-Git requires a commit message for every commit, so if you forget the `-m` flag, Git will prompt you for a commit message anyway.
-And you might not like [the editor that Git chooses](#git-editor).
-It is good practice to write meaningful commit messages, so that, in the future, potential collaborators (and your future self) will understand the progression of a project.
 
 Do you see an error like this?
 
