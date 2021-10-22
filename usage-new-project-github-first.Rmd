@@ -1,30 +1,51 @@
 # New project, GitHub first {#new-github-first}
 
-We create a new Project, with the preferred "GitHub first, then RStudio" sequence. Why do we prefer this? Because this method of copying the Project from GitHub to your computer also sets up the local Git repository for immediate pulling and pushing. Under the hood, we are doing `git clone`.
+We create a new Project, with the preferred "GitHub first, then RStudio" sequence.
+Why do we prefer this?
+Because this method of copying the Project from GitHub to your computer also sets up the local Git repository for immediate pulling and pushing.
+Under the hood, we are doing `git clone`.
 
-You've actually done this before during set up (chapter \@ref(rstudio-git-github)). We're doing it again, *with feeling*.
+You've actually done this before during set up (chapter \@ref(rstudio-git-github)).
+We're doing it again, *with feeling*.
 
-The workflow is pretty similar for other repository managers like GitLab or Bitbucket. We will specify below when you may need to do something differently.
+The workflow is pretty similar for other repository managers like GitLab or Bitbucket.
+We will specify below when you may need to do something differently.
 
 ## Make a repo on GitHub
 
-**Do this once per new project.**
+## Make a repo on GitHub
 
 Go to <https://github.com> and make sure you are logged in.
 
-Click green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
+Near "Repositories", click the big green "New" button.
+Or, if you are on your own profile page, click on "Repositories", then click the big green "New" button.
 
-- Repository name: `myrepo` (or whatever you wish)  
-- Public  
-- YES Initialize this repository with a README
+How to fill this in:
 
-Click the big green button "Create repository."
+* Repository template: No template.
+* Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
+* Description: "testing my setup" (or whatever, but some text is good for the README).
+* Public.
+* Initialize this repository with: Add a README file.
+  
+Click the big green button that says "Create repository".
+  
+Now click the big green button that says "<> Code".
 
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+Copy a clone URL to your clipboard.
+If you're taking our default advice, copy the HTTPS URL.
+But if you're opting for SSH, then make sure to copy the SSH URL.
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "100%",
+#| fig.alt = "Selecting an HTTPS vs SSH URL on GitHub"
+knitr::include_graphics("img/github-https-or-ssh-url-annotated.png")
+```
 
 ### GitLab
 
-Log in at <https://gitlab.com>. Click on the "+" button in the top-right corner, and then on "New project".
+Log in at <https://gitlab.com>.
+Click on the "+" button in the top-right corner, and then on "New project".
 
 - Project name: `myrepo` (or whatever you wish)  
 - Public
@@ -36,7 +57,8 @@ Copy the HTTPS or SSH clone URL to your clipboard via the blue "Clone" button.
 
 ### Bitbucket
 
-Log in at <https://bitbucket.org>. On the left-side pane, click on the "+" button, and then on "Repository" under "Create". 
+Log in at <https://bitbucket.org>.
+On the left-side pane, click on the "+" button, and then on "Repository" under "Create". 
 
 - Repository name: `myrepo` (or whatever you wish)
 - Access level: Uncheck to make the repository public.
@@ -45,7 +67,8 @@ Log in at <https://bitbucket.org>. On the left-side pane, click on the "+" butto
 
 Click the big blue button "Create repository."
 
-Copy the HTTPS or SSH clone URL that appears when you click on the blue "Clone" button. Make sure you remove the `git clone ...` that shows up at the beginning.
+Copy the HTTPS or SSH clone URL that appears when you click on the blue "Clone" button.
+Make sure you remove the `git clone ...` that shows up at the beginning.
 
 ## New RStudio Project via git clone {#new-rstudio-project-via-git}
 
@@ -60,36 +83,60 @@ In RStudio, start a new Project:
     - an RStudio Project
   * **In the absence of other constraints, I suggest that all of your R projects have exactly this set-up.**
 
-This should download the `README.md` file that we created on GitHub in the previous step. Look in RStudio's file browser pane for the `README.md` file.
+This should download the `README.md` file that we created on GitHub in the previous step.
+Look in RStudio's file browser pane for the `README.md` file.
 
-There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is added as a remote for your local repo and your local `master` branch is now tracking `master` on GitHub. This is a technical but important point about Git. The practical implication is that you are now set up to push and pull. No need to fanny around setting up Git remotes and tracking branches on the command line.
+There's a big advantage to the "GitHub first, then RStudio" workflow: the remote GitHub repo is configured as the `origin` remote for your local repo and your local `main` branch is now tracking the `main` on GitHub.
+This is a technical but important point about Git.
+The practical implication is that you are now set up to push and pull.
+No need to fanny around setting up Git remotes and tracking branches on the command line.
 
 ### Optional: peek under the hood
 
 Completely optional activity: use command line Git to see what we're talking about above, i.e. the remote and tracking branch setup.
 
-`git remote -v`or `git remote --verbose` shows the remotes you have setup. Here's how that looks for someone using SSH with GitHub and calling it `origin` (a convention I hate but am resigned to):
+`git remote -v` or `git remote --verbose` shows the remotes you have setup.
+Here's how that looks for someone using HTTPS with GitHub and calling it `origin`:
 
-``` sh
-$ git remote -v
-origin  git@github.com:jennybc/myrepo.git (fetch)
-origin  git@github.com:jennybc/myrepo.git (push)
+```console
+~/tmp/myrepo % git remote -v
+origin  https://github.com/jennybc/myrepo.git (fetch)
+origin  https://github.com/jennybc/myrepo.git (push)
 ```
 
-`git branch -vv` prints info about the current branch. In particular, we can see that local `master` is tracking the `master` branch on `origin`, a.k.a. `origin/master`.
+`git branch -vv` prints info about the current branch (`-vv` for "very verbose", I guess).
+In particular, we can see that local `main` is tracking the `main` branch on `origin`, a.k.a. `origin/main`.
 
-``` sh
-$ git branch -vv
-* master 7c98308 [origin/master] Initial commit
+```console
+~/tmp/myrepo % git branch -vv
+* main 2899c91 [origin/main] A commit from my local computer
 ```
 
-`git clone`, which RStudio did for us, sets all of this up automatically. This is why "GitHub first, then RStudio" is the preferred way to start projects early in your Git/GitHub life.
+Finally, `git remote show origin` gives yet another view on useful remote and branch information:
+
+```console
+~/tmp/myrepo % git remote show origin    
+* remote origin
+  Fetch URL: https://github.com/jennybc/myrepo.git
+  Push  URL: https://github.com/jennybc/myrepo.git
+  HEAD branch: main
+  Remote branch:
+    main tracked
+  Local branch configured for 'git pull':
+    main merges with remote main
+  Local ref configured for 'git push':
+    main pushes to main (up to date)
+```
+
+`git clone`, which RStudio did for us, sets all of this up automatically.
+This is why "GitHub first, then RStudio" is the preferred way to start projects early in your Git/GitHub life.
 
 ## Make local changes, save, commit
 
 **Do this every time you finish a valuable chunk of work, probably many times a day.**
 
-From RStudio, modify the `README.md` file, e.g., by adding the line "This is a line from RStudio". Save your changes.
+From RStudio, modify the `README.md` file, e.g., by adding the line "This is a line from RStudio".
+Save your changes.
 
 Commit these changes to your local repo. How?
 
@@ -108,22 +155,27 @@ You have new work in your local Git repository, but the changes are not online y
 
 This will seem counterintuitive, but first let's stop and pull from GitHub.
 
-Why? Establish this habit for the future! If you make changes to the repo in the browser or from another machine or (one day) a collaborator has pushed, you will be happier if you pull those changes in before you attempt to push.
+Why?
+Establish this habit for the future!
+If you make changes to the repo in the browser or from another machine or (one day) a collaborator has pushed, you will be happier if you pull those changes in before you attempt to push.
   
-Click the blue "Pull" button in the "Git" tab in RStudio. I doubt anything will happen, i.e. you'll get the message "Already up-to-date." This is just to establish a habit.
+Click the blue "Pull" button in the "Git" tab in RStudio.
+I doubt anything will happen, i.e. you'll get the message "Already up-to-date."
+This is just to establish a habit.
 
-Click the green "Push" button to send your local changes to GitHub. You should see some message along these lines.
+Click the green "Push" button to send your local changes to GitHub.
+RStudio will report something along these lines:
 
-``` bash
-[master dc671f0] blah
- 3 files changed, 22 insertions(+)
- create mode 100644 .gitignore
- create mode 100644 myrepo.Rproj
+```console
+>>> /usr/bin/git push origin HEAD:refs/heads/main
+To https://github.com/jennybc/myrepo.git
+   2899c91..b34cade  HEAD -> main
 ```
 
 ## Confirm the local change propagated to the GitHub remote
 
-Go back to the browser. I assume we're still viewing your new GitHub repo.
+Go back to the browser.
+I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
@@ -171,14 +223,23 @@ Click the blue "Commit" button.
 
 Back in RStudio locally ...
 
-Inspect your README.md. It should NOT have the line "Line added from GitHub". It should be as you left it. Verify that.
+Inspect your README.md.
+It should NOT have the line "Line added from GitHub".
+It should be as you left it.
+Verify that.
 
 Click the blue Pull button.
 
-Look at README.md again. You should now see the new line there.
+Look at README.md again.
+You should now see the new line there.
 
 ## The end
 
-Now just ... repeat. Do work somewhere. Commit it. Push it or pull it\* depending on where you did it, but get local and remote "synced up". Repeat.
+Now just "lather, rinse, repeat".
+Do work somewhere: locally or on GitHub.
+Commit it.
+Push it or pull it, depending on where you did the work, but get local and remote "synced up".
+Repeat.
 
-\* Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made. For this reason, it's a good idea to try and get into the habit of pulling before you attempt to push.
+Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made.
+For this reason, it's a good idea to try and get into the habit of pulling before you attempt to push.
