@@ -31,6 +31,12 @@ Copy a clone URL to your clipboard.
 If you're taking our default advice, copy the HTTPS URL.
 But if you're opting for SSH, then make sure to copy the SSH URL.
 
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "100%",
+#| fig.alt = "Selecting an HTTPS vs SSH URL on GitHub"
+knitr::include_graphics("img/github-https-or-ssh-url-annotated.png")
+```
+
 ## Clone the repo to your local computer
 
 We have a few ways to do this: with command line Git or via RStudio.
