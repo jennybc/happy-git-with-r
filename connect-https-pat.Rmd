@@ -106,7 +106,12 @@ Feel free to skip this section if you are new to Git (we mention some concepts a
 HTTPS remote URLs look like `https://github.com/<OWNER>/<REPO>.git`.  
 SSH remote URLs look like `git@github.com:<OWNER>/<REPO>.git`.
 
-*TO ADD: screenshot of making this choice in GitHub*
+```{r}
+#| echo = FALSE, fig.show = "hold",
+#| out.width = "49%", out.height = "49%", 
+#| fig.alt = "Getting an HTTPS or SSH URL from GitHub"
+knitr::include_graphics(c("img/github-https-url.png", "img/github-ssh-url.png"))
+```
 
 When you execute a command such as `git push origin my-cool-feature-branch`, Git looks up the URL you've stored for the `origin` remote and uses the protocol implicit in the URL's format.
 The protocol is a game time decision.
