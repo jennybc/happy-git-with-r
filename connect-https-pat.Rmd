@@ -248,7 +248,7 @@ If you don't have a PAT stored already, it will prompt you to enter your PAT. Pa
 
 If you already have a stored credential, `gitcreds::gitcreds_set()` reveals this and will even let you inspect it.
 This helps you decide whether to keep the existing credential or replace it.
-When in doubt, embrace a new, known-to-be-good credential over an old one, of uncertain origins.
+When in doubt, embrace a new, known-to-be-good credential over an old one, of dubious origins.
 
 ```{sh eval = FALSE}
 > gitcreds::gitcreds_set()
@@ -329,68 +329,10 @@ gh::gh_whoami()
 
 ### Store credentials through organic Git use
 
-*Before gitcreds and credentials existed (see above), we had to store the PAT through organic Git use.
-We still show this method, but `gitcreds::gitcreds_set()` is usually much more convenient.*
-
-Pre-requisite: You need a local Git repository that is associated with a remote repository on GitHub.
-Check that all of this is true:
-
-  * You have a test repo.
-  * You know where it lives on your local computer. Example:
-    - `/home/jenny/tmp/myrepo`
-  * You know where it lives on GitHub. Example:
-    - `https://github.com/jennybc/myrepo`
-  * You know the GitHub repo is setup as a remote for the local repo.
-    In a shell (Appendix \@ref(shell)), with working directory set to the local
-    Git repo, `git remote -v` should look like this:
-  
-    ```console
-    ~/tmp/myrepo % git remote -v
-    origin  https://github.com/jennybc/myrepo.git (fetch)
-    origin  https://github.com/jennybc/myrepo.git (push)
-    ```
-
-Now we need to do something that will cause Git to challenge us for our credentials.
-
-Change a file in your local repo and commit it.
-Do that however you wish.
-Here are shell commands that will work:
-
-```console
-echo "adding a line" >> README.md
-git add -A
-git commit -m "A commit from my local computer"
-```
-
-Find out what branch you're on.
-It will probably be `main` or `master`.
-
-```console
-~/tmp/myrepo % git branch
-* main
-```
-
-Now push! Substituting your branch name for `main`, if necessary.
-
-```console
-git push -u origin main
-```
-
-You should be asked for your username and password.
-Even though GitHub no longer allows username/password authentication, many general Git tools still frame the authentication task with this vocabulary.
-By all means, provide your GitHub username when prompted.
-However, the most critical piece is to **provide your PAT as the password**.
-Do not enter your password.
-Enter your PAT.
-
-Now push AGAIN.
-
-```console
-git push
-```
-  
-You should NOT be asked for your username and password, instead you should see `Everything up-to-date`.
-If you are challenged again, read below for ways to activate credential caching.
+*Before gitcreds and credentials existed (see above), we had to orchestrate a credential challenge by setting up (and then tearing down) a toy repo.
+That still occurs naturally in the guided exercise in [Connect to GitHub].
+But I strongly recommend managing your PAT more directly and explicitly with
+`gitcreds::gitcreds_set()` and related functions in gitcreds.*
 
 ## HTTPS PAT problems and solutions {#pat-troubleshooting}
 
