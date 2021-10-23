@@ -12,6 +12,8 @@ Imports:
     bslib,
     downlit,
     fs,
+    glue,
+    readr,
     sessioninfo,
     xml2
 Encoding: UTF-8

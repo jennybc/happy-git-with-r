@@ -1,25 +1,35 @@
 # Existing project, GitHub first {#existing-github-first}
 
-A novice-friendly workflow for bringing an existing R project into the RStudio and Git/GitHub universe.
+This is a novice-friendly workflow for bringing an existing R project into the RStudio and Git/GitHub universe.
 
-We do this in a slightly awkward way, in order to avoid using Git at the command line. You won't want to work this way forever, but it's perfectly fine as you're getting started!
+We do this in a slightly awkward way, in order to avoid using Git at the command line.
+You won't want to work this way forever, but it's perfectly fine as you're getting started!
 
-We assume you've got your existing R project isolated in a directory on your computer. If that's not already true, make it so. Create a directory and marshal all the existing data and R scripts there. It doesn't really matter where you do this, but note where the project currently lives.
+We assume you've got your existing R project isolated in a directory on your computer.
+If that's not already true, make it so.
+Create a directory and marshal all the existing data and R scripts there.
+It doesn't really matter where you do this, but note where the project currently lives.
 
 ## Make a repo on GitHub
 
-Go to <https://github.com> and make sure you are logged in.
-
-Click the green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
-
-Pick a repository name that actually reminds you what the project is about! But try to be concise.
-
-Public  
-YES Initialize this repository with a README
-
-Click the big green button "Create repository."
-
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+```{r echo = FALSE, results = "asis"}
+dat <- list(
+  repository_name_text = glue::glue("
+    `myrepo` or a similarly short name for this existing project. Approach \\
+    this similar to a variable name, in code: descriptive but brief, no \\
+    whitespace. Letters, digits, `-`, `.`, or `_` are allowed."),
+  description_text = glue::glue("
+    \"Analysis of the stuff\" or any short description of the project. Write \\
+    this for humans.")
+)
+insert <- glue::glue_data(
+  dat,
+  readr::read_file("child-create-a-github-repo.Rmd"),
+  .open = "<<<", .close = ">>>"
+)
+res <- knitr::knit_child(text = insert, quiet = TRUE)
+cat(res, sep = '\n')
+```
 
 ## New RStudio Project via git clone
 

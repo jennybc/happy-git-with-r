@@ -13,31 +13,23 @@ We will specify below when you may need to do something differently.
 
 ## Make a repo on GitHub
 
-Go to <https://github.com> and make sure you are logged in.
-
-Near "Repositories", click the big green "New" button.
-Or, if you are on your own profile page, click on "Repositories", then click the big green "New" button.
-
-How to fill this in:
-
-* Repository template: No template.
-* Repository name: `myrepo` (or whatever you wish, we'll delete this soon anyway).
-* Description: "testing my setup" (or whatever, but some text is good for the README).
-* Public.
-* Initialize this repository with: Add a README file.
-  
-Click the big green button that says "Create repository".
-  
-Now click the big green button that says "<> Code".
-
-Copy a clone URL to your clipboard.
-If you're taking our default advice, copy the HTTPS URL.
-But if you're opting for SSH, then make sure to copy the SSH URL.
-
-```{r}
-#| echo = FALSE, fig.align = "center", out.width = "100%",
-#| fig.alt = "Selecting an HTTPS vs SSH URL on GitHub"
-knitr::include_graphics("img/github-https-or-ssh-url-annotated.png")
+```{r echo = FALSE, results = "asis"}
+dat <- list(
+  repository_name_text = glue::glue("
+    `myrepo` or whatever you wish to name your new project. Approach this \\
+    similar to a variable name, in code: descriptive but brief, no \\
+    whitespace. Letters, digits, `-`, `.`, or `_` are allowed."),
+  description_text = glue::glue("
+    \"Analysis of the stuff\" or any short description of the project. Write \\
+    this for humans.")
+)
+insert <- glue::glue_data(
+  dat,
+  readr::read_file("child-create-a-github-repo.Rmd"),
+  .open = "<<<", .close = ">>>"
+)
+res <- knitr::knit_child(text = insert, quiet = TRUE)
+cat(res, sep = '\n')
 ```
 
 ### GitLab

@@ -1,0 +1,26 @@
+Go to <https://github.com> and make sure you are logged in.
+
+Near "Repositories", click the big green "New" button.
+Or, if you are on your own profile page, click on "Repositories", then click the big green "New" button.
+
+How to fill this in:
+
+* Repository template: No template.
+* Repository name: <<<repository_name_text>>>
+* Description: <<<description_text>>>
+* Public.
+* Initialize this repository with: Add a README file.
+
+Click the big green button that says "Create repository".
+
+Now click the big green button that says "<> Code".
+
+Copy a clone URL to your clipboard.
+If you're taking our default advice, copy the HTTPS URL.
+But if you're opting for SSH, then make sure to copy the SSH URL.
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "100%",
+#| fig.alt = "Selecting an HTTPS vs SSH URL on GitHub"
+knitr::include_graphics("img/github-https-or-ssh-url-annotated.png")
+```
