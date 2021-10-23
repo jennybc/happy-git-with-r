@@ -1,72 +1,112 @@
 # Existing project, GitHub last {#existing-github-last}
 
-An explicit workflow for connecting an existing local R project to GitHub, when for some reason you cannot or don't want to do a "GitHub first" workflow (see chapters \@ref(new-github-first) and \@ref(existing-github-first)).
+This an explicit workflow for connecting an existing local R project to GitHub, when for some reason you cannot or don't want to do a "GitHub first" workflow (see chapters \@ref(new-github-first) and \@ref(existing-github-first)).
 
-When does this come up? Example: it's an existing project that is already a Git repo with a history you care about. Then you have to do this properly.
+When does this come up?
+Example: it's an existing project that is already a Git repo with a history you care about.
+Then you have to do this properly.
 
-This is less desirable for a novice because there are more opportunities to get confused and make a mistake. RStudio and the [usethis](https://cran.r-project.org/package=usethis) package are gradually making this easier, so you can avoid working with Git in the shell (Appendix \@ref(shell)). But command line Git remains a viable option. All are covered below.
+This may be less desirable for a novice because there are more opportunities to get confused and make a mistake.
+But this workflow is not that hard, even with command line Git, and is even easier if you use conveniences from the [usethis](https://cran.r-project.org/package=usethis) package or the RStudio IDE.
+All of these are covered below.
 
-## Make or verify an RStudio Project
+## Prepare the local project
 
 We assume you've got your existing R project isolated in a directory on your computer.
+If that's not already true, make it so.
+Create a directory and marshal all the existing data and R scripts there.
+It doesn't really matter where you do this, but note where the project currently lives.
 
-If it's not already an RStudio Project, make it so:
+I encourage you to make this project into an RStudio project, although it is not absolutely required.
+If you opt-out of this, the instructions using command line Git or usethis will still work for you, outside of RStudio.
 
-  * If you use the [usethis](https://cran.r-project.org/package=usethis) package, set the existing directory as the current project with `usethis::create_project()`.
+### Make or verify an RStudio Project
+
+If the project is not already an RStudio Project, make it so:
+
   * Within RStudio you can do: *File > New Project > Existing Directory* and, if you wish, "Open in new session".
+  * Alternatively, from R, call `usethis::create_project("path/to/your/project")`, substituting the path to your existing project directory.
 
 If your project is already an RStudio Project, launch it.
 
-## Make or verify a Git repo
+### Make or verify a Git repo
 
 You should be in RStudio now, in your project.
 
-Is it already a Git repository? The presence of the Git pane should tip you off. If yes, you're done.
+Is it already a Git repository?
+The presence of the Git pane should tip you off.
+If yes, you're done.
 
 If not, you have several options:
 
-  * If you have the [usethis](https://cran.r-project.org/package=usethis) package, call `usethis::use_git()`.
+  * In the R Console, call `usethis::use_git()`.
   * In RStudio, go to *Tools > Project Options ... > Git/SVN*. Under "Version control system", select "Git". Confirm New Git Repository? Yes!
-  * In the shell, in Project's directory, do `git init`.
+  * In the shell, with working directory set to the project's directory, do `git init`.
 
-If you used RStudio or usethis, the Project should re-launch in RStudio. Do that yourself if you did `git init`. RStudio should now have a Git pane.
+If you used usethis or RStudio to initialize the Git repo, the Project should re-launch in RStudio.
+Do that yourself if you did `git init`.
+RStudio should now have a Git pane.
 
 ## Stage and commit
 
 If your local project was already a Git repo and was up-to-date, move on. Otherwise, you probably need to stage and commit.
 
-  * Click the "Git" tab in upper right pane
-  * Check "Staged" box for all files you want to commit.
-    - Default: stage everything
-    - When to do otherwise: this will all go to GitHub. So consider if that is appropriate for each file. **You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
-  * If you're not already in the Git pop-up, click "Commit"
-  * Type a message in "Commit message".
-  * Click "Commit"
+* Click the "Git" tab in upper right pane
+* Check "Staged" box for all files you want to commit.
+  - Default: stage everything
+  - When to do otherwise: this will all go to GitHub. So consider if that is
+    appropriate for each file. **You can absolutely keep a file locally,
+    without committing it to the Git repo and sending to GitHub**. Just let it
+    sit there in your Git pane, without being staged. No harm will be done. If
+    this is a long-term situation, list the file in `.gitignore`.
+* If you're not already in the Git pop-up, click "Commit"
+* Type a message in "Commit message".
+* Click "Commit"
 
-## Make and connect a GitHub repo, option 1
+## Make and connect a GitHub repo with usethis
 
-If you use the [usethis](https://cran.r-project.org/package=usethis) package AND you have configured a GitHub Personal Access Token (PAT) (see [the appendix][GitHub Personal Access Tokens] for how to set this up.), do this in R:
+To use usethis for this task, you must have configured a personal access token (PAT).
+This will already by configured for anyone using HTTPS as their protocol, because they are already using the PAT to authenticate for other Git operations.
+But if you are an SSH person, you will need to configure a PAT, which is explained in chapter \@ref(https-pat).
+It is fine to have both a PAT and SSH keys.
 
-    usethis::use_github()
+In your project, in the R Console, call:
+
+```{r eval = FALSE}
+usethis::use_github()
+#> ✓ Creating GitHub repository 'jennybc/myrepo'
+#> ✓ Setting remote 'origin' to 'https://github.com/jennybc/myrepo.git'
+#> ✓ Pushing 'main' branch to GitHub and setting 'origin/main' as upstream branch
+#> ✓ Opening URL 'https://github.com/jennybc/myrepo'
+```
     
-This will create a new repo on GitHub, add it as a remote, set up a tracking branch, and open it in your browser. Read the `use_github()` help to learn about its arguments and advice on configuring a PAT. This is extremely handy for a variety of workflows that call the GitHub API. Consider setting this up if you use usethis, devtools, or gh regularly.
+This creates a new repo on GitHub, adds it as the `origin` remote, sets up your local default branch to track same on `origin`, and opens it in your browser.
 
-## Make and connect a GitHub repo, option 2
+## Make and connect a GitHub repo without usethis
 
 ### Make a new repo on GitHub
 
-Go to <https://github.com> and make sure you are logged in.
-
-Click the green "New repository" button. Or, if you are on your own profile page, click on "Repositories", then click the green "New" button.
-
-Pick a repository name -- it should probably match the name of your local Project and directory. Why confuse yourself?
-
-Public or private, as appropriate  
-DO NOT initialize this repository with a README.
-
-Click the big green button "Create repository."
-
-Copy the HTTPS clone URL to your clipboard via the green "Clone or Download" button. Or copy the SSH URL if you chose to set up SSH keys.
+```{r echo = FALSE, results = "asis"}
+dat <- list(
+  repository_name_text = glue::glue("
+    Ideally this will be the name of your local project's directory (and \\
+    RStudio Project). Why confuse yourself? But it must be a valid \\
+    GitHub repo name, which means only letters, digits, `-`, `.`, or `_` are \\
+    allowed. For future projects, think about this in advance, i.e. make \\
+    sure each project's local name is also a valid GitHub repo name."),
+  description_text = glue::glue("
+    \"Analysis of the stuff\" or any short description of the project. Write \\
+    this for humans."),
+  initialize_text = "**DO NOT initialize this repository with anything**."
+)
+insert <- glue::glue_data(
+  dat,
+  readr::read_file("child-create-a-github-repo.Rmd"),
+  .open = "<<<", .close = ">>>"
+)
+res <- knitr::knit_child(text = insert, quiet = TRUE)
+cat(res, sep = '\n')
+```
 
 ### Connect local repo to GitHub repo
 
@@ -74,23 +114,35 @@ You can do this in the shell or, with recent versions of RStudio, via RStudio.
 
 ### In RStudio
 
-Click on the "two purple boxes and a white square" in the Git pane. Click "Add remote". Paste the URL here and pick a remote name, almost certainly `origin`. Now "Add".
+Click on the "two purple boxes and a white square" in the Git pane.
+Click "Add remote".
+Paste the GitHub repo's URL here and pick a remote name, almost certainly `origin`.
+Now "Add".
 
-We should be back in the "New Branch" dialog (if not, click on the "two purple boxes and a white square" in the Git pane again). I assume you're on the `master` branch want it to track `master` on GitHub. Enter `master` as the branch name and make sure "Sync branch with remote" is checked. Click "Create" (yes, even though the branch already exists). In the next dialog, choose "overwrite".
+We should be back in the "New Branch" dialog (if not, click on the "two purple boxes and a white square" in the Git pane again).
+I assume you're on the `main` branch and want it to track `main` on GitHub (or whatever default branch you are using).
+Enter `main` as the branch name and make sure "Sync branch with remote" is checked.
+Click "Create" (yes, even though the branch already exists).
+In the next dialog, choose "overwrite".
 
 ### In the shell
 
 In a shell, do this, substituting your URL:
 
-        git remote add origin https://github.com/jennybc/myrepo.git
+```console
+git remote add origin https://github.com/jennybc/myrepo.git
+```
 
-Push and cement the tracking relationship between your local `master` branch and `master` on GitHub:
-  
-        git push --set-upstream origin master
+Push and cement the tracking relationship between your local `main` branch and `main` on GitHub (or whatever your default branch is named):
+
+```console
+git push --set-upstream origin main
+```
 
 ## Confirm the local files propagated to the GitHub remote
 
-Go back to the browser. I assume we're still viewing your new GitHub repo.
+Go back to the browser.
+I assume we're still viewing your new GitHub repo.
 
 Refresh.
 
@@ -100,6 +152,11 @@ If this project already had a Git history, it should be reflected on GitHub.
 
 ## The end
 
-Now just ... repeat. Do work somewhere. Commit it. Push it or pull it depending on where you did it, but get local and remote "synced up". Repeat.
+Now just "lather, rinse, repeat".
+Do work somewhere: locally or on GitHub.
+Commit it.
+Push it or pull it, depending on where you did the work, but get local and remote "synced up".
+Repeat.
 
-Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made. For this reason, it's a good idea to try and get into the habit of pulling before you attempt to push.
+Note that in general (and especially in future when collaborating with other developers) you will usually need to pull changes from the remote (GitHub) before pushing the local changes you have made.
+For this reason, it's a good idea to try and get into the habit of pulling before you attempt to push.
