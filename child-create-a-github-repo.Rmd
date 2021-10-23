@@ -9,7 +9,7 @@ How to fill this in:
 * Repository name: <<<repository_name_text>>>
 * Description: <<<description_text>>>
 * Public.
-* Initialize this repository with: Add a README file.
+* <<<initialize_text>>>
 
 Click the big green button that says "Create repository".
 

@@ -40,7 +40,8 @@ dat <- list(
     `myrepo` or whatever you wish (we'll delete this soon)."),
   description_text = glue::glue("
     \"Repository for testing my Git/GitHub setup\" or similar. It's nice to \\
-    have something here, so you'll see it appear in the README.")
+    have something here, so you'll see it appear in the README."),
+  initialize_text = "Initialize this repository with: Add a README file."
 )
 insert <- glue::glue_data(
   dat,

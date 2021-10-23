@@ -21,7 +21,8 @@ dat <- list(
     whitespace. Letters, digits, `-`, `.`, or `_` are allowed."),
   description_text = glue::glue("
     \"Analysis of the stuff\" or any short description of the project. Write \\
-    this for humans.")
+    this for humans."),
+  initialize_text = "Initialize this repository with: Add a README file."
 )
 insert <- glue::glue_data(
   dat,
