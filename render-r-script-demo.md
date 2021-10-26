@@ -1,13 +1,13 @@
 R scripts can be rendered!
 ================
-Jenny Bryan
-April 1, 2014
+jenny
+2021-10-25
 
 Here’s some prose in a very special comment. Let’s summarize the
 built-in dataset `VADeaths`.
 
 ``` r
-## here is a regular code comment, that will remain as such
+# here is a regular code comment, that will remain as such
 summary(VADeaths)
 ```
 
