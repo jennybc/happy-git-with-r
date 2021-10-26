@@ -1,6 +1,9 @@
 # The Repeated Amend {#repeated-amend}
 
-One of the principal joys of version control is the freedom to experiment without fear. If you make a mess of things, you can always go back to a happier version of your project. We describe several methods of such time travel in *link to come*. But you must have a good commit to fall back to!
+One of the principal joys of version control is the freedom to experiment without fear.
+If you make a mess of things, you can always go back to a happier version of your project.
+We describe several methods of such time travel in *link to come*.
+But you must have a good commit to fall back to!
 
 ## Rock climbing analogy
 
@@ -16,11 +19,17 @@ Let's talk about this:
 
 > use more commits when you're in uncertain or dangerous territory
 
-When I'm doing something tricky, I often proceed towards my goal in small increments, checking that everything still works along the way. Yes it works? Make a commit. This is my new worst case scenario. Keep going.
+When I'm doing something tricky, I often proceed towards my goal in small increments, checking that everything still works along the way.
+Yes it works?
+Make a commit.
+This is my new worst case scenario.
+Keep going.
 
 What's not to love?
 
-This can lead to an awful lot of tiny commits. This is absolutely fine and nothing to be ashamed of. But one day you may start to care about the utility and aesthetics of your Git history.
+This can lead to an awful lot of tiny commits.
+This is absolutely fine and nothing to be ashamed of.
+But one day you may start to care about the utility and aesthetics of your Git history.
 
 The Repeated Amend is a pattern where, instead of cluttering your history with lots of tiny commits, you build up a "good" commit gradually, by amending.
 
@@ -32,16 +41,17 @@ The Repeated Amend is a pattern where, instead of cluttering your history with l
 
 Start with your project in a functional state:
 
-  * R package? Run your tests or `R CMD check`.
-  * Data analysis? Re-run your script or re-render your `.Rmd` with the new chunk.
-  * Website or book? Make sure the project still compiles.
-  * You get the idea.
+* R package? Run your tests or `R CMD check`.
+* Data analysis? Re-run your script or re-render your `.Rmd` with the new chunk.
+* Website or book? Make sure the project still compiles.
+* You get the idea.
 
 Make sure your "working tree is clean" and you are synced up with your GitHub remote. `git status` should show something like:
 
-``` bash
-On branch master
-Your branch is up to date with 'origin/master'.
+```console
+~/tmp/myrepo % git status                                                          
+On branch main
+Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
@@ -54,15 +64,20 @@ Imagine we start at commit C, with previous commit B and, before that, A:
 ... -- A -- B -- C
 ```
 
-Make a small step towards your goal. Re-check that your project "works".
+Make a small step towards your goal.
+Re-check that your project "works".
 
-Stage those changes and make a commit with the message "WIP", meaning "work in progress". Do this in RStudio or in the shell (Appendix \@ref(shell)):
+Stage those changes with and make a commit with the message "WIP", meaning "work in progress".
+Do this in RStudio or in the shell (Appendix \@ref(shell)):
 
-``` bash
+```console
+git add path/to/the/changed/file
 git commit -m "WIP"
 ```
 
-The message can be anything, but "WIP" is a common convention. If you use it, whenever you return to a project where the most recent commit message is "WIP", you'll know that you were probably in the middle of something. If you push a "WIP" commit, on purpose or by mistake, it signals to other people that more commits might be coming.
+The message can be anything, but "WIP" is a common convention.
+If you use it, whenever you return to a project where the most recent commit message is "WIP", you'll know that you were probably in the middle of something.
+If you push a "WIP" commit, on purpose or by mistake, it signals to other people that more commits might be coming.
 
 Your history now looks like this:
 
@@ -70,7 +85,8 @@ Your history now looks like this:
 A -- B -- C -- WIP*
 ```
 
-**Don't push!** The `*` above signifies a commit that exists only in your local repo, not (yet) on GitHub.
+**Don't push!**
+The `*` above signifies a commit that exists only in your local repo, not (yet) on GitHub.
 
 Do a bit more work. Re-check that your project is still in a functional state. Commit again but this time **amend** your previous commit. RStudio offers a check box for "Amend previous commit" or in the shell:
 
