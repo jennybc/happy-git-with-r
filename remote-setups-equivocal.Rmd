@@ -26,7 +26,9 @@ If you've configured a PAT and are being told your GitHub config is problematic,
 
 When we detect just one GitHub remote, but we can't verify the info above, usethis describes the setup as "maybe_ours_or_theirs".
 
-```{r maybe_ours_or_theirs, echo = FALSE, out.width = "60%"}
+```{r maybe_ours_or_theirs}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"maybe_ours_or_theirs\""
 knitr::include_graphics("img/maybe_ours_or_theirs.png")
 ```
 
@@ -36,7 +38,9 @@ Once a PAT is available, this setup can be identified as being ["ours" (belongin
 
 When we detect two GitHub remotes, but we can't verify the info above, usethis describes the setup as "maybe_fork".
 
-```{r maybe_fork, echo = FALSE, out.width = "60%"}
+```{r maybe_fork}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"maybe_fork\""
 knitr::include_graphics("img/maybe_fork.png")
 ```
 
@@ -48,4 +52,3 @@ These setups aren't necessarily broken, but usethis needs more information to op
 
 To "fix" this, set up a GitHub personal access token.
 See section \@ref(get-a-pat) for more details on why and how to do that.
-
