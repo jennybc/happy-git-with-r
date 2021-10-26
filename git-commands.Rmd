@@ -1,31 +1,34 @@
 # Git commands {#git-commands}
 
-A collection of some of the Git commands that have been largely going on under the hood. We've emphasized early workflows that are possible in RStudio. But all of this and much more can be done from the command line. This list is here mostly so we can consult it during live workshops if needed.
+A collection of some of the Git commands that have been largely going on under the hood.
+We've emphasized early workflows that are possible in RStudio.
+But all of this and much more can be done from the command line.
+This list is here mostly so we can consult it during live workshops if needed.
 
 *Unless you use the [GitHub API](https://developer.github.com/v3/), most of the GitHub bits really have to be done from the browser.*
 
 New local git repo from a repo on GitHub:
 
-``` bash
+```console
 git clone https://github.com/jennybc/happy-git-with-r.git
 ```
 
 Check the remote was cloned successfully:
 
-``` bash
+```console
 git remote --verbose
 ```
 
 Stage local changes, commit:
 
-``` bash
+```console
 git add foo.txt
 git commit --message "A commit message"
 ```
 
 Check on the state of the Git world:
 
-``` bash
+```console
 git status
 git log
 git log --oneline
@@ -33,63 +36,64 @@ git log --oneline
 
 Compare versions:
 
-``` bash
+```console
 git diff
 ```
 
 Add a remote to existing local repo:
 
-``` bash
+```console
 git remote add origin https://github.com/jennybc/happy-git-with-r
 git remote --verbose
 git remote show origin
 ```
 
-Push local master to GitHub master and have local master track master on GitHub:
+Push local `main` to GitHub `main` and have local `main` track `main` on GitHub:
 
-``` bash
-git push --set-upstream origin master
-## shorter form
-git push -u origin master
-## you only need to set upstream tracking once!
+```console
+git push --set-upstream origin main
+# shorter form
+git push -u origin main
+# you only need to set upstream tracking once!
 ```
 
 Regular push:
 
-``` bash
+```console
 git push 
-## the above usually implies (and certainly does in our tutorial)
-git push origin master
-## git push [remote-name] [branch-name]
+# the above usually implies (and certainly does in our tutorial)
+git push origin main
+# git push [remote-name] [branch-name]
 ```
 
 Pull commits from GitHub:
 
-``` bash
+```console
 git pull
 ```
 
 Pull commits and don't let it put you in a merge conflict pickle:
 
-``` bash
+```console
 git pull --ff-only
 ```
 
 Fetch commits
 
-``` bash
+```console
 git fetch
 ```
 
 Switch to a branch
 
-``` bash
+```console
 git checkout [branch-name]
 ```
 
 Checking remote and branch tracking
 
-``` bash
+```console
 git remote -v
+git remote show origin
 git branch -vv
 ```
