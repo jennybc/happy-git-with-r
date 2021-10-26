@@ -1,8 +1,9 @@
 # Remotes {#git-remotes}
 
 Remote repositories are versions of your project that are hosted on the
-Internet or another network. A single project can have 1, 2 or even hundreds of
-remotes. You pull others changes from remotes and push your changes to remotes.
+Internet or another network.
+A single project can have 1, 2, or even hundreds of remotes.
+You pull others' changes from remotes and push your changes to remotes.
 
 ```{r setup, include = FALSE}
 has_bash <- Sys.which('bash') != '' && .Platform$OS.type != 'windows'
@@ -20,40 +21,48 @@ git remote -v
 ## Adding a new remote
 
 `git clone` automatically adds a new remote, so often you do not need to do
-this manually initially. However, after the initial clone, it is often useful to
-add additional remotes.
+this manually initially.
+However, after the initial clone, it is often useful to add additional remotes.
 
-Use `git remote add` to add a new remote
+Use `git remote add` to add a new remote:
 
-```shell
+```console
 git remote add happygit https://github.com/jennybc/happy-git-with-r.git
 ```
 
 Note: when you add a remote you give it a nickname (here `happygit`), which you can use in git commands in place of the entire URL.
 
-```shell
+```console
 git fetch happygit
 ```
 
-Sidebar on nicknames: there is a strong convention to use `origin` as the nickname of your main remote. At this point, it is common for the main remote of a repo to be hosted on GitHub (or GitLab or Bitbucket). It is tempting to use a more descriptive nickname (such as `github`), but you might find that following convention is worth it. It makes your setup easier for others to understand and for you to transfer information that you read in documentation, on Stack Overflow, or in blogs.
+Sidebar on nicknames: there is a strong convention to use `origin` as the nickname of your main remote.
+At this point, it is common for the main remote of a repo to be hosted on GitHub (or GitLab or Bitbucket).
+It is tempting to use a more descriptive nickname (such as `github`), but you might find that following convention is worth it.
+It makes your setup easier for others to understand and for you to transfer information that you read in documentation, on Stack Overflow, or in blogs.
 
-A common reason to add a  second remote is when you have done a "fork and clone" of a repo and your personal copy is set up as the `origin` remote. Eventually you will want to pull changes from the original repository. It is common to use `upstream` as the nickname for this remote.
+A common reason to add a second remote is when you have done a "fork and clone" of a repo and your personal copy (your fork) is set up as the `origin` remote.
+Eventually you will want to pull changes from the original repository. It is common to use `upstream` as the nickname for this remote.
+
+```console
+git remote add upstream https://github.com/TRUE_OWNER/REPO.git
+```
 
 ## Fetching data from remotes
 
-To get new data from a remote use `git fetch <remote_name>`. This retrieves the
-data locally, but importantly it does _not_ change the state of your repository
-or your files in any way. To incorporate the data into your repository, you need to merge or rebase your project with the remote project.
+To get new data from a remote use `git fetch <remote_name>`.
+This retrieves the data locally, but importantly it does _not_ change the state of your local files in any way.
+To incorporate the data into your repository, you need to merge or rebase your project with the remote project.
 
-```shell
+```console
 # Fetch the data
 git fetch happygit
 
-# Now merge it with our local master
-git merge happygit/master master
+# Now merge it with our local main
+git merge happygit/main main
 
 # git pull is a shortcut which does the above in one command
-git pull happygit master
+git pull happygit main
 ```
 
 For more detail on `git pull` workflows, see \@ref(pull-tricky).
@@ -63,9 +72,9 @@ For more detail on `git pull` workflows, see \@ref(pull-tricky).
 Use `git push <remote> <branch>` to push your local changes to the `<branch>`
 branch on the `<remote>` remote.
 
-```shell
-# push my local changes to the origin remote's master branch
-git push origin master
+```console
+# push my local changes to the origin remote's main branch
+git push origin main
 
 # push my local changes to the happygit remote's test branch
 git push happygit test
@@ -73,25 +82,27 @@ git push happygit test
 
 ## Renaming and changing remotes
 
-`git remote rename` can be used to rename a remote
+`git remote rename` can be used to rename a remote:
 
-```shell
+```console
 git remote rename happygit hg
 ```
 
-`git remote set-url` can be used to change the URL for a remote. This is
-sometimes useful if you initially set up a remote using https, but now want to
-use the SSH URL instead (or vise versa).
+`git remote set-url` can be used to change the URL for a remote.
+This is sometimes useful if you initially set up a remote using HTTPS, but now want to use SSH instead (or *vice versa*).
 
-```shell
+```console
 git remote set-url happygit git@github.com:jennybc/happy-git-with-r.git
 ```
 
 One fairly common workflow is you initially cloned a repository on GitHub
 locally (without forking it), but now want to create your own fork and push
-changes to it. As described earlier, it is common to call the main repository `upstream` and to call your fork `origin`. So, in this case, you need to first rename the existing remote (from `origin` to `upstream`). Then add your fork as a new remote, with the name `origin`.
+changes to it.
+As described earlier, it is common to call the source repository `upstream` and to call your fork `origin`.
+So, in this case, you need to first rename the existing remote (from `origin` to `upstream`).
+Then add your fork as a new remote, with the name `origin`.
 
-```shell
+```console
 git remote rename origin upstream
 git remote add origin git@github.com:jimhester/happy-git-with-r.git
 ```
@@ -99,11 +110,11 @@ git remote add origin git@github.com:jimhester/happy-git-with-r.git
 ## Upstream tracking branches
 
 It is possible to set the branch on the remote each of your local remotes
-corresponds to. `git clone` sets this up automatically, so for your own master
-branch this is not something you will run into. However by default if you
-create a new branch and try to push to it you will see something like this.
+corresponds to.
+`git clone` sets this up automatically, so for your own `main` branch this is not something you will run into.
+However by default if you create a new branch and try to push to it you will see something like this:
 
-```shell
+```console
 git checkout -b mybranch
 git push
 # fatal: The current branch foo has no upstream branch.
@@ -113,13 +124,12 @@ git push
 ```
 
 You can do as the error message says and explicitly set the upstream branch
-with `--set-upstream`. However I would recommend instead changing the default
-behavior of `push` to automatically set the upstream branch to the branch with
-the same name on the remote.
+with `--set-upstream`.
+However I would recommend instead changing the default behavior of `push` to automatically set the upstream branch to the branch with the same name on the remote.
 
 You can do this by changing the git `push.default` option to `current`.
 
-```shell
+```console
 git config --global push.default current
 ```
 
