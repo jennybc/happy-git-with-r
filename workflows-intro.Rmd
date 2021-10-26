@@ -2,7 +2,7 @@
 
 # Useful Git patterns for real life {#workflows-intro .unnumbered}
 
-*much of this originates as live workshop materials; we are gradually creating nice prose versions*
+*Much of this originates as live workshop materials; the unlinked workflows are planned but not yet converted to prose here.*
 
 Git patterns that come up frequently in real work:
 
