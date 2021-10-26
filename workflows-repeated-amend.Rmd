@@ -87,10 +87,14 @@ A -- B -- C -- WIP*
 
 **Don't push!**
 The `*` above signifies a commit that exists only in your local repo, not (yet) on GitHub.
+If you called `git status`, you'd see something like "Your branch is ahead of 'origin/main' by 1 commit.", which is also displayed in RStudio's Git pane.
 
-Do a bit more work. Re-check that your project is still in a functional state. Commit again but this time **amend** your previous commit. RStudio offers a check box for "Amend previous commit" or in the shell:
+Do a bit more work.
+Re-check that your project is still in a functional state.
+Stage and commit again, but this time **amend** your previous commit.
+RStudio offers a check box for "Amend previous commit" or in the shell:
 
-``` bash
+```console
 git commit --amend --no-edit
 ```
 
@@ -108,9 +112,12 @@ Keep going like this.
 
 Let's say you've finally achieved your goal. One last time, check that your project is functional and in a state you're willing to share with others.
 
-Commit, amending again, but with a real commit message this time. Think of this as commit D. Push. Do this in RStudio or the shell:
+Commit, amending again, but with a real commit message this time.
+Think of this as commit D.
+Push.
+Do this in RStudio or the shell:
 
-``` bash
+```console
 git commit --amend -m "Implement awesome feature; closes #43"
 git push
 ```
@@ -121,33 +128,45 @@ Your history -- and that on GitHub -- look like this:
 A -- B -- C -- D
 ```
 
-As far as the world knows, you implemented the feature in one fell swoop. But you got to work on the task incrementally, with the peace of mind that you could never truly break things.
+As far as the world knows, you implemented the feature in one fell swoop.
+But you got to work on the task incrementally, with the peace of mind that you could never truly break things.
 
 ## What if I need to fall back?
 
 Imagine you're in the middle of a Repeated Amend workflow:
 
-``` bash
+```console
 A -- B -- C -- WIP*
 ```
 
-and you make some changes that break your project, e.g. tests start failing. These bad changes are not yet committed, but they are saved. You want to fall back to the last good state, represented by `WIP*`.
+and you make some changes that break your project, e.g. tests start failing.
+These bad changes are not yet committed, but they are saved.
+You want to fall back to the last good state, represented by `WIP*`.
 
-In Git lingo, you want to do a **hard reset** to the `WIP*` state. With the command line:
+In Git lingo, you want to do a **hard reset** to the `WIP*` state.
+Your local files will be forcibly reset to their state as of the `WIP*` commit.
+With the command line:
 
-``` bash
+```console
 git reset --hard
 ```
 
 which is implicitly the same as
 
-``` bash
+```console
 git reset --hard HEAD
 ```
 
 which says: "reset my files to their state at the most recent commit".
 
-This is also possible in RStudio. Click on "Diff" or "Commit". Select a file with changes you do not want. Use "Discard All" to discard all changes in that file. Use "Discard chunk" to discard changes in that file, selectively. Repeat this procedure for each affected file until you are back to an acceptable state. Carry on.
+This is also possible in RStudio.
+In fact, the RStudio way makes it easier to selectively reset only specific files or only certain changes.
+Click on "Diff" or "Commit".
+Select a file with changes you do not want.
+Use "Discard All" to discard all changes in that file.
+Use "Discard chunk" to discard specific changes in a file.
+Repeat this procedure for each affected file until you are back to an acceptable state.
+Carry on.
 
 If you committed a bad state, go to *link to come* for more reset scenarios.
 
@@ -155,9 +174,11 @@ If you committed a bad state, go to *link to come* for more reset scenarios.
 
 Amending a commit is an example of what's called "rewriting Git history".
 
-Rewriting history that has already been pushed to GitHub -- and therefore potentially pulled by someone else -- is a controversial practice. Like most controversial practices, lots of people still indulge in it, as do I.
+Rewriting history that has already been pushed to GitHub -- and therefore potentially pulled by someone else -- is a controversial practice.
+Like most controversial practices, lots of people still indulge in it, as do I.
 
-But there is the very real possibility that you create headaches for yourself and others, so in Happy Git we must recommend that you abstain. Once you've pushed something, consider it written in stone and move on.
+But there is the very real possibility that you create headaches for yourself and others, so in Happy Git we must recommend that you abstain.
+Once you've pushed something, consider it written in stone and move on.
 
 ## Um, what if I did push?
 
@@ -167,29 +188,53 @@ But OK here we are.
 
 Let's imagine you pushed this state to GitHub by mistake:
 
-``` bash
+```console
 A -- B -- C -- WIP (85bf30a)
 ```
 
 and proceeded to `git commit --amend` again locally, leading to this state:
 
-``` bash
+```console
 A -- B -- C -- WIP* (6e884e6)
 ```
 
-I'm deliberately showing two histories that sort of look the same, in terms of commit messages. But the last SHA reveals they are actually different.
+I'm deliberately showing two histories that sort of look the same, in terms of commit messages.
+But the last SHA reveals they are actually different.
 
-You are in a pickle now, as you can't do a simple push or pull. A push will be rejected and a pull will probably lead to a merge that you don't want.
+You are in a pickle now, as you can't do a simple push or pull.
+A push will be rejected and a pull will probably lead to a merge that you don't want.
 
 You have two choices:
 
-  * Hard reset your local repo to `C` (`git reset --hard HEAD^`) and pull from GitHub. Do this if you have collaborators who may have pulled that state. GitHub and local history now show this:
-    ``` bash
-    A -- B -- C -- WIP (85bf30a)
-    ```
-  * Force push to GitHub (`git push --force`). Do this if you have no collaborators or you have reason to believe they have not pulled. GitHub and local history now show this:
-    ``` bash
-    A -- B -- C -- WIP* (6e884e6)
-    ```
+* If you have collaborators who may have pulled the repo at commit
+  `WIP (85bf30a)`, you have to regard that particular history as being written
+  in stone now.
+  If there is any very precious work that only exists locally, such as a
+  specific file, save a copy of that to a new file path, temporarily.
+  Hard reset your local repo to `C` (`git reset --hard HEAD^`) and pull from
+  GitHub.
+  GitHub and local history now show this:
+  ```console
+  A -- B -- C -- WIP (85bf30a)
+  ```
+  If you saved some precious work to a temporary file path, bring it back into
+  the repo now; save, stage, commit, and push.
+  GitHub and local history now show this:
+  ```console
+  A -- B -- C -- WIP (85bf30a) -- E
+  ```
+* If you have no collaborators or you have reason to believe they have not
+  pulled, you can rewrite history, even on GitHub.
+  You might as well make sure your local commit has a real, non-"WIP" message
+  at this point.
+  Force push your history to GitHub (`git push --force`).
+  GitHub and local history now show this:
+  ```console
+  A -- B -- C -- D
+  ```
 
-Now you are synced up again.
+In both cases, you've made the changes you want and your local repo and the 
+GitHub remote are synced up again.
+The history is nicer in the second case, but that's a secondary issue.
+
+*There are many different ways to rewrite history and rescue some of these situations, but we find the approaches described above to be very approachable.*
