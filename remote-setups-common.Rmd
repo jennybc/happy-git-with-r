@@ -16,7 +16,9 @@ If you don't use usethis, feel free to ignore these asides.
 
 As a starting point, consider a local Git repo that is not yet connected to GitHub.
 
-```{r no_github, echo = FALSE, out.width = "60%"}
+```{r no_github}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"no_github\""
 knitr::include_graphics("img/no_github.png")
 ```
 
@@ -37,7 +39,9 @@ usethis describes this setup as "no_github".
 
 A common next step is to associate a local repo with a copy on GitHub, owned by you.
 
-```{r ours-you, echo = FALSE, out.width = "60%"}
+```{r ours-you}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"ours\""
 knitr::include_graphics("img/ours-you.png")
 ```
 
@@ -79,7 +83,9 @@ usethis describes this setup as "ours".
 
 Here is a variation on "ours" that is equivalent in practice.
 
-```{r ours-them, echo = FALSE, out.width = "60%"}
+```{r ours-them}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"ours\""
 knitr::include_graphics("img/ours-them.png")
 ```
 
@@ -103,7 +109,9 @@ usethis describes this setup as "ours".
 This is a setup that many people get themselves into, when it's not actually what they need.
 It's not broken *per se*, but it's limiting.
 
-```{r theirs, echo = FALSE, out.width = "60%"}
+```{r theirs}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"theirs\""
 knitr::include_graphics("img/theirs.png")
 ```
 
@@ -132,7 +140,9 @@ And remember to use `usethis::create_from_github(fork = TRUE)` in the future!
 
 This is an ideal setup if you want to make a pull request and generally follow the development of a source repo owned by someone else.
 
-```{r fork-them, echo = FALSE, out.width = "60%"}
+```{r fork-them}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"fork\""
 knitr::include_graphics("img/fork-them.png")
 ```
 
@@ -169,7 +179,9 @@ How to achieve:
 
 This is a less common variation on the fork setup.
 
-```{r fork-ours, echo = FALSE, out.width = "60%"}
+```{r fork-ours}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"fork\""
 knitr::include_graphics("img/fork-ours.png")
 ```
 
@@ -189,7 +201,9 @@ usethis describes this setup as "fork".
 
 Here is one last fork setup that's sub-optimal, but it can be salvaged.
 
-```{r fork-no-upstream, echo = FALSE, out.width = "60%"}
+```{r fork-no-upstream}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Setup described as \"fork_upstream_is_not_origin_parent\""
 knitr::include_graphics("img/fork_upstream_is_not_origin_parent.png")
 ```
 
