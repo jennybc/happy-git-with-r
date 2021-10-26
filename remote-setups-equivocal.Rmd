@@ -20,7 +20,12 @@ This means that programmatic access to this information, i.e. requests to the Gi
 This means that client packages, like usethis, work best when you have configured a GitHub personal access token (PAT).
 See section \@ref(get-a-pat) for more details on why and how to do that.
 
-If you've configured a PAT and are being told your GitHub config is problematic, consider these other explanations: Are you offline? Is GitHub down? Has your PAT expired? By default, they now expire after 30 days.
+If you've configured a PAT and are being told your GitHub config is problematic, consider these other explanations:
+Are you offline?
+Is GitHub down?
+Have you lost permission to access the repo?
+Has your PAT expired?
+By default, they now expire after 30 days.
 
 ## Maybe "ours" or "theirs"
 
