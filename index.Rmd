@@ -22,9 +22,9 @@ cover-image: img/watch-me-diff-watch-me-rebase-smaller.png
 
 Happy Git provides opinionated instructions on how to:
 
-  * Install Git and get it working smoothly with GitHub, in the shell and in the [RStudio IDE](https://www.rstudio.com/products/rstudio/).
-  * Develop a few key workflows that cover your most common tasks.
-  * Integrate Git and GitHub into your daily work with R and [R Markdown](https://rmarkdown.rstudio.com).
+* Install Git and get it working smoothly with GitHub, in the shell and in the [RStudio IDE](https://www.rstudio.com/products/rstudio/).
+* Develop a few key workflows that cover your most common tasks.
+* Integrate Git and GitHub into your daily work with R and [R Markdown](https://rmarkdown.rstudio.com).
   
 The target reader is someone who uses R for data analysis or who works on R packages, although some of the content may be useful to those working in adjacent areas.
 
