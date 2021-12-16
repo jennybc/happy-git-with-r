@@ -172,7 +172,7 @@ This means you have provided your GitHub _web password_, instead of your _person
 Go back to chapter \@ref(https-pat) to get a PAT.
 Try `git push` again and hopefully you'll get another prompt, allowing you to correct things and provide your PAT.
 
-If you ever feel you need to overwrite a bad credential with a new one, the easiest way to do this is to call `gitcreds::gitcreds:set()` from R.
+If you ever feel you need to overwrite a bad credential with a new one, the easiest way to do this is to call `gitcreds::gitcreds_set()` from R.
 
 ### Windows and line endings
 
