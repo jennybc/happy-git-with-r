@@ -4,6 +4,12 @@ Scenario: you maintain an R package on GitHub with pull requests (PRs) from exte
 
 How do you checkout and possibly extend an external PR?
 
+## Update from the future
+
+The lessons learned here eventually lead to the `pr_*()` family of functions in usethis.
+`pr_fetch()` and `pr_push()` are now my workhorses for exploring and extending PRs.
+You can read more about usethis's functions to help with pull requests in their very own article: [Pull request helpers](https://usethis.r-lib.org/articles/pr-functions.html).
+
 ## Terminology
 
 Vocabulary I use throughout.
@@ -77,9 +83,11 @@ This set of instructions suggests that you clone the fork, checkout the branch f
 
 My main takeaway: maintainer can push to the branch of a fork associated with a PR.
 
-## My under-development workflow
+## A workflow I once used
 
-*work in progress*
+*The lessons learned here eventually lead to the `pr_*()` family of functions in usethis.
+`pr_fetch()` and `pr_push()` are now my workhorses for exploring and extending PRs.
+You can read more about usethis's functions to help with pull requests in their very own article: [Pull request helpers](https://usethis.r-lib.org/articles/pr-functions.html).*
 
 This combines ideas from the three above approaches, but with a few tweaks. I am sketching this up in R code, with the hope of putting this into a function and package at some point. This is a revision of an earlier approach, based on feedback from Jim Hester.
 
