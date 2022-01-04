@@ -48,7 +48,15 @@ origin  https://github.com/YOU/REPO.git (push)
 
 There is only one remote, named `origin`, corresponding to your fork on GitHub. This figure depicts a BEFORE scenario:
 
-![](img/fork-no-upstream-sad.png)
+
+```{r fork-no-upstream-sad, eval=TRUE, echo=FALSE, dpi=1}
+#| fig.cap: > 
+#|   Before scenario: there is no direct connection between `OWNER/REPO` and your local copy of the repo.
+#| fig.alt: > 
+#|    Quadrant diagram with yellow cylinder indicating Them in top left, red cylinder indicating You and origin in top right, red cylinder 
+#|    indicating main repo in the bottom right, and no possible connection between top left and bottom right with a crying emoji.
+knitr::include_graphics("img/fork-no-upstream-sad.png")
+```
 
 This is sad, because there is no direct connection between `OWNER/REPO` and your local copy of the repo.
 
