@@ -151,9 +151,9 @@ Auto-merging foo.R
 CONFLICT (content): Merge conflict in foo.R
 ```
 
-At this point, you must resolve the merge conflict (*future link*). Literally, at each locus of conflict, pick one version or the other (upstream or stashed) or create a hybrid yourself. Remove the all the markers inserted to demarcate the conflicts. Save.
+At this point, you must resolve the [merge conflict](https://happygitwithr.com/git-branches.html#dealing-with-conflicts). Literally, at each locus of conflict, pick one version or the other (upstream or stashed) or create a hybrid yourself. Remove the all the markers inserted to demarcate the conflicts. Save.
 
-Since `git stash pop` did not go smoothly, we need to manually reset (*future link*) and delete the stash to finish.
+Since `git stash pop` did not go smoothly, we need to manually [reset](https://happygitwithr.com/reset.html) and delete the stash to finish.
 
 ``` sh
 jenny@2015-mbp ethel $ git reset
