@@ -207,7 +207,7 @@ CONFLICT (content): Merge conflict in foo.R
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-You must resolve these conflicts (*future link*). Literally, at each locus of conflict, pick one version or the other (upstream or local) or create a hybrid yourself. Remove the all the markers inserted to demarcate the conflicts. Save.
+You must resolve these [conflicts](https://happygitwithr.com/git-branches.html#dealing-with-conflicts). Literally, at each locus of conflict, pick one version or the other (upstream or local) or create a hybrid yourself. Remove the all the markers inserted to demarcate the conflicts. Save.
 
 Mark the affected file `foo.R` as resolved via `git add` and make an explicit `git commit` to finalize this merge.
 
