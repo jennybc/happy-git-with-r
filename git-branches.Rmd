@@ -21,7 +21,14 @@ git checkout issue-5
 
 You can also use the shortcut `git checkout -b issue-5` to create and checkout the branch all at once.
 
-Once you have switched to a branch, you can commit to it as usual.
+
+If you create your branch from the terminal, you need to push it to the remote before you can commit to it. 
+
+```console
+git push -u origin head 
+```
+
+Once you have switched to a branch and pushed it to the remote, you can commit to it as usual.
 
 ## Switching branches
 
