@@ -28,6 +28,7 @@ If you create your branch from the terminal, you need to push it to the remote b
 git push -u origin head 
 ```
 
+
 Once you have switched to a branch and pushed it to the remote, you can commit to it as usual.
 
 ## Switching branches
