@@ -41,7 +41,7 @@ Regardless, get yourself into this project, whatever that means for you, using y
 
 Explore the new repo in some suitable way. If it is a package, you could run the tests or check it. If it is a data analysis project, run a script or render an Rmd. Convince yourself that you have gotten the code.
 
-## Don't mess with `master` {#dont-touch-master}
+## Don't mess with `master` {#dont-touch-main}
 
 If you make any commits in your local repository, I **strongly recommend** that you work in [a new branch](#git-branches), not `master`.
 

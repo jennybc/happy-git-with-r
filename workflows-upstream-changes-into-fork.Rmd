@@ -1,58 +1,63 @@
 # Get upstream changes for a fork {#upstream-changes}
 
 This workflow is relevant if you have done [fork and clone](#fork-and-clone) and now you need to pull subsequent changes from the original repo into your copy.
+We are talking about both your fork (your remote copy of the repo, on GitHub) and your local copy.
 
-Sometimes you set this up right away, when you fork and clone, even though you don't need it yet. Congratulations, you are planning for the future!
+## Prep work
 
-It's also very typical to do this step a few days or months later. Maybe you're taking an interest in someone else's work for the second time and you want to make another pull request. Or you just want your copy to reflect their recent work. It is also totally normal to set this up upon first need.
+Vocabulary: `OWNER/REPO` refers to what we call the **source** repo, owned by `OWNER`, who is not you.
+`YOU/REPO` refers to your fork, i.e. your remote copy of the source repo, on GitHub.
+This is a good time to get the main page of your fork `YOU/REPO` open in a web browser.
 
-Vocabulary: `OWNER/REPO` refers to the original GitHub repo, owned by `OWNER`, who is not you. `YOU/REPO` refers to your copy on GitHub, i.e. your fork.
+Locally, get into your local copy of the repo.
+For many readers, this means launching it as an RStudio Project.
+You may also want to open a terminal (Appendix \@ref(shell)) within RStudio for some Git work via *Tools > Terminal > New Terminal*.
 
-## No, you can't do this via GitHub
-
-You might hope that GitHub could automatically keep your fork `YOU/REPO` synced up with the original `OWNER/REPO`. Or that you could do this in the browser interface. Then you could pull those upstream changes into your local repo.
-
-But you can't.
-
-There are some tantalizing, janky ways to sort of do parts of this. But they have fatal flaws that make them unsustainable. I believe you really do need to add `OWNER/REPO` as a second remote on your repo and pull from there.
-
-## Initial conditions
-
-Get into the repo of interest, i.e. your local copy. For many of you, this means launching it as an RStudio Project. You'll probably also want to open a terminal (Appendix \@ref(shell)) within RStudio for some Git work via *Tools > Terminal > New Terminal*.
-
-Make sure you are on the `master` branch and your "working tree is clean". `git status` should show something like:
+Make sure you are on the default branch, e.g. `main`, and that your "working tree is clean".
+`git status` should show something like:
 
 ``` bash
-On branch master
-Your branch is up to date with 'origin/master'.
+On branch main
+Your branch is up to date with 'origin/main'.
 
 nothing to commit, working tree clean
 ```
 
-BTW I recommend that you [never make your own commits to the `master` branch of a fork](#dont-touch-master). However, if you have already done so, we are going to address your sorry situation below.
+BTW I recommend that you [never make your own commits to the default branch of a fork](#dont-touch-main) or to any branch that you don't effectively (co-)own.
+This creates a divergence between that branch's history in the source repo and in your repo, which creates pain for you.
+However, if you have already done so, we are going to address your sorry situation below.
 
 ## List your remotes
 
-Let's inspect [the current remotes](#git-remotes) for your local repo. In the shell (Appendix \@ref(shell)):
+Let's inspect [the current remotes](#git-remotes) for your local repo.
+
+### Command line Git
+
+In the shell (Appendix \@ref(shell)):
 
 ``` bash
 git remote -v
 ```
 
-Most of you will see output along these lines (let's call this BEFORE):
+Some of you will see output along these lines:
 
 ``` bash
 origin  https://github.com/YOU/REPO.git (fetch)
 origin  https://github.com/YOU/REPO.git (push)
 ```
 
-There is only one remote, named `origin`, corresponding to your fork on GitHub. This figure depicts a BEFORE scenario:
+There is only one remote, named `origin`, corresponding to your fork on GitHub, which you then cloned locally.
+This figure depicts this scenario:
 
-![](img/fork-no-upstream-sad.png)
+```{r fork-no-upstream-sad, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is not configured."}
+knitr::include_graphics("img/fork-no-upstream-sad.png")
+```
 
-This is sad, because there is no direct connection between `OWNER/REPO` and your local copy of the repo.
+This is sad, because there is no direct connection between your local copy of the repo and the source repo `OWNER/REPO`.
+Elsewhere in this site we describe [common remote setups](#common-remote-setups) and this one is called "Fork (salvageable)", indicating it's a fork that's not fully configured.
+usethis calls this configuration `"fork_upstream_is_not_origin_parent"`.
 
-The state we want to see is like this (let's call this AFTER):
+A more functional remote setup looks like this:
 
 ``` bash
 origin    https://github.com/YOU/REPO.git (fetch)
@@ -61,19 +66,71 @@ upstream  https://github.com/OWNER/REPO.git (fetch)
 upstream  https://github.com/OWNER/REPO.git (push)
 ```
 
-Notice the second remote, named `upstream`, corresponding to the original repo on GitHub. This figure depicts AFTER, the scenario we want to achieve:
+Notice the second remote, named `upstream`, corresponding to the source repo on GitHub.
+This figure depicts this scenario, i.e. the one we want to achieve:
 
-![](img/fork-triangle-happy.png)
+```{r fork-triangle-happy, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is configured."}
+knitr::include_graphics("img/fork-triangle-happy.png")
+```
 
-Sidebar: If you used `usethis::create_from_github("OWNER/REPO")` for your original "fork and clone", the `upstream` should already be set up. In that case, you can skip to the part where we pull from `upstream`.
+Elsewhere in the book we describe [common remote setups](#common-remote-setups) and this is the setup we like to see for a fork.
+
+Sidebar: If you used `usethis::create_from_github("OWNER/REPO", fork = TRUE)` for your original "fork and clone", the `upstream` will already be set up.
+In that case, you can skip ahead.
+
+But sometimes you have done "fork and clone" another way and you haven't configured the source repo as the `upstream` remote.
+This often becomes an issue when you're taking an interest in someone else's work for the second time and you want to make another pull request.
+Or maybe you just want your copy to reflect their recent work.
+In any case, this setup can be done upon first need.
+
+### usethis
+
+usethis will display your remotes via `git_remotes()`.
+In R, you'll see something like this:
+
+```{r eval = FALSE}
+git_remotes()
+#> $origin
+#> [1] "https://github.com/YOU/REPO.git"
+#> 
+#> $upstream
+#> [1] "https://github.com/OWNER/repo.git"
+```
+
+## View the upstream tracking branch
+
+It is also helpful to be intentional about the upstream tracking branch of your local `main` branch.
+Despite the name, it is not necessarily `upstream/main` (although that is what I recommend).
+That will be the case if you used `usethis::create_from_github("OWNER/REPO", fork = TRUE)` to fork-and-clone.
+
+Other fork-and-clone workflows do not configure the `upstream` remote, which implies that it would be impossible for local `main` to be tracking `upstream/main`.
+In this case, local `main` is presumably tracking `origin/main`.
+
+You can see upstream tracking information for your branches with `git branch -vv`.
+If you have an `origin` remote, but no `upstream`, you'll see something like this:
+
+``` bash
+~/some/repo/ % git branch -vv                                                      
+* main 2739987 [origin/main] Some commit message
+```
+
+In the preferred setup, with an `upstream` remote, ideally we see something like this:
+
+``` bash
+~/some/repo/ % git branch -vv                   
+* main 2739987 [upstream/main] Some commit message
+```
 
 ## Add the `upstream` remote
 
-Let us add `OWNER/REPO` as the `upstream` remote.
+Let us add the source repo `OWNER/REPO` as the `upstream` remote.
+First we need its URL.
 
-On [GitHub](https://github.com), make sure you are signed in and navigate to the original repo, `OWNER/REPO`. It is easy to get to from your fork, `YOU/REPO`, via "forked from" links near the top.
+On [GitHub](https://github.com), make sure you are signed in and navigate to the original repo, `OWNER/REPO`.
+It is easy to get to from your fork, `YOU/REPO`, via the "forked from" link in the upper left.
 
-Use the big green "Clone or download" button to get the URL for `OWNER/REPO` on your clipboard. Be intentional about whether you copy the HTTPS or SSH URL.
+Use the big green "Code" button to get the URL for `OWNER/REPO` on your clipboard.
+Be intentional about whether you copy the HTTPS or SSH URL.
 
 ### Command line Git
 
@@ -83,15 +140,37 @@ Use a command like this, but make an intentional choice about using an HTTPS vs 
 git remote add upstream https://github.com/OWNER/REPO.git
 ```
 
-The nickname `upstream` can technically be whatever you want. There is a strong tradition of using `upstream` in this context and, even though I have better ideas, I believe it is best to conform. Every book, blog post, and Stack Overflow thread that you read will use `upstream` here. Save your psychic energy for other things.
+The nickname `upstream` can technically be whatever you want.
+There is a strong tradition of using `upstream` in this context and, even though I have better ideas, I believe it is best to conform.
+Every book, blog post, and Stack Overflow thread that you read will use `upstream` here.
+Save your psychic energy for other things.
+
+### usethis
+
+usethis can configure a Git remote.
+In R:
+
+```{r, eval = FALSE}
+usethis::use_git_remote(
+  name = "upstream",
+  url = "https://github.com/OWNER/REPO.git"
+)
+```
 
 ### RStudio
 
-This feels a bit odd, but humor me. Click on "New Branch" in the Git pane.
+This feels a bit odd, but humor me.
+Click on "New Branch" in the Git pane.
 
-![](img/rstudio-new-branch.png)]
+```{r rstudio-new-branch, echo = FALSE, out.width = "100%", fig.cap = "RStudio's New Branch button."}
+knitr::include_graphics("img/rstudio-new-branch.png")
+```
 
-This will reveal a button to "Add Remote". Click it. Enter `upstream` as the remote name and paste the URL for `OWNER/REPO` that you got from GitHub. Click "Add". Decline the opportunity to add a new branch by clicking "Cancel".
+This will reveal a button to "Add Remote".
+Click it.
+Enter `upstream` as the remote name and paste the URL for `OWNER/REPO` that you got from GitHub.
+Click "Add".
+Decline the opportunity to add a new branch by clicking "Cancel".
 
 ## Verify your `upstream` remote
 
@@ -101,7 +180,7 @@ Let's inspect [the current remotes](#git-remotes) for your local repo AGAIN. In 
 git remote -v
 ```
 
-Now you should see something like
+Now everyone should see something like
 
 ``` bash
 origin    https://github.com/YOU/REPO.git (fetch)
@@ -112,61 +191,105 @@ upstream  https://github.com/OWNER/REPO.git (push)
 
 Notice the second remote, named `upstream`, corresponding to the original repo on GitHub. We have gotten to this:
 
-![](img/fork-triangle-happy.png)
-
-## Pull changes from `upstream`
-
-Now we can pull the changes that we don't have from `OWNER/REPO` into our local copy.
-
-
-``` bash
-git pull upstream master --ff-only
+```{r fork-triangle-happy-2, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is configured."}
+knitr::include_graphics("img/fork-triangle-happy.png")
 ```
 
-This says: "pull the changes from the remote known as `upstream` into the `master` branch of my local repo". We are being explicit about the remote and the branch in this case, because (as our `git remote -v` commands reveal), `upstream/master` is **not** the default tracking branch for local `master`.
+## Have local default branch track `upstream` 
 
-I **highly recommend** using the `--ff-only` flag in this case, so that you also say "if I have made my own commits to `master`, please force me to confront this problem NOW". Here's what it looks like if a fast-forward merge isn't possible:
+This is optional but recommended.
+If you just added the `upstream` remote, this is a good time to reconfigure the upstream tracking branch of the local default branch.
+These two commands do the same thing; the first is just shorthand for the second.
 
 ``` bash
-$ git pull upstream master --ff-only
+git branch -u upstream/main
+git branch --set-upstream-to upstream/main
+```
+
+You can call `git remote -v` to confirm the change.
+
+I believe it's a good idea for local `main` to track `upstream/main`, because it helps reinforce the policy that `main` is a read-only branch in a fork.
+
+## Option 1: Pull changes from `upstream`, then push to `origin`
+
+Now we are ready to pull the changes that we don't have from the source repo `OWNER/REPO` into our local copy.
+
+``` bash
+git pull upstream main --ff-only
+```
+
+This says: "pull the changes from the remote known as `upstream` into the `main` branch of my local repo".
+I am being explicit about the remote and the branch in this case, both to make it more clear and to make this command robust to repo- and user-level Git configurations.
+
+I **highly recommend** using the `--ff-only` flag in this case, so that you also say "if I have made my own commits to `main`, please force me to confront this problem NOW".
+Here's what it looks like if a fast-forward merge isn't possible:
+
+``` bash
+$ git pull upstream main --ff-only
 From github.com:OWNER/REPO
- * branch              master     -> FETCH_HEAD
+ * branch              main     -> FETCH_HEAD
 fatal: Not possible to fast-forward, aborting.
 ```
 
-See [Um, what if I did touch `master`?](#touched-master) to get yourself back on the happy path.
+See [Um, what if I did touch `main`?](#touched-main) to get yourself back on the happy path.
 
-## Push these changes to `origin/master`
+This next step is optional and many people who are facile with Git do not bother.
 
-This is, frankly, totally optional and many people who are facile with Git do not bother.
-
-If you take my advice to [never work in `master` of a fork](#dont-touch-master), then the state of the `master` branch in your fork `YOU/REPO` does not matter. You will never make a pull request from `master`.
+If you take my advice to [never work in `main` of a fork](#dont-touch-main), then the state of the `main` branch in your fork `YOU/REPO` does not technically matter.
+You will never make a pull request from `main` and there are ways to set the correct base for the branches and pull requests that you do create.
 
 If, however, your grasp of all these Git concepts is tenuous at best, it can be helpful to try to keep things simple and orderly and synced up.
 
-Feel free to push the newly updated state of local `master` to your fork `YOU/REPO` and enjoy the satisfaction of being "caught up" with `OWNER/REPO`.
+Feel free to push the newly updated state of local `main` to your fork `YOU/REPO` and enjoy the satisfaction of being "caught up" with `OWNER/REPO`, in both your remote fork and in your local repo.
 
 In the shell:
 
 ``` bash
-git push
+git push origin main
 ```
 
-Or use the green "Push" button in RStudio.
+## Option 2: Sync your fork on GitHub, pull changes from `origin` to local repo
 
-## Um, what if I did touch `master`? {#touched-master}
+For many years, this was not possible, though many GitHub users wished for this feature.
+Happily it is now possible to sync a fork with its source repo in the browser, i.e. to do the sync between the 2 GitHub repos.
+The official GitHub documentation for this is [Syncing a fork from the web UI](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-from-the-web-ui).
+
+Navigate to the main page of your fork `YOU/REPO`.
+
+Towards the upper right corner, you will see "Fetch upstream".
+Click this and then click "Fetch and merge".
+Upon success, the main page of `YOU/REPO` shows something like
+
+> This branch is up to date with `OWNER/REPO:main`.
+
+If this does not "just work", it probably means you have made commits on the default branch of your fork, which we [strongly advise against](#dont-touch-main).
+I believe GitHub then gives you the option of bringing the `upstream` changes into your fork as a pull request.
+Alternatively, you could back out and straighten out the history of the default branch, using the instructions below.
+Then you could do a force push to `origin` and try the sync again.
+
+Once you have successfully synced the default branch of `YOU/REPO` with the default branch of `OWNER/REPO`, you probably want to do the same for your local repo.
+Since they are synced, you can pull from either `upstream` or `origin`.
+
+In the shell, with the default branch check out, execute one of these:
+
+``` bash
+git pull origin
+git pull upstream
+```
+
+## Um, what if I did touch `main`? {#touched-main}
 
 I told you not to!
 
 But OK here we are.
 
-Let's imagine this is the state of the original repo `OWNER/REPO`:
+Let's imagine this is the state of the source repo `OWNER/REPO`:
 
 ``` bash
 ... -- A -- B -- C -- D -- E -- F
 ```
 
-and and this is the state of the `master` branch in your local copy:
+and and this is the state of the `main` branch in your local copy:
 
 ``` bash
 ... -- A -- B -- C -- X -- Y -- Z
@@ -174,11 +297,12 @@ and and this is the state of the `master` branch in your local copy:
 
 The two histories agree, up to commit or state `C`, then they diverge.
 
-If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!). Then checkout `master` via `git checkout master`.
+If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!).
+Then checkout `main` via `git checkout main`.
 
 I now assume you have either preserved the work in `X`, `Y`, and `Z` (with a branch) or have decided to let it go.
 
-Do a hard reset of the `master` branch to `C`.
+Do a hard reset of the `main` branch to `C`.
 
 ``` bash
 git reset --hard C
@@ -186,7 +310,8 @@ git reset --hard C
 
 You will have to figure out how to convey `C` in Git-speak. Specify it relative to `HEAD` or provide the SHA. See *future link about resets* for more support.
 
-The instructions above for pulling changes from upstream should now work. Your `master` branch should reflect the history of `OWNER/REPO`:
+The instructions above for pulling changes from `upstream` should now work.
+Your `main` branch should reflect the history of `OWNER/REPO`:
 
 ``` bash
 ... -- A -- B -- C -- D -- E -- F
@@ -196,9 +321,10 @@ If you chose to create a branch with your work, you will also have that locally:
 
 
 ``` bash
-... -- A -- B -- C -- D -- E -- F (master)
+... -- A -- B -- C -- D -- E -- F (main)
                    \
                     -- X -- Y -- Z (my-great-innovations)
 ```
 
-If you pushed your alternative history (with commits `X`, `Y`, and `Z`) to your fork `YOU/REPO` and you like keeping everything synced up, you will also need to force push `master` via `git push --force`, but we really really don't like discussing force pushes in Happy Git. We only do so here, because we are talking about a fork, which is fairly easy to replace if things go sideways.
+If you pushed your alternative history (with commits `X`, `Y`, and `Z`) to your fork `YOU/REPO` and you like keeping everything synced up, you will also need to force push `main` via `git push --force`, but we really really don't like discussing force pushes in Happy Git.
+We only do so here, because we are talking about a fork, which is fairly easy to replace if things go sideways.
