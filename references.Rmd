@@ -4,19 +4,17 @@ We practice what we preach! This site is created with Git and R markdown, using 
 
 Long-term, you should understand more about what you are doing. Rote clicking in RStudio may be a short-term survival method but won't work for long.
 
-  * [Oh My Git!](https://ohmygit.org/) is a free and open source interactive game for learning Git. It's very beginner friendly, using a graph to visualise the worktree. Lessons can be completed using a playing card interface in addition to the built-in command line, which is there for when users become more comfortable.
+  * [Git for Humans](https://speakerdeck.com/alicebartlett/git-for-humans) is a great set of slides by [Alice Bartlett](https://alicebartlett.co.uk), originally delivered in 2016 at UX Brighton.
+
+  * [Git in Practice](https://www.manning.com/books/git-in-practice) by Mike McQuaid is an more approachable book, probably better than Pro Git (below) for most people starting out. Ancillary materials [on GitHub](https://github.com/MikeMcQuaid/GitInPractice).
 
   * The book [Pro Git](http://git-scm.com/book) is fantastic and comprehensive.
-  
-  * [Git in Practice](https://www.manning.com/books/git-in-practice) by Mike McQuaid is an more approachable book, probably better than Pro Git for most people starting out. Ancillary materials [on GitHub](https://github.com/MikeMcQuaid/GitInPractice).
-  
-  * [Git for Humans](https://speakerdeck.com/alicebartlett/git-for-humans) is a great set of slides by [Alice Bartlett](https://alicebartlett.co.uk), originally delivered in 2016 at UX Brighton.
+
+  * [Oh My Git!](https://ohmygit.org/) is a free and open source interactive game for learning Git. It's very beginner friendly, using a graph to visualise the worktree. Lessons can be completed using a playing card interface in addition to the built-in command line, which is there for when users become more comfortable.
 
   * [GitHub's own training materials](http://training.github.com/kit/) may be helpful. They also point to [many other resources](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github)
 
   * Find a powerful Git client (chapter \@ref(git-client)) if you'd like to minimize your usage of Git from the command line.
-  
-  * Hadley Wickham's book [R Packages](http://r-pkgs.had.co.nz) has an excellent [chapter on the use of Git, GitHub, and RStudio](http://r-pkgs.had.co.nz/git.html) in R package development. He covers more advanced usage, such as commit best practices, issues, branching, and pull requests.
   
   * Ten Simple Rules for Taking Advantage of Git and GitHub <http://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1004947>
 
