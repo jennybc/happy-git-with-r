@@ -4,9 +4,9 @@ Objective: make sure that you can pull from and push to GitHub from your compute
 
 I do not explain all the shell (Appendix \@ref(shell)) and Git commands in detail.
 This is a black box diagnostic / configuration exercise.
-In later chapters and in live workshops, we revisit these operations with much more narrative.
+In later chapters and in live workshops, we revisit these operations with much more narrative and discussion of alternative workflows.
 
-I assume you've decided whether to use HTTPS (see chapter \@ref(https-pat) or SSH (see chapter \@ref(ssh-keys)) and you've prepared your credential. 
+I assume you've decided whether to use HTTPS (see chapter \@ref(https-pat)) or SSH (see chapter \@ref(ssh-keys)) and you've prepared your credential. 
 
 ## Make a repo on GitHub
 
@@ -30,7 +30,7 @@ cat(res, sep = '\n')
 
 ## Clone the repo to your local computer
 
-We have a few ways to do this: with command line Git or via RStudio.
+We have a few ways to do this: with command line Git or via RStudio (or, eventually, usethis).
 
 ### Clone with command line Git
 

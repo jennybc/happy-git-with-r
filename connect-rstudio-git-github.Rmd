@@ -18,10 +18,14 @@ We assume the following:
   * You've confirmed that you can push to / pull from GitHub from the command line (chapter \@ref(push-pull-github)).
   
 You will also need a test repository on GitHub.
+If you don't have a suitable test repository on GitHub, follow the instructions in the next section.
 
-If you just completed the previous chapter, [Connect to GitHub], that will be perfect!
+If you just completed the previous chapter, [Connect to GitHub], that repo will be perfect!
 However, I encourage you to delete the *local* repository, so you can experience how we use RStudio to clone it and get a local copy.
-Delete the folder corresponding to the local repo any way you like.
+This is a actually a workflow we refer to elsewhere (see \@ref(burn) as "burn it all down".
+It's a deeply pragmatic coping strategy if your local Git repo is goofed up, but the version on GitHub is pretty current.
+
+Delete the folder corresponding to the **local repo** any way you like.
 It's just a regular directory on your computer.
 Here's how to do that in the shell, if current working directory is `myrepo`:
 
@@ -29,8 +33,6 @@ Here's how to do that in the shell, if current working directory is `myrepo`:
 cd ..
 rm -rf myrepo/
 ```
-
-If you don't have a suitable test repository on GitHub, follow the instructions in the next section.
 
 ## Make a repo on GitHub
 
