@@ -36,16 +36,27 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
   * If there is a clear R/RStudio angle, post on <https://community.rstudio.com>.
   * General advice: search with Google and on <https://stackoverflow.com>, see also <https://github.community>.
 
-## rstudio::conf 2020
+## rstudio::conf 2022
 
 2-day workshop: What They Forgot to Teach You About R  
 Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
-January 27-28, [rstudio::conf 2020](https://www.rstudio.com/conference/) Training Days, San Francisco, CA
+July 25-26, [`rstd.io/conf`](https://rstd.io/conf) Workshop Days, Washington, D.C.
 
-Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-about-r-workshop-rstudio-conf-2020/49106) on community.rstudio.com to discuss system prep woes.
+Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-about-r-workshop-rstudio-conf-2022/138999?u=jennybryan) on community.rstudio.com to discuss system prep woes.
 
 ## Previous workshops
- 
+
+  * RaukR: Advanced R for Bioinformatics Summer School
+    - June 13, 2022, online
+  * rstudio::conf 2020
+    - 2-day workshop: What They Forgot to Teach You About R  
+    - ~25% of content was Git/GitHub + R/Rmd/RStudio  
+    - January 27-28, 2020, San Francisco, CA
+  * UBC Master of Data Science Program
+    - Guest lecture on daily Git/GitHub workflows
+    - January 9, 2020
+  * RaukR: Advanced R for Bioinformatics Summer School
+    - June 10-20, 2019, Visby, Sweden
   * rstudio::conf 2019
     - 2-day workshop: What They Forgot to Teach You About R  
     - ~25% of content was Git/GitHub + R/Rmd/RStudio  
