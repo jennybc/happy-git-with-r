@@ -63,7 +63,7 @@ These people may feel like they *should* work in the shell, even if it leads to 
 This is counterproductive.
 
 I had two false starts with Git, where I failed to get proficient enough, quickly enough to truly incorporate version control into my daily work.
-I found a visual Git client invaluable -- SourceTree, at the time.
+I found a visual Git client invaluable.
 It made me willing to use Git multiple times per day, for a sustained period of time.
 This helped me build the mental model necessary for more advanced Git operations like rebasing, cherry-picking, and resetting.
 
