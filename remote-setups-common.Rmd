@@ -182,7 +182,7 @@ This is a less common variation on the fork setup.
 ```{r fork-ours}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"fork\""
-knitr::include_graphics("img/fork-ours.png")
+knitr::include_graphics("img/fork-ours.jpeg")
 ```
 
 In this case, you have permission to push to the source repo, but you elect to create a personal fork anyway.
