@@ -35,26 +35,11 @@ res <- knitr::knit_child(text = insert, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-## New RStudio Project via `git clone`
+## New RStudio Project via git clone
 
-In RStudio, start a new Project:
-
-* *File > New Project > Version Control > Git*. In the "repository URL" paste the URL of your new GitHub repository. It will be something like this `https://github.com/jennybc/myrepo.git`.
-* Be intentional about where you create this Project.
-* I suggest you "Open in new session".
-* Click "Create Project" to create a new directory, which will be all of these things:
-  - a directory or "folder" on your computer
-  - a Git repository, linked to a remote GitHub repository
-  - an RStudio Project
-* **In the absence of other constraints, I suggest that all of your R projects have exactly this set-up.**
-
-This should download the `README.md` file that we created on GitHub in the previous step.
-Look in RStudio's file browser pane for the `README.md` file.
-
-Behind the scenes, RStudio has done this for you:
-
-```console
-git clone https://github.com/jennybc/myrepo.git
+```{r echo = FALSE, results = "asis"}
+text <- readr::read_file("child-create-a-github-repo.Rmd")
+cat(res, sep = '\n')
 ```
 
 ## Bring your existing project over
@@ -73,7 +58,11 @@ Commit your files to this repo. How?
   * Click the "Git" tab in upper right pane
   * Check the "Staged" box for all files that you want to commit.
     - Default: stage it.
-    - When to reconsider: this will all go to GitHub. Consider if that is appropriate for each file. **You can absolutely keep a file locally, without committing it to the Git repo and sending to GitHub**. Just let it sit there in your Git pane, without being staged. No harm will be done. If this is a long-term situation, list the file in `.gitignore`.
+    - When to reconsider: this will all go to GitHub. Consider if that is
+      appropriate for each file. **You can absolutely keep a file locally,
+      without committing it to the Git repo and sending to GitHub**. Just let it
+      sit there in your Git pane, without being staged. No harm will be done. If
+      this is a long-term situation, list the file in `.gitignore`.
   * If you're not already in the Git pop-up, click "Commit"
   * Type a message in "Commit message", such as "Init project XYZ".
   * Click "Commit"
