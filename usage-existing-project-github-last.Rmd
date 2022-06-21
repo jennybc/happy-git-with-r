@@ -85,11 +85,18 @@ usethis::use_github()
 #> ✓ Opening URL 'https://github.com/jennybc/myrepo'
 ```
     
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "usethis::use_github() connects a local repo to a new GitHub repo."
+knitr::include_graphics("img/use_github.jpeg")
+```    
+    
 `usethis::use_github()` does the following:
     
 * Creates a new repo on GitHub.
 * Configures that new repo as the `origin` remote for the local repo.
-* Sets up your local default branch (e.g. `main`) to track same on `origin`.
+* Sets up your local default branch (e.g. `main`) to track same on `origin` and
+  does an initial push.
 * Opens the new repo in your browser.
 
 ### Create and connect a GitHub repo without usethis

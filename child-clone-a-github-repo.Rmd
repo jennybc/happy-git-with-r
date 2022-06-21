@@ -1,4 +1,4 @@
-```{r }
+```{r}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Clone a remote repo."
 knitr::include_graphics("img/new-project-github-first.jpeg")
