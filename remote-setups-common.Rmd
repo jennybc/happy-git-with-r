@@ -204,7 +204,7 @@ Here is one last fork setup that's sub-optimal, but it can be salvaged.
 ```{r fork-no-upstream}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"fork_upstream_is_not_origin_parent\""
-knitr::include_graphics("img/fork_upstream_is_not_origin_parent.png")
+knitr::include_graphics("img/fork_upstream_is_not_origin_parent.jpeg")
 ```
 
 This is what happens when you do fork-and-clone and you *only* do fork-and-clone.
