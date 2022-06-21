@@ -81,7 +81,7 @@ No need to fanny around setting up Git remotes and tracking branches on the comm
 
 We're about to confirm we are setup for pulling and pushing.
 
-```{r github-pull-push, echo = FALSE, out.width = "100%", fig.cap = "Pull and push."}
+```{r github-pull-push, echo = FALSE, out.width = "60%", fig.cap = "Pull and push."}
 knitr::include_graphics("img/github-pull-push.jpeg")
 ```
 
