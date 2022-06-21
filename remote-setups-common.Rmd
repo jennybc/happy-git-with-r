@@ -86,7 +86,7 @@ Here is a variation on "ours" that is equivalent in practice.
 ```{r ours-them}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"ours\""
-knitr::include_graphics("img/ours-them.png")
+knitr::include_graphics("img/ours-them.jpeg")
 ```
 
 A remote named `origin` is configured and you can push to (and pull from) `origin`.
