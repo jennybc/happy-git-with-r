@@ -38,7 +38,7 @@ cat(res, sep = '\n')
 ## New RStudio Project via git clone
 
 ```{r echo = FALSE, results = "asis"}
-text <- readr::read_file("child-create-a-github-repo.Rmd")
+text <- readr::read_file("child-clone-a-github-repo.Rmd")
 cat(res, sep = '\n')
 ```
 
