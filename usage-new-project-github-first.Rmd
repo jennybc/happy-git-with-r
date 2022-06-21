@@ -64,7 +64,8 @@ Make sure you remove the `git clone ...` that shows up at the beginning.
 ## New RStudio Project via git clone {#new-rstudio-project-via-git}
 
 ```{r echo = FALSE, results = "asis"}
-text <- readr::read_file("child-create-a-github-repo.Rmd")
+insert <- readr::read_file("child-clone-a-github-repo.Rmd")
+res <- knitr::knit_child(text = insert, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
