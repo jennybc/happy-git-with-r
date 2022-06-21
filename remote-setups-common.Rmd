@@ -42,7 +42,7 @@ A common next step is to associate a local repo with a copy on GitHub, owned by 
 ```{r ours-you}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"ours\""
-knitr::include_graphics("img/ours-you.png")
+knitr::include_graphics("img/ours-you.jpeg")
 ```
 
 A remote named `origin` is configured and you have permission to push to (and pull from) `origin`.
