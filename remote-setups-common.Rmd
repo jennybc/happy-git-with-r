@@ -143,7 +143,7 @@ This is an ideal setup if you want to make a pull request and generally follow t
 ```{r fork-them}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"fork\""
-knitr::include_graphics("img/fork-them.png")
+knitr::include_graphics("img/fork-them.jpeg")
 ```
 
 This shows a successful "fork-and-clone".
