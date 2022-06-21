@@ -18,7 +18,7 @@ Pick **one** of these methods below.
 
 ### `usethis::create_from_github()`
 
-You can execute these commands in any R session.
+You can execute this command in any R session.
 If you use RStudio, then do this in the R console of any RStudio instance.
 
 ```{r eval = FALSE}
@@ -29,7 +29,7 @@ usethis::create_from_github(
 ```
 
 The first argument is `repo_spec` and it accepts the GitHub repo specification in various forms.
-In particular, you can paste the URL we just copied from GitHub.
+In particular, you can use the URL we just copied from GitHub.
 
 The `destdir` argument specifies the parent directory where you want the new folder (and local Git repo) to live.
 If you don't specify `destdir`, usethis defaults to some very conspicuous place, like your desktop.
