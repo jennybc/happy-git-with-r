@@ -30,9 +30,10 @@ cat(res, sep = '\n')
 
 ## Clone the repo to your local computer
 
-We have a few ways to do this: with command line Git or via RStudio (or, eventually, usethis).
-
-### Clone with command line Git
+We have a few ways to do this.
+Here we use command line Git.
+In section \@ref(new-github-first), we show other methods that you might prefer in daily life:
+using usethis or the RStudio IDE.
 
 Go to the shell (Appendix \@ref(shell)).
 
