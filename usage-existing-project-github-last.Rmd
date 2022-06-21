@@ -63,7 +63,12 @@ If your local project was already a Git repo and was up-to-date, move on. Otherw
 * Type a message in "Commit message".
 * Click "Commit"
 
-## Make and connect a GitHub repo with usethis
+## Create and connect a GitHub repo
+
+We'll show a few methods for creating a new GitHub repo and connecting it to your local repo.
+Pick one.
+
+### Create and connect a GitHub repo with usethis
 
 To use usethis for this task, you must have configured a personal access token (PAT).
 This will already by configured for anyone using HTTPS as their protocol, because they are already using the PAT to authenticate for other Git operations.
@@ -80,11 +85,16 @@ usethis::use_github()
 #> ✓ Opening URL 'https://github.com/jennybc/myrepo'
 ```
     
-This creates a new repo on GitHub, adds it as the `origin` remote, sets up your local default branch to track same on `origin`, and opens it in your browser.
+`usethis::use_github()` does the following:
+    
+* Creates a new repo on GitHub.
+* Configures that new repo as the `origin` remote for the local repo.
+* Sets up your local default branch (e.g. `main`) to track same on `origin`.
+* Opens the new repo in your browser.
 
-## Make and connect a GitHub repo without usethis
+### Create and connect a GitHub repo without usethis
 
-### Make a new repo on GitHub
+First, you need to create a new repo on GitHub.
 
 ```{r echo = FALSE, results = "asis"}
 dat <- list(
@@ -108,11 +118,7 @@ res <- knitr::knit_child(text = insert, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-### Connect local repo to GitHub repo
-
-You can do this in the shell or, with recent versions of RStudio, via RStudio.
-
-### In RStudio
+#### Connect local repo to GitHub repo with RStudio
 
 Click on the "two purple boxes and a white square" in the Git pane.
 Click "Add remote".
@@ -125,7 +131,7 @@ Enter `main` as the branch name and make sure "Sync branch with remote" is check
 Click "Create" (yes, even though the branch already exists).
 In the next dialog, choose "overwrite".
 
-### In the shell
+#### Connect local repo to GitHub repo with the command line
 
 In a shell, do this, substituting your URL:
 
