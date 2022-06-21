@@ -34,7 +34,7 @@ When we detect just one GitHub remote, but we can't verify the info above, useth
 ```{r maybe_ours_or_theirs}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"maybe_ours_or_theirs\""
-knitr::include_graphics("img/maybe_ours_or_theirs.png")
+knitr::include_graphics("img/maybe_ours_or_theirs.jpeg")
 ```
 
 Once a PAT is available, this setup can be identified as being ["ours" (belonging to you)](#ours-you), ["ours" (but belonging to someone else)](#ours-them), or ["theirs"](#theirs).
@@ -46,7 +46,7 @@ When we detect two GitHub remotes, but we can't verify the info above, usethis d
 ```{r maybe_fork}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"maybe_fork\""
-knitr::include_graphics("img/maybe_fork.png")
+knitr::include_graphics("img/maybe_fork.jpeg")
 ```
 
 Once a PAT is available, this setup can be identified as being a well-configured [fork](#fork-them) or a [fork with incomplete setup](#fork_upstream_is_not_origin_parent) (or possibly something more weird).
