@@ -112,7 +112,7 @@ It's not broken *per se*, but it's limiting.
 ```{r theirs}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "Setup described as \"theirs\""
-knitr::include_graphics("img/theirs.png")
+knitr::include_graphics("img/theirs.jpeg")
 ```
 
 You cannot push to `origin`, which is both the source repo and your primary repo.
