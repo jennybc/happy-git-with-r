@@ -66,7 +66,7 @@ Every book, blog post, and Stack Overflow thread that you read will use `upstrea
 Save your psychic energy for other things.
   
 These steps make it easier for you to stay current with developments in the source repo.
-We talk more below about why you should never commit to the default branch, e.g. `main`, when you're working in a fork (see \@ref(dont-touch-main)).
+We talk more below about why you should never commit to the default branch, e.g. `main`, when you're working in a fork (see \@ref(fork-dont-touch-main)).
 
 ### Configure the `upstream` remote {#fork-configure-upstream}
 
