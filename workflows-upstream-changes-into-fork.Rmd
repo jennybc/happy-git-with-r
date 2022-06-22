@@ -1,6 +1,6 @@
 # Get upstream changes for a fork {#upstream-changes}
 
-This workflow is relevant if you have done [fork and clone](#fork-and-clone) and now you need to pull subsequent changes from the original repo into your copy.
+This workflow is relevant if you have done [fork and clone](#fork-and-clone) and now you need to pull subsequent changes from the source repo into your copy.
 We are talking about both your fork (your remote copy of the repo, on GitHub) and your local copy.
 
 ## Prep work
@@ -49,8 +49,8 @@ origin  https://github.com/YOU/REPO.git (push)
 There is only one remote, named `origin`, corresponding to your fork on GitHub, which you then cloned locally.
 This figure depicts this scenario:
 
-```{r fork-no-upstream-sad, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is not configured."}
-knitr::include_graphics("img/fork-no-upstream-sad.png")
+```{r fork-no-upstream-sad, echo = FALSE, out.width = "60%", fig.cap = "Fork where `upstream` is not configured."}
+knitr::include_graphics("img/fork-no-upstream-sad.jpeg")
 ```
 
 This is sad, because there is no direct connection between your local copy of the repo and the source repo `OWNER/REPO`.
@@ -69,8 +69,8 @@ upstream  https://github.com/OWNER/REPO.git (push)
 Notice the second remote, named `upstream`, corresponding to the source repo on GitHub.
 This figure depicts this scenario, i.e. the one we want to achieve:
 
-```{r fork-triangle-happy, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is configured."}
-knitr::include_graphics("img/fork-triangle-happy.png")
+```{r fork-triangle-happy, echo = FALSE, out.width = "60%", fig.cap = "Fork where `upstream` is configured."}
+knitr::include_graphics("img/fork-them.jpeg")
 ```
 
 Elsewhere in the book we describe [common remote setups](#common-remote-setups) and this is the setup we like to see for a fork.
@@ -121,57 +121,6 @@ In the preferred setup, with an `upstream` remote, ideally we see something like
 * main 2739987 [upstream/main] Some commit message
 ```
 
-## Add the `upstream` remote
-
-Let us add the source repo `OWNER/REPO` as the `upstream` remote.
-First we need its URL.
-
-On [GitHub](https://github.com), make sure you are signed in and navigate to the original repo, `OWNER/REPO`.
-It is easy to get to from your fork, `YOU/REPO`, via the "forked from" link in the upper left.
-
-Use the big green "Code" button to get the URL for `OWNER/REPO` on your clipboard.
-Be intentional about whether you copy the HTTPS or SSH URL.
-
-### Command line Git
-
-Use a command like this, but make an intentional choice about using an HTTPS vs SSH URL.
-
-``` bash
-git remote add upstream https://github.com/OWNER/REPO.git
-```
-
-The nickname `upstream` can technically be whatever you want.
-There is a strong tradition of using `upstream` in this context and, even though I have better ideas, I believe it is best to conform.
-Every book, blog post, and Stack Overflow thread that you read will use `upstream` here.
-Save your psychic energy for other things.
-
-### usethis
-
-usethis can configure a Git remote.
-In R:
-
-```{r, eval = FALSE}
-usethis::use_git_remote(
-  name = "upstream",
-  url = "https://github.com/OWNER/REPO.git"
-)
-```
-
-### RStudio
-
-This feels a bit odd, but humor me.
-Click on "New Branch" in the Git pane.
-
-```{r rstudio-new-branch, echo = FALSE, out.width = "100%", fig.cap = "RStudio's New Branch button."}
-knitr::include_graphics("img/rstudio-new-branch.png")
-```
-
-This will reveal a button to "Add Remote".
-Click it.
-Enter `upstream` as the remote name and paste the URL for `OWNER/REPO` that you got from GitHub.
-Click "Add".
-Decline the opportunity to add a new branch by clicking "Cancel".
-
 ## Verify your `upstream` remote
 
 Let's inspect [the current remotes](#git-remotes) for your local repo AGAIN. In the shell:
@@ -191,24 +140,9 @@ upstream  https://github.com/OWNER/REPO.git (push)
 
 Notice the second remote, named `upstream`, corresponding to the original repo on GitHub. We have gotten to this:
 
-```{r fork-triangle-happy-2, echo = FALSE, out.width = "100%", fig.cap = "Fork where `upstream` is configured."}
-knitr::include_graphics("img/fork-triangle-happy.png")
+```{r fork-triangle-happy-2, echo = FALSE, out.width = "60%", fig.cap = "Fork where `upstream` is configured."}
+knitr::include_graphics("img/fork-them.jpeg")
 ```
-
-## Have local default branch track `upstream` 
-
-This is optional but recommended.
-If you just added the `upstream` remote, this is a good time to reconfigure the upstream tracking branch of the local default branch.
-These two commands do the same thing; the first is just shorthand for the second.
-
-``` bash
-git branch -u upstream/main
-git branch --set-upstream-to upstream/main
-```
-
-You can call `git remote -v` to confirm the change.
-
-I believe it's a good idea for local `main` to track `upstream/main`, because it helps reinforce the policy that `main` is a read-only branch in a fork.
 
 ## Option 1: Pull changes from `upstream`, then push to `origin`
 
