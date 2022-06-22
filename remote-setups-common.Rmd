@@ -77,8 +77,7 @@ How to achieve if the remote repo exists first:
   * With usethis: `usethis::create_from_github("OWNER/REPO", fork = FALSE)`
   * Command line: `git clone <URL>`, with the source repo's HTTPS or SSH URL
   * In RStudio: Capture the source repo's HTTPS or SSH URL and do
-    *File > New Project > Version Control > Git*, described more fully in
-    [New RStudio Project via git clone](#new-rstudio-project-via-git)
+    *File > New Project > Version Control > Git*.
   
 usethis describes this setup as "ours".
 
