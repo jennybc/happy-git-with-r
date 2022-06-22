@@ -22,7 +22,9 @@ As a starting point, consider a local Git repo that is not yet connected to GitH
 knitr::include_graphics("img/no-github.jpeg")
 ```
 
-This is not very exciting, but sets the stage for what's to come. We introduce the icon we use for a Git repo, which looks like a stack of coins or a barrel. This one is blue, which indicates you have write permission.
+This is not very exciting, but sets the stage for what's to come.
+We introduce the icon we use for a Git repo, which looks like a stack of coins or a barrel.
+This one is blue, which indicates you have write permission.
 
 How to achieve:
 
@@ -52,16 +54,15 @@ In this case, `origin` is also what we'll call your **primary** repo, meaning it
 
 How to achieve if the local repo exists first:
 
-  * With usethis: `usethis::use_github()`
+  *  Detailed instructions are in
+     [Existing project, GitHub last](#existing-github-last).
+  * With usethis: `usethis::use_github()`.
   * Command line Git or RStudio: You can't complete this task fully from the
     command line or from RStudio:
     - Create a new GitHub repo in the browser, with the correct name,
-      and capture its HTTPS or SSH URL
-    - Command line: `git remote add origin <URL>`
-    - In RStudio, click the *New Branch* button, which brings up a
-      window where you can create the `origin` remote with this URL. This
-      workflow is described in
-      [Existing project, GitHub last](#existing-github-last).
+      and capture its HTTPS or SSH URL.
+    - Configure the repo as the `origin` remote.
+    - Push.
     - Even now, the setup may not be ideal, because upstream tracking
       relationships are probably not setup, which means you may not be able to
       push and pull easily. You may need to explicitly configure an upstream
@@ -70,7 +71,9 @@ How to achieve if the local repo exists first:
       `usethis::use_github()`, which completes all of this setup in one go.
     
 How to achieve if the remote repo exists first:
-
+  
+  * Detailed instructions are in
+    [New RStudio Project via git clone](#git-clone-usethis-rstudio).
   * With usethis: `usethis::create_from_github("OWNER/REPO", fork = FALSE)`
   * Command line: `git clone <URL>`, with the source repo's HTTPS or SSH URL
   * In RStudio: Capture the source repo's HTTPS or SSH URL and do
@@ -131,10 +134,10 @@ usethis describes this setup as "theirs".
 
 What if you do want to make a pull request?
 This means you should have done *fork-and-clone* instead of *clone*.
-If you've made no changes or they're easy to save somewhere temporarily, just start over with a fork-and-clone workflow (see below) and re-introduce your changes.
+If you've made no changes or they're easy to save somewhere temporarily, just start over with a fork-and-clone workflow (fully explained in \@ref(fork-and-clone)) and re-introduce your changes.
 It is also possible to preserve your work in a local branch, fork the source repo, re-configure your remotes, re-sync up with the source repo, and get back on track.
 But this is much easier to goof up.
-And remember to use `usethis::create_from_github(fork = TRUE)` in the future!
+And remember to fork and clone (not just clone) in the future!
 
 ## Fork (of theirs) {#fork-them}
 
@@ -157,6 +160,7 @@ usethis describes this setup as "fork".
 
 How to achieve:
 
+  * Detailed instructions are given in [Fork and clone](#fork-and-clone).
   * With usethis: `usethis::create_from_github("OWNER/REPO", fork = TRUE)`
   * Command line Git or RStudio: You can't complete this task fully from the
     command line or RStudio:
@@ -174,6 +178,8 @@ How to achieve:
       is probably tracking `origin`, not `upstream`, which is preferable for
       a fork. `usethis::create_from_github()` completes all of this setup in
       one go.
+    - These last two steps are described in
+      [Finish the fork and clone setup](#fork-and-clone-finish).
 
 ## Fork (of ours)
 
@@ -219,15 +225,14 @@ When the exchange is done, delete your local repo and your fork and move on with
 You can always re-fork in the future.
 But if your pull request stays open for a while or if you plan to make repeated contributions, you'll need to pull ongoing developments in the source repo into your local copy.
 
-Fix this by adding the source repo as your `upstream` remote.
-Capture the HTTP or SSH URL of the **source repo** and then:
+You can convert this into the ideal [fork setup](#fork-them) like so:
 
-  * With usethis: `usethis::use_git_remote(name = "upstream", url = "SOURCE_URL")`
-  * Command line Git: `git remote add upstream <SOURCE_URL>`
-  * With RStudio: click the *New Branch* button, which brings up a window where
-    you can add the `upstream` remote with this URL.
+* Detailed instructions are in 
+  [Finish the fork and clone setup](#fork-and-clone-finish).
+* Add the source repo as the `upstream` remote.
+* Set `upstream/main` as the upstream tracking branch for local `main`
+  (substitute whatever your default branch is called).
 
-Even now, the setup may not be ideal, because your local default branch is probably tracking `origin`, not `upstream`, which is preferable for a fork.
 Next time you do fork-and-clone, consider using `usethis::create_from_github(fork = TRUE)` instead, which completes all of this setup in one go.
 
 usethis describes this setup as "fork_upstream_is_not_origin_parent".
