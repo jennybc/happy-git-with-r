@@ -35,7 +35,7 @@ res <- knitr::knit_child(text = insert, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-## New RStudio Project via git clone
+## New RStudio Project via git clone {#git-clone-usethis-rstudio}
 
 ```{r echo = FALSE, results = "asis"}
 insert <- readr::read_file("child-clone-a-github-repo.Rmd")

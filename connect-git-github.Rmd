@@ -28,7 +28,7 @@ res <- knitr::knit_child(text = insert, quiet = TRUE)
 cat(res, sep = '\n')
 ```
 
-## Clone the repo to your local computer
+## Clone the repo to your local computer {#git-clone-command-line}
 
 We have a few ways to do this.
 Here we use command line Git.

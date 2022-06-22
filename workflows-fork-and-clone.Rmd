@@ -35,16 +35,25 @@ Make sure to clone your repo, not the source repo.
 Elsewhere, we describe multiple methods for cloning a remote repo.
 Pick one:
 
-  * [Existing project, GitHub first](#existing-github-first) describes how to do
-    this with usethis or RStudio.
-  * [Connect to GitHub](#push-pull-github) describes how to do this with command
-    line Git.
+  * The [cloning instructions in Existing project, GitHub first](#git-clone-usethis-rstudio)
+    cover usethis and RStudio.
+  * The [cloning instructions in Connect to GitHub](#git-clone-command-line)
+    show how to do this with command line Git.
 
 Make a conscious decision about the local destination directory and HTTPS vs SSH URL.
 
 ### Finish the fork and clone setup {#fork-and-clone-finish}
 
 If you stop at this point, you have what I regard as an incomplete setup, described elsewhere as ["fork (salvageable)"](#fork_upstream_is_not_origin_parent).
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Sad fork where `upstream` is not configured."
+knitr::include_graphics("img/fork-no-upstream-sad.jpeg")
+```
+
+This is sad, because there is no direct connection between your local copy of the repo and the source repo `OWNER/REPO`.
+
 There are two more recommended pieces of setup:
 
 * Configure the source repo as the `upstream` remote
@@ -239,7 +248,7 @@ In the shell, with the default branch checked out, `git branch -vv` should revea
 * main 2739987 [upstream/main] Some commit message
 ```
 
-This tracking relationship is also included in the rich information reported with `usethis::git_sitrep()`.
+All of this info about remotes and branches is also included in the rich information reported with `usethis::git_sitrep()`.
 
 ## Don't mess with `main` {#fork-dont-touch-main}
 
@@ -248,8 +257,11 @@ Here is some parting advice for how to work in a fork and clone and situation.
 If you make any commits in your local repository, I **strongly recommend** that you work in [a new branch](#git-branches), not `main` (or whatever the default branch is called).
 
 I **strongly recommend** that you do not make commits to `main` of a repo you have forked.
+If you commit to `main` in a repo you don't own, it creates a divergence between that branch's history in the source repo and in your repo.
+Nothing but pain will come from this.
+(If you've already done this, we discuss how to fix the situation in [Um, what if I did touch `main`?](#touched-main).)
 
-This will make your life much easier when you want to [pull upstream work](#upstream-changes) into your copy.
+When you treat `main` as read-only, it makes life much easier when you want to [pull upstream work](#upstream-changes) into your copy.
 The `OWNER` of `REPO` will also be happier to receive your pull request from a non-`main` branch.
 
 For more detail, this Q&A on Stack Overflow is helpful: [Why is it bad practice to commit to your fork's master branch?](https://stackoverflow.com/q/33749832).
