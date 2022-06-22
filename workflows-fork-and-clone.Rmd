@@ -1,7 +1,7 @@
 # Fork and clone {#fork-and-clone}
 
-Use "fork and clone" to get a copy of someone else's repo if there's any chance you will want to propose a change to the owner, i.e. send a "pull request".
-If you are waffling between "clone" and "fork and clone", go with "fork and clone".
+Use **fork and clone** to get a copy of someone else's repo if there's any chance you will want to propose a change to the owner, i.e. send a pull request.
+If you are waffling between "just clone" and "fork and clone", go with "fork and clone".
 
 We want to achieve this:
 
@@ -11,13 +11,15 @@ We want to achieve this:
 knitr::include_graphics("img/fork-and-clone.jpeg")
 ```
 
-Below we show to methods for fork and clone and you should pick one:
+Below we show a couple of methods for fork and clone and you should pick one:
 
 * Use a combination of the browser, command line Git, and RStudio
 * Via `usethis::create_from_github()`
 
 Vocabulary: `OWNER/REPO` refers to what we call the **source** repo, owned by `OWNER`, who is not you.
 `YOU/REPO` refers to your fork, i.e. your remote copy of the source repo, on GitHub.
+This is the same vocabulary used elsewhere, such as the chapter on [common remote configurations](#common-remote-setups).
+
 This is a good time to navigate to the [GitHub](https://github.com) repo of interest, i.e. the source repo `OWNER/REPO`.
 
 ## Fork and clone without usethis
@@ -40,9 +42,10 @@ Pick one:
 
 Make a conscious decision about the local destination directory and HTTPS vs SSH URL.
 
-### Finish the fork and clone setup
+### Finish the fork and clone setup {#fork-and-clone-finish}
 
-There are two more pieces of setup that I recommend for fork and clone:
+If you stop at this point, you have what I regard as an incomplete setup, described elsewhere as ["fork (salvageable)"](#fork_upstream_is_not_origin_parent).
+There are two more recommended pieces of setup:
 
 * Configure the source repo as the `upstream` remote
 * Configure your local `main` branch (or whatever the default is) to track
@@ -54,9 +57,9 @@ Every book, blog post, and Stack Overflow thread that you read will use `upstrea
 Save your psychic energy for other things.
   
 These steps make it easier for you to stay current with developments in the source repo.
-We talk more below about why you should never commit to `main` (or whatever the default branch is) when you're working in a fork.
+We talk more below about why you should never commit to the default branch, e.g. `main`, when you're working in a fork (see \@ref(dont-touch-main)).
 
-### Configure the `upstream` remote
+### Configure the `upstream` remote {#fork-configure-upstream}
 
 The first step is to get the URL of the **source** repo `OWNER/REPO`.
 Navigate to the source repo on GitHub.
@@ -86,7 +89,7 @@ usethis::use_git_remote(
 Finally, you can do this in RStudio, although it feels a bit odd.
 Click on "New Branch" in the Git pane ("two purple boxes and a white square").
 
-```{r rstudio-new-branch}
+```{r}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
 #| fig.alt = "RStudio's New Branch button."
 knitr::include_graphics("img/rstudio-new-branch.png")
@@ -98,12 +101,17 @@ Enter `upstream` as the remote name and paste the URL for `OWNER/REPO` that you 
 Click "Add".
 Decline the opportunity to add a new branch by clicking "Cancel".
 
-### Set upstream tracking branch for the default branch
+### Set upstream tracking branch for the default branch {#fork-set-upstream-tracking-main}
 
 This is optional but highly recommended for most fork and clone situations.
+We're going to set `upstream/main` from the source repo as the upstream tracking branch of local `main`.
+(If your default branch has a different name, substitute accordingly.)
+
+This is desirable so that a simple `git pull` pulls **from the source repo**, not from your fork.
+It also means a simple `git push` will (attempt to) push to the source repo, which will almost always be rejected since you probably do not have permission.
+This failure will alert you to the fact that you're doing something questionable, while it's still easy to back out.
 
 The two commands below do the same thing; the first is just shorthand for the second.
-If your default branch isn't `main`, be sure to substitute the name of your default branch.
 Do this with command line Git in a shell:
 
 ``` bash
@@ -111,19 +119,9 @@ git branch -u upstream/main
 git branch --set-upstream-to upstream/main
 ```
 
-You can use the commands below to review your fork and clone setup:
-
-* Command line Git in a shell:
-  - `git remote -v`
-  - `git remote show origin` (or `upstream`)
-  - `git branch -vv`
-* In R:
-  - `usethis::git_remotes()`
-  - `usethis::git_sitrep()`
-
 If you found this fork and clone workflow long and tedious, consider using `usethis::create_from_github()` next time!
 
-## `usethis::create_from_github("OWNER/REPO")`
+## `usethis::create_from_github("OWNER/REPO", fork = TRUE)` {#fork-and-clone-create-from-github}
 
 The [usethis package](https://usethis.r-lib.org) has a convenience function, [`create_from_github()`](https://usethis.r-lib.org/reference/create_from_github.html), that can do "fork and clone" (as well as just clone).
 The `fork` argument controls whether the source repo is cloned or fork-and-cloned.
@@ -137,6 +135,7 @@ But if you're opting for SSH, then make sure to copy the SSH URL.
 
 You can execute this next command in any R session.
 If you use RStudio, then do this in the R console of any RStudio instance.
+In either case, after successful completion, you should find yourself in the new project that is the local repo connected to your fork.
 
 ```{r eval = FALSE}
 usethis::create_from_github(
@@ -157,7 +156,7 @@ The `fork` argument specifies whether to clone (`fork = FALSE`) or fork and clon
 You often don't need to specify `fork` and can just enjoy the default behaviour, which is governed by your permissions on the source repo.
 By default, `fork = FALSE` if you can push to the source repo and `fork = TRUE` if you cannot.
 
-Here is what that might look like (note we're accepting the default behaviour for many arguments):
+Here is what that might look like (note that we're accepting the default behaviour for many arguments):
 
 ```{r eval = FALSE}
 usethis::create_from_github("https://github.com/OWNER/REPO")
@@ -174,9 +173,7 @@ usethis::create_from_github("https://github.com/OWNER/REPO")
 #> ✔ Setting active project to '<no active project>'
 ```
 
-In addition to `destdir` and `fork`, we're accepting the default behaviour of two other arguments, `rstudio` and `open`, because that's what most people will want.
-
-For example, for an RStudio user, `create_from_github(fork = TRUE)` does all of this:
+For an RStudio user, `create_from_github(fork = TRUE)` does all of this:
 
 * Forks the source repo on GitHub.
 * Clones your fork to a new local repo (and RStudio Project).
@@ -192,7 +189,10 @@ If you used `usethis::create_from_github()` or did fork and clone via [Existing 
 
 Regardless, get yourself into this project, whatever that means for you, using your usual method.
 
-Explore the new repo in some suitable way. If it is a package, you could run the tests or check it. If it is a data analysis project, run a script or render an Rmd. Convince yourself that you have gotten the code.
+Explore the new repo in some suitable way.
+If it is a package, you could run the tests or check it.
+If it is a data analysis project, run a script or render an Rmd.
+Convince yourself that you have gotten the code.
 
 You should now be in the perfect position to sync up with ongoing developments in the source repo and to propose new changes via a pull request from your fork.
 
@@ -202,7 +202,46 @@ You should now be in the perfect position to sync up with ongoing developments i
 knitr::include_graphics("img/fork-them-pull-request.jpeg")
 ```
 
-## Don't mess with `main` {#dont-touch-main}
+You can use the commands below to review more of the nitty gritty Git details of your fork and clone setup:
+
+* Command line Git in a shell:
+  - `git remote -v`
+  - `git remote show origin` (or `upstream`)
+  - `git branch -vv`
+* In R:
+  - `usethis::git_remotes()`
+  - `usethis::git_sitrep()`
+
+In the shell, `git remote -v` should reveal that your remotes are configured like so:
+
+``` bash
+origin    https://github.com/YOU/REPO.git (fetch)
+origin    https://github.com/YOU/REPO.git (push)
+upstream  https://github.com/OWNER/REPO.git (fetch)
+upstream  https://github.com/OWNER/REPO.git (push)
+```
+
+Comparable info is available In R with `usethis::git_remotes()`:
+
+```{r eval = FALSE}
+git_remotes()
+#> $origin
+#> [1] "https://github.com/YOU/REPO.git"
+#> 
+#> $upstream
+#> [1] "https://github.com/OWNER/repo.git"
+```
+
+In the shell, with the default branch checked out, `git branch -vv` should reveal that `upstream/main` is the upstream tracking branch:
+
+``` bash
+~/some/repo/ % git branch -vv                   
+* main 2739987 [upstream/main] Some commit message
+```
+
+This tracking relationship is also included in the rich information reported with `usethis::git_sitrep()`.
+
+## Don't mess with `main` {#fork-dont-touch-main}
 
 Here is some parting advice for how to work in a fork and clone and situation.
 
@@ -210,7 +249,7 @@ If you make any commits in your local repository, I **strongly recommend** that 
 
 I **strongly recommend** that you do not make commits to `main` of a repo you have forked.
 
-This will make your life much easier if you want to [pull upstream work](#upstream-changes) into your copy.
+This will make your life much easier when you want to [pull upstream work](#upstream-changes) into your copy.
 The `OWNER` of `REPO` will also be happier to receive your pull request from a non-`main` branch.
 
 For more detail, this Q&A on Stack Overflow is helpful: [Why is it bad practice to commit to your fork's master branch?](https://stackoverflow.com/q/33749832).
