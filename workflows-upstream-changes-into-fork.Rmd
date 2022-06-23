@@ -72,7 +72,7 @@ All of this info about remotes and branches is also included in the rich informa
 
 ### Repair or complete your repo's configuration
 
-Instructions for adding the `upstream` remote and setting upstream tracking for your default branch are given in [Finish the fork and clone setup](fork-and-clone-finish).
+Instructions for adding the `upstream` remote and setting upstream tracking for your default branch are given in [Finish the fork and clone setup](#fork-and-clone-finish).
 
 ## Verify that your "working tree is clean"
 
