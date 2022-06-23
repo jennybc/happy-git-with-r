@@ -165,11 +165,13 @@ Since they are synced, you can pull from either `upstream` or `origin`.
 In the shell, with the default branch checked out, execute one of these:
 
 ``` bash
-git pull origin
-git pull upstream
+git pull upstream --ff-only
+git pull origin --ff-only
 ```
 
-If you've followed our configuration advice, you could also do a simple `git pull` (which will pull from `upstream`).
+If you've followed our configuration advice, you don't actually need to specify the remote, because this branch is configured to pull from `upstream`.
+For the same reasons as before, it's a good idea to include the `--ff-only` flag.
+If you have made local commits to `main`, this will surface that problem, which is solved in the next section.
 
 ## Um, what if I did touch `main`? {#touched-main}
 
@@ -191,9 +193,18 @@ and and this is the state of the `main` branch in your local copy:
 
 The two histories agree, up to commit or state `C`, then they diverge.
 
-If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, via `git checkout -b my-great-innovations` (pick your own branch name!).
+If you want to preserve the work in commits `X`, `Y`, and `Z`, create a new branch right now, with tip at `Z`, like so, but substituting your preferred branch name:
+
+``` bash
+git checkout -b my-great-innovations
+```
+
 This safeguards your great innovations from commits `X`, `Y`, and `Z`.
-Then checkout `main` via `git checkout main`.
+Now checkout `main` again:
+
+``` bash
+git checkout main
+```
 
 I now assume you have either preserved the work in `X`, `Y`, and `Z` (with a branch) or have decided to let it go.
 
@@ -203,13 +214,21 @@ Do a hard reset of the `main` branch to `C`.
 git reset --hard C
 ```
 
-You will have to figure out how to convey `C` in Git-speak. Specify it relative to `HEAD` or provide the SHA. See *future link about time travel* for more support.
+You will have to figure out how to convey `C` in Git-speak.
+Specify it relative to `HEAD` or provide the SHA.
+See *future link about time travel* for more support.
 
 <!-- TODO: come back when there is content about referring to previous states. -->
 
 Your `main` branch now reflects (a subset) of the history of `OWNER/REPO`.
 The instructions above for pulling changes from `upstream` should now work.
 A fast-forward-only pull should succeed.
+
+``` bash
+git pull upstream --ff-only
+```
+
+And now your local history for `main` should match that in the source repo:
 
 ``` bash
 ... -- A -- B -- C -- D -- E -- F
