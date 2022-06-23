@@ -110,6 +110,12 @@ Enter `upstream` as the remote name and paste the URL for `OWNER/REPO` that you 
 Click "Add".
 Decline the opportunity to add a new branch by clicking "Cancel".
 
+Regardless of how you configured `upstream`, do this in a shell:
+
+``` bash
+git fetch upstream
+```
+
 ### Set upstream tracking branch for the default branch {#fork-set-upstream-tracking-main}
 
 This is optional but highly recommended for most fork and clone situations.

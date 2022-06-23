@@ -85,7 +85,13 @@ knitr::include_graphics("img/fork-them.jpeg")
 ```
 
 Make sure you are on the default branch, e.g. `main`, and that your "working tree is clean".
-`git status` should show something like:
+First, let's make sure our information on the `upstream` remote is current:
+
+``` bash
+git fetch upstream
+```
+
+`git status` should now show something like:
 
 ``` bash
 On branch main
@@ -95,8 +101,30 @@ nothing to commit, working tree clean
 ```
 
 If you have modified files, you should either discard those changes or create a new branch and commit the changes there for safekeeping.
+
+It's also fine if you see something like this:
+
+```
+Your branch is behind 'upstream/main' by 2 commits, and can be fast-forwarded.
+```
+
+However, if you see something like this:
+
+```
+Your branch is ahead of 'upstream/main' by 1 commit.
+```
+
+or this:
+
+```
+Your branch and 'upstream/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+```
+
+this is a sign that you have made some regrettable choices.
+
 I recommend that you [never make your own commits to the default branch of a fork](#fork-dont-touch-main) or to any branch that you don't effectively (co-)own.
-However, if you have already done so, we address your sorry situation below in [Um, what if I did touch `main`?](#touched-main).
+However, if you have already done so, we explain how to fix the problem in [Um, what if I did touch `main`?](#touched-main).
 
 ## Sync option 1: Pull changes from `upstream`, then push to `origin`
 
@@ -165,11 +193,11 @@ Since they are synced, you can pull from either `upstream` or `origin`.
 In the shell, with the default branch checked out, execute one of these:
 
 ``` bash
-git pull upstream --ff-only
-git pull origin --ff-only
+git pull upstream main --ff-only
+git pull origin main --ff-only
 ```
 
-If you've followed our configuration advice, you don't actually need to specify the remote, because this branch is configured to pull from `upstream`.
+If you've followed our configuration advice, you don't actually need to specify the remote and branch, because this branch is configured to pull from `upstream`.
 For the same reasons as before, it's a good idea to include the `--ff-only` flag.
 If you have made local commits to `main`, this will surface that problem, which is solved in the next section.
 
