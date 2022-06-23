@@ -175,17 +175,34 @@ The official GitHub documentation for this is [Syncing a fork from the web UI](h
 
 Navigate to the main page of your fork `YOU/REPO`, i.e. your primary repo which is configured as the `origin` remote.
 
-Towards the upper right corner, you will see "Fetch upstream".
-Click this and then click "Fetch and merge".
+At the top you'll see some information on how the state of `main` in your fork relates to `main` in the source repo, similar to what we see with `git status` in the alternative approach above.
+Ideally you will see something like:
+
+```
+This branch is 2 commits behind OWNER:main.
+```
+
+which indicates you can sync up in the ideal fast-forward sense.
+
+If you see something like this:
+
+```
+This branch is 1 commit ahead, 2 commits behind OWNER:main.
+```
+
+this is a sign that you have made some regrettable choices.
+
+I recommend that you [never make your own commits to the default branch of a fork](#fork-dont-touch-main) or to any branch that you don't effectively (co-)own.
+However, if you have already done so, we explain how to fix the problem in [Um, what if I did touch `main`?](#touched-main).
+
+Once you are ready to proceed, click "Fetch upstream" in the upper right corner and then "Fetch and merge".
 Upon success, the main page of `YOU/REPO` shows something like
 
 > This branch is up to date with `OWNER/REPO:main`.
 
-If this does not "just work", it probably means you have made commits on the default branch of your fork, which we [strongly advise against](#fork-dont-touch-main).
-I believe GitHub then gives you the option of bringing the `upstream` changes into your fork as a pull request.
-Alternatively, you could back out and straighten out the history of the default branch, using the instructions below.
-Then you could do a force push to `origin` and try the sync again.
-You could even consider deleting your fork and local repo and making a fresh start with [Fork and clone](fork-and-clone).
+If you have made commits on the default branch of your fork, which we [strongly advise against](#fork-dont-touch-main), this can result in a merge commit (or even merge conflicts).
+If you are suffering due to commits you've made on `main` and it's beyond the help we describe below, consider deleting your fork and local repo and making a fresh start with [Fork and clone](fork-and-clone).
+Live and learn.
 
 Once you have successfully synced the default branch of `YOU/REPO` with the default branch of `OWNER/REPO`, you probably want to do the same for your local repo.
 Since they are synced, you can pull from either `upstream` or `origin`.
@@ -248,12 +265,12 @@ See *future link about time travel* for more support.
 
 <!-- TODO: come back when there is content about referring to previous states. -->
 
-Your `main` branch now reflects (a subset) of the history of `OWNER/REPO`.
+The history of your `main` branch is now compatible with its history in `OWNER/REPO`.
 The instructions above for pulling changes from `upstream` should now work.
 A fast-forward-only pull should succeed.
 
 ``` bash
-git pull upstream --ff-only
+git pull upstream main --ff-only
 ```
 
 And now your local history for `main` should match that in the source repo:
