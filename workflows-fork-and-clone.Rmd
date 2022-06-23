@@ -120,6 +120,13 @@ This is desirable so that a simple `git pull` pulls **from the source repo**, no
 It also means a simple `git push` will (attempt to) push to the source repo, which will almost always be rejected since you probably do not have permission.
 This failure will alert you to the fact that you're doing something questionable, while it's still easy to back out.
 
+First, fetch info for the `upstream` remote.
+This is especially important if you just configured `upstream` for the first time.
+
+``` bash
+git fetch upstream
+```
+
 The two commands below do the same thing; the first is just shorthand for the second.
 Do this with command line Git in a shell:
 
