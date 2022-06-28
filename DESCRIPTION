@@ -10,10 +10,12 @@ URL: https://happygitwithr.com
 Imports: 
     bookdown,
     bslib,
-    downlit,
+    downlit (>= 0.4.1.9000),
     fs,
     glue,
     readr,
     sessioninfo,
     xml2
 Encoding: UTF-8
+Remotes:  
+    r-lib/downlit
