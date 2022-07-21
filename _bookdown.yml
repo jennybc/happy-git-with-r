@@ -39,6 +39,7 @@ rmd_files: [
   "git-commands.Rmd",
   "git-branches.Rmd",
   "git-remotes.Rmd",
+  "git-refs.Rmd",
 
   "remote-setups-intro.Rmd",
   "remote-setups-common.Rmd",
