@@ -7,6 +7,12 @@ These opaque strings of 40 letters and numbers are not particularly pleasant for
 The entry-level coping strategy is to work with an abbreviated form of the SHA.
 It's typical to only use the first 7 characters, as this almost always uniquely identifies a commit.
 
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Git history annotated with SHAs."
+knitr::include_graphics("img/refs-only-shas.jpeg")
+```
+
 Luckily, there are even more ways to talk about a specific commit, that are much easier for humans to wrap their head around.
 These are called Git "refs", short for references and, if you're familiar with the programming concept of a pointer, that's exactly the right mental model.
 
@@ -15,10 +21,17 @@ These are called Git "refs", short for references and, if you're familiar with t
 Here are some of the most useful refs:
 
 * A branch name.
-  Example: `main`, `bugfix`.
+  Example: `main`, `wild-experiment`.
   When you refer to the `main` branch, that resolves to the SHA of the tip of
   the `main` branch.
   Think of a branch ref as a sliding ref that evolves as the branch does.
+  
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Git history annotated with two branches."
+knitr::include_graphics("img/refs-only-branches.jpeg")
+```
+
 * `HEAD`.
   This (almost always) resolves to the tip of the branch that is currently
   checked out.[^HEAD-no-branch]
@@ -26,6 +39,13 @@ Here are some of the most useful refs:
   which itself is a ref, that points to a specific SHA.
   There are two layers of indirection.
   This is also called a *symbolic ref*.
+  
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Git history annotated with HEAD symbolic ref."
+knitr::include_graphics("img/refs-branches-and-HEAD-1.jpeg")
+```  
+  
 * A tag.
   Example: `v1.4.2`.
   Tags differ from branch refs and the `HEAD` ref in that they tend to be much
@@ -33,6 +53,12 @@ Here are some of the most useful refs:
   Tags aren't sliding by nature, although it is possible to reposition a tag to
   point at a new SHA, if you make an explicit effort.
   The most common use of a tag is to provide a nice label for a specific SHA.
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Git history annotated with a tag."
+knitr::include_graphics("img/refs-tag.jpeg")
+```  
 
 [^HEAD-no-branch]: When does `HEAD` not resolve to the SHA at the tip of some branch?
 When you are a *detached HEAD* state.
@@ -85,6 +111,12 @@ There are also modifiers that help you specify a commit relative to a ref, e.g. 
 `HEAD~1` refers to the commit just before `HEAD`.
 `HEAD^` is another way to say exactly the same thing.
 
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "Git history annotated with relative refs."
+knitr::include_graphics("img/refs-relative.jpeg")
+```  
+
 Here are some examples executed in the Happy Git repo:
 
 ```console
@@ -106,3 +138,22 @@ I worry that I have some sort of off-by-one error in my understanding and I'll e
 Tools like GitKraken and GitHub make it extremely easy to copy specific SHAs to your clipboard.
 So when I need a ref that's not a simple branch name or tag, I almost always lean on user-friendly tools like GitKraken or GitHub to allow me to state my intent using the actual SHA of interest.
 I suspect that the relative ref shortcuts are most popular with folks who are exclusively using command line Git and are operating under different constraints.
+
+In GitKraken, right or control click on the target commit to access a menu that includes "Copy commit sha", among many other useful commands.
+If you're using another Git client, there is probably a way to do this and it's worth figuring that out.
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "GitKraken screenshot showing how to copy a specific SHA."
+knitr::include_graphics("img/gitkraken-screenshot-copy-commit-sha.png")
+```  
+
+GitHub also makes it extremely easy to copy a SHA in many contexts.
+This screenshot shows just one example.
+Once you start looking for this feature, you'll find it in many places on GitHub.
+
+```{r}
+#| echo = FALSE, fig.align = "center", out.width = "60%",
+#| fig.alt = "GitHub screenshot showing how to copy a specific SHA."
+knitr::include_graphics("img/github-screenshot-copy-the-full-sha.png")
+```  
