@@ -2,15 +2,15 @@
 
 Problem: You want to pull changes from upstream, but you have done some new work locally since the last time you pulled. This often comes up because [what you actually want to do is *push*](#push-rejected), but Git won't let you until you first incorporate the upstream changes.
 
-For the sake of simplicity, assume we're dealing with the `master` branch and the remote is called `origin`.
+For the sake of simplicity, assume we're dealing with the `main` branch and the remote is called `origin`.
 
-Recent commit history of `origin/master`:
+Recent commit history of `origin/main`:
 
 ``` sh
 A--B--C
 ```
 
-Recent commit history of the local `master` branch:
+Recent commit history of the local `main` branch:
 
 ``` sh
 A--B--D
@@ -51,7 +51,7 @@ Local before 'git pull': A--B--(uncommitted changes)
  Local after 'git pull': A--B--C--(uncommitted changes)
 ```
 
-What has actually happened here is that `git pull` resulted in a *fast-forward merge*, i.e. we placed commit `C` right on the end of your history. This would also be the case in the simpler situation where recent local history was just `A--B`, i.e. you had not added any local work since the last sync up with `origin/master`.
+What has actually happened here is that `git pull` resulted in a *fast-forward merge*, i.e. we placed commit `C` right on the end of your history. This would also be the case in the simpler situation where recent local history was just `A--B`, i.e. you had not added any local work since the last sync up with `origin/main`.
 
 ### `git stash` works, sometimes
 
@@ -65,7 +65,7 @@ remote: Compressing objects: 100% (2/2), done.
 remote: Total 3 (delta 1), reused 1 (delta 0), pack-reused 0
 Unpacking objects: 100% (3/3), done.
 From github.com:jennybc/ethel
-   db046b4..2d33a6f  master     -> origin/master
+   db046b4..2d33a6f  main     -> origin/main
 Updating db046b4..2d33a6f
 error: Your local changes to the following files would be overwritten by merge:
         foo.R
@@ -96,7 +96,7 @@ And here's the output from our example:
 
 ``` sh
 jenny@2015-mbp ethel $ git stash save
-Saved working directory and index state WIP on master: db046b4 Merge branch 'master'of github.com:jennybc/ethel
+Saved working directory and index state WIP on main: db046b4 Merge branch 'main'of github.com:jennybc/ethel
 
 jenny@2015-mbp ethel $ git pull
 Updating db046b4..2d33a6f
@@ -106,8 +106,8 @@ Fast-forward
 
 jenny@2015-mbp ethel $ git stash pop
 Auto-merging foo.R
-On branch master
-Your branch is up-to-date with 'origin/master'.
+On branch main
+Your branch is up-to-date with 'origin/main'.
 
 Changes not staged for commit:
   (use "git add <file>..." to update what will be committed)
@@ -138,7 +138,7 @@ Here's how to execute the `git stash` workflow in our example, in the face of co
 
 ``` sh
 jenny@2015-mbp ethel $ git stash save
-Saved working directory and index state WIP on master: 2d33a6f Back to 5
+Saved working directory and index state WIP on main: 2d33a6f Back to 5
 
 jenny@2015-mbp ethel $ git pull
 Updating 2d33a6f..1eddf9e
@@ -214,7 +214,7 @@ Mark the affected file `foo.R` as resolved via `git add` and make an explicit `g
 ``` sh
 jenny@2015-mbp ethel $ git add foo.R
 jenny@2015-mbp ethel $ git commit
-[master 20b297b] Merge branch 'master' of github.com:jennybc/ethel
+[main 20b297b] Merge branch 'main' of github.com:jennybc/ethel
 ```
 
 Again, do not be surprised if, during `git commit`, you find yourself in an editor, confirming/editing the commit message for the merge commit.
@@ -270,15 +270,15 @@ Local state is `A--B--(uncommitted changes)`.
 
 This is an alternative to the stash workflow that has the advantage of giving you practice with Git techniques that are more generally useful. It also leads to a nice history.
 
-Create a new, temporary branch and commit your uncommitted changes there. Checkout `master` and `git pull` to get changes from upstream. You now need to recover the work from the commit in the temporary branch. Options:
+Create a new, temporary branch and commit your uncommitted changes there. Checkout `main` and `git pull` to get changes from upstream. You now need to recover the work from the commit in the temporary branch. Options:
 
-  * Merge the temporary branch into `master`.
-  * Cherry pick the commit from the temporary branch into `master`.
+  * Merge the temporary branch into `main`.
+  * Cherry pick the commit from the temporary branch into `main`.
   
 In either case, it is still possible you will need to deal with merge conflicts.
 
-In either case, if you felt forced to commit before you were ready or to accept an ugly merge commit, you can either do a mixed reset to "uncommit" but keep the changes on `master` or keep amending until you are satisfied with the commit.
+In either case, if you felt forced to commit before you were ready or to accept an ugly merge commit, you can either do a mixed reset to "uncommit" but keep the changes on `main` or keep amending until you are satisfied with the commit.
 
 ## Some local work is committed, some is not
 
-This is an awkward hybrid situation that can be handled with a combination of strategies seen above: make a pragmatic commit on `master` or a temporary branch. Integrate the upstream and local changes in `master`. If you aren't happy with the final pragmatic commit (which only exists locally), reset or amend until you are.
+This is an awkward hybrid situation that can be handled with a combination of strategies seen above: make a pragmatic commit on `main` or a temporary branch. Integrate the upstream and local changes in `main`. If you aren't happy with the final pragmatic commit (which only exists locally), reset or amend until you are.
