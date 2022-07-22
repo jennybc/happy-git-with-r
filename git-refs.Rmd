@@ -138,6 +138,8 @@ I worry that I have some sort of off-by-one error in my understanding and I'll e
 Tools like GitKraken and GitHub make it extremely easy to copy specific SHAs to your clipboard.
 So when I need a ref that's not a simple branch name or tag, I almost always lean on user-friendly tools like GitKraken or GitHub to allow me to state my intent using the actual SHA of interest.
 I suspect that the relative ref shortcuts are most popular with folks who are exclusively using command line Git and are operating under different constraints.
+There's actually a rich set of ways to specify a target commit that goes well beyond the `^` and `~` syntax shown here.
+You can learn more in the [official Git documention about revision parameters](https://git-scm.com/docs/gitrevisions).
 
 In GitKraken, right or control click on the target commit to access a menu that includes "Copy commit sha", among many other useful commands.
 If you're using another Git client, there is probably a way to do this and it's worth figuring that out.
