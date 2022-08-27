@@ -171,7 +171,7 @@ If you've followed our configuration advice, you really do need to be this expli
 
 For many years, this was not possible, though many GitHub users wished for this feature.
 Happily it is now possible to sync a fork with its source repo in the browser, i.e. to do the sync between the 2 GitHub repos.
-The official GitHub documentation for this is [Syncing a fork from the web UI](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-from-the-web-ui).
+The official GitHub documentation for this is [Syncing a fork branch from the web UI](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork#syncing-a-fork-branch-from-the-web-ui).
 
 Navigate to the main page of your fork `YOU/REPO`, i.e. your primary repo which is configured as the `origin` remote.
 
@@ -195,7 +195,7 @@ this is a sign that you have made some regrettable choices.
 I recommend that you [never make your own commits to the default branch of a fork](#fork-dont-touch-main) or to any branch that you don't effectively (co-)own.
 However, if you have already done so, we explain how to fix the problem in [Um, what if I did touch `main`?](#touched-main).
 
-Once you are ready to proceed, click "Fetch upstream" in the upper right corner and then "Fetch and merge".
+Once you are ready to proceed, click "Sync fork" in the upper right corner.
 Upon success, the main page of `YOU/REPO` shows something like
 
 > This branch is up to date with `OWNER/REPO:main`.
