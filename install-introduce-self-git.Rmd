@@ -30,7 +30,7 @@ What user name should you give to Git? This does not have to be your GitHub user
 
 What email should you give to Git? This __must__ be the email associated with your GitHub account.
 
-These commands return nothing. You can check that Git understood what you typed by looking at the output of `git config --global --list`.
+The first two commands used in the shell beginning with `git config --global` return nothing in the terminal. You can check that Git understood what you typed by looking at the output of the third from `git config --global --list`.
 
 ### Configure the Git editor {#git-editor}
 
