@@ -8,6 +8,7 @@ on:
   schedule:
     # run every day at 11 PM
     - cron: '0 23 * * *'
+  workflow_dispatch:
 
 name: bookdown
 
@@ -17,6 +18,8 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       isExtPR: ${{ github.event.pull_request.head.repo.fork == true }}
+    concurrency:
+      group: pkgdown-${{ github.event_name != 'pull_request' || github.run_id }}
     steps:
       - uses: actions/checkout@v3
 
@@ -29,7 +32,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
 
       - name: Cache bookdown results
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: _bookdown_files
           key: bookdown-${{ hashFiles('**/*Rmd') }}
@@ -41,7 +44,8 @@ jobs:
           git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Build site
-        run: Rscript -e 'bookdown::render_book("index.Rmd", quiet = TRUE)'
+        run: bookdown::render_book("index.Rmd", quiet = TRUE)
+        shell: Rscript {0}
 
       - name: Deploy to Netlify
         if: contains(env.isExtPR, 'false')
