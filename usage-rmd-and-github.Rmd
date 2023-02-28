@@ -220,7 +220,7 @@ Here are two behaviors I find very frustrating:
   "product". The implicit assumption is that the target audience will download
   all of the data and code and execute it locally.
 * "Here is my HTML. Behold." This is when someone accepts the default HTML-only
-  output. Remember, HTML files are GitHub are not readable by humans. Therefore,
+  output. Remember, HTML files on GitHub are not readable by humans. Therefore,
   the implicit assumption is that the target audience will download the repo
   and point their browser at this HTML file, in order to see it.
   HTML on GitHub? It's not readable by humans.
