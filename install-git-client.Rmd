@@ -73,10 +73,12 @@ Do whatever works for you, but don't do anything for the sake of purity or heroi
 
 ## Recommended Git clients
 
-  * [GitKraken](https://www.gitkraken.com) is a free, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who previously had very few options. I used the free for version for years, which works great, but now I happily pay money for the pro version.
+  * [GitKraken](https://www.gitkraken.com) is a free*, powerful Git(Hub) client that is my current favorite. It's especially exciting because it works on Windows, macOS, and Linux. This is great news, especially for long-suffering Linux users who previously had very few options. I used the free version for years, which works great, but now I happily pay money for the pro version.
 
   * [SourceTree](https://www.sourcetreeapp.com) is another free client that I used to highly recommend. It was my first beloved Git client, but I eventually had to give it up, due to long-standing bugs / deficiencies that seemed like they would never be fixed ([macOS bug re: leaking file handles](http://openradar.appspot.com/radar?id=1387401), no ability to control font size). GitKraken feels much more actively developed and has completely supplanted SourceTree for me.
   
   * GitHub offers a free Git(Hub) client, [GitHub Desktop](https://desktop.github.com/), for Windows and macOS. Although we previously discouraged its use, GitHub's client has since gotten a thorough makeover that eliminates several of our concerns, so we're cautiously optimistic. GitHub Desktop is aimed at beginners who want the most useful features of Git front and center. The flipside is that it may not support some of the more advanced workflows exposed by the clients above and, consequently, may not develop your mental model of Git as thoroughly.
 
   * Browse [even more Git(Hub) clients](http://git-scm.com/downloads/guis).
+
+\* Free for solo developers on local and public repositories only.
