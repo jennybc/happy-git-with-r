@@ -36,16 +36,20 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
   * If there is a clear R/RStudio angle, post on <https://community.rstudio.com>.
   * General advice: search with Google and on <https://stackoverflow.com>, see also <https://github.community>.
 
-## rstudio::conf 2022
+## posit::conf 2023
 
-2-day workshop: What They Forgot to Teach You About R  
-Will have substantial coverage of Git/GitHub + R/Rmd/RStudio  
-July 25-26, [`rstd.io/conf`](https://rstd.io/conf) Workshop Days, Washington, D.C.
+1-day workshop: What They Forgot to Teach You About R  
+Will have half-day coverage of Git/GitHub
+Sep 17, [`posit.co/conference`](https://posit.co/conference/) Workshop Day, Chicago
 
 Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-about-r-workshop-rstudio-conf-2022/138999?u=jennybryan) on community.rstudio.com to discuss system prep woes.
 
 ## Previous workshops
 
+  * rstudio::conf 2022
+   - 2-day workshop: What They Forgot to Teach You About R  
+   - ~25% of content was Git/GitHub
+   - July 25-26, 2022, Washington, D.C.
   * RaukR: Advanced R for Bioinformatics Summer School
     - June 13, 2022, online
   * rstudio::conf 2020
