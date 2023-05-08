@@ -107,11 +107,11 @@ author: "Jenny Bryan"
 date: "`r format(Sys.Date())`"
 output:
   html_document:
-    keep_md: true
+    keep_md: yes
 ---
 ```
 
-You should have gained the line `keep_md: true`.
+You should have gained the line `keep_md: yes`.
 You can also simply edit the file yourself to achieve this.
 The IDE only exposes a small fraction of what's possible to configure in the YAML.
 
