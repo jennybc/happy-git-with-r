@@ -40,7 +40,7 @@ Another Git option that many people eventually configure is the editor. At some 
 git config --global core.editor "emacs"
 ```
 
-Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](http://swcarpentry.github.io/git-novice/02-setup/).
+Substitute your preferred editor for `"emacs"` here. Software Carpentry's Git lesson has a comprehensive listing of the exact `git config` command needed for [many combinations of OS and editor](https://swcarpentry.github.io/git-novice/02-setup.html).
 
 ### Configure the default name for an initial branch
 
