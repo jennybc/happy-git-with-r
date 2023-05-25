@@ -164,7 +164,7 @@ How to achieve:
   * Command line Git or RStudio: You can't complete this task fully from the
     command line or RStudio:
     - Fork the source repo in the browser, capture the HTTPS or SSH
-      URL of **your fork**, then use `git remote clone <FORK_URL>`
+      URL of **your fork**, then use `git clone <FORK_URL>`
       (command line) or RStudio's *File > New Project > Version Control > Git*
       workflow. But, wait, you're not done! If you stop here, you will have the
       incomplete setup we refer to as
