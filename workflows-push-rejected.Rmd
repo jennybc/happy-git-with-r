@@ -32,7 +32,7 @@ A -- B -- D (what you have)
 
 You can't cause some sort of merge to happen to the GitHub copy when you push. 
 
-Instead, you've got pull the commit `C` and somehow integrate it into your `D`-containing history. Then you will be able to push again.
+Instead, you've got to pull the commit `C` and somehow integrate it into your `D`-containing history. Then you will be able to push again.
 
 This is covered in the workflow [Pull, but you have local work](#pull-tricky).
 
