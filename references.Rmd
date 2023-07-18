@@ -12,7 +12,7 @@ Long-term, you should understand more about what you are doing. Rote clicking in
 
   * [Oh My Git!](https://ohmygit.org/) is a free and open source interactive game for learning Git. It's very beginner friendly, using a graph to visualise the worktree. Lessons can be completed using a playing card interface in addition to the built-in command line, which is there for when users become more comfortable.
 
-  * [GitHub's own training materials](http://training.github.com) may be helpful. They also point to [many other resources](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github)
+  * [GitHub's own training materials](https://training.github.com) may be helpful. They also point to [many other resources](https://help.github.com/articles/what-are-other-good-resources-for-learning-git-and-github)
 
   * Find a powerful Git client (chapter \@ref(git-client)) if you'd like to minimize your usage of Git from the command line.
   
