@@ -3,8 +3,8 @@
 In the shell (Appendix \@ref(shell)):
 
 ``` bash
-git config --global user.name 'Jane Doe'
-git config --global user.email 'jane@example.com'
+git config --global user.name "Jane Doe"
+git config --global user.email "jane@example.com"
 git config --global --list
 ```
 
