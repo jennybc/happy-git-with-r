@@ -18,8 +18,10 @@ As a starting point, consider a local Git repo that is not yet connected to GitH
 
 ```{r no_github}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \"no_github\""
+#| fig.alt = "Setup described as \'no_github\'"
+
 knitr::include_graphics("img/no-github.jpeg")
+
 ```
 
 This is not very exciting, but sets the stage for what's to come.
