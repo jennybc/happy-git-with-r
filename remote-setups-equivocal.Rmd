@@ -33,7 +33,7 @@ When we detect just one GitHub remote, but we can't verify the info above, useth
 
 ```{r maybe_ours_or_theirs}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \"maybe_ours_or_theirs\""
+#| fig.alt = "Setup described as \'maybe_ours_or_theirs\'"
 knitr::include_graphics("img/maybe_ours_or_theirs.jpeg")
 ```
 
@@ -45,7 +45,7 @@ When we detect two GitHub remotes, but we can't verify the info above, usethis d
 
 ```{r maybe_fork}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \"maybe_fork\""
+#| fig.alt = "Setup described as \'maybe_fork\'"
 knitr::include_graphics("img/maybe_fork.jpeg")
 ```
 
