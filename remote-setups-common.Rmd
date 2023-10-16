@@ -18,7 +18,7 @@ As a starting point, consider a local Git repo that is not yet connected to GitH
 
 ```{r no_github}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'no_github\'"
+#| fig.alt = "Setup described as 'no_github'"
 
 knitr::include_graphics("img/no-github.jpeg")
 
@@ -45,7 +45,7 @@ A common next step is to associate a local repo with a copy on GitHub, owned by 
 
 ```{r ours-you}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'ours\'"
+#| fig.alt = "Setup described as 'ours'"
 knitr::include_graphics("img/ours-you.jpeg")
 ```
 
@@ -89,7 +89,7 @@ Here is a variation on "ours" that is equivalent in practice.
 
 ```{r ours-them}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'ours\'"
+#| fig.alt = "Setup described as 'ours'"
 knitr::include_graphics("img/ours-them.jpeg")
 ```
 
@@ -115,7 +115,7 @@ It's not broken *per se*, but it's limiting.
 
 ```{r theirs}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'theirs\'"
+#| fig.alt = "Setup described as 'theirs'"
 knitr::include_graphics("img/theirs.jpeg")
 ```
 
@@ -146,7 +146,7 @@ This is an ideal setup if you want to make a pull request and generally follow t
 
 ```{r fork-them}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'fork\'"
+#| fig.alt = "Setup described as 'fork'"
 knitr::include_graphics("img/fork-them.jpeg")
 ```
 
@@ -188,7 +188,7 @@ This is a less common variation on the fork setup.
 
 ```{r fork-ours}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'fork\'"
+#| fig.alt = "Setup described as 'fork'"
 knitr::include_graphics("img/fork-ours.jpeg")
 ```
 
@@ -210,7 +210,7 @@ Here is one last fork setup that's sub-optimal, but it can be salvaged.
 
 ```{r fork-no-upstream}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \'fork_upstream_is_not_origin_parent\'"
+#| fig.alt = "Setup described as 'fork_upstream_is_not_origin_parent'"
 knitr::include_graphics("img/fork_upstream_is_not_origin_parent.jpeg")
 ```
 
