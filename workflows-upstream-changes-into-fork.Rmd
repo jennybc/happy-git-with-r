@@ -80,7 +80,7 @@ We assume your repo has this favorable configuration:
 
 ```{r fork-them}
 #| echo = FALSE, fig.align = "center", out.width = "60%",
-#| fig.alt = "Setup described as \"fork\""
+#| fig.alt = "Setup described as 'fork'"
 knitr::include_graphics("img/fork-them.jpeg")
 ```
 
