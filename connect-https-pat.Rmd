@@ -53,9 +53,13 @@ GitHub no longer allows passwords in this context, but most basic Git tools stil
 You could even get out ahead of this and store the PAT explicitly right now.
 In R, call `gitcreds::gitcreds_set()` to get a prompt where you can paste your PAT:
 
-```{sh eval = FALSE}
-> gitcreds::gitcreds_set()
+```{r eval = FALSE}
+gitcreds::gitcreds_set()
+```
 
+Paste the PAT in response to the dialogue in the console:
+
+```
 ? Enter password or token: ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 -> Adding new credentials...
 -> Removing credentials from cache...
