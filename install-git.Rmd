@@ -61,7 +61,9 @@ If you already have Git for Windows, but it's not the latest version, it's a goo
 Since v2.16, you can [update like so from the command line](https://stackoverflow.com/a/48924212):
 
 ``` bash
-git update git-for-windows
+git update git-for-windows  
+Warning! `git update` has been deprecated;
+Please use  git update-git-for-windows
 ```
 
 ## macOS
