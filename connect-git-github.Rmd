@@ -48,6 +48,7 @@ This URL should have **your GitHub username** and the name of **your practice re
 If your shell (Appendix \@ref(shell)) cooperates, you should be able to paste the whole `https://....` bit that we copied above.
 But some shells are not (immediately) clipboard aware.
 In that sad case, you must type it. **Accurately.**
+You might want to try using Shift + Insert instead of the good ol' Ctrl V in order to paste into the shell
 
 ```console
 git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git
