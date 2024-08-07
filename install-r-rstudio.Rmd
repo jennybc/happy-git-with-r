@@ -13,10 +13,9 @@ knitr::opts_chunk$set(
     ```{r}
     R.version.string
     ```
-1. Install RStudio Desktop.  
-   Already have RStudio? **Hold on: This is a great time to upgrade to the latest Preview version.** Download it here:  
-    <https://www.rstudio.com/products/rstudio/download/preview/>
-1. Update your R packages:
+2. Install RStudio Desktop for your OS from here:
+    <https://posit.co/download/rstudio-desktop>
+3. Update your R packages:
     ```{r, eval = FALSE}
     update.packages(ask = FALSE, checkBuilt = TRUE)
     ```
@@ -38,12 +37,5 @@ Once you are 2 minor versions behind (4.5.whatever or earlier in this example), 
 In particular, you can no longer install pre-built binary add-on packages from CRAN.
 
 Is your RStudio "old"?
-Unless you have a specific reason to prefer the released version, try the Preview.
-The Preview version is often the same as the general release.
-But in the build-up to a new general release, the Preview release is used for release candidates.
-The Preview version includes new (upcoming) features, but it is also generally very stable and highly usable.
 You can expect to update RStudio much more often than R itself.
 For example, I update RStudio every month or so, whereas I update R 1 or 2 times per year.
-
-* Main RStudio IDE download page: <https://www.rstudio.com/products/rstudio/download/#download>
-* RStudio IDE Preview download page: <https://www.rstudio.com/products/rstudio/download/preview/>
