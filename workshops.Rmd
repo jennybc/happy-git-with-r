@@ -33,7 +33,7 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 
   * If you are enrolled in an upcoming workshop, find it below to get specifics on pre-workshop support.
   * We *might* be able to respond to a GitHub issue [here](https://github.com/jennybc/happy-git-with-r/issues).
-  * If there is a clear R/RStudio angle, post on <https://community.rstudio.com>.
+  * If there is a clear R/RStudio angle, post on <https://forum.posit.co/>.
   * General advice: search with Google and on <https://stackoverflow.com>, see also <https://github.community>.
 
 ## posit::conf 2023
@@ -42,7 +42,7 @@ These are battle-tested instructions, so most will succeed. We believe in you! I
 Will have half-day coverage of Git/GitHub
 Sep 17, [`posit.co/conference`](https://posit.co/conference/) Workshop Day, Chicago
 
-Registered workshop participants should use [this thread](https://community.rstudio.com/t/what-they-forgot-to-teach-you-about-r-workshop-rstudio-conf-2022/138999?u=jennybryan) on community.rstudio.com to discuss system prep woes.
+Registered workshop participants should use [this thread](https://forum.posit.co/t/what-they-forgot-to-teach-you-about-r-workshop-rstudio-conf-2022/138999) on forum.posit.co to discuss system prep woes.
 
 ## Previous workshops
 
