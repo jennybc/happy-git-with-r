@@ -62,7 +62,7 @@ git checkout main
 git merge issue-5
 ```
 
-## Dealing with conflicts
+## Dealing with conflicts {#fusion-conflicts}
 
 Most of the time, the merge will go smoothly.
 However if both the branches you are merging changed the same part of the same file you will get a merge conflict.
