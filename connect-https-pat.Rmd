@@ -107,12 +107,12 @@ Even though I'm suggesting that you adopt HTTPS as a lifestyle, it's good to kno
 It is determined by the URL used to access a remote repo.
 Feel free to skip this section if you are new to Git (we mention some concepts and commands that won't make much sense 'til you've used Git a little).
 
-HTTPS remote URLs look like `https://github.com/<OWNER>/<REPO>.git`.  
+HTTPS remote URLs look like `https://github.com/<OWNER>/<REPO>.git`.
 SSH remote URLs look like `git@github.com:<OWNER>/<REPO>.git`.
 
 ```{r}
 #| echo = FALSE, fig.show = "hold",
-#| out.width = "49%", out.height = "49%", 
+#| out.width = "49%", out.height = "49%",
 #| fig.alt = "Getting an HTTPS or SSH URL from GitHub"
 knitr::include_graphics(c("img/github-https-url.png", "img/github-ssh-url.png"))
 ```
@@ -120,14 +120,14 @@ knitr::include_graphics(c("img/github-https-url.png", "img/github-ssh-url.png"))
 When you execute a command such as `git push origin my-cool-feature-branch`, Git looks up the URL you've stored for the `origin` remote and uses the protocol implicit in the URL's format.
 The protocol is a game time decision.
 
-This implies that:  
+This implies that:
 
-* It's fine to use HTTPS for one remote in a repo and SSH for another.  
-* It's fine to use HTTPS in one repo and SSH in another.  
-* It's fine to interact with a GitHub repo via HTTPS from one computer and via SSH from another.  
-* It's fine to adopt HTTPS for new work, even if some of your pre-existing repos use SSH.  
+* It's fine to use HTTPS for one remote in a repo and SSH for another.
+* It's fine to use HTTPS in one repo and SSH in another.
+* It's fine to interact with a GitHub repo via HTTPS from one computer and via SSH from another.
+* It's fine to adopt HTTPS for new work, even if some of your pre-existing repos use SSH.
 
-You just have to be aware that mixed use of HTTPS and SSH means you'll have to configure both sorts of credentials.  
+You just have to be aware that mixed use of HTTPS and SSH means you'll have to configure both sorts of credentials.
 
 Changing a specific remote from HTTPS to SSH (and back again) is a straightforward operation with `git remote set-url REMOTE_NAME DESIRED_URL`:
 
@@ -207,11 +207,11 @@ Do not ever hard-wire your PAT into your code!
 A PAT should always be retrieved implicitly, for example, from the Git credential store.
 We're about to help you store the PAT in a safe place, where command line Git, RStudio, and R packages can discover it.
 
-If you use a password management app, such as 1Password or LastPass (highly recommended!), you might want to also add this PAT (and its *Note*) to the entry for GitHub, where you're already storing your username and password.
+If you use a password management app, such as 1Password (highly recommended!), you might want to also add this PAT (and its *Note*) to the entry for GitHub, where you're already storing your username and password.
 Storing your PAT in the Git credential store is a semi-persistent convenience, sort of like a browser cache or "remember me" on a website[^remember-me-haha] and it's conceivable you will need to re-enter your PAT in the future.
 You could decide to embrace the impermanence of your PAT and, if it somehow goes missing, you'll just [re-generate the PAT and re-store it](#regenerate-pat).
 If you accept the default 30-day expiration period, this is a workflow you'll be using often anyway.
-But if you create long-lasting tokens or want to feel free to play around with the functions for setting or clearing your Git credentials, it can be handy to have your own record of your PAT in a secure place, like 1Password or LastPass.
+But if you create long-lasting tokens or want to feel free to play around with the functions for setting or clearing your Git credentials, it can be handy to have your own record of your PAT in a secure place, like 1Password.
 
 [^remember-me-haha]: Haha! We all know how well "remember me" works.
 
@@ -219,7 +219,7 @@ But if you create long-lasting tokens or want to feel free to play around with t
 
 At this point, I assume you've generated a PAT and have it available, in one or both of these ways:
 
-  * In a secure, long-term system for storing secrets, like 1Password or LastPass
+  * In a secure, long-term system for storing secrets, like 1Password
   * For the next few minutes, in a browser window or on the clipboard
 
 There are a couple ways to get your PAT into the Git credential store:
@@ -234,7 +234,7 @@ There are two R packages for accessing the Git credential store:
 
   * [gitcreds](https://r-lib.github.io/gitcreds/)
   * [credentials](https://docs.ropensci.org/credentials/)
-    
+
 It is likely that these packages will eventually combine into one and, even now, they are largely interoperable.
 You don't need to follow the instructions for both packages -- pick one!
 
@@ -269,7 +269,7 @@ When in doubt, embrace a new, known-to-be-good credential over an old one, of du
   username: PersonalAccessToken
   password: <-- hidden -->
 
--> What would you like to do? 
+-> What would you like to do?
 
 1: Keep these credentials
 2: Replace these credentials
@@ -430,7 +430,7 @@ If you really want to poke around directly to explore or clean out your GitHub c
 
 ### PAT doesn't persist on Linux
 
-The credential helpers used by Git take advantage of official OS-provided 
+The credential helpers used by Git take advantage of official OS-provided
 credential stores on macOS and Windows, but sadly there is no exact equivalent on Linux.
 
 The easiest thing to do is to configure Git to "cache" your credentials (vs "store"), which is more time-limited.
