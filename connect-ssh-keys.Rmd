@@ -68,7 +68,7 @@ If you're happy to stick with your existing keys, skip to the sections about add
 
 ### Option 1: Set up from RStudio
 
-Go to *Tools > Global Options...> Git/SVN > Create RSA Key...*.
+Go to *Tools > Global Options...> Git/SVN > Create SSH Key...*.
 
 RStudio prompts you for a passphrase. It is optional, but also a best practice. Configuring your system for smooth operation with a passphrase-protected key introduces more moving parts.
 If you're completely new at all this, skip the passphrase (or use HTTPS!) and implement it next time, when you are more comfortable with system configuration.
