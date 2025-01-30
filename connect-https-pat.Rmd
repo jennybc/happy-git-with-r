@@ -417,7 +417,7 @@ $ git config --show-origin --get credential.helper
 file:C:/Program Files/Git/mingw64/etc/gitconfig manager
 ```
 
-If you want to know how more about how gitcreds and credentials are managing your PAT, learn about [`git credential <fill|approve|reject>`](https://git-scm.com/docs/git-credential).
+If you want to know how gitcreds and credentials are managing your PAT, learn about [`git credential <fill|approve|reject>`](https://git-scm.com/docs/git-credential).
 For keeners, that documentation gives you the gory details on how credentials are stored and retrieved:
 
 > Git has an internal interface for storing and retrieving credentials from system-specific helpers, as well as prompting the user for usernames and passwords. The `git-credential` command exposes this interface to scripts which may want to retrieve, store, or prompt for credentials in the same manner as Git.
