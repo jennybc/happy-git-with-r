@@ -181,7 +181,7 @@ output: github_document
 ---
 ```
 
-You can then click on "Knit" then "Knit to github document" to perform the conversion. See  [Output format](## Output format) for more details of controlling output formats with the YAML frontmatter.
+You can then click on "Knit" then "Knit to github document" to perform the conversion. See  [Output format](#output-format) for more details of controlling output formats with the YAML frontmatter.
 
 ## Linking to a ZIP archive of your repo
 

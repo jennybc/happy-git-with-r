@@ -2,7 +2,7 @@
 
 One of the principal joys of version control is the freedom to experiment without fear.
 If you make a mess of things, you can always go back to a happier version of your project.
-We describe several methods of such time travel in *link to come*.
+We describe several methods of such time travel in [Time travel: See the past](#time-travel-see-past).
 But you must have a good commit to fall back to!
 
 ## Rock climbing analogy
@@ -131,7 +131,7 @@ A -- B -- C -- D
 As far as the world knows, you implemented the feature in one fell swoop.
 But you got to work on the task incrementally, with the peace of mind that you could never truly break things.
 
-## What if I need to fall back?
+## What if I need to fall back? {#manually-reset}
 
 Imagine you're in the middle of a Repeated Amend workflow:
 
@@ -168,7 +168,7 @@ Use "Discard chunk" to discard specific changes in a file.
 Repeat this procedure for each affected file until you are back to an acceptable state.
 Carry on.
 
-If you committed a bad state, go to *link to come* for more reset scenarios.
+If you committed a bad state, go to [Resetting](#reset) for more reset scenarios.
 
 ## Why don't we push intermediate progress?
 

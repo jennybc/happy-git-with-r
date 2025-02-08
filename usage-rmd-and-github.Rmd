@@ -60,7 +60,7 @@ Verify this:
 * Rmd is quite readable. But the output is obviously not there.
 * HTML is ugly.
 
-## Output format
+## Output format {#output-format}
 
 Do you really want HTML?
 Do you only want HTML?
