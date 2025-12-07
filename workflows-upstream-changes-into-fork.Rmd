@@ -201,7 +201,7 @@ Upon success, the main page of `YOU/REPO` shows something like
 > This branch is up to date with `OWNER/REPO:main`.
 
 If you have made commits on the default branch of your fork, which we [strongly advise against](#fork-dont-touch-main), this can result in a merge commit (or even merge conflicts).
-If you are suffering due to commits you've made on `main` and it's beyond the help we describe below, consider deleting your fork and local repo and making a fresh start with [Fork and clone](fork-and-clone).
+If you are suffering due to commits you've made on `main` and it's beyond the help we describe below, consider deleting your fork and local repo and making a fresh start with [Fork and clone](#fork-and-clone).
 Live and learn.
 
 Once you have successfully synced the default branch of `YOU/REPO` with the default branch of `OWNER/REPO`, you probably want to do the same for your local repo.
@@ -261,7 +261,7 @@ git reset --hard C
 
 You will have to figure out how to convey `C` in Git-speak.
 Specify it relative to `HEAD` or provide the SHA.
-See *future link about time travel* for more support.
+See [Time travel: See the past](#time-travel-see-past) for more support.
 
 <!-- TODO: come back when there is content about referring to previous states. -->
 
