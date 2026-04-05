@@ -39,14 +39,13 @@ Global advice: if you do have existing keys, but have no clue where they came fr
 
 ### From RStudio
 
-Go to *Tools > Global Options...> Git/SVN*. If you see something like `~/.ssh/id_rsa` in the SSH RSA Key box, you definitely have existing keys.
+Go to *Tools > Global Options...> Git/SVN*. If you see something like `~/.ssh/id_rsa` or `.ssh/id_ed25519` in the SSH Key box, you definitely have existing keys.
 
-Caveat: RStudio only looks for a key pair named `id_rsa` and `id_rsa.pub`.
-This makes sense, because historically that has been the most common.
+Caveat: RStudio only looks for key pairs named `id_rsa` & `id_rsa.pub` or `id_ed25519` & `id_ed25519.pub`.
 
-However, these days both GitHub and GitLab are encouraging users to generate SSH keys with the Ed25519 algorithm, which results in a key pair named `id_ed25519` and `id_ed25519.pub`.
-At the time of writing, RStudio will not display such a key pair, which can be confusing.
-Therefore, it's probably a good idea to also check for existing keys in the shell.
+These days both GitHub and GitLab are encouraging users to generate SSH keys with the Ed25519 algorithm, which results in a key pair named `id_ed25519` and `id_ed25519.pub`. If you have an older RSA key, it might be a good idea to generate a new ED25519 key.
+
+There are other types of keys that RStudio won't display, so it's probably a good idea to also check for existing keys in the shell.
 
 ### From the shell
 
@@ -74,10 +73,9 @@ RStudio prompts you for a passphrase. It is optional, but also a best practice. 
 If you're completely new at all this, skip the passphrase (or use HTTPS!) and implement it next time, when you are more comfortable with system configuration.
 I did not use a passphrase at first, but I do now, and record it in a password manager.
 
-Click "Create" and RStudio will generate an SSH key pair, stored in the files `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`.
+Click "Create" and RStudio will generate an SSH key pair, stored in the files `~/.ssh/id_ed25519` and `~/.ssh/id_ed25519.pub`.
 
-Note that RStudio currently only generates RSA keys, whereas the standard recommendation by GitHub and GitLab is to use Ed25519 keys.
-If you want to comply with that advice, generate your keys in the shell for now.
+Note that RStudio can generate both ED25519 and RSA keys -- the default in RStudio and the standard recommendation by GitHub and GitLab is to use Ed25519 keys. Unless you have a specific reason to generate an RSA key, just go with the default ED25519 option.
 
 ### Option 2: Set up from the shell
 
@@ -238,10 +236,11 @@ Now we store a copy of your public key on GitHub.
 ### RStudio to clipboard
 
 Go to *Tools > Global Options...> Git/SVN*.
-If your key pair is named like `id_rsa.pub` and `id_rsa`, RStudio will see it and offer to "View public key".
+If your key pair is named like `id_rsa.pub` and `id_rsa` or `id_ed25519` and `id_ed25519.pub`, RStudio will see it and offer to "View public key".
+
 Do that and accept the offer to copy to your clipboard.
 
-If your key pair is named differently, such as `id_ed25519.pub` and `id_ed25519`, you'll have to copy the public key another way.
+If your key pair is named differently, you'll have to copy the public key another way.
 
 ### Shell to clipboard
 
