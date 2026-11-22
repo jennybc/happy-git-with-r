@@ -1,6 +1,6 @@
 # Existing project, GitHub last {#existing-github-last}
 
-This an explicit workflow for connecting an existing local R project to GitHub, when for some reason you cannot or don't want to do a "GitHub first" workflow (see chapters \@ref(new-github-first) and \@ref(existing-github-first)).
+This is an explicit workflow for connecting an existing local R project to GitHub, when for some reason you cannot or don't want to do a "GitHub first" workflow (see chapters \@ref(new-github-first) and \@ref(existing-github-first)).
 
 When does this come up?
 Example: it's an existing project that is already a Git repo with a history you care about.
